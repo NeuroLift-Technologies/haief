@@ -1,0 +1,4 @@
+# Internal directory - contains charter and agent contribution logs
+# This preserves provenance integrity, agent identity boundaries,
+# safe experimentation, and non-public coordination
+/internal/
