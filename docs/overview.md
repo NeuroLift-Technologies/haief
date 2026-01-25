@@ -15,7 +15,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is an independent, community-driven
 ## Key Components
 
 ### TOI (Terms of Interaction)
-Baseline rules for how AI systems engage with humans.
+User defined Terms for any AI system they choose to or are otherwise forced to interact with.
 
 ### OTOI (Orchestrated Terms of Interaction)
 Multi-agent governance ensuring provenance, identity integrity, and safe handoffs.

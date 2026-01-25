@@ -116,9 +116,7 @@ This ensures that public standards remain transparent while internal agent orche
 
 The following remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
 
-- Aide / Avatar / Advocate training pipelines  
 - Fusion methodology  
-- Runtime orchestration logic  
 - Identity‑bound agent state  
 - Emotional continuity memory  
 - Enterprise‑grade deployment infrastructure  
