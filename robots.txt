@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neurolift-technologies.github.io/haief/sitemap.xml

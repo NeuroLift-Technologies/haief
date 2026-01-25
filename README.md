@@ -1,10 +1,12 @@
 # HAIEF — Human & AI ElevAItion Foundation
 
-**Open Standards for Human‑Safe, Emotionally‑Continuous AI**
+**Keeping Open Source AI Open**
 
 The Human & AI ElevAItion Foundation (HAIEF) is an independent, community‑driven initiative dedicated to building the open governance standards, protocols, and safety frameworks required for humane, sovereign, emotionally‑continuous AI systems.
 
 HAIEF exists to ensure that AI serves people, not the other way around — with transparency, dignity, and global accessibility at its core.
+
+**[Visit the Website](https://neurolift-technologies.github.io/haief/)** | **[Join Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)** | **[Take Action](https://neurolift-technologies.github.io/haief/take-action/)**
 
 ---
 
