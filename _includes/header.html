@@ -1,0 +1,31 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="HAIEF Home">
+        <span class="logo-mark">HAIEF</span>
+        <span class="logo-text">Keeping Open Source AI Open</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <ul class="nav-list" id="nav-list">
+          {% for item in site.nav %}
+            <li>
+              <a href="{{ item.url | relative_url }}"
+                 class="nav-link {% if page.url == item.url %}nav-link--active{% endif %}{% if item.title == 'Take Action' %} nav-cta{% endif %}">
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
