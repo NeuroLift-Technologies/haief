@@ -127,7 +127,7 @@ permalink: /take-action/
     <li>Invite HAIEF representatives to standards discussions</li>
     <li>Review Solidarity Framework specifications for adoption</li>
     <li>Collaborate on user rights criteria development</li>
-    <li><a href="mailto:haief@neurolift.dev">Contact us for partnership discussions</a></li>
+    <li><a href="mailto:haief@neuroliftsolutions.com">Contact us for partnership discussions</a></li>
   </ul>
 </div>
 
@@ -172,7 +172,7 @@ permalink: /take-action/
     <li>Alignment with emerging regulatory requirements (EU AI Act)</li>
   </ul>
 
-  <p><a href="mailto:haief@neurolift.dev" class="btn btn--primary">Discuss Partnership</a></p>
+  <p><a href="mailto:haief@neuroliftsolutions.com" class="btn btn--primary">Discuss Partnership</a></p>
 </div>
 
 ---
@@ -214,7 +214,7 @@ permalink: /take-action/
     <li>Join early adopter program for implementation support</li>
   </ol>
 
-  <p><a href="mailto:haief@neurolift.dev" class="btn btn--primary">Join Early Adopter Program</a></p>
+  <p><a href="mailto:haief@neuroliftsolutions.com" class="btn btn--primary">Join Early Adopter Program</a></p>
 </div>
 
 ---
