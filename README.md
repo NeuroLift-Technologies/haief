@@ -1,5 +1,7 @@
 # HAIEF — Human & AI ElevAItion Foundation
 
+[![Financial Contributors on Open Collective](https://opencollective.com/haief/all/badge.svg?label=Financial+Contributors)](https://opencollective.com/haief)
+
 **Keeping Open Source AI Open**
 
 The Human & AI ElevAItion Foundation (HAIEF) is an independent, community‑driven initiative dedicated to building the open governance standards, protocols, and safety frameworks required for humane, sovereign, emotionally‑continuous AI systems.
