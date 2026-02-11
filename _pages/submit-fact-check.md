@@ -130,7 +130,7 @@ permalink: /submit-fact-check/
 
   <div class="form-actions" style="margin-top: var(--space-6);">
     <button type="submit" class="btn btn--primary btn--large">Submit Fact-Check Request</button>
-    <a href="{{ '/fact-checking/research-checklist.html' | relative_url }}" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Fact-Check Checklist</a>
+    <a href="{{ '/fact-checking/research-checklist.md' | relative_url }}" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Fact-Check Checklist</a>
   </div>
 
   <div id="form-message" style="margin-top: var(--space-4); display: none;"></div>
