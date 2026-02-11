@@ -140,10 +140,7 @@ document.getElementById('question-form').addEventListener('submit', function(e) 
   
   // For now, we'll create a GitHub issue
   // In a real implementation, this would connect to a backend service
-  const question = encodeURIComponent(data.question);
-  const category = encodeURIComponent(data.category);
   const responseType = data.response_type;
-  const name = data.name || 'Anonymous';
   
   let issueBody = `**Question:** ${data.question}\n\n`;
   issueBody += `**Category:** ${data.category}\n\n`;
