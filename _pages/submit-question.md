@@ -104,21 +104,30 @@ permalink: /submit-question/
 
 <script>
 // Show/hide email field based on response type selection
+function updateEmailFieldVisibility() {
+  const emailGroup = document.getElementById('email-group');
+  const emailInput = document.getElementById('email');
+  const selected = document.querySelector('input[name="response_type"]:checked');
+
+  if (!emailGroup || !emailInput) {
+    return;
+  }
+
+  if (selected && selected.value === 'private') {
+    emailGroup.style.display = 'block';
+    emailInput.required = true;
+  } else {
+    emailGroup.style.display = 'none';
+    emailInput.required = false;
+  }
+}
+
 document.querySelectorAll('input[name="response_type"]').forEach(radio => {
-  radio.addEventListener('change', function() {
-    const emailGroup = document.getElementById('email-group');
-    const emailInput = document.getElementById('email');
-    
-    if (this.value === 'private') {
-      emailGroup.style.display = 'block';
-      emailInput.required = true;
-    } else {
-      emailGroup.style.display = 'none';
-      emailInput.required = false;
-    }
-  });
+  radio.addEventListener('change', updateEmailFieldVisibility);
 });
 
+// Initialize email field visibility on page load
+updateEmailFieldVisibility();
 // Handle form submission
 document.getElementById('question-form').addEventListener('submit', function(e) {
   e.preventDefault();
