@@ -144,14 +144,6 @@ document.getElementById('question-form').addEventListener('submit', function(e) 
   
   let issueBody = `**Question:** ${data.question}\n\n`;
   issueBody += `**Category:** ${data.category}\n\n`;
-  issueBody += `**Response Type:** ${responseType}\n\n`;
-  
-  if (responseType === 'private' && data.email) {
-    issueBody += `**Email for private response:** ${data.email}\n\n`;
-    if (data.allow_public) {
-      issueBody += `**May post publicly:** Yes\n\n`;
-    }
-  }
   
   if (data.name) {
     issueBody += `**Submitted by:** ${data.name}\n\n`;
@@ -163,20 +155,47 @@ document.getElementById('question-form').addEventListener('submit', function(e) 
   const encodedIssueTitle = encodeURIComponent(`Q&A: ${truncatedQuestion}${data.question.length > 80 ? '...' : ''}`);
   const issueBodyEncoded = encodeURIComponent(issueBody);
   
-  // Create a GitHub issue URL with pre-filled content
+  // Create a GitHub issue URL with pre-filled content (for anonymous submissions)
   const githubIssueUrl = `https://github.com/NeuroLift-Technologies/haief/issues/new?title=${encodedIssueTitle}&body=${issueBodyEncoded}&labels=question`;
   
-  // Show success message
+  // For private responses, use email only (do not expose email in public GitHub issues)
+  const emailSubject = encodeURIComponent(`Q&A Question: ${data.question.substring(0, 50)}${data.question.length > 50 ? '...' : ''}`);
+  let emailBody = `Question: ${data.question}\n\nCategory: ${data.category}\n\n`;
+  if (data.name) {
+    emailBody += `Name: ${data.name}\n`;
+  }
+  if (data.email) {
+    emailBody += `Reply to: ${data.email}\n`;
+  }
+  if (data.allow_public) {
+    emailBody += `\nPermission to post publicly: Yes\n`;
+  }
+  const emailBodyEncoded = encodeURIComponent(emailBody);
+  const emailUrl = `mailto:haief@neuroliftsolutions.com?subject=${emailSubject}&body=${emailBodyEncoded}`;
+  
+  // Show success message based on response type
   messageEl.className = 'callout callout--success';
   messageEl.style.display = 'block';
-  messageEl.innerHTML = `
-    <p class="callout__title">Thank You!</p>
-    <p>Your question has been prepared. Click the button below to submit it as a GitHub issue. We'll review and answer it as soon as possible.</p>
-    <p style="margin-top: var(--space-4);">
-      <a href="${githubIssueUrl}" target="_blank" class="btn btn--primary">Complete Submission on GitHub</a>
-    </p>
-    <p><small>Note: You'll need a GitHub account to complete the submission. If you don't have one, you can <a href="mailto:haief@neuroliftsolutions.com?subject=Q%26A%20Question&body=${issueBodyEncoded}">email us instead</a>.</small></p>
-  `;
+  
+  if (responseType === 'private') {
+    messageEl.innerHTML = `
+      <p class="callout__title">Thank You!</p>
+      <p>For private responses, please email us directly to protect your privacy. Click the button below to open your email client with your question pre-filled.</p>
+      <p style="margin-top: var(--space-4);">
+        <a href="${emailUrl}" class="btn btn--primary">Send Email</a>
+      </p>
+      <p><small>Your email address will not be shared publicly. We'll respond directly to your email.</small></p>
+    `;
+  } else {
+    messageEl.innerHTML = `
+      <p class="callout__title">Thank You!</p>
+      <p>Your question has been prepared. Click the button below to submit it as a GitHub issue. We'll review and answer it as soon as possible.</p>
+      <p style="margin-top: var(--space-4);">
+        <a href="${githubIssueUrl}" target="_blank" class="btn btn--primary">Complete Submission on GitHub</a>
+      </p>
+      <p><small>Note: You'll need a GitHub account to complete the submission. If you don't have one, you can <a href="${emailUrl}">email us instead</a>.</small></p>
+    `;
+  }
   
   // Scroll to message
   messageEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
