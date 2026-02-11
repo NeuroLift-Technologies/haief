@@ -153,11 +153,12 @@ document.getElementById('question-form').addEventListener('submit', function(e) 
   
   issueBody += `---\n\n*This question was submitted via the HAIEF Q&A form.*`;
   
-  const issueTitle = encodeURIComponent(`Q&A: ${data.question.substring(0, 80)}${data.question.length > 80 ? '...' : ''}`);
+  const truncatedQuestion = data.question.substring(0, 80);
+  const encodedIssueTitle = encodeURIComponent(`Q&A: ${truncatedQuestion}${data.question.length > 80 ? '...' : ''}`);
   const issueBodyEncoded = encodeURIComponent(issueBody);
   
   // Create a GitHub issue URL with pre-filled content
-  const githubIssueUrl = `https://github.com/NeuroLift-Technologies/haief/issues/new?title=${issueTitle}&body=${issueBodyEncoded}&labels=question`;
+  const githubIssueUrl = `https://github.com/NeuroLift-Technologies/haief/issues/new?title=${encodedIssueTitle}&body=${issueBodyEncoded}&labels=question`;
   
   // Show success message
   messageEl.className = 'callout callout--success';
