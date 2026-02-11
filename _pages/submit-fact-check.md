@@ -138,21 +138,34 @@ permalink: /submit-fact-check/
 
 <script>
 // Show/hide email field based on response type selection
+const emailGroup = document.getElementById('email-group');
+const emailInput = document.getElementById('email');
+
+function updateEmailVisibility() {
+  const selectedResponseType = document.querySelector('input[name="response_type"]:checked');
+
+  if (!selectedResponseType) {
+    // Default to hiding the email field if nothing is selected
+    emailGroup.style.display = 'none';
+    emailInput.required = false;
+    return;
+  }
+
+  if (selectedResponseType.value === 'private') {
+    emailGroup.style.display = 'block';
+    emailInput.required = true;
+  } else {
+    emailGroup.style.display = 'none';
+    emailInput.required = false;
+  }
+}
+
 document.querySelectorAll('input[name="response_type"]').forEach(radio => {
-  radio.addEventListener('change', function() {
-    const emailGroup = document.getElementById('email-group');
-    const emailInput = document.getElementById('email');
-    
-    if (this.value === 'private') {
-      emailGroup.style.display = 'block';
-      emailInput.required = true;
-    } else {
-      emailGroup.style.display = 'none';
-      emailInput.required = false;
-    }
-  });
+  radio.addEventListener('change', updateEmailVisibility);
 });
 
+// Initialize email field visibility/required state on page load
+updateEmailVisibility();
 // Handle form submission
 document.getElementById('fact-check-form').addEventListener('submit', function(e) {
   e.preventDefault();
