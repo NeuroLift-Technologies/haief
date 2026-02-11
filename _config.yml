@@ -58,7 +58,7 @@ social:
 organization:
   name: "Human & AI ElevAItion Foundation"
   founding_org: "NeuroLift Technologies LLC"
-  founder: "Joshua Wayne Dorsey Sr."
+  founder: "Joshua Dorsey Sr."
 
 # Navigation
 nav:
@@ -74,6 +74,8 @@ nav:
     url: "/take-action/"
   - title: "Q&A"
     url: "/questions-and-answers/"
+  - title: "Fact-Check"
+    url: "/submit-fact-check/"
   - title: "For Humans"
     url: "/for-humans/"
   - title: "For AI Agents"

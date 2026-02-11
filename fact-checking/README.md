@@ -27,9 +27,10 @@ To maintain accuracy and credibility, all significant claims made in HAIEF docum
 
 If you find a claim in HAIEF documentation that seems questionable or needs verification, please:
 
-1. Add it to the research-checklist.md
-2. Open an issue in the GitHub repository
-3. Contact the team at haief@neuroliftsolutions.com
+1. [Submit a fact-check request via the online form](https://neurolift-technologies.github.io/haief/submit-fact-check/)
+2. Add it to the research-checklist.md
+3. Open an issue in the GitHub repository
+4. Contact the team at haief@neuroliftsolutions.com
 
 ## Priority
 

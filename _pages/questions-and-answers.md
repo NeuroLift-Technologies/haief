@@ -36,7 +36,7 @@ Open source AI is at risk of corporate capture. While major tech companies estab
 
 ### Who is behind HAIEF?
 
-HAIEF was founded as a contribution from NeuroLift Technologies LLC, with Joshua Wayne Dorsey Sr. as the lead architect. However, HAIEF is designed to be community-owned and governed, not controlled by any single company or organization. The frameworks are being contributed to the public commons.
+HAIEF was founded as a contribution from NeuroLift Technologies LLC, with Joshua Dorsey Sr. as the lead architect. However, HAIEF is designed to be community-owned and governed, not controlled by any single company or organization. The frameworks are being contributed to the public commons.
 
 ### Is HAIEF a product or a company?
 

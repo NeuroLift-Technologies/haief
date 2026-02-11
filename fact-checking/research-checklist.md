@@ -91,7 +91,7 @@ This document contains a checklist of claims and statements that require fact-ch
 
 - [ ] **NeuroLift Technologies background**
   - Verify founding contribution claims
-  - Document Joshua Wayne Dorsey Sr. credentials
+  - Document Joshua Dorsey Sr. credentials
   - Confirm framework origination
 
 - [ ] **Framework implementation status**

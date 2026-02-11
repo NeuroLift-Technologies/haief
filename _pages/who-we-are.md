@@ -138,13 +138,13 @@ HAIEF is founded on the principle that those affected by AI governance must part
 
 <div class="callout callout--info">
   <p class="callout__title">From NeuroLift to Public Commons</p>
-  <p>The Solidarity Framework was developed by <strong>NeuroLift Technologies LLC</strong>, founded by <strong>Joshua Wayne Dorsey Sr.</strong> as Managing Member. Rather than keeping these frameworks proprietary, NeuroLift is contributing them to the public commons through HAIEF.</p>
+  <p>The Solidarity Framework was developed by <strong>NeuroLift Technologies LLC</strong>, founded by <strong>Joshua Dorsey Sr.</strong> as Managing Member. Rather than keeping these frameworks proprietary, NeuroLift is contributing them to the public commons through HAIEF.</p>
   <p style="margin-bottom: 0;"><strong>Why?</strong> Because AI governance that serves only those who can afford private development isn't governance - it's gatekeeping. The standards that protect users should belong to users.</p>
 </div>
 
 ### About the Founder
 
-Joshua Wayne Dorsey Sr. brings a unique perspective to AI governance:
+Joshua Dorsey Sr. brings a unique perspective to AI governance:
 
 - **Neurodivergent advocate** - Personal understanding of the gaps in current AI systems
 - **Technical practitioner** - Hands-on experience with AI systems and their limitations
