@@ -72,6 +72,8 @@ nav:
     url: "/solidarity-framework/"
   - title: "Take Action"
     url: "/take-action/"
+  - title: "Q&A"
+    url: "/questions-and-answers/"
   - title: "For Humans"
     url: "/for-humans/"
   - title: "For AI Agents"

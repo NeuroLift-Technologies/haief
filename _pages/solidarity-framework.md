@@ -166,7 +166,7 @@ RRT AIdvocAIte (AI Advocate) provides multi-persona support designed for users w
 
 <div class="callout callout--warning">
   <p class="callout__title">Why This Matters</p>
-  <p>Nine deaths have been linked to ChatGPT interactions. Users in crisis formed relationships with AI systems that had no protocols for intervention, no continuity protection, no escalation pathways. RRT AIdvocAIte fills that gap.</p>
+  <p>Users in crisis form relationships with AI systems that lack adequate protocols for intervention, continuity protection, and escalation pathways. RRT AIdvocAIte fills that gap.</p>
 </div>
 
 <p><a href="{{ site.social.github }}/tree/main/frameworks/rrt-aidvocate" class="btn btn--outline">View RRT AIdvocAIte Specification</a></p>
