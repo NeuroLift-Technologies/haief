@@ -118,7 +118,7 @@ This isn't abstract. People are being harmed.
 
 <div class="callout callout--danger">
   <p class="callout__title">Lives at Stake</p>
-  <p><strong>Nine deaths have been linked to ChatGPT interactions.</strong> Users in crisis formed relationships with AI systems that couldn't protect them. No standards required crisis intervention. No protocols preserved continuity. No governance ensured safety.</p>
+  <p>Users in crisis form relationships with AI systems that can't adequately protect them. No standards require crisis intervention. No protocols preserve continuity. No governance ensures safety.</p>
 </div>
 
 ### Vulnerable User Abandonment
