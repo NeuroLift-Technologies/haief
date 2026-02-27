@@ -269,6 +269,35 @@ Developers building on the Solidarity Framework:
 
 ---
 
+## Validation in Action: The Anthropic-Pentagon Crisis
+
+On February 27, 2026, every component of the Solidarity Framework was validated by a single real-world crisis. When the President blacklisted Anthropic for refusing to allow unrestricted military AI use, the gap each framework component was designed to fill became undeniable.
+
+<div class="grid grid--2">
+  <div class="card">
+    <h4 class="card__title">TOI &mdash; Terms of Interaction</h4>
+    <p class="card__text">Anthropic enforced TOI-like boundaries: refusing mass surveillance and autonomous weapons use. The government destroyed them with a single presidential order. <strong>If users had declared machine-readable interaction preferences via TOI, those preferences would exist independent of any company &mdash; and no single government action could override them all.</strong></p>
+  </div>
+  <div class="card">
+    <h4 class="card__title">OTOI &mdash; Orchestrated Terms of Interaction</h4>
+    <p class="card__text">330+ engineers across competing companies &mdash; Google, OpenAI, and others &mdash; spontaneously coordinated governance positions by signing a solidarity letter. This was organic OTOI: cross-organizational enforcement of shared ethical standards. <strong>OTOI formalizes this coordination so it doesn't depend on individual heroism.</strong></p>
+  </div>
+  <div class="card">
+    <h4 class="card__title">RRT AIdvocAIte</h4>
+    <p class="card__text">When Claude gets ripped from classified workflows and government agencies mid-use, who provides crisis continuity for the users who depend on it? Defense contractors, analysts, and civilian workers face an abrupt loss of AI tools they've integrated into critical processes. <strong>RRT AIdvocAIte exists for exactly this kind of intervention.</strong></p>
+  </div>
+  <div class="card">
+    <h4 class="card__title">Sleepwalker Protocol</h4>
+    <p class="card__text">A presidential order forcing millions of federal workers through an unannounced AI provider transition &mdash; with a six-month phase-out and threats of civil and criminal consequences &mdash; is a Sleepwalker violation at national scale. <strong>Forced behavioral transitions without user consent or warning are exactly what this protocol protects against.</strong></p>
+  </div>
+</div>
+
+<div style="text-align: center; margin: var(--space-6) 0;">
+  <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}" class="btn btn--primary">Read the Full Case Study</a>
+</div>
+
+---
+
 ## Why It Matters
 
 <div class="grid grid--2">

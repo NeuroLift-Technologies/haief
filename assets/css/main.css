@@ -1023,6 +1023,204 @@ pre code {
   }
 }
 
+/* Crisis Banner */
+.crisis-banner {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%);
+  border-bottom: 3px solid var(--color-accent);
+  padding: var(--space-6) 0;
+  color: white;
+}
+
+.crisis-banner__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.crisis-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-accent);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--border-radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: var(--space-1);
+}
+
+.crisis-banner__content {
+  flex: 1;
+}
+
+.crisis-banner__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+}
+
+.crisis-banner__text {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 var(--space-4);
+  max-width: 700px;
+}
+
+.crisis-banner__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-accent-light);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.crisis-banner__link:hover,
+.crisis-banner__link:focus {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .crisis-banner__inner {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}
+
+/* Governance Triangle */
+.governance-triangle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+.governance-triangle__pillar {
+  text-align: center;
+  padding: var(--space-6);
+  border-radius: var(--border-radius-lg);
+  border: 2px solid var(--color-border);
+}
+
+.governance-triangle__pillar--tos {
+  border-color: var(--color-text-muted);
+}
+
+.governance-triangle__pillar--constitution {
+  border-color: var(--color-info);
+}
+
+.governance-triangle__pillar--toi {
+  border-color: var(--color-primary);
+  background-color: rgba(26, 95, 122, 0.05);
+}
+
+.governance-triangle__label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+.governance-triangle__name {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.governance-triangle__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .governance-triangle {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scenario Tracker */
+.scenario-tracker {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.scenario-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+}
+
+.scenario-card__letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--border-radius-full);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.scenario-card__content h4 {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-1);
+}
+
+.scenario-card__content p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Comparison Side-by-Side */
+.comparison-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.comparison-side__item {
+  padding: var(--space-6);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.comparison-side__year {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .comparison-side {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Agent-specific styles */
 .agent-content {
   font-family: var(--font-family-mono);

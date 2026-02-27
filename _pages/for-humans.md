@@ -24,6 +24,25 @@ permalink: /for-humans/
 
 ---
 
+## What Just Happened &mdash; And Why It Matters for You
+
+<div class="callout callout--danger">
+  <p class="callout__title">February 27, 2026</p>
+  <p>Today the President ordered all government agencies to stop using an AI tool because the company behind it refused to allow it to be used for mass surveillance and autonomous weapons.</p>
+  <p>Here's what that means in plain language:</p>
+  <ul>
+    <li>A company (Anthropic) told the military "no, you can't use our AI to watch everyone or to build weapons that decide on their own who to kill."</li>
+    <li>The government responded by banning that company's technology from every federal agency and calling it a national security risk.</li>
+    <li>The <em>only</em> thing protecting users was the company's internal policy &mdash; its Terms of Service.</li>
+    <li>One presidential order was enough to punish the company for holding that line.</li>
+  </ul>
+  <p><strong>If the only thing protecting your rights is a company's Terms of Service, and the government can destroy that company for holding the line, who protects you?</strong></p>
+  <p>That's what Terms of Interaction answers. TOI creates governance that belongs to <em>you</em> &mdash; not a company, not a government. Community-owned rights that travel with you and can't be eliminated because one company gets blacklisted.</p>
+  <p><a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">Read the full case study &rarr;</a></p>
+</div>
+
+---
+
 ## Join the Discussion
 
 <div class="grid grid--2">

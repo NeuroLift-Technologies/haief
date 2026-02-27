@@ -17,9 +17,9 @@ permalink: /take-action/
 <div class="page-content">
   <div class="container">
 
-<div class="callout callout--info">
-  <p class="callout__title">The window is closing, but it's not closed</p>
-  <p>AI governance infrastructure is being built right now. Your participation today shapes how AI treats users for decades. Choose your path below and take the first step.</p>
+<div class="callout callout--danger">
+  <p class="callout__title">This is no longer theoretical</p>
+  <p>On February 27, 2026, the President of the United States blacklisted an AI company for refusing to allow mass surveillance. The only thing that stood between users and unrestricted military AI deployment was a company's Terms of Service. One presidential order eliminated it. <strong>The governance gap HAIEF was built to fill is now visible to the entire world.</strong> <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">Read the full case study &rarr;</a></p>
 </div>
 
 ---
@@ -31,6 +31,11 @@ permalink: /take-action/
     <span class="audience-section__icon">&#128187;</span>
     You build the future. Help us ensure it preserves user agency.
   </h3>
+
+  <div class="callout callout--warning" style="margin-top: 0;">
+    <p class="callout__title">Why this matters now</p>
+    <p>The Anthropic crisis proved that governance dependent on any single company's willingness to hold the line is governance that can be eliminated overnight. Contribute to TOI implementation so user sovereignty exists independent of any one vendor.</p>
+  </div>
 
   <div class="grid grid--2">
     <div>
@@ -141,6 +146,11 @@ permalink: /take-action/
     Strategic partnership opportunity. Early adoption advantage.
   </h3>
 
+  <div class="callout callout--warning" style="margin-top: 0;">
+    <p class="callout__title">Assess your exposure</p>
+    <p>If your organization relies on a single AI provider, you are now exposed to the risk that a government order — anywhere in the world — can force your provider to change its policies or be shut down entirely. The Anthropic crisis is a wake-up call to build governance infrastructure that is vendor-neutral and portable.</p>
+  </div>
+
   <div class="grid grid--2">
     <div>
       <h4>Mission-Aligned Organizations</h4>
@@ -227,6 +237,11 @@ permalink: /take-action/
     AI should serve you, not the other way around. These are your rights.
   </h3>
 
+  <div class="callout callout--warning" style="margin-top: 0;">
+    <p class="callout__title">Your AI tools can be eliminated by political decision</p>
+    <p>The Anthropic blacklisting proves that your access to AI tools — and the protections those tools provide — can be revoked by government order. Demand portable governance that travels with you, not governance locked inside a single company.</p>
+  </div>
+
   <div class="grid grid--2">
     <div>
       <h4>Understand Your Rights</h4>
@@ -298,6 +313,25 @@ permalink: /take-action/
   </div>
 
   <p><a href="{{ '/for-humans/' | relative_url }}" class="btn btn--primary">Join the Community</a></p>
+</div>
+
+---
+
+## For Everyone
+
+<div class="audience-section">
+  <h3 class="audience-section__title">
+    <span class="audience-section__icon">&#127758;</span>
+    Share the case for the Third Pillar.
+  </h3>
+
+  <p>The Anthropic crisis has made the need for community-owned AI governance visible to the entire world. Help spread the word:</p>
+
+  <ul>
+    <li><strong>Share the HAIEF site</strong> &mdash; especially the <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">case study</a> that explains what happened and why it matters</li>
+    <li><strong>Join the discussion</strong> &mdash; <a href="{{ site.social.discussions }}">GitHub Discussions</a> is open to everyone, no technical expertise needed</li>
+    <li><strong>Talk about it</strong> &mdash; in your communities, workplaces, and social networks. The question "who protects users when companies get blacklisted?" deserves a public answer</li>
+  </ul>
 </div>
 
 ---
