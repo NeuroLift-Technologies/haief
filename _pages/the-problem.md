@@ -104,10 +104,30 @@ You can have access to the weights, access to the code, access to the training m
   </div>
 
   <div class="timeline__item">
+    <div class="timeline__date">February 27, 2026</div>
+    <h4 class="timeline__title">Anthropic-Pentagon Crisis</h4>
+    <p class="timeline__content">The President of the United States blacklisted an AI company for refusing to allow unrestricted military use of its technology for mass surveillance and autonomous weapons. Corporate Terms of Service was the only safeguard &mdash; and a single presidential order eliminated it. <strong>This is the most concrete proof yet that internal corporate ethics are insufficient against state coercion.</strong></p>
+  </div>
+
+  <div class="timeline__item">
     <div class="timeline__date">Ongoing</div>
     <h4 class="timeline__title">Regulatory Pressure Mounting</h4>
     <p class="timeline__content">40+ state attorneys general investigating AI harms. Class action lawsuits emerging. The governance infrastructure established now will determine how these pressures resolve.</p>
   </div>
+</div>
+
+### The Governance Gap Is Now Undeniable
+
+<div class="callout callout--danger">
+  <p class="callout__title">February 27, 2026: The day a company's ethics became a national security threat</p>
+  <p>The Anthropic-Pentagon crisis demonstrates the governance gap with unprecedented clarity:</p>
+  <ol>
+    <li><strong>Corporate TOS was the only safeguard</strong> against mass surveillance deployment &mdash; no external governance protected users</li>
+    <li><strong>A single presidential order eliminated it</strong> by designating the company a "supply chain risk"</li>
+    <li><strong>No existing framework protects the individual user</strong> when the company defending their rights gets blacklisted</li>
+    <li><strong>Internal corporate ethics are insufficient</strong> against state coercion &mdash; validating the need for external, community-governed governance</li>
+  </ol>
+  <p>This is exactly why HAIEF builds governance that exists <em>independent</em> of any single company. <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">Read the full case study &rarr;</a></p>
 </div>
 
 ---
