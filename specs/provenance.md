@@ -98,26 +98,34 @@ Minimum required fields for a HAIEF-compliant provenance record:
 }
 ```
 
+Field definitions:
+
+- `provenance_id` — Unique identifier for this provenance record itself.
+- `interaction_id` — Unique identifier for the interaction this record describes (see R1).
+- `parent_interaction_id` — The `interaction_id` of the parent interaction that triggered this one; `null` for user-originated requests.
+
 ---
 
 ## Multi-Agent Provenance Chains
 
-In multi-agent systems, provenance records form a chain:
+In multi-agent systems, provenance records form a chain linked by `interaction_id` and `parent_interaction_id`:
 
 ```
 User Request
-    │ provenance_id: A
+    │ interaction_id: A
     ▼
 Agent 1 (Orchestrator)
-    │ provenance_id: B, parent_interaction_id: A
+    │ interaction_id: B, parent_interaction_id: A
     ▼
 Agent 2 (Sub-task)
-    │ provenance_id: C, parent_interaction_id: B
+    │ interaction_id: C, parent_interaction_id: B
     ▼
 Response to User
 ```
 
-Each record in the chain MUST reference its parent via `parent_interaction_id`. A missing parent reference constitutes a **provenance gap** — a compliance violation that MUST be flagged in OTOI logs.
+Each provenance record carries its own `provenance_id` (identifying the record) and an `interaction_id` (identifying the interaction). The chain is traversed via `parent_interaction_id`, which always references another record's `interaction_id`.
+
+A missing `parent_interaction_id` where one is expected constitutes a **provenance gap** — a compliance violation that MUST be flagged in OTOI logs.
 
 ---
 
@@ -136,7 +144,7 @@ Provenance records may contain sensitive information. Implementations MUST:
 ## Relationship to Other Specifications
 
 - **Identity Integrity** — Provenance records are only meaningful when the agent identity they reference is verifiable. See `identity-integrity.md`.
-- **Handoff Rules** — Each handoff event MUST produce a provenance record linking the outgoing and incoming agents. See `handoff-rules.md`.
+- **Handoff Rules** — Each handoff event MUST produce a provenance record linking the outgoing and incoming agents, and the handoff record MUST carry the `interaction_id` (R1). See `handoff-rules.md`.
 - **OTOI** — The OTOI Orchestrator is the enforcement point for provenance in multi-agent systems.
 
 ---

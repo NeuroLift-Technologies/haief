@@ -81,6 +81,8 @@ Minimum required fields for a HAIEF-compliant handoff record:
 {
   "handoff_id": "uuid-v4",
   "provenance_id": "uuid-v4",
+  "interaction_id": "uuid-v4",
+  "parent_interaction_id": "uuid-v4 | null",
   "from_agent": {
     "agent_id": "string",
     "agent_version": "semver"
@@ -106,6 +108,13 @@ Minimum required fields for a HAIEF-compliant handoff record:
 }
 ```
 
+Field definitions:
+
+- `handoff_id` — Unique identifier for this handoff event.
+- `provenance_id` — The provenance record ID that this handoff contributes to.
+- `interaction_id` — The interaction being handed off (required by Provenance R1; used to link into the provenance chain).
+- `parent_interaction_id` — The `interaction_id` of the interaction that triggered this handoff; `null` for user-originated handoffs.
+
 ---
 
 ## Safety Checks
@@ -118,6 +127,7 @@ Before accepting a handoff, a receiving agent MUST verify:
 | TOI declarations are supportable by this agent | Refuse handoff or disclose unsupported declarations |
 | Agent identity declared (per Identity Integrity spec) | Refuse handoff |
 | SWP state received (if active) | Refuse handoff |
+| `interaction_id` present in handoff record | Refuse handoff |
 | Provenance chain intact | Log integrity warning; proceed with caution |
 
 ---
@@ -146,7 +156,7 @@ When a user moves between AI systems (e.g., from one vendor to another):
 
 ## Relationship to Other Specifications
 
-- **Provenance** — Handoff records are a required input to the provenance chain. See `provenance.md`.
+- **Provenance** — Handoff records are a required input to the provenance chain; `interaction_id` in the handoff record satisfies Provenance R1. See `provenance.md`.
 - **Identity Integrity** — Identity verification is a prerequisite for all handoffs. See `identity-integrity.md`.
 - **OTOI** — The OTOI Orchestrator coordinates and enforces handoff rules in multi-agent systems.
 - **Sleepwalker Protocol** — SWP state must be explicitly transmitted and preserved through handoffs.
