@@ -77,7 +77,7 @@ The Sleepwalker Protocol preserves user agency when circumstances change. It pro
 
 The framework specifications are available in the [GitHub repository]({{ site.social.github }}). You can:
 
-1. Review the specifications in the `/frameworks` and `/specs` directories
+1. Review the specifications in the `/solidarity-framework` and `/specs` directories
 2. Use validation suites to test compliance
 3. Join working groups to participate in standards development
 4. Contribute implementations and improvements

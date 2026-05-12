@@ -175,10 +175,10 @@ OTOI_COMPLIANCE: {
 
 | Resource | Location | Format |
 |----------|----------|--------|
-| TOI Specification | `/frameworks/toi/` | Markdown + JSON Schema |
-| OTOI Specification | `/frameworks/otoi/` | Markdown + JSON Schema |
-| RRT AIdvocAIte | `/frameworks/rrt-aidvocate/` | Markdown |
-| Sleepwalker Protocol | `/frameworks/sleepwalker/` | Markdown |
+| TOI Specification | `/solidarity-framework/toi/` | Markdown + JSON Schema |
+| OTOI Specification | `/solidarity-framework/otoi/` | Markdown + JSON Schema |
+| RRT AIdvocAIte | `/solidarity-framework/rrt-aidvocate/` | Markdown |
+| Sleepwalker Protocol | `/solidarity-framework/sleepwalker/` | Markdown |
 | Provenance Spec | `/specs/provenance.md` | Markdown + JSON Schema |
 | Identity Integrity | `/specs/identity-integrity.md` | Markdown |
 | Handoff Rules | `/specs/handoff-rules.md` | Markdown |
@@ -190,7 +190,7 @@ OTOI_COMPLIANCE: {
 REPOSITORY: {
   url: "https://github.com/NeuroLift-Technologies/haief",
   structure: {
-    "/frameworks": "Core framework specifications",
+    "/solidarity-framework": "Core framework specifications",
     "/specs": "Technical specification documents",
     "/docs": "Human-readable documentation",
     "/community": "Participation guidelines and processes",

@@ -24,7 +24,7 @@ exclude:
   - .git
   - .gitignore
   - README.md
-  - frameworks/
+  - solidarity-framework/
   - specs/
   - docs/
   - tests/

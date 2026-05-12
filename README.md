@@ -73,7 +73,7 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 ## 🗂️ Repository Structure
 
 ```
-/frameworks
+/solidarity-framework
     /toi
     /otoi
     /sleepwalker
