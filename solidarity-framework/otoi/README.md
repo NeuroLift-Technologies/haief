@@ -101,16 +101,16 @@ Where a TOI is absent or ambiguous, OTOI defaults to the most privacy-protective
 
 ### For Non-Technical Users
 
-1. Create your TOI using the [personal-toi-template](https://github.com/NeuroLift-Technologies/nlt-otoi/blob/main/templates/personal-toi-template.md)
+1. Create your TOI using the [personal-toi-template](https://github.com/NeuroLift-Technologies/nlt-toi/blob/main/templates/personal-toi-template.md)
 2. Share it with any HAIEF-compliant AI system
 3. The system's OTOI layer enforces it automatically
 
 ### For Technical Users
 
 ```python
-from nlt_toi.fusion.toi_parser import TOIParser
-from nlt_toi.fusion.otoi_orchestrator import OTOIOrchestrator
-from nlt_toi.fusion.privacy_guardian import PrivacyGuardian
+from nlt_otoi.fusion.toi_parser import TOIParser
+from nlt_otoi.fusion.otoi_orchestrator import OTOIOrchestrator
+from nlt_otoi.fusion.privacy_guardian import PrivacyGuardian
 
 # Parse and validate the user's TOI
 parser = TOIParser()
@@ -122,7 +122,7 @@ privacy = PrivacyGuardian(toi)
 
 # Check before processing
 if orchestrator.is_permitted(action, context):
-    result = agent.run(action)
+    result = agent.run(action)  # Replace with your agent's execution logic
     result = privacy.filter_output(result, toi)
 ```
 
@@ -145,8 +145,8 @@ For an OTOI implementation to be HAIEF-compliant, it MUST:
 
 The canonical TOI/OTOI JSON schemas:
 
-- [`personal-toi.schema.json`](https://github.com/NeuroLift-Technologies/nlt-otoi/blob/main/schemas/personal-toi.schema.json)
-- [`collaborative-charter.schema.json`](https://github.com/NeuroLift-Technologies/nlt-otoi/blob/main/schemas/collaborative-charter.schema.json)
+- [`personal-toi.schema.json`](https://github.com/NeuroLift-Technologies/nlt-toi/blob/main/schemas/personal-toi.schema.json)
+- [`collaborative-charter.schema.json`](https://github.com/NeuroLift-Technologies/nlt-toi/blob/main/schemas/collaborative-charter.schema.json)
 
 ---
 

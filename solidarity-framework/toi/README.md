@@ -178,8 +178,8 @@ For a TOI implementation to be HAIEF-compliant, it MUST:
 
 The canonical TOI JSON schemas are maintained in the reference implementation:
 
-- [`personal-toi.schema.json`](https://github.com/NeuroLift-Technologies/nlt-otoi/blob/main/schemas/personal-toi.schema.json) — Individual user TOI
-- [`collaborative-charter.schema.json`](https://github.com/NeuroLift-Technologies/nlt-otoi/blob/main/schemas/collaborative-charter.schema.json) — Multi-user or team charter
+- [`personal-toi.schema.json`](https://github.com/NeuroLift-Technologies/nlt-toi/blob/main/schemas/personal-toi.schema.json) — Individual user TOI
+- [`collaborative-charter.schema.json`](https://github.com/NeuroLift-Technologies/nlt-toi/blob/main/schemas/collaborative-charter.schema.json) — Multi-user or team charter
 
 ---
 
