@@ -5,7 +5,7 @@
 The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative building open standards for human-centered AI governance. The repository combines:
 
 - **Public-facing governance website** (Jekyll pages under `_pages/`, shared layout/components, CSS)
-- **Reference governance artifacts** (`frameworks/`, `specs/`, `tests/`, and `docs/`)
+- **Reference governance artifacts** (`solidarity-framework/`, `specs/`, `tests/`, and `docs/`)
 
 ## Core Principles
 
