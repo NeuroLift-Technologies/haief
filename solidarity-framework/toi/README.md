@@ -22,7 +22,7 @@ To establish user-owned interaction standards so AI behavior is governed by decl
 - Versioned and auditable over time
 - Machine-readable for enforcement
 - Human-readable for user review
-- Revocable and updateable by the user
+- Revocable and updatable by the user
 
 ## Relationship to Other Components
 

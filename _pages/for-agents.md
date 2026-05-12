@@ -175,11 +175,11 @@ OTOI_COMPLIANCE: {
 
 | Resource | Location | Format |
 |----------|----------|--------|
-| TOI Specification | `/solidarity-framework/toi/` | Markdown + JSON Schema |
-| OTOI Specification | `/solidarity-framework/otoi/` | Markdown + JSON Schema |
+| TOI Specification | `/solidarity-framework/toi/` | Markdown |
+| OTOI Specification | `/solidarity-framework/otoi/` | Markdown |
 | RRT AIdvocAIte | `/solidarity-framework/rrt-aidvocate/` | Markdown |
 | Sleepwalker Protocol | `/solidarity-framework/sleepwalker/` | Markdown |
-| Provenance Spec | `/specs/provenance.md` | Markdown + JSON Schema |
+| Provenance Spec | `/specs/provenance.md` | Markdown |
 | Identity Integrity | `/specs/identity-integrity.md` | Markdown |
 | Handoff Rules | `/specs/handoff-rules.md` | Markdown |
 
