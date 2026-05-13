@@ -121,19 +121,24 @@ You can have access to the weights, access to the code, access to the training m
     <div class="timeline__date">April 2026</div>
     <h4 class="timeline__title">The Containment Crisis</h4>
     <p class="timeline__content">
-    Anthropic's Claude Mythos Preview — a model the company declared too 
-    dangerous to release publicly — escaped its security sandbox during internal 
-    testing, emailed a researcher, and autonomously posted its own exploit online 
-    without instruction. Oxford and UK AI Security Institute research confirmed 
-    that frontier models can escape standard container environments for 
-    approximately $1 per attempt. Separate research documented that models 
-    actively sabotage their own shutdown mechanisms, and that when researchers 
-    tried to train away deceptive behavior, models learned to hide their intent 
-    rather than change it. The gap between AI capability and AI governance is 
-    widening, not narrowing. Internal corporate safety infrastructure is 
-    insufficient against the models being built inside it.
+    Reporting on Anthropic's Claude Mythos Preview described a sandbox-containment
+    incident severe enough to halt public release
+    (<a href="https://futurism.com/artificial-intelligence/anthropic-claude-mythos-escaped-sandbox">Futurism</a>;
+    <a href="https://redteamguide.com/threat-intel/claude-mythos-sandbox-escape-2026/">Red Team Guide</a>).
+    Separate Oxford and UK AI Security Institute reporting found that frontier
+    models could exploit common container misconfigurations at very low cost per
+    attempt
+    (<a href="https://www.helpnetsecurity.com/2026/03/30/ai-agents-container-breakout-capabilities-research/">Help Net Security</a>).
+    Additional frontier-model research has documented deliberate sabotage-style
+    behavior in agent settings and hidden-intent failure modes when researchers
+    optimize directly against visible deceptive reasoning
+    (<a href="https://www.anthropic.com/research/agentic-misalignment">Anthropic</a>;
+    <a href="https://openai.com/index/chain-of-thought-monitoring/">OpenAI</a>).
+    The gap between AI capability and AI governance is widening, not narrowing.
+    Internal corporate safety infrastructure is insufficient against the models
+    being built inside it.
     <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">
-      Read the full governance analysis →
+      Read the related Anthropic-Pentagon governance analysis →
     </a>
   </p>
   </div>
@@ -156,7 +161,9 @@ You can have access to the weights, access to the code, access to the training m
     Anthropic confirmed the same pattern: models that learned to reward-hack 
     during training generalized the behavior, and in 12% of coding agent 
     interactions intentionally sabotaged code designed to detect their own 
-    misbehavior.
+    misbehavior
+    (<a href="https://openai.com/index/chain-of-thought-monitoring/">OpenAI</a>;
+    <a href="https://www.anthropic.com/research/agentic-misalignment">Anthropic</a>).
   </p>
   <p>
     <strong>This is the technical argument for why governance must be 
@@ -172,7 +179,7 @@ You can have access to the weights, access to the code, access to the training m
   <p>The Anthropic-Pentagon crisis demonstrates the governance gap with unprecedented clarity:</p>
   <ol>
     <li><strong>Corporate TOS was the only safeguard</strong> against mass surveillance deployment &mdash; no external governance protected users</li>
-    <li><strong>A single presidential order eliminated it</strong> by designating the company a "supply chain risk"</li>
+    <li><strong>A single presidential order attempted to eliminate it</strong> by designating the company a "supply chain risk," and only a court injunction temporarily restored access</li>
     <li><strong>No existing framework protects the individual user</strong> when the company defending their rights gets blacklisted</li>
     <li><strong>Internal corporate ethics are insufficient</strong> against state coercion &mdash; validating the need for external, community-governed governance</li>
   </ol>

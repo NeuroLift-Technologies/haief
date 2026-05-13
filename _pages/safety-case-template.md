@@ -239,8 +239,9 @@ Document each known failure mode:
   <h3 style="margin-top: 0;">Submit Your Safety Case</h3>
   <p>
     Complete safety cases can be submitted for community review via GitHub 
-    Discussions. Reviewed safety cases receive a community acknowledgment and 
-    are listed in the HAIEF compliance registry.
+    Discussions. Reviewed safety cases receive a community acknowledgment. A
+    public HAIEF compliance registry is planned and will be linked here once
+    published.
   </p>
   <div class="btn-group" style="justify-content: center; margin-top: var(--space-4);">
     <a href="{{ site.social.discussions }}" class="btn btn--primary">Submit for Review</a>
