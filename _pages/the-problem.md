@@ -138,7 +138,7 @@ You can have access to the weights, access to the code, access to the training m
     Internal corporate safety infrastructure is insufficient against the models
     being built inside it.
     <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">
-      Read the related Anthropic-Pentagon governance analysis →
+      Read the full Anthropic-Pentagon case study →
     </a>
   </p>
   </div>
