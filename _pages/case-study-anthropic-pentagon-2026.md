@@ -256,9 +256,17 @@ The crisis is ongoing. Here are the possible trajectories:
   </div>
 </div>
 
-<div class="callout callout--info">
-  <p class="callout__title">This section will be updated</p>
-  <p>As the crisis develops, this page will be updated with new events and analysis. <a href="{{ site.social.discussions }}">Join the discussion</a> to contribute your analysis.</p>
+<div class="callout callout--warning">
+  <p class="callout__title">March 2026 Update</p>
+  <p>
+    A federal court temporarily blocked the supply-chain-risk designation and 
+    federal-use ban in March 2026. The legal situation remains in flux. 
+    Regardless of outcome, the crisis exposed the structural governance 
+    failure: user protections that depend on a single company's willingness to 
+    hold the line — and that company's continued survival — are not durable 
+    governance. <a href="{{ site.social.discussions }}">Join the discussion</a> 
+    to contribute your analysis of ongoing developments.
+  </p>
 </div>
 
 ---
@@ -318,7 +326,7 @@ All claims on this page are sourced from primary reporting. This is governance a
 
 <div style="text-align: center; padding: var(--space-8) 0; font-size: var(--font-size-sm); color: var(--color-text-muted);">
   <p>This page is part of the <a href="{{ '/' | relative_url }}">HAIEF</a> project &mdash; the Human & AI ElevAItion Foundation.</p>
-  <p>Last updated: February 27, 2026. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+  <p>Last updated: May 12, 2026. Amended to reflect March 2026 federal court temporary injunction blocking the supply-chain-risk designation and federal-use ban. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
 </div>
 
   </div>
