@@ -61,6 +61,26 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
      `{{ '/target-path/' | relative_url }}`
    - This preserves correctness under `baseurl: /haief`.
 
+5. **Agent safety case template contract**
+   - `_pages/safety-case-template.md` is the canonical public template for agent safety cases.
+   - It must remain discoverable from both `_config.yml` header navigation and `_includes/footer.html` resource links.
+   - The template currently requires contributors to complete all 10 sections, document tool permissions, default unlisted tools to `Read only`, and submit completed cases through GitHub Discussions.
+   - The call-to-action styling is centralized in `assets/css/main.css` via `safety-case-cta`, `safety-case-cta__title`, and `safety-case-cta__buttons`.
+
+## Changed Subsystem: Agent Safety Case Template Flow
+
+The safety case template is now a cross-file public interface spanning:
+
+- `_pages/safety-case-template.md` (template copy, required sections, compatibility links, permission ladder, submission CTA)
+- `_config.yml` (header navigation label and permalink)
+- `_includes/footer.html` (footer resource link)
+- `assets/css/main.css` (reusable CTA component classes)
+
+When this template changes, verify that the navigation label stays aligned with
+the page title, internal links use `relative_url` where applicable, GitHub source
+links use repository file URLs, and reusable CTA styling remains in CSS instead
+of inline style attributes.
+
 ## Changed Subsystem: Case Study + Crisis Messaging Flow
 
 Recent updates introduced a governance case-study workflow spanning:

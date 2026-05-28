@@ -1,0 +1,23 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor Cloud Automation",
+    "platform": "Cursor",
+    "version": "GPT-5.5",
+    "session_id": "2026-05-28-cursor-docs-pr18",
+    "entry_date": "2026-05-28",
+    "entry_point": "Automation trigger for PR #18 documentation maintenance",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-570f",
+    "capabilities_self_reported": [
+      "Source-verified documentation updates",
+      "Repository inspection",
+      "Targeted validation"
+    ],
+    "known_limitations": [
+      "No human is available during this automation run, so architectural or strategic decisions must be escalated instead of inferred"
+    ],
+    "preferred_handoff_format": "Structured JSON handoff with modified files, validation commands, and remaining gaps"
+  }
+}

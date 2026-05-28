@@ -51,6 +51,28 @@ Use this checklist when adding event-based governance documentation:
 6. **Document sources**
    - Add a source section in the case-study page and keep link text specific to each claim.
 
+## Runbook: Maintaining the Agent Safety Case Template
+
+Use this checklist when updating `_pages/safety-case-template.md`:
+
+1. **Preserve the template contract**
+   - Keep the instruction to complete all 10 sections.
+   - Keep the section sequence from declared purpose through escalation and shutdown unless Joshua approves a framework change.
+2. **Keep compatibility links source-accurate**
+   - Use `{{ '/solidarity-framework/' | relative_url }}` for the public framework page.
+   - Use repository `blob/main/...` links for specification files such as Provenance, Identity Integrity, and Handoff Rules.
+3. **Maintain the tool permission ladder**
+   - Keep permission values explicit: `Read`, `Suggest`, `Draft`, `Act with confirmation`, and `Autonomous`.
+   - Keep the default for unlisted tools as `Read only`.
+4. **Verify discoverability**
+   - Header navigation in `_config.yml` should use the public label `Safety Case Template`.
+   - Footer resources in `_includes/footer.html` should link to `/safety-case-template/`.
+5. **Keep styling reusable**
+   - Use the `safety-case-cta`, `safety-case-cta__title`, and `safety-case-cta__buttons` classes from `assets/css/main.css`.
+   - Avoid reintroducing repeated inline styles for the submission CTA.
+6. **Avoid overstating publication status**
+   - The page may say a public compliance registry is planned, but do not describe it as live until the registry exists.
+
 ## Operational Pitfalls and Safeguards
 
 - **Pitfall:** Publishing a page without nav integration.  
@@ -61,6 +83,8 @@ Use this checklist when adding event-based governance documentation:
   **Safeguard:** Verify wording against existing framework documents before merge.
 - **Pitfall:** Style sprawl from repeated inline formatting.  
   **Safeguard:** Promote repeated styles to named CSS classes in `assets/css/main.css`.
+- **Pitfall:** Safety case template drift after review edits.  
+  **Safeguard:** Re-check the 10-section structure, permission ladder formatting, nav/footer labels, and CTA classes together.
 
 ## Contribution Guidelines
 
