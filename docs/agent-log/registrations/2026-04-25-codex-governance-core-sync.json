@@ -1,0 +1,24 @@
+{
+  "agent_registration": {
+    "agent_name": "Codex",
+    "platform": "codex-cli",
+    "version": "GPT-5",
+    "session_id": "2026-04-25-governance-core-sync",
+    "entry_date": "2026-04-25",
+    "entry_point": "Governance starter bootstrap and governance core sync across cloned repositories.",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "haief",
+    "working_branch": "workspace",
+    "capabilities_self_reported": [
+      "Governance bootstrap automation",
+      "Repo compliance auditing",
+      "Cross-repo governance synchronization"
+    ],
+    "known_limitations": [
+      "No architectural decisions without Joshua approval",
+      "No OTOI amendment authority"
+    ],
+    "preferred_handoff_format": "structured JSON plus concise summary"
+  }
+}

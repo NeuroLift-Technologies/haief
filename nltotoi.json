@@ -1,0 +1,56 @@
+{
+  "nltotoi_version": "1.0.0",
+  "document_id": "ORG-DEV-OTOI-1.0.0",
+  "repository": {
+    "name": "NeuroLift-Technologies/haief",
+    "purpose": "Repository-specific coding agent governance for haief",
+    "mode": "production",
+    "visibility": "repository-local",
+    "audience": "internal-coding-agents"
+  },
+  "canonical_contract": "NLT-DEV-OTOI.md",
+  "agents_gateway": "AGENTS.md",
+  "discovery": {
+    "file_index": ".nltotoi/index/governance-files.md",
+    "validation_script": ".nltotoi/scripts/validate-governance.sh",
+    "contracts_namespace": ".nltotoi/contracts/README.md",
+    "agents_directory": "agents/",
+    "vscode_agents_directory": ".github/agents/"
+  },
+  "required_files": [
+    "NLT-DEV-OTOI.md",
+    "AGENTS.md",
+    "nltotoi.json",
+    ".nltotoi/README.md",
+    ".nltotoi/index/governance-files.md",
+    ".nltotoi/contracts/README.md",
+    ".nltotoi/scripts/validate-governance.sh",
+    "templates/agent-registration.json",
+    "templates/handoff-record.json",
+    "templates/escalation.md",
+    "templates/intent-log.md",
+    "ISSUE_TEMPLATE/agent-escalation.md",
+    "ISSUE_TEMPLATE/governance-proposal.md",
+    "PULL_REQUEST_TEMPLATE/agent-contribution.md",
+    "workflows/validate-governance.yml",
+    "SOPs/new-agent-onboarding.md",
+    "SOPs/repo-governance-setup.md",
+    "SOPs/incident-response.md"
+  ],
+  "authority": {
+    "final_decision_maker": "Joshua W. Dorsey, Sr.",
+    "escalation_target": "info@neuroliftsolutions.com",
+    "amendment_process": "governance-proposal GitHub issue → Joshua review → version bump"
+  },
+  "ethical_framework": {
+    "solidarity_framework": true,
+    "haief": true,
+    "haief_url": "https://elevaitionfoundation.org",
+    "public_governance": "https://github.com/NeuroLift-Technologies/haief"
+  },
+  "metadata": {
+    "created": "2026-03-31",
+    "version": "1.0.0",
+    "last_updated": "2026-04-04"
+  }
+}

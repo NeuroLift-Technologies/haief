@@ -1,0 +1,53 @@
+{
+  "handoff_record": {
+    "session_id": "2026-04-25-governance-core-sync",
+    "agent_name": "Codex",
+    "date": "2026-04-25",
+    "repo": "haief",
+    "branch": "workspace",
+    "work_completed": [
+      "Added missing baseline governance files where required.",
+      "Synchronized org governance core from haief into the repository.",
+      "Added the NLT Governance Steward custom agent.",
+      "Added the validate-governance workflow."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Repo-specific README.md and CLAUDE.md were preserved where possible.",
+      "Governance core files were synchronized to align the repository with org standards."
+    ],
+    "decisions_pending": [
+      "Whether this repository should later receive stricter normalization beyond governance-core sync."
+    ],
+    "escalations": [],
+    "next_agent_notes": "Governance sync completed for this repository. If future edits occur here, update docs/agent-log again in the same repository.",
+    "files_modified": [
+      "AGENTS.md",
+      "NLT-DEV-OTOI.md",
+      "nltotoi.json",
+      "file-structure.md",
+      "links.md",
+      "mcp-config.yaml",
+      ".nltotoi/",
+      "templates/",
+      "SOPs/",
+      "ISSUE_TEMPLATE/",
+      "PULL_REQUEST_TEMPLATE/",
+      ".github/workflows/validate-governance.yml",
+      "agents/nlt-governance-steward.md",
+      "docs/agent-log/registrations/",
+      "2026-04-25",
+      "-codex-governance-core-sync.json",
+      "docs/agent-log/handoffs/",
+      "2026-04-25",
+      "-codex-governance-core-sync-handoff.json"
+    ],
+    "tests_run": [
+      "bootstrap-nlt-governance.ps1",
+      "audit-nlt-governance.ps1",
+      "sync-nlt-governance-core.ps1"
+    ],
+    "tests_passing": true
+  }
+}

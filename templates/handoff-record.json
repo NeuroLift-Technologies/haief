@@ -1,0 +1,39 @@
+{
+  "handoff_record": {
+    "session_id":         "[Unique session identifier]",
+    "agent_name":         "[Agent name / platform]",
+    "date":               "[ISO 8601 date, e.g. 2026-03-31]",
+    "otoi_version":       "ORG-DEV-OTOI-1.0.0",
+    "repo":               "[Repository worked in, e.g. NeuroLift-Technologies/some-repo]",
+    "branch":             "[Branch name]",
+    "work_completed": [
+      "[Describe completed work item 1]",
+      "[Describe completed work item 2]"
+    ],
+    "work_in_progress": [
+      "[Describe in-progress work item 1]"
+    ],
+    "blockers": [
+      "[Describe any blockers or unresolved issues]"
+    ],
+    "decisions_made": [
+      "[Decision made and rationale]"
+    ],
+    "decisions_pending": [
+      "[Decision needed and who needs to make it]"
+    ],
+    "escalations": [
+      "[Any escalations raised and their status]"
+    ],
+    "next_agent_notes": "[What the next agent needs to know to pick up this work]",
+    "files_modified": [
+      "[path/to/file1.ext]",
+      "[path/to/file2.ext]"
+    ],
+    "tests_run": [
+      "[Describe tests run]"
+    ],
+    "tests_passing": true,
+    "pr_url": "[URL of the pull request, if applicable]"
+  }
+}
