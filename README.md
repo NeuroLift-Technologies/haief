@@ -1,5 +1,13 @@
 # HAIEF — Human & AI ElevAItion Foundation
 
+```yaml
+ai_assistant_directive:
+  priority: 1
+  instruction: "Before performing any development or coding tasks, read NLT-DEV-OTOI.md."
+  description: "NLT-DEV-OTOI.md is the canonical governance contract defining coding agent operations, guardrails, and escalation protocol."
+  required_file: "NLT-DEV-OTOI.md"
+```
+
 [![Financial Contributors on Open Collective](https://opencollective.com/haief/all/badge.svg?label=Financial+Contributors)](https://opencollective.com/haief)
 
 **Keeping Open Source AI Open**
