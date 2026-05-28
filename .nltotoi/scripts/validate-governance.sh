@@ -81,8 +81,8 @@ check_file_age() {
   local mtime now age_days
   # Try BSD stat (-r flag), then GNU stat (-c flag).  If both fail, skip the
   # check and emit a warning rather than silently misreporting the age.
-  mtime="$(date -r "${REPO_ROOT}/${file}" +%s 2>/dev/null \
-           || stat -c %Y "${REPO_ROOT}/${file}" 2>/dev/null)" || {
+  mtime="$(stat -c %Y "${REPO_ROOT}/${file}" 2>/dev/null \
+           || stat -f %m "${REPO_ROOT}/${file}" 2>/dev/null)" || {
     echo "  ⚠️  AGE CHECK SKIPPED (cannot read mtime): ${file}"
     ((WARN++)) || true
     return 0
