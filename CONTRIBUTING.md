@@ -114,6 +114,25 @@ Use this workflow when adding/updating public pages:
 5. **Verify the site builds**
    - Run `bundle exec jekyll build` before opening a docs PR.
 
+### Public Goals and Safety Case Updates
+
+Use this additional checklist when editing `_pages/safety-case-template.md`,
+public-goal language, or governance crisis timelines:
+
+1. **Keep claims traceable**
+   - Source factual event claims on the page where they appear.
+   - Separate observed events from HAIEF analysis.
+2. **Preserve the safety case contract**
+   - The public template currently has ten required sections.
+   - Update `docs/overview.md` and `docs/governance.md` if the section list, review path, or linked specifications change.
+3. **Cross-link the workflow**
+   - Public goals belong in narrative pages such as `_pages/who-we-are.md`.
+   - Evidence and constraints belong in `_pages/safety-case-template.md`.
+   - Case-study timelines belong in the relevant case-study or problem page.
+4. **Avoid premature compliance language**
+   - Do not claim certification, registration, or review unless that process exists publicly.
+   - Use "submit for community review" only when linking to the configured Discussions URL.
+
 ### Troubleshooting Common Pitfalls
 
 - **New page not reachable from navigation**

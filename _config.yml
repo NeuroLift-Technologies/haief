@@ -76,7 +76,11 @@ nav:
     url: "/take-action/"
   - title: "Q&A"
     url: "/questions-and-answers/"
+<<<<<<< HEAD
   - title: "Safety Case"
+=======
+  - title: "Safety Case Template"
+>>>>>>> origin/main
     url: "/safety-case-template/"
   - title: "Fact-Check"
     url: "/submit-fact-check/"

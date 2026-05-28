@@ -1,0 +1,180 @@
+# MCP Server Configuration — NeuroLift Technologies
+#
+# This file configures access to MCP (Model Context Protocol) servers used
+# across NeuroLift Technologies. Copy or reference this file in your AI tool's
+# MCP host configuration.
+#
+# Sources:
+#   GitHub MCP Server:       https://github.com/github/github-mcp-server
+#   Cloudflare MCP Servers:  https://github.com/cloudflare/mcp-server-cloudflare
+#
+# Credentials are loaded from environment variables. Copy .env.example to .env
+# and fill in your actual tokens. Never commit .env to version control.
+#
+# Transport note: all servers below use the streamable-http transport (/mcp).
+# For MCP clients that do NOT support native remote/HTTP servers, see the
+# "mcp-remote fallback" section at the bottom of this file.
+
+mcpServers:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # GitHub MCP Server
+  # Remote, HTTP transport — https://github.com/github/github-mcp-server
+  #
+  # Authentication options:
+  #   OAuth  — omit the headers block; the client handles the OAuth flow.
+  #   PAT    — set GITHUB_PERSONAL_ACCESS_TOKEN in .env (recommended for CI).
+  #
+  # Create a PAT at: https://github.com/settings/personal-access-tokens/new
+  # ───────────────────────────────────────────────────────────────────────────
+  github:
+    type: http
+    url: https://api.githubcopilot.com/mcp/
+    headers:
+      Authorization: "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # Cloudflare MCP Servers
+  # Remote, HTTP transport — https://github.com/cloudflare/mcp-server-cloudflare
+  #
+  # Most servers require a Cloudflare API token. Create one at:
+  #   https://dash.cloudflare.com/profile/api-tokens
+  # Grant only the scopes needed for the servers you enable.
+  #
+  # The Documentation and Radar servers are publicly accessible without auth;
+  # all others require CLOUDFLARE_API_TOKEN.
+  # ───────────────────────────────────────────────────────────────────────────
+
+  # Cloudflare Documentation — up-to-date reference on Cloudflare products
+  # Public — no auth required
+  cloudflare-docs:
+    type: http
+    url: https://docs.mcp.cloudflare.com/mcp
+
+  # Workers Bindings — build Workers apps with storage, AI, and compute
+  cloudflare-bindings:
+    type: http
+    url: https://bindings.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Workers Builds — insights and management for Cloudflare Workers Builds
+  cloudflare-builds:
+    type: http
+    url: https://builds.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Observability — debug application logs and analytics
+  cloudflare-observability:
+    type: http
+    url: https://observability.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Radar — global Internet traffic insights, trends, and URL scans
+  # Public — no auth required for most endpoints
+  cloudflare-radar:
+    type: http
+    url: https://radar.mcp.cloudflare.com/mcp
+
+  # Container — spin up a sandbox development environment
+  cloudflare-containers:
+    type: http
+    url: https://containers.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Browser Rendering — fetch web pages, convert to markdown, take screenshots
+  cloudflare-browser:
+    type: http
+    url: https://browser.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Logpush — quick summaries for Logpush job health
+  cloudflare-logpush:
+    type: http
+    url: https://logs.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # AI Gateway — search logs, get details about prompts and responses
+  cloudflare-ai-gateway:
+    type: http
+    url: https://ai-gateway.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # AutoRAG — list and search documents on your AutoRAGs
+  cloudflare-autorag:
+    type: http
+    url: https://autorag.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Audit Logs — query audit logs and generate reports
+  cloudflare-auditlogs:
+    type: http
+    url: https://auditlogs.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # DNS Analytics — optimize DNS performance and debug issues
+  cloudflare-dns-analytics:
+    type: http
+    url: https://dns-analytics.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Digital Experience Monitoring — insights on critical applications for your org
+  cloudflare-dex:
+    type: http
+    url: https://dex.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # Cloudflare One CASB — identify security misconfigurations for SaaS applications
+  cloudflare-casb:
+    type: http
+    url: https://casb.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+  # GraphQL — analytics data using Cloudflare's GraphQL API
+  cloudflare-graphql:
+    type: http
+    url: https://graphql.mcp.cloudflare.com/mcp
+    headers:
+      Authorization: "Bearer ${CLOUDFLARE_API_TOKEN}"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# mcp-remote fallback (for clients without native remote MCP support)
+#
+# If your MCP client does not support HTTP/remote servers natively (e.g. older
+# Claude Desktop, some CLI tools), use the mcp-remote npm package to bridge
+# the connection. Convert the servers above to the format below and add them
+# to your client's mcpServers config (JSON format required by most clients):
+#
+# {
+#   "mcpServers": {
+#     "github": {
+#       "command": "npx",
+#       "args": ["mcp-remote", "https://api.githubcopilot.com/mcp/",
+#                "--header", "Authorization: Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"]
+#     },
+#     "cloudflare-docs": {
+#       "command": "npx",
+#       "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/mcp"]
+#     },
+#     "cloudflare-observability": {
+#       "command": "npx",
+#       "args": ["mcp-remote", "https://observability.mcp.cloudflare.com/mcp",
+#                "--header", "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}"]
+#     }
+#   }
+# }
+#
+# Install mcp-remote: npm install -g mcp-remote
+# Docs: https://www.npmjs.com/package/mcp-remote
+# ─────────────────────────────────────────────────────────────────────────────
