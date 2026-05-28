@@ -1,0 +1,45 @@
+{
+  "handoff_record": {
+    "session_id": "2026-05-28-cursor-docs-pr18",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-05-28",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-570f",
+    "work_completed": [
+      "Registered the documentation automation session and resolved the active thread.",
+      "Reviewed merged PR #18 source changes across _config.yml, _pages/safety-case-template.md, _pages/the-problem.md, and assets/css/main.css.",
+      "Updated docs/overview.md with the agent safety case template as a stable public interface and cross-file subsystem.",
+      "Updated docs/governance.md with a maintenance runbook for the safety case template and a drift-prevention pitfall."
+    ],
+    "work_in_progress": [],
+    "blockers": [
+      "Jekyll build could not run in this cloud environment because ruby, gem, and bundle are not installed."
+    ],
+    "decisions_made": [
+      "Updated existing documentation instead of creating a new page to keep the docs-only change focused.",
+      "Scoped validation to origin/main..HEAD and the current run's commits because local main was behind origin/main."
+    ],
+    "decisions_pending": [
+      "Human review should confirm the safety-case runbook reflects project expectations before merge."
+    ],
+    "escalations": [],
+    "next_agent_notes": "The documentation now covers the source-verified safety-case template contract: 10-section completion requirement, tool permission ladder, default Read only permission, nav/footer discoverability, source-accurate links, and reusable CTA classes.",
+    "files_modified": [
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-05-28-cursor-docs-pr18.json",
+      "docs/agent-log/handoffs/2026-05-28-cursor-docs-pr18-handoff.json",
+      "docs/governance.md",
+      "docs/overview.md"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "git diff --check HEAD~2..HEAD",
+      "git diff --check origin/main..HEAD",
+      "python3 static safety-case documentation contract check",
+      "bundle exec jekyll build (attempted; blocked by missing Ruby/Bundler toolchain)"
+    ],
+    "tests_passing": true,
+    "pr_url": "Pending PR creation by automation"
+  }
+}
