@@ -1,0 +1,26 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor Cloud Automation",
+    "platform": "Cursor Cloud",
+    "version": "GPT-5.5",
+    "session_id": "2026-05-28-cursor-docs-automation-pr13",
+    "entry_date": "2026-05-28",
+    "entry_point": "Automation trigger for merged PR #13 governance compliance baseline",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-a276",
+    "capabilities_self_reported": [
+      "Source-verified documentation updates",
+      "Repository documentation gap analysis",
+      "GitHub PR context inspection",
+      "Governance workflow documentation"
+    ],
+    "known_limitations": [
+      "No production deployment authority",
+      "No authority to change OTOI governance contracts",
+      "No authority to decide unresolved architecture, deployment, UX, or strategic questions"
+    ],
+    "preferred_handoff_format": "Structured JSON handoff with files modified, verification run, and open gaps"
+  }
+}
