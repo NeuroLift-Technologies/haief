@@ -110,10 +110,10 @@ You can have access to the weights, access to the code, access to the training m
   On February 27, 2026, the U.S. government moved to blacklist Anthropic after 
   a dispute over AI use restrictions involving mass surveillance and autonomous 
   weapons. A federal court later temporarily blocked the supply-chain-risk 
-  designation and federal-use ban — but the crisis still exposed the central 
+  designation and federal-use ban — but the attempted action still exposed the central 
   governance failure: when corporate Terms of Service and state power collide, 
   the user has no independent governance layer. 
-  <strong>The Third Pillar was absent.</strong>
+  <strong>Even with the court's temporary intervention, the Third Pillar was still missing.</strong>
 </p>
   </div>
 
