@@ -53,7 +53,7 @@ This repo hosts the public governance layer of the HAIEF ecosystem:
 - Identity integrity rules  
 - Multi‑agent handoff formats  
 - Safety validation harnesses  
-- Agent safety case template  
+- Agent safety case template for discussion-based community review  
 - Public test suites  
 - Documentation and reference implementations  
 

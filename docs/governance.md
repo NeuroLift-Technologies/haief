@@ -57,6 +57,20 @@ Use this checklist when changing public-goal language or the agent safety case t
    - Examples should name required evidence types, such as provenance logs, identity declarations, handoff records, red-team results, escalation triggers, and shutdown behavior.
    - Constraints should state default behavior for absent TOI, unsupported handoffs, unlisted tools, memory retention, and crisis escalation.
 
+Current public workflow:
+
+- Authors copy `_pages/safety-case-template.md`, complete all ten sections, and link the completed safety case from the agent repository README.
+- Submission currently means opening a GitHub Discussions thread through `site.social.discussions`.
+- Discussion feedback or acknowledgment is not certification, registration, or a HAIEF compliance seal.
+- A registry can only be documented as active after the public review process and registry location are defined.
+
+Verification checklist:
+
+- Confirm `_config.yml` and `_includes/footer.html` both expose `/safety-case-template/`.
+- Count ten `## Section` headings in `_pages/safety-case-template.md`.
+- Check that review links use `site.social.discussions` and specification links use `site.social.github`.
+- Run `bundle exec jekyll build` when Ruby dependencies are available; otherwise perform the static checks above before opening a docs PR.
+
 ## Runbook: Publishing a Governance Case Study
 
 Use this checklist when adding event-based governance documentation:

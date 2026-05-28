@@ -132,6 +132,11 @@ public-goal language, or governance crisis timelines:
 4. **Avoid premature compliance language**
    - Do not claim certification, registration, or review unless that process exists publicly.
    - Use "submit for community review" only when linking to the configured Discussions URL.
+5. **Verify the public interface**
+   - `_config.yml` should expose `/safety-case-template/` in `nav`.
+   - `_includes/footer.html` should link to the same page with `relative_url`.
+   - `_pages/safety-case-template.md` should keep exactly ten `## Section` headings.
+   - If `bundle exec jekyll build` is unavailable, run these static checks before opening a docs PR.
 
 ### Troubleshooting Common Pitfalls
 

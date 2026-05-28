@@ -63,9 +63,10 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 
 5. **Agent safety case template contract**
    - `_pages/safety-case-template.md` is the canonical public template for documenting an agent safety case.
-   - The template is exposed as `Safety Case` in `_config.yml` navigation and as `Safety Case Template` in the footer resources list.
+   - The template is exposed as `Safety Case Template` in `_config.yml` navigation and in the footer resources list.
    - The page currently contains ten numbered sections. If a section is renamed, added, or removed, update governance runbooks and contributor guidance in the same change.
    - The page depends on `site.social.discussions` for review submission links and `site.social.github` for framework/specification links.
+   - The current public review path is discussion-based. Do not document certification, registration, or compliance status until the community review process and registry are publicly defined.
 
 ## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow
 
@@ -90,6 +91,14 @@ Maintenance constraints:
 - Use `{{ '/path/' | relative_url }}` for internal page links so GitHub Pages `baseurl: /haief` remains valid.
 - When the safety case template changes, verify navigation in `_config.yml`, footer discovery in `_includes/footer.html`, and contributor guidance in `CONTRIBUTING.md`.
 - Reuse existing design primitives (`callout`, `grid`, `card`, `timeline`) before adding new CSS classes.
+
+Minimum verification for this subsystem:
+
+1. `_pages/safety-case-template.md` still has front matter with `layout`, `title`, `description`, and `permalink: /safety-case-template/`.
+2. `_config.yml` includes a `nav` entry whose URL is `/safety-case-template/`.
+3. `_includes/footer.html` links to `{{ '/safety-case-template/' | relative_url }}`.
+4. The template has exactly ten `## Section` headings.
+5. Submission language points to `site.social.discussions` and avoids certification or registry claims unless those processes exist publicly.
 
 This means public-governance additions are now a **cross-file subsystem**, not a single page change.
 

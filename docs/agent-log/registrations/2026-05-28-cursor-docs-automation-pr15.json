@@ -1,0 +1,25 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor Cloud Automation",
+    "platform": "Cursor",
+    "version": "GPT-5.5",
+    "session_id": "2026-05-28-cursor-docs-automation-pr15",
+    "entry_date": "2026-05-28",
+    "entry_point": "Automation trigger for closed PR #15: docs: document safety case governance workflow",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-76ea",
+    "capabilities_self_reported": [
+      "Documentation gap analysis",
+      "Source-verified repository inspection",
+      "Focused Markdown documentation updates",
+      "Git workflow execution"
+    ],
+    "known_limitations": [
+      "Cannot obtain live human clarification during automation runs",
+      "Will not make architectural, deployment, or external-service decisions"
+    ],
+    "preferred_handoff_format": "Structured JSON handoff with files modified, checks run, and remaining gaps"
+  }
+}
