@@ -1,7 +1,7 @@
 # Commit Message Template
 
-> Use this format for **every commit** made in any NeuroLift Technologies repository.  
-> Required by `agent-commit-format.yml` CI workflow and OTOI Section 4.2.
+> Use this format for **every commit** made by agents in any NeuroLift Technologies repository.  
+> Required by OTOI Section 4.2 and the agent contribution checklist.
 
 ---
 
@@ -63,7 +63,9 @@
 
 ## SOP Reference
 
-Commit format is defined in **SOP-NLT-001 Step 7** and validated automatically on every PR by `.github/workflows/agent-commit-format.yml`.
+Commit format is defined in **SOP-NLT-001 Step 7**. This repo currently documents the
+format and validates the governance scaffold with `.github/workflows/validate-governance.yml`;
+do not cite a commit-format workflow as active unless that workflow exists in the repo.
 
 ---
 

@@ -33,6 +33,23 @@ It is public infrastructure for the future of human–AI interaction.
 
 This repo hosts the public governance layer of the HAIEF ecosystem:
 
+### Engineering Governance Scaffold
+
+Coding agents and automation must start from the repo-local governance files added by the
+NLT scaffold:
+
+- `NLT-DEV-OTOI.md` — canonical agent contract, authority model, guardrails, escalation format, and handoff protocol.
+- `AGENTS.md` and `CLAUDE.md` — session entry points that tell agents what to read before work begins.
+- `nltotoi.json` and `.nltotoi/` — machine-readable discovery plus validation tooling for governance files.
+- `templates/`, `ISSUE_TEMPLATE/`, `PULL_REQUEST_TEMPLATE/`, and `SOPs/` — reusable formats for registrations, handoffs, escalations, PR review, onboarding, repo setup, and incident response.
+- `.github/workflows/validate-governance.yml` — CI wrapper that runs `bash .nltotoi/scripts/validate-governance.sh` on pushes and pull requests.
+
+Run the governance validator locally before changing governance files:
+
+```bash
+bash .nltotoi/scripts/validate-governance.sh
+```
+
 ### Core Frameworks
 
 - **TOI — Terms of Interaction**  
@@ -81,6 +98,12 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 ## 🗂️ Repository Structure
 
 ```
+/NLT-DEV-OTOI.md
+/AGENTS.md
+/CLAUDE.md
+/nltotoi.json
+/file-structure.md
+
 /frameworks
     /toi
     /otoi
@@ -96,6 +119,9 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
     overview.md
     governance.md
     emotional-continuity.md
+    active-threads.md
+    agent-log/
+    escalations/
 
 /tests
     safety-suite/
@@ -106,21 +132,60 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
     proposals/
     discussions/
 
+/SOPs
+    new-agent-onboarding.md
+    repo-governance-setup.md
+    incident-response.md
+
+/.nltotoi
+    README.md
+    index/governance-files.md
+    contracts/README.md
+    proposals/validation-roadmap.md
+    scripts/validate-governance.sh
+
+/.github/workflows
+    validate-governance.yml
+
+/ISSUE_TEMPLATE
+    agent-escalation.md
+    governance-proposal.md
+
+/PULL_REQUEST_TEMPLATE
+    agent-contribution.md
+
+/agents
+    nlt-governance-steward.md
+
+/templates
+    agent-registration.json
+    handoff-record.json
+    escalation.md
+    intent-log.md
+    commit-message.md
+
 /internal  (gitignored)
     charter/
     agent-contributions/
 ```
 
-### 🔒 About the /internal Directory
+### 🔒 About Agent Coordination Records and /internal
 
-The charter and agent contribution logs for AI agents assisting with the build will live in `/internal/`, which is intentionally gitignored to preserve:
+Current repo-local agent coordination records live in tracked governance paths:
+
+- `docs/active-threads.md` — current and resolved work threads.
+- `docs/agent-log/registrations/` — one registration per agent session.
+- `docs/agent-log/handoffs/` — session handoffs for continuity.
+- `docs/escalations/` — escalation records when guardrails require human review.
+
+If a future workflow needs non-public experiments or sensitive coordination notes, keep them under `/internal/`, which is intentionally gitignored to preserve:
 
 - provenance integrity  
 - agent identity boundaries  
 - safe experimentation  
 - non‑public coordination  
 
-This ensures that public standards remain transparent while internal agent orchestration remains controlled.
+Do not store credentials, tokens, or secrets in either tracked documentation or `/internal/`.
 
 ---
 

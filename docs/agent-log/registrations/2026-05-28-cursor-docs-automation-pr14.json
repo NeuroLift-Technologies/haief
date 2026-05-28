@@ -1,0 +1,24 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor",
+    "platform": "Cursor Cloud Automation",
+    "version": "GPT-5.5",
+    "session_id": "cursor-docs-automation-pr14-2026-05-28",
+    "entry_date": "2026-05-28",
+    "entry_point": "Automation trigger for merged PR #14: feat: add NLT governance scaffold",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-b774",
+    "capabilities_self_reported": [
+      "source-verified documentation updates",
+      "governance scaffold review",
+      "git-based PR documentation automation"
+    ],
+    "known_limitations": [
+      "no human reviewer available during automation run",
+      "no production deployment authority"
+    ],
+    "preferred_handoff_format": "structured JSON handoff plus concise PR summary"
+  }
+}

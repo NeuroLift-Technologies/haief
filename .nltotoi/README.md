@@ -44,7 +44,29 @@ Run governance validation:
 bash .nltotoi/scripts/validate-governance.sh
 ```
 
-This script checks that all required governance files exist and contain expected content markers.
+The same command runs in `.github/workflows/validate-governance.yml` on `push`
+and `pull_request`.
+
+### What the Validator Checks
+
+- Required governance files exist, including the root contract, gateway, manifest,
+  templates, SOPs, and `.github/workflows/validate-governance.yml`.
+- `NLT-DEV-OTOI.md` contains the document ID, authority marker, Solidarity
+  Framework reference, and HAIEF reference.
+- `AGENTS.md` contains the canonical contract path and document ID.
+- `nltotoi.json` contains the repository name, document ID, and canonical contract path.
+
+### Troubleshooting
+
+| Symptom | Check |
+|---|---|
+| `MISSING` for a required file | Confirm the file exists at the exact path listed in `.nltotoi/scripts/validate-governance.sh`. |
+| `CONTENT MISSING` for a marker | Verify the expected phrase still appears in the file; do not rewrite `NLT-DEV-OTOI.md` without the formal amendment process. |
+| CI passes locally but not on GitHub | Confirm the branch includes `.github/workflows/validate-governance.yml` and that the script is run from the repository root. |
+| A new governance file is not validated | Update the script, `nltotoi.json`, `.nltotoi/index/governance-files.md`, and `file-structure.md` together. |
+
+The script accepts `--strict`, but the currently active checks are existence and content
+checks that fail directly when unmet.
 
 ---
 

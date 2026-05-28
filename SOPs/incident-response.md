@@ -161,48 +161,22 @@ See `SOPs/new-agent-onboarding.md` for the full onboarding checklist.
 
 ### Automated Gates — Credential Exposure
 
-Two complementary automated controls protect against committed credentials:
+As of the PR #14 governance scaffold, this repo tracks one governance workflow:
+`.github/workflows/validate-governance.yml`. It does **not** currently track custom
+credential-scanning workflows or a local secrets-scanner hook template.
 
-| Control | File | When it runs | Action |
-|---|---|---|---|
-| **PR gate (preventive)** | `.github/workflows/secret-scan-pr.yml` | On every pull request targeting `main` or `release/**` | Fails the required status check — blocks merge |
-| **Push detector (reactive)** | `.github/workflows/incident-detection.yml` | On every push to any branch | Opens a GitHub incident issue |
+Do not claim a custom PR gate or push detector is active unless the workflow file exists
+under `.github/workflows/` and has been reviewed. If custom credential scanning is needed,
+propose it through the governance-proposal process and escalate for Joshua W. Dorsey, Sr.'s
+approval before treating it as an operational control.
 
-#### Enable the PR Gate as a Required Status Check
+#### Defense-in-Depth Controls Available Now
 
-To ensure `secret-scan-pr.yml` blocks merges, set it as a required status check on `main`:
-
-1. Go to **Settings → Branches → Branch protection rules → `main`**
-2. Enable **"Require status checks to pass before merging"**
-3. Search for and add: **`Scan PR for Credential Exposure (SOP-NLT-003)`**
-4. Enable **"Require branches to be up to date before merging"**
-5. Enable **"Do not allow bypassing the above settings"** to prevent force-pushes
-
-Once configured, no PR containing detected credential patterns can be merged.
-
-#### Pre-Commit Scanning (Local Defense-in-Depth)
-
-Install the secrets scanner hook from `agents-templates/hooks/secrets-scanner/` in this
-repository (this template already exists inside `haief`). This catches secrets before
-they are ever committed:
-
-```bash
-# Run from the root of the .github-repository
-cp -r agents-templates/hooks/secrets-scanner .github/hooks/
-chmod +x .github/hooks/secrets-scanner/scan-secrets.sh
-```
-
-Configure Copilot to run the hook in block mode at session end:
-
-```json
-{
-  "event": "sessionEnd",
-  "command": "bash .github/hooks/secrets-scanner/scan-secrets.sh",
-  "env": { "SCAN_MODE": "block", "SCAN_SCOPE": "staged" }
-}
-```
-
-See `agents-templates/hooks/secrets-scanner/README.md` for full configuration options.
+1. Review diffs for credentials before committing or opening a PR.
+2. Keep secrets out of tracked files and out of `/internal/`.
+3. Enable GitHub native secret scanning and push protection where the repository settings
+   and plan support them.
+4. Rotate any exposed credential immediately, even if the exposure was brief.
 
 #### GitHub Native Secret Scanning
 
