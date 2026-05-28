@@ -624,6 +624,20 @@ pre code {
   margin-bottom: 0;
 }
 
+.safety-case-cta {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.safety-case-cta__title {
+  margin-top: 0;
+}
+
+.safety-case-cta__buttons {
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
 /* Timeline */
 .timeline {
   position: relative;

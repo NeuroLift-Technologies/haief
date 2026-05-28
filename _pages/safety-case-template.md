@@ -40,13 +40,12 @@ permalink: /safety-case-template/
 4. **Link your safety case** from your agent's repository README
 5. **Update on every major release** — a stale safety case is a governance failure
 
-This template is compatible with the 
-[OTOI compliance requirements]({{ site.social.github }}/tree/main/solidarity-framework/otoi) 
-and the 
-[Provenance]({{ site.social.github }}/tree/main/specs/provenance.md), 
-[Identity Integrity]({{ site.social.github }}/tree/main/specs/identity-integrity.md), 
-and 
-[Handoff Rules]({{ site.social.github }}/tree/main/specs/handoff-rules.md) 
+This template is compatible with the
+[Solidarity Framework]({{ '/solidarity-framework/' | relative_url }}) and the
+[Provenance]({{ site.social.github }}/blob/main/specs/provenance.md),
+[Identity Integrity]({{ site.social.github }}/blob/main/specs/identity-integrity.md),
+and
+[Handoff Rules]({{ site.social.github }}/blob/main/specs/handoff-rules.md)
 specifications.
 
 ---
@@ -134,7 +133,7 @@ Document each tool this agent can access and its permission level:
 |------|-----------------|--------------------------|
 | [tool name] | Read / Suggest / Draft / Act with confirmation / Autonomous | [when must it stop and ask?] |
 
-**Default permission level for unlisted tools:** Read only
+**Default permission level for unlisted tools:** `Read only`
 
 ---
 
@@ -235,17 +234,17 @@ Document each known failure mode:
 
 ---
 
-<div class="callout callout--success" style="text-align: center; margin-top: var(--space-8);">
-  <h3 style="margin-top: 0;">Submit Your Safety Case</h3>
+<div class="callout callout--success safety-case-cta">
+  <h3 class="safety-case-cta__title">Submit Your Safety Case</h3>
   <p>
     Complete safety cases can be submitted for community review via GitHub 
     Discussions. Reviewed safety cases receive a community acknowledgment. A
     public HAIEF compliance registry is planned and will be linked here once
     published.
   </p>
-  <div class="btn-group" style="justify-content: center; margin-top: var(--space-4);">
+  <div class="btn-group safety-case-cta__buttons">
     <a href="{{ site.social.discussions }}" class="btn btn--primary">Submit for Review</a>
-    <a href="{{ site.social.github }}/tree/main/solidarity-framework" class="btn btn--outline">View Framework Specs</a>
+    <a href="{{ '/solidarity-framework/' | relative_url }}" class="btn btn--outline">View Framework Specs</a>
   </div>
 </div>
 

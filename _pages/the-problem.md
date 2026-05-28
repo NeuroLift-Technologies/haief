@@ -137,9 +137,6 @@ You can have access to the weights, access to the code, access to the training m
     The gap between AI capability and AI governance is widening, not narrowing.
     Internal corporate safety infrastructure is insufficient against the models
     being built inside it.
-    <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">
-      Read the full Anthropic-Pentagon case study →
-    </a>
   </p>
   </div>
 
