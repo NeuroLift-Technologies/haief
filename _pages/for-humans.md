@@ -224,7 +224,7 @@ In HAIEF, the strength of an argument matters more than the credentials of the s
 ### Technical
 
 - [GitHub Repository]({{ site.social.github }}) - All source code and documentation
-- [Framework Specifications]({{ site.social.github }}/tree/main/frameworks) - Technical details
+- [Framework Specifications]({{ site.social.github }}/tree/main/solidarity-framework) - Technical details
 - [Open Issues]({{ site.social.github }}/issues) - Current work items
 
 ---

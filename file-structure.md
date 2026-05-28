@@ -1,127 +1,205 @@
-# Governance File Structure
 
-**Scope:** Source-verified map for `NeuroLift-Technologies/haief` after PR #14  
-**Last verified:** 2026-05-28 with `git ls-files`  
-**Canonical contract:** `NLT-DEV-OTOI.md` (`ORG-DEV-OTOI-1.0.0`)
+## Architecture Decision: Public vs. Private Governance
 
----
-
-## Architecture Decision: Public Standards + Repo-Local Operations
-
-| Layer | Primary files | Audience | Purpose |
+| Layer | Repo | Audience | Purpose |
 |---|---|---|---|
-| Public HAIEF standards | `frameworks/`, `specs/`, `_pages/`, `docs/overview.md`, `docs/governance.md` | Public contributors and readers | Explain the public governance principles, standards, and movement-facing content. |
-| Repo-local agent governance | `NLT-DEV-OTOI.md`, `AGENTS.md`, `CLAUDE.md`, `SOPs/`, `templates/` | Coding agents and maintainers working in this repo | Define authority, session start, escalation, handoff, and contribution protocols. |
-| Machine-readable governance | `nltotoi.json`, `.nltotoi/` | Agents, scripts, and CI | Discover required files and validate governance scaffold health. |
-| Coordination records | `docs/active-threads.md`, `docs/agent-log/`, `docs/escalations/` | Current and future agents | Preserve work state, session registration, handoffs, and escalation history. |
+| **Public governance identity** | `NeuroLift-Technologies/haief` | All agents, public | Solidarity Framework principles, HAIEF attribution, org profile |
+| **Private operational governance** | `NeuroLift-Technologies/haief` | Internal coding agents only | TOI-OTOI contracts, internal procedures, escalation templates, agent registration |
+| **Repo-level stubs** | Each NLT repo | That repo's agents | Thin pointers to both repos above |
 
-The governance scaffold is operational documentation. Do not amend `NLT-DEV-OTOI.md`
-without the formal amendment process described inside that file.
+The key insight: the **principles** are public (Solidarity Framework is open-source). The **operational machinery** — who escalates what, how agents register, internal handoff formats, credential procedures — is private.
 
 ---
 
-## Source-Verified Governance Tree
+## Current Implemented Governance Structure
 
-```text
+Source-verified on 2026-05-28 after PR #13. This tree lists governance-relevant
+files that currently exist in `NeuroLift-Technologies/haief`; planned or
+upstream source files are documented separately below and should not be treated
+as implemented until they are present in the repository.
+
+```
 haief/
-├── NLT-DEV-OTOI.md                    # Canonical repo-local agent contract
-├── AGENTS.md                          # Agent gateway and coordination protocol
-├── CLAUDE.md                          # Entry-point instructions for coding agents
-├── nltotoi.json                       # Machine-readable discovery manifest
-├── file-structure.md                  # This source-verified file map
-│
-├── .nltotoi/
-│   ├── README.md                      # Namespace overview and validation runbook
-│   ├── contracts/
-│   │   └── README.md                  # Contract namespace and versioning notes
-│   ├── index/
-│   │   └── governance-files.md        # Governance file registry
-│   ├── proposals/
-│   │   └── validation-roadmap.md      # Planned validation improvements
-│   └── scripts/
-│       └── validate-governance.sh     # Local/CI governance validator
-│
-├── .github/
-│   ├── ISSUE_TEMPLATE/                # Public GitHub issue templates
-│   └── workflows/
-│       └── validate-governance.yml    # Runs the governance validator on push/PR
-│
-├── ISSUE_TEMPLATE/
-│   ├── agent-escalation.md            # Repo-local escalation issue template reference
-│   └── governance-proposal.md         # Repo-local OTOI amendment template reference
-│
-├── PULL_REQUEST_TEMPLATE/
-│   └── agent-contribution.md          # Agent contribution checklist
-│
-├── SOPs/
-│   ├── new-agent-onboarding.md        # SOP-NLT-001
-│   ├── repo-governance-setup.md       # Repo governance setup procedure
-│   └── incident-response.md           # SOP-NLT-003
+├── AGENTS.md                          ← Internal gateway (extends public AGENTS.md)
+├── NLT-DEV-OTOI.md                    ← Full coding agent contract (from docs/context/)
+├── CLAUDE.md                          ← Agent entry directive for this repository
+├── README.md                          ← Public HAIEF repository overview
+├── file-structure.md                  ← This structure and mapping ADR
+├── nltotoi.json                       ← Internal discovery manifest
 │
 ├── agents/
-│   └── nlt-governance-steward.md      # Governance guidance agent profile
+│   └── nlt-governance-steward.md      ← Governance compliance and OTOI guidance agent
+│
+├── .github/
+│   └── workflows/
+│       └── validate-governance.yml           ← Core governance validation
+│
+├── .nltotoi/
+│   ├── index/
+│   │   └── governance-files.md       ← Internal file index
+│   ├── contracts/
+│   │   └── README.md                 ← Contract namespace
+│   ├── scripts/
+│   │   └── validate-governance.sh    ← Validation script
+│   └── proposals/
+│       └── validation-roadmap.md
+│
+├── templates/
+│   ├── agent-registration.json       ← From OTOI Section 3
+│   ├── handoff-record.json           ← From OTOI Section 5
+│   ├── escalation.md                 ← From OTOI Section 4.3
+│   ├── intent-log.md                 ← From docs/agent-log/ pattern
+│   └── commit-message.md             ← Commit format reference
+│
+├── ISSUE_TEMPLATE/
+│   ├── agent-escalation.md           ← Escalation as GitHub Issue
+│   └── governance-proposal.md        ← For OTOI amendments
+│
+├── PULL_REQUEST_TEMPLATE/
+│   └── agent-contribution.md         ← PR template with governance checklist
 │
 ├── docs/
-│   ├── active-threads.md              # Active/resolved agent work threads
-│   ├── agent-log/
-│   │   ├── README.md
-│   │   ├── registrations/
-│   │   └── handoffs/
-│   └── escalations/
-│       └── README.md
+│   ├── active-threads.md             ← Active and resolved work tracking
+│   ├── agent-log/                    ← Agent registration and handoff records
+│   └── escalations/                  ← Escalation record location
 │
-└── templates/
-    ├── agent-registration.json
-    ├── commit-message.md
-    ├── escalation.md
-    ├── handoff-record.json
-    └── intent-log.md
+└── SOPs/
+    ├── new-agent-onboarding.md       ← How to onboard a new coding agent
+    ├── repo-governance-setup.md      ← How to add governance to a new NLT repo
+    └── incident-response.md          ← What to do when an agent goes off-rails
 ```
 
 ---
 
-## Validation Workflow
+## Source Mapping Notes from `nlt-business-agents`
 
-Run the same validator locally and in CI:
+The table below records where the governance baseline was sourced from. It is a
+mapping reference, not a guarantee that every source-side helper or future
+workflow has been implemented in this repository.
 
-```bash
-bash .nltotoi/scripts/validate-governance.sh
+### Direct Lifts (copy with minor adjustments)
+
+| Source (nlt-business-agents) | Destination (haief) | Change |
+|---|---|---|
+| `docs/context/NLT-DEV-OTOI.md` | `NLT-DEV-OTOI.md` | Update `document_id` to `ORG-DEV-OTOI-1.0.0`, remove project-specific stack references |
+| `AGENTS.md` | `AGENTS.md` | Internal version — keep full coordination protocol, add pointer to public `.github` AGENTS.md |
+| `nltotoi.json` | `nltotoi.json` | Update `repository` field to reference org scope, not single repo |
+| `.nltotoi/` (entire namespace) | `.nltotoi/` | Direct copy — validation script already works at org level |
+| `docs/agent-log/` templates | `templates/` | Extract JSON blocks from OTOI Sections 3 & 5 into standalone template files |
+
+### Restructured Content
+
+**`templates/agent-registration.json`** — Extract from OTOI Section 3:
+```json
+{
+  "agent_registration": {
+    "agent_name":         "[Your name / platform identifier]",
+    "platform":           "[e.g. Codex CLI, Claude Code, Cursor, Gemini CLI, GitHub Copilot]",
+    "version":            "[Model or tool version, if known]",
+    "session_id":         "[Unique session identifier, if applicable]",
+    "entry_date":         "[ISO 8601 date, e.g. 2026-03-31]",
+    "entry_point":        "[Which file, task, or conversation brought you in]",
+    "acknowledged_otoi":  true,
+    "otoi_version":       "ORG-DEV-OTOI-1.0.0",
+    "working_repo":       "[e.g. NeuroLift-Technologies/some-repo]",
+    "working_branch":     "[e.g. feature/my-feature]",
+    "capabilities_self_reported": [
+      "[List your relevant capabilities]"
+    ],
+    "known_limitations": [
+      "[List known limitations relevant to this task]"
+    ],
+    "preferred_handoff_format": "[Describe how you prefer to receive context, e.g. structured JSON, narrative summary]"
+  }
+}
 ```
 
-The script currently checks:
+**`PULL_REQUEST_TEMPLATE/agent-contribution.md`** — New, built from OTOI commit format:
+```markdown
+## Agent Contribution Checklist
 
-1. Required governance files exist.
-2. `NLT-DEV-OTOI.md` includes the document ID, authority marker, Solidarity Framework reference, and HAIEF reference.
-3. `AGENTS.md` includes the canonical contract path and document ID.
-4. `nltotoi.json` includes the repository name, document ID, and canonical contract path.
+**Agent:** [Name]  
+**Session:** [Branch/session ID]  
+**Governed by:** ORG-DEV-OTOI-1.0.0
 
-The CI entry point is `.github/workflows/validate-governance.yml`, triggered on
-`push` and `pull_request`.
+### Before Merging
+- [ ] Governance validation script passed (`.nltotoi/scripts/validate-governance.sh`)
+- [ ] `docs/active-threads.md` updated
+- [ ] Handoff record written to `docs/agent-log/handoffs/`
+- [ ] Escalations resolved or documented in `docs/escalations/`
+- [ ] No LLM provider locked in without Josh's approval
+- [ ] No architecture decisions made without Josh's approval
 
-### Common Pitfalls
+### Commit Format Used
+`[AGENT_NAME] type(scope): description`
+```
 
-- Use `.github/workflows/validate-governance.yml`; there is no tracked `workflows/`
-  directory in this repo.
-- Keep `nltotoi.json`, `.nltotoi/index/governance-files.md`, and
-  `.nltotoi/scripts/validate-governance.sh` aligned when adding or removing required
-  governance files.
-- `ISSUE_TEMPLATE/` at the repo root contains repo-local governance templates. Public
-  GitHub issue templates live under `.github/ISSUE_TEMPLATE/`.
-- Do not cite workflows as active controls unless the workflow file exists in
-  `.github/workflows/` and has been reviewed.
+**`.github/workflows/validate-governance.yml`** — CI wrapper:
+```yaml
+name: Governance Validation
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run governance validation
+        run: bash .nltotoi/scripts/validate-governance.sh
+```
 
 ---
 
-## Maintenance Checklist
+## What Goes in the Public `.github` Repo
 
-When the governance scaffold changes:
-
-1. Update this file map and `.nltotoi/index/governance-files.md`.
-2. Update `nltotoi.json` if discovery paths or required files changed.
-3. Run `bash .nltotoi/scripts/validate-governance.sh`.
-4. Update `docs/active-threads.md` and write a handoff in `docs/agent-log/handoffs/`.
-5. Use the commit format from `templates/commit-message.md`.
+| File | Content |
+|---|---|
+| `AGENTS.md` | Thin gateway — points to `haief` for internal governance, includes public Solidarity Framework principles |
+| `NLT-GOVERNANCE.md` | Public version of OTOI — principles, ethical commitments, HAIEF attribution. No internal procedures |
+| `CLAUDE.md` | 30-line directive: who we are, read `NLT-GOVERNANCE.md`, escalate to Josh |
+| `profile/README.md` | Public org face — mission, HAIEF link, Solidarity Framework |
+| `CODE_OF_CONDUCT.md` | Built from OTOI Section 8 ethical pillars |
+| `CONTRIBUTING.md` | Public contribution guidelines |
 
 ---
 
-*NeuroLift Technologies | HAIEF | ORG-DEV-OTOI-1.0.0*
+## Implementation Sequence
+
+1. **Create `NeuroLift-Technologies/haief`** (private repo, org members only)
+2. **Populate from nlt-business-agents** using the mapping table above
+3. **Update `nltotoi.json`** in `haief` to scope to org:
+   ```json
+   "repository": {
+     "name": "NeuroLift-Technologies/haief",
+     "purpose": "Repository-specific coding agent governance for haief",
+     "mode": "production"
+   }
+   ```
+4. **Create/update public `.github`** with thin public-facing versions
+5. **Add lightweight stubs** to each existing NLT repo — a `CLAUDE.md` that points to both repos
+
+---
+
+## Stub Template for Each NLT Repo
+
+Drop this `CLAUDE.md` in each repo root:
+
+```markdown
+# CLAUDE.md — [REPO NAME]
+
+You are working in a NeuroLift Technologies repository.
+
+**Mandatory reading (in order):**
+1. Repo-local governance: https://github.com/NeuroLift-Technologies/haief/blob/main/NLT-DEV-OTOI.md
+2. Project context: `docs/context/README_TO_AI.md` (this repo)
+3. Active threads: `docs/active-threads.md` (this repo)
+
+**Non-negotiable:** Joshua W. Dorsey, Sr. is final authority on all architectural, 
+deployment, UX, and strategic decisions. Escalate. Do not guess.
+
+**Governed by:** Solidarity Framework | HAIEF | https://elevaitionfoundation.org
+```
+
+---
+
+The `haief` repo becomes the internal constitution that every coding agent reads at session start — operational, specific, enforced. The public `.github` repo becomes the Solidarity Framework's public face. The two together give you exactly the three-tier model the Claude Code (Opus) handoff document designed — and that Codex CLI and other agents now follow: org canonical → repo operational → public identity.

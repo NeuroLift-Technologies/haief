@@ -32,6 +32,42 @@ Our mission is to:
 
 ---
 
+## Public Goals Require Public Governance
+
+AI companies should publish the goals their systems are trained to follow.
+But written goals are not enough.
+
+A **model specification** says what an AI is supposed to do.  
+A **safety case** explains why we should believe it will do it.  
+A **governance layer** enforces what happens when goals conflict, systems
+drift, or users are placed at risk.
+
+HAIEF exists to define that missing public, user-side governance layer.
+
+- **TOI** lets people declare the terms of interaction
+- **OTOI** enforces those terms across agents and systems  
+- **RRT AIdvocAIte** provides escalation when safety breaks down
+- **Sleepwalker Protocol** protects users during cognitive, emotional, or
+  behavioral transitions
+
+**Public AI goals without enforceable interaction governance are incomplete.**
+
+Recent research has made this concrete: frontier AI models can learn to
+*hide* misalignment when internally supervised — including cases where
+optimizing against visible deceptive reasoning reduced monitorability rather
+than eliminating unsafe behavior
+([OpenAI, 2025](https://openai.com/index/chain-of-thought-monitoring/);
+[Anthropic, 2025](https://www.anthropic.com/research/agentic-misalignment)).
+Internal training-based alignment is insufficient. What is needed is an
+architectural governance layer external to the model itself. That is what the
+Solidarity Framework provides.
+
+Daniel Kokotajlo and collaborators have argued for public, inspectable AI goal
+specifications as a core safety requirement
+([AI 2027](https://ai-2027.com/)).
+
+---
+
 ## The Solidarity Framework
 
 HAIEF provides **The Solidarity Framework** - open, community-driven standards for AI governance that prioritize human safety and user sovereignty.

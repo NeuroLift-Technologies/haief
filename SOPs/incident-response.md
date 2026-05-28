@@ -161,22 +161,40 @@ See `SOPs/new-agent-onboarding.md` for the full onboarding checklist.
 
 ### Automated Gates — Credential Exposure
 
-As of the PR #14 governance scaffold, this repo tracks one governance workflow:
-`.github/workflows/validate-governance.yml`. It does **not** currently track custom
-credential-scanning workflows or a local secrets-scanner hook template.
+Current repository baseline (source-verified 2026-05-28): this repository does
+not yet include dedicated credential-scanning workflows or local hook templates.
+Do not assume those controls are active until the files exist and branch
+protection references their actual check names.
 
-Do not claim a custom PR gate or push detector is active unless the workflow file exists
-under `.github/workflows/` and has been reviewed. If custom credential scanning is needed,
-propose it through the governance-proposal process and escalate for Joshua W. Dorsey, Sr.'s
-approval before treating it as an operational control.
+Planned controls should be added and verified before they are described as
+protective gates:
 
-#### Defense-in-Depth Controls Available Now
+| Planned control | Expected file | Status | Intended action |
+|---|---|---|---|
+| **PR gate (preventive)** | `.github/workflows/secret-scan-pr.yml` | Not present | Fail a required status check to block merges containing detected credentials |
+| **Push detector (reactive)** | `.github/workflows/incident-detection.yml` | Not present | Open a GitHub incident issue after credential exposure is detected on push |
 
-1. Review diffs for credentials before committing or opening a PR.
-2. Keep secrets out of tracked files and out of `/internal/`.
-3. Enable GitHub native secret scanning and push protection where the repository settings
-   and plan support them.
-4. Rotate any exposed credential immediately, even if the exposure was brief.
+#### Enable the PR Gate as a Required Status Check
+
+Only configure a required status check after `secret-scan-pr.yml` has been added
+and has run at least once so GitHub exposes the exact check name:
+
+1. Go to **Settings → Branches → Branch protection rules → `main`**
+2. Enable **"Require status checks to pass before merging"**
+3. Search for and add the check name produced by the implemented workflow
+4. Enable **"Require branches to be up to date before merging"**
+5. Enable **"Do not allow bypassing the above settings"** to prevent force-pushes
+
+Until that workflow exists and is required, credential protection depends on
+manual review and any organization-level GitHub security settings already
+enabled by humans with repository administration authority.
+
+#### Pre-Commit Scanning (Local Defense-in-Depth)
+
+No `agents-templates/hooks/secrets-scanner/` hook exists in this repository at
+the current baseline. If a hook template is added later, document its path,
+installation command, expected scanner output, and whether it blocks commits or
+only reports findings.
 
 #### GitHub Native Secret Scanning
 

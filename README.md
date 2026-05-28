@@ -70,6 +70,7 @@ bash .nltotoi/scripts/validate-governance.sh
 - Identity integrity rules  
 - Multi‑agent handoff formats  
 - Safety validation harnesses  
+- Agent safety case template  
 - Public test suites  
 - Documentation and reference implementations  
 
@@ -104,7 +105,13 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 /nltotoi.json
 /file-structure.md
 
-/frameworks
+/_pages
+    safety-case-template.md
+    who-we-are.md
+    the-problem.md
+    case-study-anthropic-pentagon-2026.md
+
+/solidarity-framework
     /toi
     /otoi
     /sleepwalker

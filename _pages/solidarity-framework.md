@@ -89,7 +89,7 @@ TOI is a portable, machine-readable declaration of user preferences that travels
   <p>Think of TOI like a dietary preference card at a restaurant. Instead of asking each restaurant what they can accommodate, you present your requirements and they adapt. TOI does the same for AI.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/frameworks/toi" class="btn btn--outline">View TOI Specification</a></p>
+<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/toi" class="btn btn--outline">View TOI Specification</a></p>
 
 ---
 
@@ -127,7 +127,7 @@ OTOI ensures that AI systems - especially multi-agent orchestrations - respect a
   <p>OTOI is like HIPAA for AI. Just as healthcare providers must follow specific rules about patient data regardless of their internal systems, AI agents must follow OTOI rules about user sovereignty regardless of their implementation.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/frameworks/otoi" class="btn btn--outline">View OTOI Specification</a></p>
+<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/otoi" class="btn btn--outline">View OTOI Specification</a></p>
 
 ---
 
@@ -169,7 +169,7 @@ RRT AIdvocAIte (AI Advocate) provides multi-persona support designed for users w
   <p>Users in crisis form relationships with AI systems that lack adequate protocols for intervention, continuity protection, and escalation pathways. RRT AIdvocAIte fills that gap.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/frameworks/rrt-aidvocate" class="btn btn--outline">View RRT AIdvocAIte Specification</a></p>
+<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/rrt-aidvocate" class="btn btn--outline">View RRT AIdvocAIte Specification</a></p>
 
 ---
 
@@ -207,7 +207,7 @@ The Sleepwalker Protocol preserves user agency when circumstances change - preve
   <p>Sleepwalker Protocol is like a drunk-texting prevention app, but for your entire AI relationship. It recognizes when you might not be in a state to make good decisions and provides guardrails until you're back to baseline.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/frameworks/sleepwalker" class="btn btn--outline">View Sleepwalker Protocol Specification</a></p>
+<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/sleepwalker" class="btn btn--outline">View Sleepwalker Protocol Specification</a></p>
 
 ---
 

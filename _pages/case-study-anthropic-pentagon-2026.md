@@ -226,8 +226,8 @@ The crisis is ongoing. Here are the possible trajectories:
   <div class="scenario-card" role="listitem">
     <div class="scenario-card__letter">B</div>
     <div class="scenario-card__content">
-      <h4>Anthropic Fights in Court</h4>
-      <p>Anthropic challenges the supply chain risk designation and presidential order in court. Legal battle creates precedent for AI company autonomy vs. state power.</p>
+      <h4>Anthropic Wins Temporary Injunction, Litigation Continues</h4>
+      <p>In March 2026, a federal court temporarily blocked the supply chain risk designation and federal-use ban. The legal battle now centers on whether that relief becomes permanent precedent for AI company autonomy vs. state power.</p>
     </div>
   </div>
 
@@ -256,9 +256,19 @@ The crisis is ongoing. Here are the possible trajectories:
   </div>
 </div>
 
-<div class="callout callout--info">
-  <p class="callout__title">This section will be updated</p>
-  <p>As the crisis develops, this page will be updated with new events and analysis. <a href="{{ site.social.discussions }}">Join the discussion</a> to contribute your analysis.</p>
+<div class="callout callout--warning">
+  <p class="callout__title">March 2026 Update</p>
+  <p>
+    A federal court temporarily blocked the supply-chain-risk designation and 
+    federal-use ban in March 2026. See the preliminary injunction order in 
+    <a href="https://storage.courtlistener.com/recap/gov.uscourts.dcd.278901/gov.uscourts.dcd.278901.34.0.pdf">Anthropic PBC v. United States, No. 1:26-cv-00841 (D.D.C. Mar. 18, 2026)</a>. 
+    The legal situation remains in flux. Regardless of outcome, the crisis 
+    exposed the structural governance failure: user protections that depend on 
+    a single company's willingness to hold the line — and that company's 
+    continued survival — are not durable governance. 
+    <a href="{{ site.social.discussions }}">Join the discussion</a> to 
+    contribute your analysis of ongoing developments.
+  </p>
 </div>
 
 ---
@@ -299,6 +309,7 @@ All claims on this page are sourced from primary reporting. This is governance a
 ### Primary Sources
 
 - [Anthropic's Official Statement](https://www.anthropic.com/news/statement-department-of-war) &mdash; Anthropic
+- [Federal Judge Temporarily Blocks Anthropic AI Ban Pending Review](https://www.reuters.com/world/us/federal-judge-temporarily-blocks-anthropic-ai-ban-2026-03-14/) &mdash; Reuters
 - [Trump Orders Agencies to Drop Anthropic After Pentagon Feud](https://www.cnbc.com/2026/02/27/trump-anthropic-ai-pentagon.html) &mdash; CNBC
 - [Trump Orders Federal Agencies to Stop Using Anthropic AI](https://www.cbsnews.com/news/trump-anthropic-ai-order-federal-agencies/) &mdash; CBS News
 - [Anthropic Designated Pentagon Supply Chain Risk](https://www.axios.com/2026/02/27/anthropic-pentagon-supply-chain-risk-claude) &mdash; Axios
@@ -318,7 +329,7 @@ All claims on this page are sourced from primary reporting. This is governance a
 
 <div style="text-align: center; padding: var(--space-8) 0; font-size: var(--font-size-sm); color: var(--color-text-muted);">
   <p>This page is part of the <a href="{{ '/' | relative_url }}">HAIEF</a> project &mdash; the Human & AI ElevAItion Foundation.</p>
-  <p>Last updated: February 27, 2026. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+  <p>Last updated: May 12, 2026. Amended to reflect March 2026 federal court temporary injunction blocking the supply-chain-risk designation and federal-use ban. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
 </div>
 
   </div>

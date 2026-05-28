@@ -1,0 +1,47 @@
+{
+  "handoff_record": {
+    "session_id": "2026-05-28-cursor-docs-automation-pr13",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-05-28",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-a276",
+    "work_completed": [
+      "Documented the .nltotoi validation script, CI wrapper, troubleshooting steps, and known validation limits.",
+      "Corrected the governance file index and file-structure ADR to list source-verified implemented workflows, agents, and coordination docs.",
+      "Aligned nltotoi.json required file paths with the validation script and actual .github workflow location.",
+      "Updated PR, commit-message, and incident-response docs so unimplemented gates are described as manual or planned rather than active."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Kept documentation focused on the PR #13 governance baseline instead of changing governance contract language.",
+      "Marked absent workflow gates as not present instead of documenting them as active controls."
+    ],
+    "decisions_pending": [
+      "Joshua W. Dorsey, Sr. or a designated maintainer must decide whether to implement planned credential-scan, commit-format, or scope-check workflows."
+    ],
+    "escalations": [],
+    "next_agent_notes": "Validation passed locally with bash .nltotoi/scripts/validate-governance.sh. Edited JSON parsed with python3 -m json.tool. The documentation now distinguishes implemented governance surfaces from planned workflow gates.",
+    "files_modified": [
+      ".nltotoi/README.md",
+      ".nltotoi/index/governance-files.md",
+      "PULL_REQUEST_TEMPLATE/agent-contribution.md",
+      "SOPs/incident-response.md",
+      "docs/active-threads.md",
+      "docs/agent-log/handoffs/2026-05-28-cursor-docs-automation-pr13.json",
+      "docs/agent-log/registrations/2026-05-28-cursor-docs-automation-pr13.json",
+      "file-structure.md",
+      "nltotoi.json",
+      "templates/commit-message.md"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "python3 -m json.tool nltotoi.json",
+      "python3 -m json.tool docs/agent-log/registrations/2026-05-28-cursor-docs-automation-pr13.json",
+      "rg source-reference verification for implemented/planned workflow language"
+    ],
+    "tests_passing": true,
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/17"
+  }
+}

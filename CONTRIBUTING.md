@@ -98,6 +98,52 @@ bundle exec jekyll serve
 bundle exec jekyll build
 ```
 
+### Documentation + Site Content Workflow
+
+Use this workflow when adding/updating public pages:
+
+1. **Edit content in `_pages/` or `index.html`**
+   - Include front matter fields (`layout`, `title`, `description`, `permalink`) for pages in `_pages/`.
+2. **Wire discoverability**
+   - Add/update nav entries in `_config.yml` (`nav` section).
+   - Add/update corresponding footer links in `_includes/footer.html` when appropriate.
+3. **Use stable internal links**
+   - Prefer `{{ '/target/' | relative_url }}` over hard-coded `/haief/...` paths.
+4. **Prefer reusable styling**
+   - Add repeated styles as classes in `assets/css/main.css`.
+5. **Verify the site builds**
+   - Run `bundle exec jekyll build` before opening a docs PR.
+
+### Public Goals and Safety Case Updates
+
+Use this additional checklist when editing `_pages/safety-case-template.md`,
+public-goal language, or governance crisis timelines:
+
+1. **Keep claims traceable**
+   - Source factual event claims on the page where they appear.
+   - Separate observed events from HAIEF analysis.
+2. **Preserve the safety case contract**
+   - The public template currently has ten required sections.
+   - Update `docs/overview.md` and `docs/governance.md` if the section list, review path, or linked specifications change.
+3. **Cross-link the workflow**
+   - Public goals belong in narrative pages such as `_pages/who-we-are.md`.
+   - Evidence and constraints belong in `_pages/safety-case-template.md`.
+   - Case-study timelines belong in the relevant case-study or problem page.
+4. **Avoid premature compliance language**
+   - Do not claim certification, registration, or review unless that process exists publicly.
+   - Use "submit for community review" only when linking to the configured Discussions URL.
+
+### Troubleshooting Common Pitfalls
+
+- **New page not reachable from navigation**
+  - Check both `_config.yml` and `_includes/footer.html`.
+- **Broken internal links in production**
+  - Replace hard-coded root-relative links with `relative_url`.
+- **Poor social preview cards**
+  - Ensure page front matter includes a concise `description`.
+- **Inconsistent governance terminology**
+  - Cross-check terms with `_pages/solidarity-framework.md` before merge.
+
 ### Documentation
 
 All documentation is in Markdown. Follow existing formatting conventions.

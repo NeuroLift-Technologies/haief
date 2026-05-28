@@ -13,6 +13,7 @@
   "discovery": {
     "file_index": ".nltotoi/index/governance-files.md",
     "validation_script": ".nltotoi/scripts/validate-governance.sh",
+    "validation_workflow": ".github/workflows/validate-governance.yml",
     "contracts_namespace": ".nltotoi/contracts/README.md",
     "validation_workflow": ".github/workflows/validate-governance.yml",
     "agents_directory": "agents/"
