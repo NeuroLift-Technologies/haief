@@ -1,0 +1,47 @@
+{
+  "handoff_record": {
+    "session_id": "cursor-docs-automation-pr14-2026-05-28",
+    "agent_name": "Cursor",
+    "date": "2026-05-28",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-b774",
+    "work_completed": [
+      "Documented the PR #14 governance scaffold in README.md and file-structure.md.",
+      "Replaced stale governance registry entries with a source-verified .nltotoi index.",
+      "Aligned nltotoi.json discovery and required_files entries with tracked validation paths.",
+      "Added validation workflow details and troubleshooting notes for .nltotoi/scripts/validate-governance.sh.",
+      "Clarified active incident-response controls so nonexistent secret-scanning workflows are not described as active.",
+      "Added session registration and resolved the active documentation thread."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Updated existing documentation instead of adding a redundant governance runbook page.",
+      "Treated the PR #14 scaffold as the source of truth and removed claims about untracked governance CI workflows.",
+      "Left NLT-DEV-OTOI.md unchanged because OTOI amendments require the formal governance process."
+    ],
+    "decisions_pending": [],
+    "escalations": [],
+    "next_agent_notes": "Future governance scaffold changes should update nltotoi.json, .nltotoi/index/governance-files.md, file-structure.md, and the validator in the same change when paths or required files change.",
+    "files_modified": [
+      ".nltotoi/README.md",
+      ".nltotoi/index/governance-files.md",
+      "README.md",
+      "SOPs/incident-response.md",
+      "agents/nlt-governance-steward.md",
+      "docs/active-threads.md",
+      "docs/agent-log/README.md",
+      "docs/agent-log/registrations/2026-05-28-cursor-docs-automation-pr14.json",
+      "docs/escalations/README.md",
+      "file-structure.md",
+      "nltotoi.json",
+      "templates/commit-message.md"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "python3 -m json.tool nltotoi.json",
+      "python3 -m json.tool docs/agent-log/registrations/2026-05-28-cursor-docs-automation-pr14.json"
+    ],
+    "tests_passing": true
+  }
+}
