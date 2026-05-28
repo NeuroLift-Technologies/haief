@@ -40,6 +40,6 @@
       "python3 static safety-case interface checks for front matter, nav/footer links, section count, social links, and non-certification language"
     ],
     "tests_passing": false,
-    "pr_url": "[pending]"
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/20"
   }
 }
