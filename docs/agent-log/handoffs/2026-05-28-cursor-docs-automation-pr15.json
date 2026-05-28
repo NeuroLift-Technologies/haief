@@ -1,0 +1,45 @@
+{
+  "handoff_record": {
+    "session_id": "2026-05-28-cursor-docs-automation-pr15",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-05-28",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-76ea",
+    "work_completed": [
+      "Inspected closed PR #15 diff and verified the safety-case workflow against _pages/safety-case-template.md, _config.yml, _includes/footer.html, and community process docs.",
+      "Updated README.md, CONTRIBUTING.md, docs/overview.md, docs/governance.md, and _pages/safety-case-template.md to clarify the discussion-based safety-case review workflow and non-certification constraint.",
+      "Registered the automation session and resolved the active documentation thread."
+    ],
+    "work_in_progress": [],
+    "blockers": [
+      "Full Jekyll build could not run because bundle is not installed in the cloud image."
+    ],
+    "decisions_made": [
+      "Kept updates in existing documentation instead of creating a duplicate safety-case guide.",
+      "Documented current Discussions submission as community review/discussion only, not certification, registration, or a compliance seal."
+    ],
+    "decisions_pending": [
+      "Joshua or the HAIEF community must define any future formal safety-case review process or registry before docs can describe it as active."
+    ],
+    "escalations": [],
+    "next_agent_notes": "The focused static safety-case checks passed. If Ruby/Bundler is available, run bundle exec jekyll build for a full site build before merge.",
+    "files_modified": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "_pages/safety-case-template.md",
+      "docs/overview.md",
+      "docs/governance.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-05-28-cursor-docs-automation-pr15.json",
+      "docs/agent-log/handoffs/2026-05-28-cursor-docs-automation-pr15.json"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "bundle exec jekyll build (attempted; bundle command unavailable)",
+      "python3 static safety-case interface checks for front matter, nav/footer links, section count, social links, and non-certification language"
+    ],
+    "tests_passing": false,
+    "pr_url": "[pending]"
+  }
+}

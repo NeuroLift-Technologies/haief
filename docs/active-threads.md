@@ -8,17 +8,17 @@
 
 ## Active Threads
 
-### Thread: 2026-05-28-cursor-docs-automation-pr15
-**Status:** open
-**Owner:** Cursor Cloud Automation
-**Started:** 2026-05-28
-**Last updated:** 2026-05-28
-**Summary:** Documentation automation follow-up for closed PR #15, focused on source-verifying the safety-case governance workflow changes and filling concise developer-facing documentation gaps.
-**Blockers:** None.
-**Next action:** Inspect PR #15 diff and update the most relevant existing documentation.
+*(No active threads yet)*
 
 ---
 
 ## Resolved Threads
 
-*(None yet)*
+### Thread: 2026-05-28-cursor-docs-automation-pr15
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-05-28
+**Last updated:** 2026-05-28
+**Summary:** Documentation automation follow-up for closed PR #15. Clarified the safety-case template review workflow, corrected the documented navigation label, and added source-verified verification steps for the safety-case public interface.
+**Blockers:** None.
+**Next action:** Review the documentation PR and run a full Jekyll build in an environment with Bundler installed if desired.
