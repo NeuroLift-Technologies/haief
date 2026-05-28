@@ -8,17 +8,17 @@
 
 ## Active Threads
 
-### Thread: 2026-05-28-cursor-docs-automation-pr13
-**Status:** open
-**Owner:** Cursor Cloud Automation
-**Started:** 2026-05-28
-**Last updated:** 2026-05-28
-**Summary:** Source-verify the governance baseline merged in PR #13 and add focused documentation for weak developer-facing governance validation and operating runbook gaps.
-**Blockers:** None.
-**Next action:** Review the new validation workflow, manifest, scripts, and governance docs before updating the most appropriate existing documentation.
+*(No active threads yet)*
 
 ---
 
 ## Resolved Threads
 
-*(None yet)*
+### Thread: 2026-05-28-cursor-docs-automation-pr13
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-05-28
+**Last updated:** 2026-05-28
+**Summary:** Source-verified the governance baseline merged in PR #13 and added focused documentation for governance validation, the implemented file registry, commit/PR workflow caveats, and incident-response automation gaps.
+**Blockers:** None.
+**Next action:** Review the documentation PR and decide whether to implement the planned workflow gates described as not currently present.
