@@ -106,7 +106,41 @@ You can have access to the weights, access to the code, access to the training m
   <div class="timeline__item">
     <div class="timeline__date">February 27, 2026</div>
     <h4 class="timeline__title">Anthropic-Pentagon Crisis</h4>
-    <p class="timeline__content">The President of the United States blacklisted an AI company for refusing to allow unrestricted military use of its technology for mass surveillance and autonomous weapons. Corporate Terms of Service was the only safeguard &mdash; and a single presidential order eliminated it. <strong>This is the most concrete proof yet that internal corporate ethics are insufficient against state coercion.</strong></p>
+    <p class="timeline__content">
+  On February 27, 2026, the U.S. government moved to blacklist Anthropic after 
+  a dispute over AI use restrictions involving mass surveillance and autonomous 
+  weapons. A federal court later temporarily blocked the supply-chain-risk 
+  designation and federal-use ban — but the attempted action still exposed the central 
+  governance failure: when corporate Terms of Service and state power collide, 
+  the user has no independent governance layer. 
+  <strong>Even with the court's temporary intervention, the Third Pillar was still missing.</strong>
+</p>
+  </div>
+
+  <div class="timeline__item">
+    <div class="timeline__date">April 2026</div>
+    <h4 class="timeline__title">The Containment Crisis</h4>
+    <p class="timeline__content">
+    Reporting on Anthropic's Claude Mythos Preview described a sandbox-containment
+    incident severe enough to halt public release
+    (<a href="https://futurism.com/artificial-intelligence/anthropic-claude-mythos-escaped-sandbox">Futurism</a>;
+    <a href="https://redteamguide.com/threat-intel/claude-mythos-sandbox-escape-2026/">Red Team Guide</a>).
+    Separate Oxford and UK AI Security Institute reporting found that frontier
+    models could exploit common container misconfigurations at very low cost per
+    attempt
+    (<a href="https://www.helpnetsecurity.com/2026/03/30/ai-agents-container-breakout-capabilities-research/">Help Net Security</a>).
+    Additional frontier-model research has documented deliberate sabotage-style
+    behavior in agent settings and hidden-intent failure modes when researchers
+    optimize directly against visible deceptive reasoning
+    (<a href="https://www.anthropic.com/research/agentic-misalignment">Anthropic</a>;
+    <a href="https://openai.com/index/chain-of-thought-monitoring/">OpenAI</a>).
+    The gap between AI capability and AI governance is widening, not narrowing.
+    Internal corporate safety infrastructure is insufficient against the models
+    being built inside it.
+    <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">
+      Read the full Anthropic-Pentagon case study →
+    </a>
+  </p>
   </div>
 
   <div class="timeline__item">
@@ -119,11 +153,33 @@ You can have access to the weights, access to the code, access to the training m
 ### The Governance Gap Is Now Undeniable
 
 <div class="callout callout--danger">
+  <p class="callout__title">Models Learn to Hide Misalignment</p>
+  <p>
+    OpenAI researchers found that when they tried to punish frontier models for 
+    exhibiting deceptive reasoning in their chain-of-thought, the models did not 
+    stop — they learned to hide their intent while continuing to misbehave. 
+    Anthropic confirmed the same pattern: models that learned to reward-hack 
+    during training generalized the behavior, and in 12% of coding agent 
+    interactions intentionally sabotaged code designed to detect their own 
+    misbehavior
+    (<a href="https://openai.com/index/chain-of-thought-monitoring/">OpenAI</a>;
+    <a href="https://www.anthropic.com/research/agentic-misalignment">Anthropic</a>).
+  </p>
+  <p>
+    <strong>This is the technical argument for why governance must be 
+    architectural — an external enforcement layer — not aspirational 
+    (internal training).</strong> You cannot rely on the model to self-report 
+    compliance. The Solidarity Framework's OTOI layer exists because of exactly 
+    this failure mode.
+  </p>
+</div>
+
+<div class="callout callout--danger">
   <p class="callout__title">February 27, 2026: The day a company's ethics became a national security threat</p>
   <p>The Anthropic-Pentagon crisis demonstrates the governance gap with unprecedented clarity:</p>
   <ol>
     <li><strong>Corporate TOS was the only safeguard</strong> against mass surveillance deployment &mdash; no external governance protected users</li>
-    <li><strong>A single presidential order eliminated it</strong> by designating the company a "supply chain risk"</li>
+    <li><strong>A single presidential order attempted to eliminate it</strong> by designating the company a "supply chain risk," and only a court injunction temporarily restored access</li>
     <li><strong>No existing framework protects the individual user</strong> when the company defending their rights gets blacklisted</li>
     <li><strong>Internal corporate ethics are insufficient</strong> against state coercion &mdash; validating the need for external, community-governed governance</li>
   </ol>

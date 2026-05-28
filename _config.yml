@@ -76,6 +76,8 @@ nav:
     url: "/take-action/"
   - title: "Q&A"
     url: "/questions-and-answers/"
+  - title: "Safety Case"
+    url: "/safety-case-template/"
   - title: "Fact-Check"
     url: "/submit-fact-check/"
   - title: "For Humans"
