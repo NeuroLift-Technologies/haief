@@ -34,6 +34,29 @@ When updating governance content, contributors should follow these constraints:
 - **Keep cross-page language aligned.** Changes to a major claim should be reflected in `index.html`, `_pages/the-problem.md`, and relevant action/education pages when applicable.
 - **Prefer update-over-duplication.** Expand existing governance pages before creating new standalone pages.
 
+## Runbook: Public Goals and Agent Safety Cases
+
+Use this checklist when changing public-goal language or the agent safety case template:
+
+1. **Confirm the governance distinction**
+   - A model specification or public goal explains intended behavior.
+   - A safety case explains the evidence and constraints that make the goal credible.
+   - The governance layer explains enforcement when goals conflict, systems drift, handoffs occur, or users are placed at risk.
+2. **Update the canonical template first**
+   - The public template lives at `_pages/safety-case-template.md`.
+   - Keep the ten-section structure complete unless the governance model itself changes.
+   - Preserve links to TOI/OTOI, Provenance, Identity Integrity, and Handoff Rules when those specifications remain applicable.
+3. **Keep discovery paths current**
+   - Header navigation is configured in `_config.yml`.
+   - Footer resources are maintained in `_includes/footer.html`.
+   - Contributor-facing instructions live in `CONTRIBUTING.md`.
+4. **Avoid unsupported compliance claims**
+   - Do not describe a safety case as reviewed, certified, or registered unless the corresponding public review process exists.
+   - "Submitted for community review" and "planned registry" language should remain distinct from completed recognition.
+5. **Validate examples and constraints**
+   - Examples should name required evidence types, such as provenance logs, identity declarations, handoff records, red-team results, escalation triggers, and shutdown behavior.
+   - Constraints should state default behavior for absent TOI, unsupported handoffs, unlisted tools, memory retention, and crisis escalation.
+
 ## Runbook: Publishing a Governance Case Study
 
 Use this checklist when adding event-based governance documentation:

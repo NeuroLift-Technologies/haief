@@ -45,6 +45,7 @@ This repo hosts the public governance layer of the HAIEF ecosystem:
 - Identity integrity rules  
 - Multi‑agent handoff formats  
 - Safety validation harnesses  
+- Agent safety case template  
 - Public test suites  
 - Documentation and reference implementations  
 
@@ -73,6 +74,12 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 ## 🗂️ Repository Structure
 
 ```
+/_pages
+    safety-case-template.md
+    who-we-are.md
+    the-problem.md
+    case-study-anthropic-pentagon-2026.md
+
 /solidarity-framework
     /toi
     /otoi
