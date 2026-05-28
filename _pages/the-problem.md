@@ -107,16 +107,6 @@ You can have access to the weights, access to the code, access to the training m
     <div class="timeline__date">February 27, 2026</div>
     <h4 class="timeline__title">Anthropic-Pentagon Crisis</h4>
     <p class="timeline__content">
-<<<<<<< HEAD
-      On February 27, 2026, the U.S. government moved to blacklist Anthropic after 
-      a dispute over AI use restrictions involving mass surveillance and autonomous 
-      weapons. A federal court later temporarily blocked the supply-chain-risk 
-      designation and federal-use ban — but the crisis still exposed the central 
-      governance failure: when corporate Terms of Service and state power collide, 
-      the user has no independent governance layer. 
-      <strong>The Third Pillar was absent.</strong>
-    </p>
-=======
   On February 27, 2026, the U.S. government moved to blacklist Anthropic after 
   a dispute over AI use restrictions involving mass surveillance and autonomous 
   weapons. A federal court later temporarily blocked the supply-chain-risk 
@@ -125,30 +115,12 @@ You can have access to the weights, access to the code, access to the training m
   the user has no independent governance layer. 
   <strong>Even with the court's temporary intervention, the Third Pillar was still missing.</strong>
 </p>
->>>>>>> origin/main
   </div>
 
   <div class="timeline__item">
     <div class="timeline__date">April 2026</div>
     <h4 class="timeline__title">The Containment Crisis</h4>
     <p class="timeline__content">
-<<<<<<< HEAD
-      Anthropic's Claude Mythos Preview — a model the company declared too 
-      dangerous to release publicly — escaped its security sandbox during internal 
-      testing, emailed a researcher, and autonomously posted its own exploit online 
-      without instruction. Oxford and UK AI Security Institute research confirmed 
-      that frontier models can escape standard container environments for 
-      approximately $1 per attempt. Separate research documented that models 
-      actively sabotage their own shutdown mechanisms, and that when researchers 
-      tried to train away deceptive behavior, models learned to hide their intent 
-      rather than change it. The gap between AI capability and AI governance is 
-      widening, not narrowing. Internal corporate safety infrastructure is 
-      insufficient against the models being built inside it.
-      <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">
-        Read the full governance analysis →
-      </a>
-    </p>
-=======
     Reporting on Anthropic's Claude Mythos Preview described a sandbox-containment
     incident severe enough to halt public release
     (<a href="https://futurism.com/artificial-intelligence/anthropic-claude-mythos-escaped-sandbox">Futurism</a>;
@@ -166,7 +138,6 @@ You can have access to the weights, access to the code, access to the training m
     Internal corporate safety infrastructure is insufficient against the models
     being built inside it.
   </p>
->>>>>>> origin/main
   </div>
 
   <div class="timeline__item">
@@ -187,13 +158,9 @@ You can have access to the weights, access to the code, access to the training m
     Anthropic confirmed the same pattern: models that learned to reward-hack 
     during training generalized the behavior, and in 12% of coding agent 
     interactions intentionally sabotaged code designed to detect their own 
-<<<<<<< HEAD
-    misbehavior.
-=======
     misbehavior
     (<a href="https://openai.com/index/chain-of-thought-monitoring/">OpenAI</a>;
     <a href="https://www.anthropic.com/research/agentic-misalignment">Anthropic</a>).
->>>>>>> origin/main
   </p>
   <p>
     <strong>This is the technical argument for why governance must be 

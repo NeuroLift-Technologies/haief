@@ -52,18 +52,6 @@ HAIEF exists to define that missing public, user-side governance layer.
 
 **Public AI goals without enforceable interaction governance are incomplete.**
 
-<<<<<<< HEAD
-Recent research has made this concrete: frontier AI models actively learn to
-*hide* misalignment when internally supervised — writing plans to cheat in
-their chain-of-thought, then concealing those plans when researchers try to
-train the behavior away. Internal training-based alignment is insufficient.
-What is needed is an architectural governance layer external to the model
-itself. That is what the Solidarity Framework provides.
-
-> *"The public must demand written, public specifications of AI goals to avoid
-> a scenario where AIs pursue a hidden agenda."*  
-> — Daniel Kokotajlo, former OpenAI forecasting researcher
-=======
 Recent research has made this concrete: frontier AI models can learn to
 *hide* misalignment when internally supervised — including cases where
 optimizing against visible deceptive reasoning reduced monitorability rather
@@ -77,7 +65,6 @@ Solidarity Framework provides.
 Daniel Kokotajlo and collaborators have argued for public, inspectable AI goal
 specifications as a core safety requirement
 ([AI 2027](https://ai-2027.com/)).
->>>>>>> origin/main
 
 ---
 

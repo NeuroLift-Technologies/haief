@@ -260,7 +260,6 @@ The crisis is ongoing. Here are the possible trajectories:
   <p class="callout__title">March 2026 Update</p>
   <p>
     A federal court temporarily blocked the supply-chain-risk designation and 
-<<<<<<< HEAD
     federal-use ban in March 2026. See the preliminary injunction order in 
     <a href="https://storage.courtlistener.com/recap/gov.uscourts.dcd.278901/gov.uscourts.dcd.278901.34.0.pdf">Anthropic PBC v. United States, No. 1:26-cv-00841 (D.D.C. Mar. 18, 2026)</a>. 
     The legal situation remains in flux. Regardless of outcome, the crisis 
@@ -269,14 +268,6 @@ The crisis is ongoing. Here are the possible trajectories:
     continued survival — are not durable governance. 
     <a href="{{ site.social.discussions }}">Join the discussion</a> to 
     contribute your analysis of ongoing developments.
-=======
-    federal-use ban in March 2026. The legal situation remains in flux. 
-    Regardless of outcome, the crisis exposed the structural governance 
-    failure: user protections that depend on a single company's willingness to 
-    hold the line — and that company's continued survival — are not durable 
-    governance. <a href="{{ site.social.discussions }}">Join the discussion</a> 
-    to contribute your analysis of ongoing developments.
->>>>>>> origin/main
   </p>
 </div>
 
