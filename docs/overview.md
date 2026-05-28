@@ -61,17 +61,37 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
      `{{ '/target-path/' | relative_url }}`
    - This preserves correctness under `baseurl: /haief`.
 
-## Changed Subsystem: Case Study + Crisis Messaging Flow
+5. **Agent safety case template contract**
+   - `_pages/safety-case-template.md` is the canonical public template for documenting an agent safety case.
+   - The template is exposed as `Safety Case` in `_config.yml` navigation and as `Safety Case Template` in the footer resources list.
+   - The page currently contains ten numbered sections. If a section is renamed, added, or removed, update governance runbooks and contributor guidance in the same change.
+   - The page depends on `site.social.discussions` for review submission links and `site.social.github` for framework/specification links.
 
-Recent updates introduced a governance case-study workflow spanning:
+## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow
 
-- `_pages/case-study-anthropic-pentagon-2026.md` (new narrative source)
-- `index.html` (crisis banner entry point)
-- `_pages/the-problem.md`, `_pages/for-humans.md`, `_pages/solidarity-framework.md`, `_pages/take-action.md` (cross-page references)
-- `_config.yml` and `_includes/footer.html` (discovery/navigation)
-- `assets/css/main.css` (new component classes: crisis banner, governance triangle, scenario cards, comparison layout)
+Recent governance updates expanded the site from a case-study narrative into a public-goal and safety-case workflow spanning:
 
-This means case-study additions are now a **cross-file subsystem**, not a single page change.
+- `_pages/safety-case-template.md` (canonical agent safety case template)
+- `_pages/who-we-are.md` (public-goals framing and model-spec/safety-case/governance-layer distinction)
+- `_pages/the-problem.md` (containment crisis timeline and external-governance rationale)
+- `_pages/case-study-anthropic-pentagon-2026.md` (case-study source and scenario tracking)
+- `_config.yml` and `_includes/footer.html` (discovery/navigation for the new template)
+
+The architecture intent is:
+
+1. **Public goal specification** explains what a system is supposed to do.
+2. **Safety case documentation** records why maintainers believe it will do that under defined conditions.
+3. **Governance layer mapping** points to the HAIEF mechanisms that enforce behavior when goals conflict, agents hand off work, identity changes, or users enter vulnerable states.
+
+Maintenance constraints:
+
+- Treat safety-case content as a public interface. Do not change section numbers, review language, or linked specifications casually.
+- Keep factual crisis/timeline claims sourced in the page that makes the claim.
+- Use `{{ '/path/' | relative_url }}` for internal page links so GitHub Pages `baseurl: /haief` remains valid.
+- When the safety case template changes, verify navigation in `_config.yml`, footer discovery in `_includes/footer.html`, and contributor guidance in `CONTRIBUTING.md`.
+- Reuse existing design primitives (`callout`, `grid`, `card`, `timeline`) before adding new CSS classes.
+
+This means public-governance additions are now a **cross-file subsystem**, not a single page change.
 
 ---
 
