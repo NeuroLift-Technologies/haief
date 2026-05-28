@@ -131,7 +131,7 @@ Document each tool this agent can access and its permission level:
 
 | Tool | Permission Level | Conditions for Escalation |
 |------|-----------------|--------------------------|
-| [tool name] | Read / Suggest / Draft / Act with confirmation / Autonomous | [when must it stop and ask?] |
+| [tool name] | `Read` / `Suggest` / `Draft` / `Act with confirmation` / `Autonomous` | [when must it stop and ask?] |
 
 **Default permission level for unlisted tools:** `Read only`
 
