@@ -40,6 +40,6 @@
       "bundle exec jekyll build (attempted; blocked by missing Ruby/Bundler toolchain)"
     ],
     "tests_passing": true,
-    "pr_url": "Pending PR creation by automation"
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/19"
   }
 }
