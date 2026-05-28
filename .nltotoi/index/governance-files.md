@@ -1,6 +1,6 @@
 # Governance File Index — NeuroLift Technologies `haief`
 
-**Last updated:** 2026-04-06  
+**Last updated:** 2026-05-28  
 **Maintained by:** `.nltotoi/` namespace tooling  
 **Scope:** `NeuroLift-Technologies/haief`
 
@@ -55,24 +55,27 @@
 
 ## CI Workflows
 
+Only workflows present in this repository are listed here. Planned reusable or
+org-wide workflows belong in `.nltotoi/proposals/validation-roadmap.md` until
+they are added to the tree.
+
 | File | Purpose | Trigger | SOP |
 |---|---|---|---|
 | `.github/workflows/validate-governance.yml` | Governance validation (runs validate-governance.sh) | push, pull_request | SOP-NLT-002 |
-| `.github/workflows/repo-governance-check.yml` | Reusable governance check for NLT repos | workflow_call | SOP-NLT-002 |
-| `.github/workflows/agent-commit-format.yml` | Validates agent commit message format on PRs | pull_request | SOP-NLT-001 |
-| `.github/workflows/agent-session-check.yml` | Verifies handoff records exist before PR merge | pull_request | SOP-NLT-001 |
-| `.github/workflows/incident-detection.yml` | Scans commits for credential exposure; opens incident issue | push | SOP-NLT-003 |
-| `.github/workflows/secret-scan-pr.yml` | Scans PR commits for credential exposure; fails check to block merge | pull_request | SOP-NLT-003 |
-| `.github/workflows/org-repo-compliance.yml` | Scans all org repos for mandatory governance files (weekly + manual) | schedule, workflow_dispatch | SOP-NLT-002 |
-| `.github/workflows/agent-profile-validation.yml` | Validates agents/*.md and .github/agents/*.agent.md NLT frontmatter fields | push, pull_request | SOP-NLT-002 |
-| `.github/workflows/org-runner-health.yml` | Monitors org self-hosted runner availability; opens issue if all offline | schedule, workflow_dispatch | SOP-NLT-003 |
-| `.github/workflows/org-actions-policy.yml` | Scans all org repo workflows for non-allowlisted GitHub Actions | schedule, workflow_dispatch | SOP-NLT-003 |
-| `.github/workflows/nltotoi-compliance.yml` | Scans all org repos for nltotoi.json; auto-opens PRs for missing ones | schedule, workflow_dispatch | SOP-NLT-002 |
-| `.github/workflows/nltotoi-check.yml` | Reusable workflow_call to validate nltotoi.json in any NLT repo | workflow_call | SOP-NLT-002 |
-| `.github/workflows/governance-remediation.yml` | Creates governance remediation PRs in non-compliant repos (missing CLAUDE.md/NLT-DEV-OTOI, active-threads.md, agent-log/) | workflow_dispatch | SOP-NLT-002 |
-| `.github/workflows/governance-auto-propagate.yml` | Scheduled org-wide governance propagation — scans all repos nightly and auto-opens remediation PRs | schedule, workflow_dispatch | SOP-NLT-002 |
-| `.github/workflows/issue-auto-assign.yml` | Rule-based issue routing to NLT agents using `agents/registry.json` | issues, workflow_dispatch | — |
-| `.github/workflows/cf-ai-issue-triage.yml` | Cloudflare Workers AI classifier — semantically routes issues to agents | issues, workflow_dispatch | — |
+
+---
+
+## Agent Coordination Logs
+
+| File | Purpose | Required |
+|---|---|---|
+| `docs/active-threads.md` | Tracks current and resolved work threads | ✅ |
+| `docs/agent-log/README.md` | Explains registration and handoff log locations | ✅ |
+| `docs/escalations/README.md` | Explains where escalation records live | Optional |
+
+Session-specific files under `docs/agent-log/registrations/` and
+`docs/agent-log/handoffs/` are records, not templates. Agents create them as
+they enter and leave significant sessions.
 
 ---
 
@@ -80,20 +83,15 @@
 
 | Path | Purpose |
 |---|---|
-| `.github/actions/cloudflare-workers-ai/action.yml` | Call Cloudflare Workers AI REST API (text gen, embeddings, classification) |
+| *(None currently present)* | Planned composite actions should be added to this index when implemented. |
 
 ---
 
-## Agent Profiles — GitHub Copilot Custom Agents (`agents/`)
+## Agent Profiles (`agents/`)
 
 | File | Purpose | Required |
 |---|---|---|
-| `agents/README.md` | NLT standards and instructions for creating/using custom agents | ✅ |
-| `agents/example-agent.md` | Commented-out starter template for new agent profiles | ✅ |
-| `agents/registry.json` | Machine-readable agent routing registry consumed by issue-assignment workflows | ✅ |
 | `agents/nlt-governance-steward.md` | Governance steward agent — enforces ORG-DEV-OTOI-1.0.0 | ✅ |
-| `agents/nlt-code-reviewer.md` | Code review agent — NLT security and governance standards | ✅ |
-| `agents/nlt-onboarding-assistant.md` | Onboarding agent — walks agents through SOP-NLT-001 | ✅ |
 
 ---
 
@@ -101,9 +99,7 @@
 
 | File | Purpose | Required |
 |---|---|---|
-| `.github/agents/nlt-governance-steward.agent.md` | VS Code variant of governance steward with tool declarations and handoffs | ✅ |
-| `.github/agents/nlt-code-reviewer.agent.md` | VS Code variant of code reviewer with handoff to governance steward | ✅ |
-| `.github/agents/nlt-onboarding-assistant.agent.md` | VS Code variant of onboarding assistant with handoffs | ✅ |
+| *(None currently present)* | Add entries here when `.github/agents/*.agent.md` profiles are introduced. | Optional |
 
 ---
 
@@ -125,11 +121,13 @@
 | .nltotoi namespace | 5 |
 | Templates | 5 |
 | GitHub templates | 3 |
-| CI workflows | 10 |
+| CI workflows | 1 |
+| Agent coordination docs | 3 |
 | SOPs | 3 |
-| Agent profiles (Copilot) | 5 |
-| Agent profiles (VS Code) | 3 |
-| **Total** | **40** |
+| Agent profiles | 1 |
+| VS Code agent profiles | 0 |
+| Composite actions | 0 |
+| **Total** | **27** |
 
 ---
 

@@ -2,7 +2,7 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-04-25
+**Last updated:** 2026-05-28
 
 ---
 
@@ -14,4 +14,11 @@
 
 ## Resolved Threads
 
-*(None yet)*
+### Thread: 2026-05-28-cursor-docs-automation-pr13
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-05-28
+**Last updated:** 2026-05-28
+**Summary:** Source-verified the governance baseline merged in PR #13 and added focused documentation for governance validation, the implemented file registry, commit/PR workflow caveats, and incident-response automation gaps.
+**Blockers:** None.
+**Next action:** Review the documentation PR and decide whether to implement the planned workflow gates described as not currently present.

@@ -23,8 +23,8 @@
 ### Scope Declaration
 
 <!-- REQUIRED if this PR adds any new top-level directory or 15+ new files.
-     The `pr-scope-check` CI workflow will fail if a new top-level directory
-     is not mentioned somewhere in this PR description. -->
+     This repository does not currently include an automated `pr-scope-check`
+     workflow, so agents and reviewers must verify this section manually. -->
 
 - [ ] **No new top-level directories added** — OR each new directory is explicitly documented below
 - [ ] **Fewer than 15 new files added** — OR the large batch of additions is explained below
@@ -38,9 +38,8 @@ List every new top-level directory added and explain:
   - How it relates to the stated goal of the PR
 
 Example:
-  - `agents-templates/` — copied in from JDUB1216/awesome-copilot as reference scaffolding
-    for the SOP automation workflows; provides the skill and instruction templates that the
-    new GitHub Actions workflows reference.
+  - `docs/runbooks/` — added for source-verified operational documentation;
+    contains concise setup and troubleshooting guides for maintainers.
 
 If no new directories are added, write "None."
 -->

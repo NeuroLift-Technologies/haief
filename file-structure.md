@@ -11,42 +11,28 @@ The key insight: the **principles** are public (Solidarity Framework is open-sou
 
 ---
 
-## `haief` File Structure (from nlt-business-agents)
+## Current Implemented Governance Structure
+
+Source-verified on 2026-05-28 after PR #13. This tree lists governance-relevant
+files that currently exist in `NeuroLift-Technologies/haief`; planned or
+upstream source files are documented separately below and should not be treated
+as implemented until they are present in the repository.
 
 ```
 haief/
 ├── AGENTS.md                          ← Internal gateway (extends public AGENTS.md)
 ├── NLT-DEV-OTOI.md                    ← Full coding agent contract (from docs/context/)
+├── CLAUDE.md                          ← Agent entry directive for this repository
+├── README.md                          ← Public HAIEF repository overview
+├── file-structure.md                  ← This structure and mapping ADR
 ├── nltotoi.json                       ← Internal discovery manifest
 │
-├── agents/                            ← GitHub Copilot custom agent profiles (org-wide)
-│   ├── README.md                      ← NLT standards and instructions for custom agents
-│   ├── example-agent.md               ← Commented-out starter template
-│   ├── nlt-governance-steward.md      ← Governance compliance and OTOI guidance agent
-│   ├── nlt-code-reviewer.md           ← Security/quality code review agent
-│   └── nlt-onboarding-assistant.md    ← SOP-NLT-001 onboarding guide agent
-│
-├── skills/                            ← GitHub Copilot custom skill definitions (org-wide)
-│   ├── README.md                      ← NLT standards and compliance requirements for skills
-│   └── example-skill/
-│       └── SKILL.md                   ← Commented-out starter template for new skills
+├── agents/
+│   └── nlt-governance-steward.md      ← Governance compliance and OTOI guidance agent
 │
 ├── .github/
-│   ├── agents/                        ← VS Code / GitHub Copilot Chat agent profiles
-│   │   ├── nlt-governance-steward.agent.md   ← VS Code variant with tools + handoffs
-│   │   ├── nlt-code-reviewer.agent.md        ← VS Code variant with tools + handoffs
-│   │   └── nlt-onboarding-assistant.agent.md ← VS Code variant with tools + handoffs
 │   └── workflows/
-│       ├── validate-governance.yml           ← Core governance validation
-│       ├── incident-detection.yml            ← Credential/secret scanning
-│       ├── repo-governance-check.yml         ← Reusable compliance check (workflow_call)
-│       ├── agent-commit-format.yml           ← Commit message format enforcement
-│       ├── agent-session-check.yml           ← Handoff record verification
-│       ├── org-repo-compliance.yml           ← Weekly org-wide repo scanning
-│       ├── agent-profile-validation.yml      ← Validates agents/*.md NLT frontmatter
-│       ├── skill-profile-validation.yml      ← Validates skills/*/SKILL.md NLT frontmatter
-│       ├── org-runner-health.yml             ← Self-hosted runner availability monitoring
-│       └── org-actions-policy.yml            ← Non-allowlisted GitHub Actions scanning
+│       └── validate-governance.yml           ← Core governance validation
 │
 ├── .nltotoi/
 │   ├── index/
@@ -62,7 +48,8 @@ haief/
 │   ├── agent-registration.json       ← From OTOI Section 3
 │   ├── handoff-record.json           ← From OTOI Section 5
 │   ├── escalation.md                 ← From OTOI Section 4.3
-│   └── intent-log.md                 ← From docs/agent-log/ pattern
+│   ├── intent-log.md                 ← From docs/agent-log/ pattern
+│   └── commit-message.md             ← Commit format reference
 │
 ├── ISSUE_TEMPLATE/
 │   ├── agent-escalation.md           ← Escalation as GitHub Issue
@@ -71,8 +58,10 @@ haief/
 ├── PULL_REQUEST_TEMPLATE/
 │   └── agent-contribution.md         ← PR template with governance checklist
 │
-├── workflows/
-│   └── validate-governance.yml       ← CI: runs validate-governance.sh on push
+├── docs/
+│   ├── active-threads.md             ← Active and resolved work tracking
+│   ├── agent-log/                    ← Agent registration and handoff records
+│   └── escalations/                  ← Escalation record location
 │
 └── SOPs/
     ├── new-agent-onboarding.md       ← How to onboard a new coding agent
@@ -82,7 +71,11 @@ haief/
 
 ---
 
-## Content Mapping from `nlt-business-agents`
+## Source Mapping Notes from `nlt-business-agents`
+
+The table below records where the governance baseline was sourced from. It is a
+mapping reference, not a guarantee that every source-side helper or future
+workflow has been implemented in this repository.
 
 ### Direct Lifts (copy with minor adjustments)
 
@@ -127,7 +120,7 @@ haief/
 
 **Agent:** [Name]  
 **Session:** [Branch/session ID]  
-**Governed by:** DEV-OTOI-1.0.0
+**Governed by:** ORG-DEV-OTOI-1.0.0
 
 ### Before Merging
 - [ ] Governance validation script passed (`.nltotoi/scripts/validate-governance.sh`)
@@ -141,7 +134,7 @@ haief/
 `[AGENT_NAME] type(scope): description`
 ```
 
-**`workflows/validate-governance.yml`** — New CI wrapper:
+**`.github/workflows/validate-governance.yml`** — CI wrapper:
 ```yaml
 name: Governance Validation
 on: [push, pull_request]
