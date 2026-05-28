@@ -83,7 +83,7 @@ Use this checklist when updating `_pages/safety-case-template.md`:
   **Safeguard:** Verify wording against existing framework documents before merge.
 - **Pitfall:** Style sprawl from repeated inline formatting.  
   **Safeguard:** Promote repeated styles to named CSS classes in `assets/css/main.css`.
-- **Pitfall:** Safety case template drift after review edits.  
+- **Pitfall:** Safety case template drift after review edits.
   **Safeguard:** Re-check the 10-section structure, permission ladder formatting, nav/footer labels, and CTA classes together.
 
 ## Contribution Guidelines
