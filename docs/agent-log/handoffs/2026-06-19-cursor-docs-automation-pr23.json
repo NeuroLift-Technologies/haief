@@ -1,0 +1,54 @@
+{
+  "handoff_record": {
+    "session_id": "158b2152-7214-45b1-9efe-a458133e75b6",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-06-19",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-f09c",
+    "work_completed": [
+      "Source-verified the merged PR #23 Astro migration documentation state against current Astro pages, layout, navigation components, npm scripts, and Cloudflare Pages deploy command.",
+      "Expanded README.md with the full current src/pages inventory and a pointer to docs/overview.md for route and workflow contracts.",
+      "Updated CONTRIBUTING.md with npm install versus npm ci guidance, Cloudflare Pages deployment constraints, canonical/preview URL handling, client-only submission form maintenance, and troubleshooting notes.",
+      "Updated docs/overview.md with a source-verified public route inventory, navigation conventions, submission handoff contract, agent-facing page contract, URL/sitemap/robots contract, and manual site-build validation note.",
+      "Updated PULL_REQUEST_TEMPLATE/agent-contribution.md to prompt site build checks for PRs that touch Astro/site files.",
+      "Recorded this automation in docs/agent-log/registrations and resolved the active thread."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Kept the change documentation-focused and did not modify runtime assets such as public/robots.txt.",
+      "Documented src/pages/submit-question.md and src/pages/submit-fact-check.md as static browser-only handoff forms because source shows they generate GitHub issue URLs or mailto links and do not call a backend.",
+      "Documented https://haief.org as the canonical site value from astro.config.mjs and https://haief-site.pages.dev/ as the current preview URL already used in repo docs.",
+      "Documented npm run deploy as a guarded operation requiring explicit production/deployment authorization under OTOI."
+    ],
+    "decisions_pending": [
+      "Whether to update the stale sitemap URL in public/robots.txt, which build output still copies with the old GitHub Pages host.",
+      "Whether and how to address the two low-severity npm audit findings reported by npm ci.",
+      "Joshua must decide and complete any haief.org custom-domain binding or production deployment actions outside this documentation PR."
+    ],
+    "escalations": [],
+    "next_agent_notes": "The docs now describe the public route inventory, static submission form behavior, Cloudflare Pages deploy constraints, and site-build validation expectations. If changing runtime assets next, verify public/robots.txt against astro.config.mjs and the generated dist/sitemap-index.xml. Do not deploy without explicit human authorization.",
+    "files_modified": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "docs/overview.md",
+      "PULL_REQUEST_TEMPLATE/agent-contribution.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr23.json",
+      "docs/agent-log/handoffs/2026-06-19-cursor-docs-automation-pr23.json"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "bash .nltotoi/scripts/validate-governance.sh --strict",
+      "npm ci",
+      "npm run build",
+      "git diff --check HEAD~1..HEAD",
+      "python3 -m json.tool docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr23.json",
+      "rg '(_pages|_config\\\\.yml|_includes|relative_url|bundle exec jekyll|neurolift-technologies\\\\.github\\\\.io/haief)' --glob '*.md'",
+      "rg 'Sitemap:|sitemap-index' dist"
+    ],
+    "tests_passing": true,
+    "pr_url": null
+  }
+}
