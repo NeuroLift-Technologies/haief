@@ -33,8 +33,10 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 - `src/components/Header.astro` and `src/components/Footer.astro`: reusable navigation surfaces.
 - `public/assets/css/main.css`: design system and page-specific components, served at `/assets/css/main.css`.
 - `public/assets/images/favicon.svg`: favicon, served at `/assets/images/favicon.svg`.
-- `astro.config.mjs`: Astro config, `@astrojs/sitemap`, and canonical `site: 'https://haief.org'`.
-- `package.json`: Node `>=22`, Astro build/dev scripts, and Cloudflare Pages deploy command.
+- `public/.assetsignore`: Cloudflare asset upload exclusions for Worker routing artifacts.
+- `astro.config.mjs`: Astro config, `@astrojs/sitemap`, `@astrojs/cloudflare`, and canonical `site: 'https://haief.org'`.
+- `wrangler.jsonc`: Cloudflare Worker deploy contract for the `haief` Worker and static asset binding.
+- `package.json`: Node `>=22`, Astro build/dev scripts, Wrangler preview/deploy scripts, and Cloudflare dependencies. Use a current Node 22 runtime for builds; Node `22.14.0` fails with a missing `node:module.registerHooks` export before Astro loads config.
 
 ### Public route inventory
 
@@ -106,14 +108,16 @@ when adding, renaming, or removing pages:
 
 8. **URL, sitemap, and robots contract**
    - `astro.config.mjs` sets `site: 'https://haief.org'`; `Base.astro` and `@astrojs/sitemap` use that value for canonical URLs and sitemap generation.
-   - `https://haief-site.pages.dev/` is the documented Cloudflare Pages preview URL until the custom domain is bound.
+   - Repository source does not declare the production route or custom-domain binding; verify Cloudflare routing outside the repo before release.
    - `public/robots.txt` is copied into the build output as a static asset. Verify its `Sitemap:` host when `astro.config.mjs` `site` or deployment domains change.
 
 9. **Build and deploy contract**
    - `npm run dev` starts Astro locally.
    - `npm run build` and `npm run check` run `astro build` and emit `dist/`.
-   - `npm run preview` serves the built output locally.
-   - `npm run deploy` runs `astro build && wrangler pages deploy dist --project-name haief-site`; production deployment requires explicit human authorization.
+   - `npm run preview` runs `npm run build && wrangler dev`, serving the generated Cloudflare Worker locally.
+   - `npm run deploy` runs `npm run build && wrangler deploy`; production deployment requires explicit human authorization.
+   - `wrangler.jsonc` names the Worker `haief`, uses `@astrojs/cloudflare/entrypoints/server` as `main`, serves `./dist` through the `ASSETS` binding, enables observability, and sets the Worker compatibility date/flags.
+   - `public/.assetsignore` keeps `_worker.js` and `_routes.json` out of static asset uploads so Worker routing files are not treated as public assets.
    - This repository currently has governance validation CI only; site builds must be run manually for PRs that touch `src/`, `public/`, `astro.config.mjs`, or package files.
 
 ## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow

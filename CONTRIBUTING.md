@@ -85,7 +85,7 @@ See [Community Guidelines](community/guidelines.md) for full details.
 
 ## Development Setup
 
-### Website (Astro on Cloudflare Pages)
+### Website (Astro on Cloudflare Workers)
 
 ```bash
 # Install dependencies for local development (updates package-lock.json if deps change)
@@ -100,13 +100,13 @@ npm run dev
 # Build for production
 npm run build
 
-# Preview the built site locally
+# Build and preview the Worker locally
 npm run preview
 ```
 
-The site requires Node `>=22`. `npm run check` is currently an alias for `astro build`.
+The site declares Node `>=22` in `package.json`, but the current Astro/Vite toolchain needs a recent Node 22 runtime with `node:module.registerHooks`. Node `22.22.2` has been verified for builds; Node `22.14.0` fails before loading `astro.config.mjs`. `npm run check` is currently an alias for `astro build`. `npm run preview` runs `npm run build && wrangler dev`, so it exercises the generated Cloudflare Worker locally rather than Astro's standalone preview server.
 
-### Cloudflare Pages Runbook
+### Cloudflare Worker Runbook
 
 The site deploy path is source-controlled in `package.json`:
 
@@ -114,15 +114,17 @@ The site deploy path is source-controlled in `package.json`:
 npm run deploy
 ```
 
-That command runs `astro build` and then `wrangler pages deploy dist --project-name haief-site`.
+That command runs `astro build` and then `wrangler deploy`.
 
 Operational constraints:
 
 - Do not deploy without explicit production/deployment authorization from Joshua W. Dorsey, Sr.
-- There is no `wrangler.toml`; the Cloudflare Pages project name is supplied by the npm script.
-- Wrangler authentication must already be configured for an account with access to the `haief-site` Pages project.
-- `astro.config.mjs` uses `site: 'https://haief.org'` for canonical metadata and sitemap generation. The documented preview URL is `https://haief-site.pages.dev/` until the custom domain is bound.
-- Before a deploy, verify `public/robots.txt` and any absolute public links still match the intended canonical/preview URL split.
+- `wrangler.jsonc` is the deploy contract. It names the Worker `haief`, points `main` at `@astrojs/cloudflare/entrypoints/server`, binds static assets from `./dist` to `ASSETS`, enables observability, and sets `compatibility_date`.
+- Wrangler authentication must already be configured for an account with access to deploy the `haief` Worker.
+- `astro.config.mjs` uses `site: 'https://haief.org'` for canonical metadata and sitemap generation. Repository source does not declare the production route or custom-domain binding.
+- `public/.assetsignore` excludes Worker routing artifacts (`_worker.js` and `_routes.json`) from static asset upload; keep it aligned with Astro/Cloudflare output if the adapter changes.
+- Before a deploy, verify `public/robots.txt` and any absolute public links still match the intended canonical/public URL split.
+- Run `npm run generate-types` after changing Wrangler bindings or compatibility settings so `worker-configuration.d.ts` can be regenerated if needed.
 
 ### Documentation + Site Content Workflow
 
@@ -143,7 +145,7 @@ Use this workflow when adding/updating public pages:
    - Run `npm run build` or `npm run check` before opening a docs PR.
    - Use `npm ci` first when validating a branch or automation output against the committed lockfile.
 6. **Do not deploy without approval**
-   - `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project `haief-site`; production deployment requires explicit human authorization.
+   - `npm run deploy` builds and deploys the Cloudflare Worker named `haief`; production deployment requires explicit human authorization.
 
 ### Public Routes, Navigation, and Submission Forms
 
@@ -189,6 +191,10 @@ public-goal language, or governance crisis timelines:
   - Confirm header URLs keep the root-relative trailing-slash pattern used by `src/components/Header.astro`.
 - **Sitemap or robots metadata points to the wrong host**
   - Compare `astro.config.mjs` `site` with `public/robots.txt` before release.
+- **Worker preview fails after a clean build**
+  - Check `wrangler.jsonc` `main`, `assets.directory`, and `assets.binding` against `astro.config.mjs` and the generated `dist/` output.
+- **Build fails with `node:module` missing `registerHooks`**
+  - Check `node --version` and use a current Node 22 runtime. In Cursor Cloud, ensure the desired `nvm` Node path appears before `/exec-daemon` on `PATH`.
 - **Inconsistent governance terminology**
   - Cross-check terms with `src/pages/solidarity-framework.md` before merge.
 

@@ -1,0 +1,25 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor Cloud Automation",
+    "platform": "Cursor Cloud",
+    "version": "GPT-5.5",
+    "session_id": "158b2152-7214-45b1-9efe-a458133e75b6-pr26-docs-follow-up",
+    "entry_date": "2026-06-19",
+    "entry_point": "Automation triggered by merged PR #26: [Cursor] docs(site): document Astro public workflows",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-3f02",
+    "capabilities_self_reported": [
+      "Source-verified documentation updates",
+      "GitHub PR context inspection",
+      "Astro and Cloudflare Worker workflow documentation",
+      "Repository governance session tracking"
+    ],
+    "known_limitations": [
+      "No production deployment authorization",
+      "No authority to make architecture decisions beyond documenting the implemented source"
+    ],
+    "preferred_handoff_format": "Structured JSON handoff plus concise PR summary"
+  }
+}
