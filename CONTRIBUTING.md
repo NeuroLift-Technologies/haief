@@ -121,7 +121,7 @@ Operational constraints:
 - Do not deploy without explicit production/deployment authorization from Joshua W. Dorsey, Sr.
 - `wrangler.jsonc` is the deploy contract. It names the Worker `haief`, points `main` at `@astrojs/cloudflare/entrypoints/server`, binds static assets from `./dist` to `ASSETS`, enables observability, and sets `compatibility_date`.
 - Wrangler authentication must already be configured for an account with access to deploy the `haief` Worker.
-- `astro.config.mjs` uses `site: 'https://haief.org'` for canonical metadata and sitemap generation. Repository source does not declare the production route or custom-domain binding.
+- `astro.config.mjs` uses `site: 'https://elevaitionfoundation.org'` for canonical metadata and sitemap generation. Repository source does not declare the production route or custom-domain binding.
 - `public/.assetsignore` excludes Worker routing artifacts (`_worker.js` and `_routes.json`) from static asset upload; keep it aligned with Astro/Cloudflare output if the adapter changes.
 - Before a deploy, verify `public/robots.txt` and any absolute public links still match the intended canonical/public URL split.
 - Run `npm run generate-types` after changing Wrangler bindings or compatibility settings so `worker-configuration.d.ts` can be regenerated if needed.

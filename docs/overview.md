@@ -34,7 +34,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 - `public/assets/css/main.css`: design system and page-specific components, served at `/assets/css/main.css`.
 - `public/assets/images/favicon.svg`: favicon, served at `/assets/images/favicon.svg`.
 - `public/.assetsignore`: Cloudflare asset upload exclusions for Worker routing artifacts.
-- `astro.config.mjs`: Astro config, `@astrojs/sitemap`, `@astrojs/cloudflare`, and canonical `site: 'https://haief.org'`.
+- `astro.config.mjs`: Astro config, `@astrojs/sitemap`, `@astrojs/cloudflare`, and canonical `site: 'https://elevaitionfoundation.org'`.
 - `wrangler.jsonc`: Cloudflare Worker deploy contract for the `haief` Worker and static asset binding.
 - `package.json`: Node `>=22`, Astro build/dev scripts, Wrangler preview/deploy scripts, and Cloudflare dependencies. Use a current Node 22 runtime for builds; Node `22.14.0` fails with a missing `node:module.registerHooks` export before Astro loads config.
 
@@ -107,7 +107,7 @@ when adding, renaming, or removing pages:
    - When agent-facing terms change, cross-check `src/pages/solidarity-framework.md`, `AGENTS.md`, and `NLT-DEV-OTOI.md` for governance alignment without amending OTOI content.
 
 8. **URL, sitemap, and robots contract**
-   - `astro.config.mjs` sets `site: 'https://haief.org'`; `Base.astro` and `@astrojs/sitemap` use that value for canonical URLs and sitemap generation.
+   - `astro.config.mjs` sets `site: 'https://elevaitionfoundation.org'`; `Base.astro` and `@astrojs/sitemap` use that value for canonical URLs and sitemap generation.
    - Repository source does not declare the production route or custom-domain binding; verify Cloudflare routing outside the repo before release.
    - `public/robots.txt` is copied into the build output as a static asset. Verify its `Sitemap:` host when `astro.config.mjs` `site` or deployment domains change.
 
