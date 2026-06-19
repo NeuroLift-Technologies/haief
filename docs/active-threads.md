@@ -8,18 +8,20 @@
 
 ## Active Threads
 
-### Thread: 2026-06-19-cursor-docs-automation-pr24
-**Status:** open
-**Owner:** Cursor Cloud Automation
-**Started:** 2026-06-19
-**Last updated:** 2026-06-19
-**Summary:** Source-verify the merged PR #24 Cloudflare Workers configuration and update engineering documentation for any newly exposed setup, workflow, or operational gaps.
-**Blockers:** None.
-**Next action:** Inspect the PR #24 diff and current source files to identify the smallest useful documentation update.
+*(No active threads yet)*
 
 ---
 
 ## Resolved Threads
+
+### Thread: 2026-06-19-cursor-docs-automation-pr24
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verified the merged PR #24 Cloudflare Workers configuration and updated developer-facing documentation for the current Worker deploy contract, local preview flow, Worker type generation, ignored environment files, asset metadata exclusion, and Node 22.x runtime pitfall.
+**Blockers:** None.
+**Next action:** Review the documentation PR; separately decide whether to tighten `package.json` engines beyond broad `>=22` and whether to address the existing npm audit findings.
 
 ### Thread: 2026-06-19-cursor-docs-automation-pr21
 **Status:** resolved
