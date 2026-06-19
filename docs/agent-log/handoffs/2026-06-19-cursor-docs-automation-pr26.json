@@ -1,0 +1,51 @@
+{
+  "handoff_record": {
+    "session_id": "158b2152-7214-45b1-9efe-a458133e75b6-pr26-docs-follow-up",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-06-19",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-3f02",
+    "work_completed": [
+      "Source-verified PR #26 documentation against the current Astro and Cloudflare Worker source.",
+      "Updated README, CONTRIBUTING, docs/overview, and file-structure documentation to describe @astrojs/cloudflare, wrangler.jsonc, wrangler deploy, Worker asset binding, local wrangler dev preview, and public route/build constraints.",
+      "Corrected the stale deploy comment in astro.config.mjs from Cloudflare Pages to Cloudflare Workers.",
+      "Documented the verified Node build pitfall: Node 22.14.0 fails with missing node:module.registerHooks, while Node 22.22.2 builds successfully when first on PATH.",
+      "Added session registration and resolved the active thread for this documentation automation."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Updated existing docs instead of creating a new runbook to keep the documentation-only follow-up focused.",
+      "Did not change package.json engines because that is a package/runtime policy decision; documented the verified Node pitfall instead.",
+      "Left historical Cloudflare Pages references in prior handoff/resolved-thread records unchanged because they describe past work state."
+    ],
+    "decisions_pending": [
+      "Joshua or maintainers should decide whether package.json engines.node should be tightened beyond >=22.",
+      "Maintainers should decide whether to address the existing low-severity npm audit findings."
+    ],
+    "escalations": [],
+    "next_agent_notes": "Current docs now describe the implemented Worker deploy path. Use a recent Node 22 runtime, e.g. v22.22.2, for npm run build in Cursor Cloud because /exec-daemon/node v22.14.0 fails before Astro config loads. Do not deploy without explicit authorization.",
+    "files_modified": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "docs/overview.md",
+      "file-structure.md",
+      "astro.config.mjs",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr26.json",
+      "docs/agent-log/handoffs/2026-06-19-cursor-docs-automation-pr26.json"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "bash .nltotoi/scripts/validate-governance.sh --strict",
+      "npm ci",
+      "PATH=\"$HOME/.nvm/versions/node/v22.22.2/bin:$PATH\" npm run build",
+      "python3 -m json.tool docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr26.json",
+      "git diff --check origin/main..HEAD",
+      "Targeted stale-reference scans for Cloudflare Pages deploy and wrangler pages deploy"
+    ],
+    "tests_passing": true,
+    "pr_url": ""
+  }
+}
