@@ -16,7 +16,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is an independent, community‑driv
 
 HAIEF exists to ensure that AI serves people, not the other way around — with transparency, dignity, and global accessibility at its core.
 
-**[Visit the Website](https://neurolift-technologies.github.io/haief/)** | **[Join Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)** | **[Take Action](https://neurolift-technologies.github.io/haief/take-action/)**
+**[Visit the Website](https://haief-site.pages.dev/)** | **[Join Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)** | **[Take Action](https://haief-site.pages.dev/take-action/)**
 
 ---
 
@@ -82,11 +82,29 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 ## 🗂️ Repository Structure
 
 ```
-/_pages
-    safety-case-template.md
-    who-we-are.md
-    the-problem.md
-    case-study-anthropic-pentagon-2026.md
+/src
+    /pages
+        index.astro
+        404.astro
+        safety-case-template.md
+        who-we-are.md
+        the-problem.md
+        case-study-anthropic-pentagon-2026.md
+    /layouts
+        Base.astro
+    /components
+        Header.astro
+        Footer.astro
+
+/public
+    /assets
+        /css/main.css
+        /images/favicon.svg
+    robots.txt
+
+package.json
+astro.config.mjs
+tsconfig.json
 
 /solidarity-framework
     /toi
@@ -118,6 +136,18 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
     agent-contributions/
 ```
 
+### Public Website Stack
+
+The public site is an Astro static site deployed to Cloudflare Pages:
+
+- Node `>=22` is required by `package.json`.
+- `npm run dev` starts the local Astro dev server.
+- `npm run build` and `npm run check` run `astro build` and emit `dist/`.
+- `npm run preview` serves the built site locally.
+- `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project `haief-site`; use it only with explicit production/deployment authorization.
+
+`astro.config.mjs` sets the canonical site URL to `https://haief.org` for generated metadata and sitemap output. The currently documented Cloudflare Pages preview is `https://haief-site.pages.dev/` until the custom domain is bound.
+
 ### 🔒 About the /internal Directory
 
 The charter and agent contribution logs for AI agents assisting with the build will live in `/internal/`, which is intentionally gitignored to preserve:
@@ -133,7 +163,7 @@ This ensures that public standards remain transparent while internal agent orche
 
 ## ☁️ What Is Not in This Repo
 
-The following remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
+The public static website build and Cloudflare Pages deploy tooling are now in this repo. The following runtime systems remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
 
 - Fusion methodology  
 - Identity‑bound agent state  

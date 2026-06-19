@@ -2,13 +2,20 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-05-28
+**Last updated:** 2026-06-19
 
 ---
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-19-cursor-docs-automation-pr21
+**Status:** open
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verified the merged PR #21 Astro/Cloudflare Pages site migration and is updating developer-facing documentation that still referenced the removed Jekyll/GitHub Pages scaffold.
+**Blockers:** None.
+**Next action:** Run focused documentation validation, then write a handoff record and resolve this thread.
 
 ---
 

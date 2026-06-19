@@ -31,7 +31,7 @@ When updating governance content, contributors should follow these constraints:
 - **Do not publish unsourced factual claims.** Tie event claims to verifiable source links.
 - **Separate observed events from analysis.** Facts first, interpretation second.
 - **Avoid framework drift.** TOI/OTOI/Sleepwalker/RRT terms should be used consistently with current framework pages.
-- **Keep cross-page language aligned.** Changes to a major claim should be reflected in `index.html`, `_pages/the-problem.md`, and relevant action/education pages when applicable.
+- **Keep cross-page language aligned.** Changes to a major claim should be reflected in `src/pages/index.astro`, `src/pages/the-problem.md`, and relevant action/education pages when applicable.
 - **Prefer update-over-duplication.** Expand existing governance pages before creating new standalone pages.
 
 ## Runbook: Public Goals and Agent Safety Cases
@@ -43,12 +43,12 @@ Use this checklist when changing public-goal language or the agent safety case t
    - A safety case explains the evidence and constraints that make the goal credible.
    - The governance layer explains enforcement when goals conflict, systems drift, handoffs occur, or users are placed at risk.
 2. **Update the canonical template first**
-   - The public template lives at `_pages/safety-case-template.md`.
+   - The public template lives at `src/pages/safety-case-template.md`.
    - Keep the ten-section structure complete unless the governance model itself changes.
    - Preserve links to TOI/OTOI, Provenance, Identity Integrity, and Handoff Rules when those specifications remain applicable.
 3. **Keep discovery paths current**
-   - Header navigation is configured in `_config.yml`.
-   - Footer resources are maintained in `_includes/footer.html`.
+   - Header navigation is maintained in `src/components/Header.astro`.
+   - Footer resources are maintained in `src/components/Footer.astro`.
    - Contributor-facing instructions live in `CONTRIBUTING.md`.
 4. **Avoid unsupported compliance claims**
    - Do not describe a safety case as reviewed, certified, or registered unless the corresponding public review process exists.
@@ -61,14 +61,15 @@ Use this checklist when changing public-goal language or the agent safety case t
 
 Use this checklist when adding event-based governance documentation:
 
-1. **Create or update the case-study page in `_pages/`**
-   - Include front matter with `layout`, `title`, `description`, and `permalink`.
+1. **Create or update the case-study page in `src/pages/`**
+   - Include front matter with `layout: ../layouts/Base.astro`, `title`, and `description`.
+   - The current Anthropic-Pentagon case study lives at `src/pages/case-study-anthropic-pentagon-2026.md`.
 2. **Add discovery paths**
-   - Header nav (`_config.yml` `nav`) and footer links (`_includes/footer.html`) if the page is a primary reference.
+   - Header nav (`src/components/Header.astro`) and footer links (`src/components/Footer.astro`) if the page is a primary reference.
 3. **Wire context across key paths**
-   - Link from homepage and from the affected framework/problem/action pages.
+   - Link from `src/pages/index.astro` and from the affected framework/problem/action pages under `src/pages/`.
 4. **Add only required styling**
-   - Place new reusable classes in `assets/css/main.css`; avoid one-off inline styles when a class is reusable.
+   - Place new reusable classes in `public/assets/css/main.css`; avoid one-off inline styles when a class is reusable.
 5. **Validate metadata coverage**
    - Confirm the page has a description so Open Graph/Twitter card metadata remain meaningful.
 6. **Document sources**
@@ -77,13 +78,13 @@ Use this checklist when adding event-based governance documentation:
 ## Operational Pitfalls and Safeguards
 
 - **Pitfall:** Publishing a page without nav integration.  
-  **Safeguard:** Check both `_config.yml` and `_includes/footer.html`.
-- **Pitfall:** Broken links due to base URL differences.  
-  **Safeguard:** Use `{{ '/path/' | relative_url }}` for internal links.
+  **Safeguard:** Check both `src/components/Header.astro` and `src/components/Footer.astro`.
+- **Pitfall:** Broken links due to stale Jekyll assumptions.  
+  **Safeguard:** Use root-relative links such as `/path/`; remove Liquid filters and `/haief` base URL assumptions.
 - **Pitfall:** Overstating framework guarantees.  
   **Safeguard:** Verify wording against existing framework documents before merge.
 - **Pitfall:** Style sprawl from repeated inline formatting.  
-  **Safeguard:** Promote repeated styles to named CSS classes in `assets/css/main.css`.
+  **Safeguard:** Promote repeated styles to named CSS classes in `public/assets/css/main.css`.
 
 ## Contribution Guidelines
 
