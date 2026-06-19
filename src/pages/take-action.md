@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "Take Action"
 description: "Join the HAIEF movement. Developers, organizations, standards bodies, and users - everyone has a role in keeping open source AI open."
-permalink: /take-action/
 ---
 
 <div class="page-header">
@@ -19,7 +18,7 @@ permalink: /take-action/
 
 <div class="callout callout--danger">
   <p class="callout__title">This is no longer theoretical</p>
-  <p>On February 27, 2026, the President of the United States blacklisted an AI company for refusing to allow mass surveillance. The only thing that stood between users and unrestricted military AI deployment was a company's Terms of Service. One presidential order eliminated it. <strong>The governance gap HAIEF was built to fill is now visible to the entire world.</strong> <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">Read the full case study &rarr;</a></p>
+  <p>On February 27, 2026, the President of the United States blacklisted an AI company for refusing to allow mass surveillance. The only thing that stood between users and unrestricted military AI deployment was a company's Terms of Service. One presidential order eliminated it. <strong>The governance gap HAIEF was built to fill is now visible to the entire world.</strong> <a href="/case-study-anthropic-pentagon-2026/">Read the full case study &rarr;</a></p>
 </div>
 
 ---
@@ -68,10 +67,10 @@ permalink: /take-action/
 
   <h4>Get Started</h4>
   <ol>
-    <li><a href="{{ site.social.github }}">Star and fork the repository</a></li>
-    <li>Read the <a href="{{ site.social.github }}/blob/main/community/guidelines.md">contribution guidelines</a></li>
-    <li>Check <a href="{{ site.social.github }}/issues">open issues</a> for good first contributions</li>
-    <li>Join the <a href="{{ site.social.discussions }}">developer discussions</a></li>
+    <li><a href="https://github.com/NeuroLift-Technologies/haief">Star and fork the repository</a></li>
+    <li>Read the <a href="https://github.com/NeuroLift-Technologies/haief/blob/main/community/guidelines.md">contribution guidelines</a></li>
+    <li>Check <a href="https://github.com/NeuroLift-Technologies/haief/issues">open issues</a> for good first contributions</li>
+    <li>Join the <a href="https://github.com/NeuroLift-Technologies/haief/discussions">developer discussions</a></li>
   </ol>
 </div>
 
@@ -218,7 +217,7 @@ permalink: /take-action/
 
   <h4>Getting Started</h4>
   <ol>
-    <li>Review <a href="{{ '/solidarity-framework/' | relative_url }}">Solidarity Framework</a> specifications</li>
+    <li>Review <a href="/solidarity-framework/">Solidarity Framework</a> specifications</li>
     <li>Assess current AI governance against framework requirements</li>
     <li>Identify integration points for TOI/OTOI compliance</li>
     <li>Join early adopter program for implementation support</li>
@@ -265,13 +264,13 @@ permalink: /take-action/
 
   <h4>Join the Community</h4>
   <ul>
-    <li><a href="{{ site.social.discussions }}">Participate in governance discussions</a> - No technical expertise required</li>
+    <li><a href="https://github.com/NeuroLift-Technologies/haief/discussions">Participate in governance discussions</a> - No technical expertise required</li>
     <li>Share your experiences with AI systems - Your story matters</li>
     <li>Provide feedback on framework usability - Help make protections accessible</li>
     <li>Advocate for adoption by platforms you use - Your voice creates pressure</li>
   </ul>
 
-  <p><a href="{{ '/for-humans/' | relative_url }}" class="btn btn--primary">Join the Community</a></p>
+  <p><a href="/for-humans/" class="btn btn--primary">Join the Community</a></p>
 </div>
 
 ---
@@ -312,7 +311,7 @@ permalink: /take-action/
     <p>We're committed to making participation accessible. If you need accommodations to contribute - alternative formats, flexible timing, different communication channels - let us know. Your participation is worth the effort.</p>
   </div>
 
-  <p><a href="{{ '/for-humans/' | relative_url }}" class="btn btn--primary">Join the Community</a></p>
+  <p><a href="/for-humans/" class="btn btn--primary">Join the Community</a></p>
 </div>
 
 ---
@@ -328,8 +327,8 @@ permalink: /take-action/
   <p>The Anthropic crisis has made the need for community-owned AI governance visible to the entire world. Help spread the word:</p>
 
   <ul>
-    <li><strong>Share the HAIEF site</strong> &mdash; especially the <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">case study</a> that explains what happened and why it matters</li>
-    <li><strong>Join the discussion</strong> &mdash; <a href="{{ site.social.discussions }}">GitHub Discussions</a> is open to everyone, no technical expertise needed</li>
+    <li><strong>Share the HAIEF site</strong> &mdash; especially the <a href="/case-study-anthropic-pentagon-2026/">case study</a> that explains what happened and why it matters</li>
+    <li><strong>Join the discussion</strong> &mdash; <a href="https://github.com/NeuroLift-Technologies/haief/discussions">GitHub Discussions</a> is open to everyone, no technical expertise needed</li>
     <li><strong>Talk about it</strong> &mdash; in your communities, workplaces, and social networks. The question "who protects users when companies get blacklisted?" deserves a public answer</li>
   </ul>
 </div>
@@ -342,22 +341,22 @@ permalink: /take-action/
   <div class="card" style="text-align: center;">
     <h4>Star</h4>
     <p style="font-size: var(--font-size-sm);">Show support on GitHub</p>
-    <a href="{{ site.social.github }}" class="btn btn--outline">Star Repo</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief" class="btn btn--outline">Star Repo</a>
   </div>
   <div class="card" style="text-align: center;">
     <h4>Discuss</h4>
     <p style="font-size: var(--font-size-sm);">Join the conversation</p>
-    <a href="{{ site.social.discussions }}" class="btn btn--outline">Discussions</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--outline">Discussions</a>
   </div>
   <div class="card" style="text-align: center;">
     <h4>Share</h4>
     <p style="font-size: var(--font-size-sm);">Spread the word</p>
-    <a href="https://twitter.com/intent/tweet?text=Keeping%20open%20source%20AI%20open%20-%20check%20out%20HAIEF&url={{ site.url }}{{ site.baseurl }}" class="btn btn--outline">Tweet</a>
+    <a href="https://twitter.com/intent/tweet?text=Keeping%20open%20source%20AI%20open%20-%20check%20out%20HAIEF&url=https://haief.org" class="btn btn--outline">Tweet</a>
   </div>
   <div class="card" style="text-align: center;">
     <h4>Contribute</h4>
     <p style="font-size: var(--font-size-sm);">Submit a PR</p>
-    <a href="{{ site.social.github }}/blob/main/community/proposals/README.md" class="btn btn--outline">Propose</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief/blob/main/community/proposals/README.md" class="btn btn--outline">Propose</a>
   </div>
 </div>
 
@@ -368,7 +367,7 @@ permalink: /take-action/
   <p style="font-size: var(--font-size-xl); color: var(--color-text-muted); margin-bottom: var(--space-6); max-width: 600px; margin-left: auto; margin-right: auto;">
     The open source community saved software freedom once. Now we need to save it again for AI.
   </p>
-  <a href="{{ site.social.discussions }}" class="btn btn--accent btn--large">Start a Discussion</a>
+  <a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--accent btn--large">Start a Discussion</a>
 </div>
 
   </div>

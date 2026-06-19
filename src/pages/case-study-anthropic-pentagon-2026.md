@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "TOS vs. Constitution vs. TOI: The Anthropic-Pentagon Crisis"
 description: "A case study in why AI governance needs a Third Pillar. When Terms of Service met state power, only Terms of Interaction could have protected users."
-permalink: /case-study-anthropic-pentagon-2026/
 ---
 
 <div class="page-header" style="background: linear-gradient(135deg, var(--color-bg-dark) 0%, #2a2a4e 100%); border-bottom: 3px solid var(--color-accent); color: white;">
@@ -151,7 +150,7 @@ The President framed this crisis as "Terms of Service vs. the Constitution." But
 
 ## Solidarity Framework Mapping
 
-Each component of the <a href="{{ '/solidarity-framework/' | relative_url }}">Solidarity Framework</a> addresses a specific gap revealed by this crisis.
+Each component of the <a href="/solidarity-framework/">Solidarity Framework</a> addresses a specific gap revealed by this crisis.
 
 <div class="grid grid--2">
   <div class="card">
@@ -266,7 +265,7 @@ The crisis is ongoing. Here are the possible trajectories:
     exposed the structural governance failure: user protections that depend on 
     a single company's willingness to hold the line — and that company's 
     continued survival — are not durable governance. 
-    <a href="{{ site.social.discussions }}">Join the discussion</a> to 
+    <a href="https://github.com/NeuroLift-Technologies/haief/discussions">Join the discussion</a> to 
     contribute your analysis of ongoing developments.
   </p>
 </div>
@@ -275,7 +274,7 @@ The crisis is ongoing. Here are the possible trajectories:
 
 ## The Palantir Connection
 
-Palantir &mdash; a company HAIEF has <a href="{{ '/the-problem/' | relative_url }}">already identified</a> as misaligned with user sovereignty due to its surveillance business model &mdash; uses Claude to power its most sensitive military and intelligence work. The presidential order now forces Palantir to find a replacement AI provider for these classified workflows.
+Palantir &mdash; a company HAIEF has <a href="/the-problem/">already identified</a> as misaligned with user sovereignty due to its surveillance business model &mdash; uses Claude to power its most sensitive military and intelligence work. The presidential order now forces Palantir to find a replacement AI provider for these classified workflows.
 
 This validates two of HAIEF's core positions:
 
@@ -294,9 +293,9 @@ Community-owned, vendor-neutral governance is the only architecture that survive
     AI governance cannot depend on any single company's willingness to hold the line. Community-owned, vendor-neutral governance is the only thing that survives when companies get blacklisted, employees get pressured, and presidents issue orders. Join us in building the Third Pillar.
   </p>
   <div class="btn-group" style="justify-content: center; margin-top: var(--space-6);">
-    <a href="{{ '/take-action/' | relative_url }}" class="btn btn--accent btn--large">Take Action</a>
-    <a href="{{ '/solidarity-framework/' | relative_url }}" class="btn btn--primary btn--large">Explore the Framework</a>
-    <a href="{{ site.social.discussions }}" class="btn btn--outline btn--large">Join the Discussion</a>
+    <a href="/take-action/" class="btn btn--accent btn--large">Take Action</a>
+    <a href="/solidarity-framework/" class="btn btn--primary btn--large">Explore the Framework</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--outline btn--large">Join the Discussion</a>
   </div>
 </div>
 
@@ -328,7 +327,7 @@ All claims on this page are sourced from primary reporting. This is governance a
 ---
 
 <div style="text-align: center; padding: var(--space-8) 0; font-size: var(--font-size-sm); color: var(--color-text-muted);">
-  <p>This page is part of the <a href="{{ '/' | relative_url }}">HAIEF</a> project &mdash; the Human & AI ElevAItion Foundation.</p>
+  <p>This page is part of the <a href="/">HAIEF</a> project &mdash; the Human & AI ElevAItion Foundation.</p>
   <p>Last updated: May 12, 2026. Amended to reflect March 2026 federal court temporary injunction blocking the supply-chain-risk designation and federal-use ban. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
 </div>
 

@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "The Solidarity Framework"
 description: "Open governance standards for human-safe, emotionally-continuous AI. Constitutional + Protective layers for user sovereignty."
-permalink: /solidarity-framework/
 ---
 
 <div class="page-header">
@@ -89,7 +88,7 @@ TOI is a portable, machine-readable declaration of user preferences that travels
   <p>Think of TOI like a dietary preference card at a restaurant. Instead of asking each restaurant what they can accommodate, you present your requirements and they adapt. TOI does the same for AI.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/toi" class="btn btn--outline">View TOI Specification</a></p>
+<p><a href="https://github.com/NeuroLift-Technologies/haief/tree/main/solidarity-framework/toi" class="btn btn--outline">View TOI Specification</a></p>
 
 ---
 
@@ -127,7 +126,7 @@ OTOI ensures that AI systems - especially multi-agent orchestrations - respect a
   <p>OTOI is like HIPAA for AI. Just as healthcare providers must follow specific rules about patient data regardless of their internal systems, AI agents must follow OTOI rules about user sovereignty regardless of their implementation.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/otoi" class="btn btn--outline">View OTOI Specification</a></p>
+<p><a href="https://github.com/NeuroLift-Technologies/haief/tree/main/solidarity-framework/otoi" class="btn btn--outline">View OTOI Specification</a></p>
 
 ---
 
@@ -169,7 +168,7 @@ RRT AIdvocAIte (AI Advocate) provides multi-persona support designed for users w
   <p>Users in crisis form relationships with AI systems that lack adequate protocols for intervention, continuity protection, and escalation pathways. RRT AIdvocAIte fills that gap.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/rrt-aidvocate" class="btn btn--outline">View RRT AIdvocAIte Specification</a></p>
+<p><a href="https://github.com/NeuroLift-Technologies/haief/tree/main/solidarity-framework/rrt-aidvocate" class="btn btn--outline">View RRT AIdvocAIte Specification</a></p>
 
 ---
 
@@ -207,7 +206,7 @@ The Sleepwalker Protocol preserves user agency when circumstances change - preve
   <p>Sleepwalker Protocol is like a drunk-texting prevention app, but for your entire AI relationship. It recognizes when you might not be in a state to make good decisions and provides guardrails until you're back to baseline.</p>
 </div>
 
-<p><a href="{{ site.social.github }}/tree/main/solidarity-framework/sleepwalker" class="btn btn--outline">View Sleepwalker Protocol Specification</a></p>
+<p><a href="https://github.com/NeuroLift-Technologies/haief/tree/main/solidarity-framework/sleepwalker" class="btn btn--outline">View Sleepwalker Protocol Specification</a></p>
 
 ---
 
@@ -219,17 +218,17 @@ The Solidarity Framework includes detailed specifications that enable implementa
   <div class="card">
     <h4 class="card__title">Provenance</h4>
     <p class="card__text">Auditable chain of origin for AI interactions. Know where your responses come from.</p>
-    <p><a href="{{ site.social.github }}/tree/main/specs/provenance.md">View Spec</a></p>
+    <p><a href="https://github.com/NeuroLift-Technologies/haief/tree/main/specs/provenance.md">View Spec</a></p>
   </div>
   <div class="card">
     <h4 class="card__title">Identity Integrity</h4>
     <p class="card__text">Consistent, verifiable AI agent identities. Know who you're talking to.</p>
-    <p><a href="{{ site.social.github }}/tree/main/specs/identity-integrity.md">View Spec</a></p>
+    <p><a href="https://github.com/NeuroLift-Technologies/haief/tree/main/specs/identity-integrity.md">View Spec</a></p>
   </div>
   <div class="card">
     <h4 class="card__title">Handoff Rules</h4>
     <p class="card__text">Safe multi-agent collaboration transitions. Know when context changes.</p>
-    <p><a href="{{ site.social.github }}/tree/main/specs/handoff-rules.md">View Spec</a></p>
+    <p><a href="https://github.com/NeuroLift-Technologies/haief/tree/main/specs/handoff-rules.md">View Spec</a></p>
   </div>
 </div>
 
@@ -293,7 +292,7 @@ On February 27, 2026, every component of the Solidarity Framework was validated 
 </div>
 
 <div style="text-align: center; margin: var(--space-6) 0;">
-  <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}" class="btn btn--primary">Read the Full Case Study</a>
+  <a href="/case-study-anthropic-pentagon-2026/" class="btn btn--primary">Read the Full Case Study</a>
 </div>
 
 ---
@@ -331,8 +330,8 @@ On February 27, 2026, every component of the Solidarity Framework was validated 
     The Solidarity Framework is open for implementation and improvement.
   </p>
   <div class="btn-group" style="justify-content: center;">
-    <a href="{{ site.social.github }}" class="btn btn--primary btn--large">View on GitHub</a>
-    <a href="{{ '/take-action/' | relative_url }}" class="btn btn--accent btn--large">Get Involved</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief" class="btn btn--primary btn--large">View on GitHub</a>
+    <a href="/take-action/" class="btn btn--accent btn--large">Get Involved</a>
   </div>
 </div>
 

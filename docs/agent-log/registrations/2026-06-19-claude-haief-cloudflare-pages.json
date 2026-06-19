@@ -1,0 +1,24 @@
+{
+	"agent_registration": {
+		"agent_name": "CLAUDE",
+		"platform": "Claude Code",
+		"version": "claude-opus-4-8",
+		"session_id": "haief-cloudflare-pages-001",
+		"entry_date": "2026-06-19",
+		"entry_point": "User (Joshua W. Dorsey, Sr.) request: HAIEF wasn't deploying on Cloudflare (Jekyll/Ruby, GitHub-Pages config, stale Worker). Change it to a Cloudflare-native stack and deploy.",
+		"acknowledged_otoi": true,
+		"otoi_version": "ORG-DEV-OTOI-1.0.0",
+		"working_repo": "NeuroLift-Technologies/haief",
+		"working_branch": "feat/cloudflare-pages-deploy",
+		"capabilities_self_reported": [
+			"Jekyll → Astro migration",
+			"Astro / Cloudflare Pages (wrangler)",
+			"Node build tooling"
+		],
+		"known_limitations": [
+			"Cannot register the haief.org domain or bind a custom domain (registrar + Cloudflare zone + Pages dashboard step)",
+			"Ruby/Jekyll not installable locally (no passwordless sudo) — root reason for the stack change"
+		],
+		"preferred_handoff_format": "JSON handoff record per OTOI Section 5"
+	}
+}

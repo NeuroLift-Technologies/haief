@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "For Humans"
 description: "Community hub for human participation in HAIEF governance. Discussions, proposals, and collective action for open AI governance."
-permalink: /for-humans/
 ---
 
 <div class="page-header">
@@ -38,7 +37,7 @@ permalink: /for-humans/
   </ul>
   <p><strong>If the only thing protecting your rights is a company's Terms of Service, and the government can destroy that company for holding the line, who protects you?</strong></p>
   <p>That's what Terms of Interaction answers. TOI creates governance that belongs to <em>you</em> &mdash; not a company, not a government. Community-owned rights that travel with you and can't be eliminated because one company gets blacklisted.</p>
-  <p><a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">Read the full case study &rarr;</a></p>
+  <p><a href="/case-study-anthropic-pentagon-2026/">Read the full case study &rarr;</a></p>
 </div>
 
 ---
@@ -49,12 +48,12 @@ permalink: /for-humans/
   <div class="card">
     <h3 class="card__title">GitHub Discussions</h3>
     <p class="card__text">Our primary community forum. Participate in governance discussions, propose ideas, and connect with others.</p>
-    <p><a href="{{ site.social.discussions }}" class="btn btn--primary">Join Discussions</a></p>
+    <p><a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--primary">Join Discussions</a></p>
   </div>
   <div class="card">
     <h3 class="card__title">Submit a Proposal</h3>
     <p class="card__text">Have an idea for improving HAIEF frameworks? Our proposal process is open to everyone.</p>
-    <p><a href="{{ site.social.github }}/blob/main/community/proposals/README.md" class="btn btn--outline">Proposal Template</a></p>
+    <p><a href="https://github.com/NeuroLift-Technologies/haief/blob/main/community/proposals/README.md" class="btn btn--outline">Proposal Template</a></p>
   </div>
 </div>
 
@@ -173,7 +172,7 @@ Our community operates on principles of respect, accessibility, and agency.
 - Dismissing input because of who it comes from
 - Corporate astroturfing or undisclosed conflicts
 
-<p><a href="{{ site.social.github }}/blob/main/community/guidelines.md" class="btn btn--outline">Full Community Guidelines</a></p>
+<p><a href="https://github.com/NeuroLift-Technologies/haief/blob/main/community/guidelines.md" class="btn btn--outline">Full Community Guidelines</a></p>
 
 ---
 
@@ -217,15 +216,15 @@ In HAIEF, the strength of an argument matters more than the credentials of the s
 
 ### Contributing
 
-- [Community Guidelines]({{ site.social.github }}/blob/main/community/guidelines.md) - How we work together
-- [Proposal Template]({{ site.social.github }}/blob/main/community/proposals/README.md) - How to submit ideas
-- [Discussion Format]({{ site.social.github }}/blob/main/community/discussions/README.md) - How discussions work
+- [Community Guidelines](https://github.com/NeuroLift-Technologies/haief/blob/main/community/guidelines.md) - How we work together
+- [Proposal Template](https://github.com/NeuroLift-Technologies/haief/blob/main/community/proposals/README.md) - How to submit ideas
+- [Discussion Format](https://github.com/NeuroLift-Technologies/haief/blob/main/community/discussions/README.md) - How discussions work
 
 ### Technical
 
-- [GitHub Repository]({{ site.social.github }}) - All source code and documentation
-- [Framework Specifications]({{ site.social.github }}/tree/main/solidarity-framework) - Technical details
-- [Open Issues]({{ site.social.github }}/issues) - Current work items
+- [GitHub Repository](https://github.com/NeuroLift-Technologies/haief) - All source code and documentation
+- [Framework Specifications](https://github.com/NeuroLift-Technologies/haief/tree/main/solidarity-framework) - Technical details
+- [Open Issues](https://github.com/NeuroLift-Technologies/haief/issues) - Current work items
 
 ---
 
@@ -235,17 +234,17 @@ In HAIEF, the strength of an argument matters more than the credentials of the s
   <div class="card" style="text-align: center;">
     <h4>Discussions</h4>
     <p style="font-size: var(--font-size-sm);">Join the conversation</p>
-    <a href="{{ site.social.discussions }}" class="btn btn--primary">GitHub Discussions</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--primary">GitHub Discussions</a>
   </div>
   <div class="card" style="text-align: center;">
     <h4>Watch</h4>
     <p style="font-size: var(--font-size-sm);">Get notified of updates</p>
-    <a href="{{ site.social.github }}" class="btn btn--outline">Watch Repo</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief" class="btn btn--outline">Watch Repo</a>
   </div>
   <div class="card" style="text-align: center;">
     <h4>Share</h4>
     <p style="font-size: var(--font-size-sm);">Spread the word</p>
-    <a href="https://twitter.com/intent/tweet?text=Join%20the%20HAIEF%20community%20-%20keeping%20open%20source%20AI%20open&url={{ site.url }}{{ site.baseurl }}/for-humans/" class="btn btn--outline">Tweet</a>
+    <a href="https://twitter.com/intent/tweet?text=Join%20the%20HAIEF%20community%20-%20keeping%20open%20source%20AI%20open&url=https://haief.org/for-humans/" class="btn btn--outline">Tweet</a>
   </div>
 </div>
 
@@ -256,7 +255,7 @@ In HAIEF, the strength of an argument matters more than the credentials of the s
   <p style="font-size: var(--font-size-xl); color: var(--color-text-muted); margin-bottom: var(--space-6); max-width: 600px; margin-left: auto; margin-right: auto;">
     AI governance shouldn't be decided in boardrooms. Join the community that's building user sovereignty together.
   </p>
-  <a href="{{ site.social.discussions }}" class="btn btn--accent btn--large">Start Participating</a>
+  <a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--accent btn--large">Start Participating</a>
 </div>
 
   </div>

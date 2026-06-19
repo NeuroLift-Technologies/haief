@@ -1,0 +1,23 @@
+{
+	"name": "haief",
+	"type": "module",
+	"private": true,
+	"description": "HAIEF — Human & AI ElevAItion Foundation public site (Astro on Cloudflare)",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"check": "astro build",
+		"deploy": "astro build && wrangler pages deploy dist --project-name haief"
+	},
+	"dependencies": {
+		"@astrojs/sitemap": "3.6.1",
+		"astro": "5.16.9"
+	},
+	"devDependencies": {
+		"wrangler": "4.94.0"
+	}
+}

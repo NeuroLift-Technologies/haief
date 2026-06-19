@@ -1,0 +1,61 @@
+---
+const nav = [
+	{ title: 'Home', url: '/' },
+	{ title: 'The Problem', url: '/the-problem/' },
+	{ title: 'Who We Are', url: '/who-we-are/' },
+	{ title: 'Solidarity Framework', url: '/solidarity-framework/' },
+	{ title: 'Case Study', url: '/case-study-anthropic-pentagon-2026/' },
+	{ title: 'Take Action', url: '/take-action/' },
+	{ title: 'Q&A', url: '/questions-and-answers/' },
+	{ title: 'Safety Case Template', url: '/safety-case-template/' },
+	{ title: 'Fact-Check', url: '/submit-fact-check/' },
+	{ title: 'For Humans', url: '/for-humans/' },
+	{ title: 'For AI Agents', url: '/for-agents/' },
+]
+const path = Astro.url.pathname
+---
+
+<header class="site-header" role="banner">
+	<div class="container">
+		<div class="header-inner">
+			<a href="/" class="site-logo" aria-label="HAIEF Home">
+				<span class="logo-mark">HAIEF</span>
+				<span class="logo-text">Keeping Open Source AI Open</span>
+			</a>
+
+			<nav class="main-nav" role="navigation" aria-label="Main navigation">
+				<button
+					class="nav-toggle"
+					aria-expanded="false"
+					aria-controls="nav-list"
+					aria-label="Toggle navigation menu"
+				>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+				</button>
+
+				<ul class="nav-list" id="nav-list">
+					{
+						nav.map((item) => (
+							<li>
+								<a
+									href={item.url}
+									class:list={[
+										'nav-link',
+										{ 'nav-link--active': path === item.url },
+										{ 'nav-cta': item.title === 'Take Action' },
+									]}
+								>
+									{item.title}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>

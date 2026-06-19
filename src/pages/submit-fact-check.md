@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "Submit Fact-Check Request"
 description: "Request fact-checking for claims made in HAIEF documentation or suggest claims that need verification."
-permalink: /submit-fact-check/
 ---
 
 <div class="page-header">
@@ -130,7 +129,7 @@ permalink: /submit-fact-check/
 
   <div class="form-actions" style="margin-top: var(--space-6);">
     <button type="submit" class="btn btn--primary btn--large">Submit Fact-Check Request</button>
-    <a href="{{ '/fact-checking/research-checklist.md' | relative_url }}" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Fact-Check Checklist</a>
+    <a href="/fact-checking/research-checklist.md" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Fact-Check Checklist</a>
   </div>
 
   <div id="form-message" style="margin-top: var(--space-4); display: none;"></div>

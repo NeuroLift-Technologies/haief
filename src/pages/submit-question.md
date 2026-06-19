@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "Submit a Question"
 description: "Have questions about HAIEF? Submit them here and we'll provide answers on our Q&A page."
-permalink: /submit-question/
 ---
 
 <div class="page-header">
@@ -19,7 +18,7 @@ permalink: /submit-question/
 
 <div class="callout callout--info">
   <p class="callout__title">How It Works</p>
-  <p>Submit your question using the form below. You can choose to submit anonymously or provide your email address if you'd like a private response. All questions submitted anonymously (or with permission) will be answered publicly on our <a href="{{ '/questions-and-answers/' | relative_url }}">Q&A page</a>.</p>
+  <p>Submit your question using the form below. You can choose to submit anonymously or provide your email address if you'd like a private response. All questions submitted anonymously (or with permission) will be answered publicly on our <a href="/questions-and-answers/">Q&A page</a>.</p>
 </div>
 
 <form id="question-form" class="form" style="margin-top: var(--space-8);">
@@ -96,7 +95,7 @@ permalink: /submit-question/
 
   <div class="form-actions" style="margin-top: var(--space-6);">
     <button type="submit" class="btn btn--primary btn--large">Submit Question</button>
-    <a href="{{ '/questions-and-answers/' | relative_url }}" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Q&A Page</a>
+    <a href="/questions-and-answers/" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Q&A Page</a>
   </div>
 
   <div id="form-message" style="margin-top: var(--space-4); display: none;"></div>
