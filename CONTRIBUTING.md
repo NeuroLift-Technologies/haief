@@ -88,8 +88,11 @@ See [Community Guidelines](community/guidelines.md) for full details.
 ### Website (Astro on Cloudflare Pages)
 
 ```bash
-# Install dependencies
+# Install dependencies for local development (updates package-lock.json if deps change)
 npm install
+
+# Or reproduce the locked dependency tree for validation/automation
+npm ci
 
 # Run local server
 npm run dev
@@ -102,6 +105,24 @@ npm run preview
 ```
 
 The site requires Node `>=22`. `npm run check` is currently an alias for `astro build`.
+
+### Cloudflare Pages Runbook
+
+The site deploy path is source-controlled in `package.json`:
+
+```bash
+npm run deploy
+```
+
+That command runs `astro build` and then `wrangler pages deploy dist --project-name haief-site`.
+
+Operational constraints:
+
+- Do not deploy without explicit production/deployment authorization from Joshua W. Dorsey, Sr.
+- There is no `wrangler.toml`; the Cloudflare Pages project name is supplied by the npm script.
+- Wrangler authentication must already be configured for an account with access to the `haief-site` Pages project.
+- `astro.config.mjs` uses `site: 'https://haief.org'` for canonical metadata and sitemap generation. The documented preview URL is `https://haief-site.pages.dev/` until the custom domain is bound.
+- Before a deploy, verify `public/robots.txt` and any absolute public links still match the intended canonical/preview URL split.
 
 ### Documentation + Site Content Workflow
 
@@ -120,8 +141,20 @@ Use this workflow when adding/updating public pages:
    - Add repeated styles as classes in `public/assets/css/main.css`.
 5. **Verify the site builds**
    - Run `npm run build` or `npm run check` before opening a docs PR.
+   - Use `npm ci` first when validating a branch or automation output against the committed lockfile.
 6. **Do not deploy without approval**
    - `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project `haief-site`; production deployment requires explicit human authorization.
+
+### Public Routes, Navigation, and Submission Forms
+
+The canonical route inventory and public interface contracts are documented in
+[`docs/overview.md`](docs/overview.md). When editing those surfaces:
+
+- Keep header URLs root-relative with trailing slashes so active-link matching in `src/components/Header.astro` stays predictable.
+- Treat `src/pages/submit-question.md` and `src/pages/submit-fact-check.md` as browser-only handoff forms. They do not persist submissions; they prepare either a GitHub issue URL or a `mailto:` URL.
+- Keep GitHub issue labels aligned with the form scripts: `question` for Q&A submissions and `fact-check` for fact-check requests.
+- Do not place private response emails into GitHub issue bodies. The current forms route private responses through `mailto:haief@neuroliftsolutions.com`.
+- If repeated form styles spread across submission pages, promote them to reusable classes in `public/assets/css/main.css`.
 
 ### Public Goals and Safety Case Updates
 
@@ -150,6 +183,12 @@ public-goal language, or governance crisis timelines:
   - Use root-relative links such as `/safety-case-template/`; remove leftover Liquid such as `relative_url`.
 - **Poor social preview cards**
   - Ensure page front matter includes a concise `description`.
+- **Submission form opens the wrong destination**
+  - Check the generated GitHub issue URL, labels, and `mailto:` address in the page script.
+- **Unexpected active navigation state**
+  - Confirm header URLs keep the root-relative trailing-slash pattern used by `src/components/Header.astro`.
+- **Sitemap or robots metadata points to the wrong host**
+  - Compare `astro.config.mjs` `site` with `public/robots.txt` before release.
 - **Inconsistent governance terminology**
   - Cross-check terms with `src/pages/solidarity-framework.md` before merge.
 

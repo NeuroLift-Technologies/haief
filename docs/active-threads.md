@@ -14,6 +14,15 @@
 
 ## Resolved Threads
 
+### Thread: 2026-06-19-cursor-docs-automation-pr23
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verified the merged PR #23 Astro documentation follow-up and added focused developer documentation for public route inventory, client-only submission workflows, Cloudflare Pages deployment constraints, canonical/preview URL handling, and site-build PR checks.
+**Blockers:** None.
+**Next action:** Review the documentation PR; separately decide whether to update the pre-existing stale sitemap host in `public/robots.txt` and how to address the existing low-severity npm audit findings.
+
 ### Thread: 2026-06-19-cursor-docs-automation-pr21
 **Status:** resolved
 **Owner:** Cursor Cloud Automation
