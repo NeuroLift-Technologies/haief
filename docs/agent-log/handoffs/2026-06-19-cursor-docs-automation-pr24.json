@@ -42,6 +42,6 @@
       "git diff --check origin/main..HEAD"
     ],
     "tests_passing": true,
-    "pr_url": "pending"
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/27"
   }
 }
