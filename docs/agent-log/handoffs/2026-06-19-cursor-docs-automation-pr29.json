@@ -1,0 +1,55 @@
+{
+  "handoff_record": {
+    "session_id": "158b2152-7214-45b1-9efe-a458133e75b6-pr29-docs-follow-up",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-06-19",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-b70a",
+    "work_completed": [
+      "Source-verified the merged PR #29 canonical-domain update against current Astro source and generated build output.",
+      "Updated README.md with the complete public URL surface for future domain changes.",
+      "Added a Canonical URL and Public Domain Changes checklist to CONTRIBUTING.md.",
+      "Expanded docs/overview.md URL, sitemap, and robots contract to cover Astro.site, sitemap generation, explicit JSON-LD, absolute public share links, static robots handling, and a concrete rg verification command.",
+      "Updated file-structure.md to reflect PR #29 source verification and canonical-domain maintenance notes.",
+      "Added a PR template checklist item for canonical/public URL surface verification.",
+      "Added session registration and resolved the active thread for this documentation automation."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Updated existing docs and reviewer checklist rather than creating a new runbook page.",
+      "Kept the PR documentation-only and did not modify runtime assets such as public/robots.txt.",
+      "Documented public/robots.txt as a static, independently maintained file because source and build output confirm it is not derived from astro.config.mjs."
+    ],
+    "decisions_pending": [
+      "Joshua or maintainers should decide whether to update public/robots.txt so its Sitemap URL matches the elevaitionfoundation.org canonical domain.",
+      "Maintainers should decide whether to address the existing low-severity npm audit findings reported by npm ci."
+    ],
+    "escalations": [],
+    "next_agent_notes": "Canonical metadata and generated sitemap output now use https://elevaitionfoundation.org. public/robots.txt still contains the old GitHub Pages sitemap URL and was intentionally left unchanged because this automation is documentation-only. Use Node v22.22.2 or newer for Astro builds in this environment; the default Node v22.14.0 fails with missing node:module.registerHooks before Astro loads config. Do not deploy without explicit authorization.",
+    "files_modified": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "docs/overview.md",
+      "file-structure.md",
+      "PULL_REQUEST_TEMPLATE/agent-contribution.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr29.json",
+      "docs/agent-log/handoffs/2026-06-19-cursor-docs-automation-pr29.json"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "bash .nltotoi/scripts/validate-governance.sh --strict",
+      "python3 -m json.tool docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr29.json",
+      "git diff --check origin/main..HEAD",
+      "npm ci",
+      "npm run build (failed under default Node v22.14.0 with missing node:module.registerHooks)",
+      "PATH=\"$HOME/.nvm/versions/node/v22.22.2/bin:$PATH\" npm run build",
+      "rg source scan for haief.org, neurolift-technologies.github.io, elevaitionfoundation.org, and Sitemap",
+      "rg built-output scan for elevaitionfoundation.org, neurolift-technologies.github.io, haief.org, Sitemap, and sitemap"
+    ],
+    "tests_passing": true,
+    "pr_url": "pending"
+  }
+}

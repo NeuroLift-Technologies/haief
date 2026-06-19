@@ -8,18 +8,20 @@
 
 ## Active Threads
 
-### Thread: 2026-06-19-cursor-docs-automation-pr29
-**Status:** open
-**Owner:** Cursor Cloud Automation
-**Started:** 2026-06-19
-**Last updated:** 2026-06-19
-**Summary:** Source-verifying the merged PR #29 canonical-domain update and adding focused developer documentation for future public URL, metadata, sitemap, robots, and absolute-link maintenance.
-**Blockers:** None.
-**Next action:** Update existing site runbooks with a concise canonical-domain checklist, then validate and record handoff.
+*(No active threads yet)*
 
 ---
 
 ## Resolved Threads
+
+### Thread: 2026-06-19-cursor-docs-automation-pr29
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verified the merged PR #29 canonical-domain update and added focused developer documentation for future public URL, metadata, sitemap, robots, and absolute-link maintenance.
+**Blockers:** None.
+**Next action:** Review the documentation PR; separately decide whether to update the runtime `public/robots.txt` sitemap URL, which remains a static asset outside Astro sitemap generation.
 
 ### Thread: 2026-06-19-cursor-docs-automation-pr26
 **Status:** resolved
