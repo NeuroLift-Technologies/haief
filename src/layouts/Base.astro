@@ -59,16 +59,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href
 		<Footer />
 
 		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				const navToggle = document.querySelector('.nav-toggle')
-				const navList = document.querySelector('.nav-list')
-				if (navToggle && navList) {
-					navToggle.addEventListener('click', () => {
-						navList.classList.toggle('is-open')
-						navToggle.setAttribute('aria-expanded', String(navList.classList.contains('is-open')))
-					})
-				}
-			})
+			// Astro bundles + defers this script, so the DOM is already parsed — bind directly.
+			const navToggle = document.querySelector('.nav-toggle')
+			const navList = document.querySelector('.nav-list')
+			if (navToggle && navList) {
+				navToggle.addEventListener('click', () => {
+					navList.classList.toggle('is-open')
+					navToggle.setAttribute('aria-expanded', String(navList.classList.contains('is-open')))
+				})
+			}
 		</script>
 	</body>
 </html>

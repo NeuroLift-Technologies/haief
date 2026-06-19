@@ -11,7 +11,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"check": "astro build",
-		"deploy": "astro build && wrangler pages deploy dist --project-name haief"
+		"deploy": "astro build && wrangler pages deploy dist --project-name haief-site"
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "3.6.1",

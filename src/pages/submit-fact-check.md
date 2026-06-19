@@ -129,7 +129,7 @@ description: "Request fact-checking for claims made in HAIEF documentation or su
 
   <div class="form-actions" style="margin-top: var(--space-6);">
     <button type="submit" class="btn btn--primary btn--large">Submit Fact-Check Request</button>
-    <a href="/fact-checking/research-checklist.md" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Fact-Check Checklist</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief/blob/main/fact-checking/research-checklist.md" class="btn btn--outline btn--large" style="margin-left: var(--space-3);">View Fact-Check Checklist</a>
   </div>
 
   <div id="form-message" style="margin-top: var(--space-4); display: none;"></div>

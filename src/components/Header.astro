@@ -45,7 +45,10 @@ const path = Astro.url.pathname
 									href={item.url}
 									class:list={[
 										'nav-link',
-										{ 'nav-link--active': path === item.url },
+										{
+											'nav-link--active':
+												(path.replace(/\/$/, '') || '/') === (item.url.replace(/\/$/, '') || '/'),
+										},
 										{ 'nav-cta': item.title === 'Take Action' },
 									]}
 								>
