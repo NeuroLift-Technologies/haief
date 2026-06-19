@@ -6,6 +6,6 @@ import sitemap from '@astrojs/sitemap'
 // build.format 'directory' (default) emits /the-problem/index.html → served at /the-problem/,
 // matching the old Jekyll pretty permalinks. No baseurl: this is a root-domain site now.
 export default defineConfig({
-	site: 'https://haief.org',
+	site: 'https://elevaitionfoundation.org',
 	integrations: [sitemap()],
 })

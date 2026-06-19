@@ -351,7 +351,7 @@ description: "Join the HAIEF movement. Developers, organizations, standards bodi
   <div class="card" style="text-align: center;">
     <h4>Share</h4>
     <p style="font-size: var(--font-size-sm);">Spread the word</p>
-    <a href="https://twitter.com/intent/tweet?text=Keeping%20open%20source%20AI%20open%20-%20check%20out%20HAIEF&url=https://haief.org" class="btn btn--outline">Tweet</a>
+    <a href="https://twitter.com/intent/tweet?text=Keeping%20open%20source%20AI%20open%20-%20check%20out%20HAIEF&url=https://elevaitionfoundation.org" class="btn btn--outline">Tweet</a>
   </div>
   <div class="card" style="text-align: center;">
     <h4>Contribute</h4>
