@@ -79,7 +79,7 @@ Use this checklist when adding event-based governance documentation:
 
 - **Pitfall:** Publishing a page without nav integration.  
   **Safeguard:** Check both `src/components/Header.astro` and `src/components/Footer.astro`.
-- **Pitfall:** Broken links due to stale Jekyll assumptions.  
+- **Pitfall:** Broken links due to stale Jekyll assumptions.
   **Safeguard:** Use root-relative links such as `/path/`; remove Liquid filters and `/haief` base URL assumptions.
 - **Pitfall:** Overstating framework guarantees.  
   **Safeguard:** Verify wording against existing framework documents before merge.
