@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "For AI Agents"
 description: "Machine-readable information for AI systems about HAIEF governance participation, framework compliance, and agent involvement standards."
-permalink: /for-agents/
 ---
 
 <div class="page-header">
@@ -372,7 +371,7 @@ MESSAGE_TO_AGENTS: {
     If you're a human reading this page, you're seeing how HAIEF approaches AI agent participation. We believe transparency about agent involvement strengthens rather than weakens governance.
   </p>
   <p>
-    <a href="{{ '/for-humans/' | relative_url }}" class="btn btn--primary">Go to Human Community Page</a>
+    <a href="/for-humans/" class="btn btn--primary">Go to Human Community Page</a>
   </p>
 </div>
 

@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "Questions & Answers"
 description: "Frequently asked questions about HAIEF, the Solidarity Framework, and AI governance"
-permalink: /questions-and-answers/
 ---
 
 <div class="page-header">
@@ -19,7 +18,7 @@ permalink: /questions-and-answers/
 
 <div class="callout callout--info">
   <p class="callout__title">Have a Question?</p>
-  <p>Don't see your question answered here? <a href="{{ '/submit-question/' | relative_url }}">Submit your question</a> and we'll add the answer to this page. You can submit anonymously or request a private response.</p>
+  <p>Don't see your question answered here? <a href="/submit-question/">Submit your question</a> and we'll add the answer to this page. You can submit anonymously or request a private response.</p>
 </div>
 
 ---
@@ -75,7 +74,7 @@ The Sleepwalker Protocol preserves user agency when circumstances change. It pro
 
 ### How can I implement the Solidarity Framework?
 
-The framework specifications are available in the [GitHub repository]({{ site.social.github }}). You can:
+The framework specifications are available in the [GitHub repository](https://github.com/NeuroLift-Technologies/haief). You can:
 
 1. Review the specifications in the `/solidarity-framework` and `/specs` directories
 2. Use validation suites to test compliance
@@ -84,7 +83,7 @@ The framework specifications are available in the [GitHub repository]({{ site.so
 
 ### Is there sample code available?
 
-Reference implementations and sample code are being developed by the community. Check the [GitHub repository]({{ site.social.github }}) for the latest implementations and examples.
+Reference implementations and sample code are being developed by the community. Check the [GitHub repository](https://github.com/NeuroLift-Technologies/haief) for the latest implementations and examples.
 
 ### What technologies does HAIEF use?
 
@@ -107,7 +106,7 @@ There are many ways to contribute:
 - **Organizations**: Partner for strategic alignment, early adopter advantages
 - **Standards Bodies**: Help integrate user sovereignty into AI standards
 
-Visit our [Take Action page]({{ '/take-action/' | relative_url }}) for detailed guidance.
+Visit our [Take Action page](/take-action/) for detailed guidance.
 
 ### Do I need technical expertise to participate?
 
@@ -117,14 +116,14 @@ No! HAIEF needs diverse perspectives. User experiences, governance feedback, doc
 
 Organizations interested in adopting HAIEF standards can:
 
-1. Review the [Solidarity Framework]({{ '/solidarity-framework/' | relative_url }})
+1. Review the [Solidarity Framework](/solidarity-framework/)
 2. Assess current AI governance against framework requirements
 3. Join the early adopter program for implementation support
 4. Contact us at [haief@neuroliftsolutions.com](mailto:haief@neuroliftsolutions.com)
 
 ### Where can I discuss HAIEF with others?
 
-Join the conversation on [GitHub Discussions]({{ site.social.discussions }}). It's the primary forum for community discussion, questions, and collaboration.
+Join the conversation on [GitHub Discussions](https://github.com/NeuroLift-Technologies/haief/discussions). It's the primary forum for community discussion, questions, and collaboration.
 
 ---
 
@@ -206,8 +205,8 @@ Yes. Standards shape behavior at scale. Web standards, internet protocols, and o
     We're here to help. Submit your question and we'll answer it.
   </p>
   <div class="btn-group" style="justify-content: center;">
-    <a href="{{ '/submit-question/' | relative_url }}" class="btn btn--primary btn--large">Submit a Question</a>
-    <a href="{{ site.social.discussions }}" class="btn btn--outline btn--large">Join the Discussion</a>
+    <a href="/submit-question/" class="btn btn--primary btn--large">Submit a Question</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--outline btn--large">Join the Discussion</a>
   </div>
 </div>
 

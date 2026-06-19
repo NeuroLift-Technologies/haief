@@ -1,0 +1,48 @@
+{
+	"handoff_record": {
+		"session_id": "haief-cloudflare-pages-001",
+		"agent_name": "CLAUDE",
+		"date": "2026-06-19",
+		"otoi_version": "ORG-DEV-OTOI-1.0.0",
+		"repo": "NeuroLift-Technologies/haief",
+		"branch": "feat/cloudflare-pages-deploy",
+		"work_completed": [
+			"Diagnosed why HAIEF wasn't deploying on Cloudflare: Jekyll site configured for GitHub Pages (baseurl /haief), no CF build/deploy config, a conflicting Gemfile (jekyll 4.3 + github-pages), and a stale orphaned 'haief' Worker (last modified 2026-02-25).",
+			"Migrated the site from Jekyll to Astro (mirrors neurolift-blog): package.json/astro.config/tsconfig; _layouts/default.html → src/layouts/Base.astro; _includes → src/components/Header.astro + Footer.astro; assets → public/.",
+			"Converted index.html → src/pages/index.astro and all 11 _pages/*.md → src/pages/*.md, substituting Jekyll Liquid (site.social.*, relative_url, site.url/baseurl) with resolved values; baseurl fixed to root domain; 0 leftover Liquid.",
+			"Removed the dead Jekyll scaffold (_config.yml, Gemfile, _layouts, _includes, _pages, index.html, azure-pipelines.yml, root assets/robots/404).",
+			"Built (astro build → 13 pages + sitemap) and deployed to Cloudflare Pages.",
+			"LIVE: https://haief-site.pages.dev (verified homepage, /the-problem/, case study; CSS 200; no leftover Liquid)."
+		],
+		"work_in_progress": [],
+		"blockers": [],
+		"decisions_made": [
+			"Switched stack Jekyll → Astro because Ruby/Jekyll can't be built in this environment (no passwordless sudo); Astro is Node-native, Cloudflare-native, and matches neurolift-blog.",
+			"Deployed via Cloudflare Pages as project 'haief-site' (not 'haief') because the existing 'haief' Worker collides with that name in the unified Workers/Pages namespace.",
+			"Set site to https://haief.org (Joshua's chosen domain) and removed the /haief baseurl for root-domain hosting."
+		],
+		"decisions_pending": [
+			"Custom domain haief.org: register it, add the zone to this Cloudflare account, then bind it to the haief-site Pages project (dashboard / registrar — cannot be done from here).",
+			"Whether to retire the stale 'haief' Worker.",
+			"Reconcile the foundation URL: repo/governance + the neurolift-technologies surface reference elevaitionfoundation.org, not haief.org."
+		],
+		"escalations": [
+			"Domain registration + custom-domain binding require registrar access and the Cloudflare dashboard — Joshua's action (OTOI §4.4)."
+		],
+		"next_agent_notes": "Site is live at haief-site.pages.dev; redeploy with `npm run deploy` (astro build + wrangler pages deploy dist --project-name haief-site) — toolchain: Node ~/.local/node/bin, wrangler OAuth-authed. To go live on haief.org: register domain → add CF zone → Pages project haief-site → Custom domains → add haief.org. Also update the neurolift-technologies proof generator: it references haief/_pages/case-study-anthropic-pentagon-2026.md, now at src/pages/.",
+		"files_modified": [
+			"package.json, astro.config.mjs, tsconfig.json, package-lock.json, .gitignore",
+			"src/layouts/Base.astro, src/components/{Header,Footer}.astro",
+			"src/pages/index.astro, src/pages/404.astro, src/pages/*.md (11 migrated)",
+			"public/assets/** (css, favicon), public/robots.txt",
+			"removed: _config.yml, Gemfile, _layouts/, _includes/, _pages/, index.html, azure-pipelines.yml, 404.html, assets/, robots.txt"
+		],
+		"tests_run": [
+			"astro build (13 pages + sitemap, clean)",
+			"bash .nltotoi/scripts/validate-governance.sh (29/29)",
+			"live HTTP checks on haief-site.pages.dev (homepage + routes 200, CSS 200, 0 Liquid)"
+		],
+		"tests_passing": true,
+		"pr_url": null
+	}
+}

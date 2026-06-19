@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "The Problem"
 description: "Open Source AI is being captured by corporate interests. The window for community governance is closing."
-permalink: /the-problem/
 ---
 
 <div class="page-header">
@@ -180,7 +179,7 @@ You can have access to the weights, access to the code, access to the training m
     <li><strong>No existing framework protects the individual user</strong> when the company defending their rights gets blacklisted</li>
     <li><strong>Internal corporate ethics are insufficient</strong> against state coercion &mdash; validating the need for external, community-governed governance</li>
   </ol>
-  <p>This is exactly why HAIEF builds governance that exists <em>independent</em> of any single company. <a href="{{ '/case-study-anthropic-pentagon-2026/' | relative_url }}">Read the full case study &rarr;</a></p>
+  <p>This is exactly why HAIEF builds governance that exists <em>independent</em> of any single company. <a href="/case-study-anthropic-pentagon-2026/">Read the full case study &rarr;</a></p>
 </div>
 
 ---
@@ -287,8 +286,8 @@ Standards must translate to safety:
     The window is closing, but it's not closed. Join us.
   </p>
   <div class="btn-group" style="justify-content: center;">
-    <a href="{{ '/take-action/' | relative_url }}" class="btn btn--accent btn--large">Take Action</a>
-    <a href="{{ '/solidarity-framework/' | relative_url }}" class="btn btn--outline btn--large">See the Solution</a>
+    <a href="/take-action/" class="btn btn--accent btn--large">Take Action</a>
+    <a href="/solidarity-framework/" class="btn btn--outline btn--large">See the Solution</a>
   </div>
 </div>
 

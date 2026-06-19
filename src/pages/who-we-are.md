@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: ../layouts/Base.astro
 title: "Who We Are"
 description: "HAIEF - The Human & AI ElevAItion Foundation. Community-driven governance for human-safe AI."
-permalink: /who-we-are/
 ---
 
 <div class="page-header">
@@ -103,7 +102,7 @@ HAIEF provides **The Solidarity Framework** - open, community-driven standards f
 </div>
 
 <p style="text-align: center; margin-top: var(--space-6);">
-  <a href="{{ '/solidarity-framework/' | relative_url }}" class="btn btn--primary">Explore the Full Framework</a>
+  <a href="/solidarity-framework/" class="btn btn--primary">Explore the Full Framework</a>
 </p>
 
 ---
@@ -279,8 +278,8 @@ HAIEF operates under principles that reflect our values:
     HAIEF is what we build together. Your voice matters.
   </p>
   <div class="btn-group" style="justify-content: center;">
-    <a href="{{ '/take-action/' | relative_url }}" class="btn btn--accent btn--large">Get Involved</a>
-    <a href="{{ site.social.discussions }}" class="btn btn--outline btn--large">Join Discussions</a>
+    <a href="/take-action/" class="btn btn--accent btn--large">Get Involved</a>
+    <a href="https://github.com/NeuroLift-Technologies/haief/discussions" class="btn btn--outline btn--large">Join Discussions</a>
   </div>
 </div>
 

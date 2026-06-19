@@ -1,0 +1,73 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+const SITE_TITLE = 'HAIEF'
+const SITE_DESCRIPTION =
+	'The Human & AI ElevAItion Foundation - Building open governance standards for human-safe, community-driven AI'
+
+// Works for both .astro pages (props passed directly) and .md pages (Astro passes `frontmatter`).
+const fm = (Astro.props.frontmatter ?? {}) as { title?: string; description?: string }
+const title = (Astro.props.title as string | undefined) ?? fm.title
+const description = (Astro.props.description as string | undefined) ?? fm.description ?? SITE_DESCRIPTION
+const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE
+const canonical = new URL(Astro.url.pathname, Astro.site).href
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<title>{pageTitle}</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+		<link rel="canonical" href={canonical} />
+
+		<meta property="og:title" content={title ?? SITE_TITLE} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonical} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title ?? SITE_TITLE} />
+		<meta name="twitter:description" content={description} />
+
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'Organization',
+				name: 'Human & AI ElevAItion Foundation',
+				url: 'https://haief.org',
+				description: SITE_DESCRIPTION,
+				foundingOrganization: { '@type': 'Organization', name: 'NeuroLift Technologies LLC' },
+			})}
+		/>
+	</head>
+	<body>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+
+		<Header />
+
+		<main id="main-content">
+			<slot />
+		</main>
+
+		<Footer />
+
+		<script>
+			// Astro bundles + defers this script, so the DOM is already parsed — bind directly.
+			const navToggle = document.querySelector('.nav-toggle')
+			const navList = document.querySelector('.nav-list')
+			if (navToggle && navList) {
+				navToggle.addEventListener('click', () => {
+					navList.classList.toggle('is-open')
+					navToggle.setAttribute('aria-expanded', String(navList.classList.contains('is-open')))
+				})
+			}
+		</script>
+	</body>
+</html>
