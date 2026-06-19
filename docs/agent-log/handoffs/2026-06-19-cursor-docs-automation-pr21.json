@@ -1,0 +1,51 @@
+{
+  "handoff_record": {
+    "session_id": "2026-06-19-cursor-docs-automation-pr21",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-06-19",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-af51",
+    "work_completed": [
+      "Source-verified PR #21's migration from Jekyll/GitHub Pages paths to Astro/Cloudflare Pages files and npm scripts.",
+      "Updated README.md with current site links, source tree, Astro scripts, deploy output, and preview/canonical URL distinction.",
+      "Updated CONTRIBUTING.md, docs/overview.md, and docs/governance.md to use src/pages, Base.astro, Header.astro, Footer.astro, public/assets, root-relative links, and npm validation commands.",
+      "Fixed the leftover Liquid fact-checking link and added the implemented Astro site structure to file-structure.md.",
+      "Recorded this automation in docs/agent-log/registrations and resolved the active thread."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Kept the update documentation-only and did not modify runtime files such as public/robots.txt.",
+      "Documented haief-site.pages.dev as the current preview URL and https://haief.org as the configured canonical site URL because custom-domain binding cannot be verified from source alone.",
+      "Documented npm run deploy as requiring explicit human authorization under OTOI deployment guardrails."
+    ],
+    "decisions_pending": [
+      "Whether to fix the stale sitemap URL in public/robots.txt, which still points to the old GitHub Pages host.",
+      "Whether and how to address npm audit findings reported by npm ci for the existing Astro toolchain.",
+      "Joshua must decide and complete any haief.org domain registration/custom-domain binding work outside this repository."
+    ],
+    "escalations": [],
+    "next_agent_notes": "The docs now describe the current Astro site contract after PR #21. If changing public pages, use src/pages/*.md or src/pages/index.astro, update Header/Footer components for discovery, keep safety-case ten-section contract aligned, and run governance validation plus npm build checks. Do not deploy without explicit human authorization.",
+    "files_modified": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "docs/overview.md",
+      "docs/governance.md",
+      "fact-checking/README.md",
+      "file-structure.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr21.json",
+      "docs/agent-log/handoffs/2026-06-19-cursor-docs-automation-pr21.json"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "npm ci",
+      "npm run build",
+      "rg '(_pages|_config\\.yml|_includes|relative_url|bundle exec jekyll|neurolift-technologies\\.github\\.io/haief|Jekyll)' --glob '*.md'",
+      "git diff --check origin/main..HEAD (initially found trailing whitespace; fixed before final commit)"
+    ],
+    "tests_passing": true,
+    "pr_url": null
+  }
+}

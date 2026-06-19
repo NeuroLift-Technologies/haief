@@ -85,38 +85,47 @@ See [Community Guidelines](community/guidelines.md) for full details.
 
 ## Development Setup
 
-### Website (Jekyll)
+### Website (Astro on Cloudflare Pages)
 
 ```bash
 # Install dependencies
-bundle install
+npm install
 
 # Run local server
-bundle exec jekyll serve
+npm run dev
 
 # Build for production
-bundle exec jekyll build
+npm run build
+
+# Preview the built site locally
+npm run preview
 ```
+
+The site requires Node `>=22`. `npm run check` is currently an alias for `astro build`.
 
 ### Documentation + Site Content Workflow
 
 Use this workflow when adding/updating public pages:
 
-1. **Edit content in `_pages/` or `index.html`**
-   - Include front matter fields (`layout`, `title`, `description`, `permalink`) for pages in `_pages/`.
+1. **Edit content in `src/pages/`**
+   - Markdown pages use front matter fields such as `layout: ../layouts/Base.astro`, `title`, and `description`.
+   - The homepage lives at `src/pages/index.astro`; the not-found page lives at `src/pages/404.astro`.
 2. **Wire discoverability**
-   - Add/update nav entries in `_config.yml` (`nav` section).
-   - Add/update corresponding footer links in `_includes/footer.html` when appropriate.
+   - Add/update header navigation in `src/components/Header.astro`.
+   - Add/update corresponding footer links in `src/components/Footer.astro` when appropriate.
 3. **Use stable internal links**
-   - Prefer `{{ '/target/' | relative_url }}` over hard-coded `/haief/...` paths.
+   - Use root-relative links such as `/target/`.
+   - Do not use Jekyll Liquid filters; the Astro site has no `/haief` base URL.
 4. **Prefer reusable styling**
-   - Add repeated styles as classes in `assets/css/main.css`.
+   - Add repeated styles as classes in `public/assets/css/main.css`.
 5. **Verify the site builds**
-   - Run `bundle exec jekyll build` before opening a docs PR.
+   - Run `npm run build` or `npm run check` before opening a docs PR.
+6. **Do not deploy without approval**
+   - `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project `haief-site`; production deployment requires explicit human authorization.
 
 ### Public Goals and Safety Case Updates
 
-Use this additional checklist when editing `_pages/safety-case-template.md`,
+Use this additional checklist when editing `src/pages/safety-case-template.md`,
 public-goal language, or governance crisis timelines:
 
 1. **Keep claims traceable**
@@ -126,8 +135,8 @@ public-goal language, or governance crisis timelines:
    - The public template currently has ten required sections.
    - Update `docs/overview.md` and `docs/governance.md` if the section list, review path, or linked specifications change.
 3. **Cross-link the workflow**
-   - Public goals belong in narrative pages such as `_pages/who-we-are.md`.
-   - Evidence and constraints belong in `_pages/safety-case-template.md`.
+   - Public goals belong in narrative pages such as `src/pages/who-we-are.md`.
+   - Evidence and constraints belong in `src/pages/safety-case-template.md`.
    - Case-study timelines belong in the relevant case-study or problem page.
 4. **Avoid premature compliance language**
    - Do not claim certification, registration, or review unless that process exists publicly.
@@ -136,13 +145,13 @@ public-goal language, or governance crisis timelines:
 ### Troubleshooting Common Pitfalls
 
 - **New page not reachable from navigation**
-  - Check both `_config.yml` and `_includes/footer.html`.
+  - Check both `src/components/Header.astro` and `src/components/Footer.astro`.
 - **Broken internal links in production**
-  - Replace hard-coded root-relative links with `relative_url`.
+  - Use root-relative links such as `/safety-case-template/`; remove leftover Liquid such as `relative_url`.
 - **Poor social preview cards**
   - Ensure page front matter includes a concise `description`.
 - **Inconsistent governance terminology**
-  - Cross-check terms with `_pages/solidarity-framework.md` before merge.
+  - Cross-check terms with `src/pages/solidarity-framework.md` before merge.
 
 ### Documentation
 

@@ -71,6 +71,52 @@ haief/
 
 ---
 
+## Current Implemented Public Website Structure
+
+Source-verified on 2026-06-19 after PR #21. This tree lists the active
+Astro/Cloudflare Pages static site files that replaced the previous Jekyll
+scaffold. Governance coordination files remain documented in the section above.
+
+```
+haief/
+├── package.json                       ← Node >=22, Astro scripts, Cloudflare Pages deploy command
+├── package-lock.json                  ← npm lockfile for the site toolchain
+├── astro.config.mjs                   ← Astro config, sitemap integration, canonical site URL
+├── tsconfig.json                      ← Astro TypeScript configuration
+│
+├── src/
+│   ├── layouts/
+│   │   └── Base.astro                 ← Shared shell, metadata, CSS/favicon references
+│   ├── components/
+│   │   ├── Header.astro               ← Header navigation and mobile menu markup
+│   │   └── Footer.astro               ← Footer navigation and resource links
+│   └── pages/
+│       ├── index.astro                ← Homepage
+│       ├── 404.astro                  ← Not-found page
+│       ├── safety-case-template.md    ← Canonical public safety case template
+│       ├── case-study-anthropic-pentagon-2026.md
+│       └── *.md                       ← Narrative, framework, action, and submission pages
+│
+└── public/
+    ├── assets/
+    │   ├── css/main.css               ← Site design system and reusable components
+    │   └── images/favicon.svg         ← Favicon served from /assets/images/favicon.svg
+    └── robots.txt                     ← Static robots file copied to build output
+```
+
+Operational notes:
+
+- `npm run dev` starts the local Astro server.
+- `npm run build` and `npm run check` run `astro build` and write `dist/`.
+- `npm run preview` serves the built output locally.
+- `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project
+  `haief-site`; production deployments require explicit human authorization.
+- `astro.config.mjs` sets the canonical site URL to `https://haief.org`, while
+  the documented Cloudflare Pages preview is `https://haief-site.pages.dev/`
+  until the custom domain is bound.
+
+---
+
 ## Source Mapping Notes from `nlt-business-agents`
 
 The table below records where the governance baseline was sourced from. It is a
