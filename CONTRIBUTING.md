@@ -85,7 +85,7 @@ See [Community Guidelines](community/guidelines.md) for full details.
 
 ## Development Setup
 
-### Website (Astro on Cloudflare Pages)
+### Website (Astro on Cloudflare Workers)
 
 ```bash
 # Install dependencies
@@ -101,7 +101,13 @@ npm run build
 npm run preview
 ```
 
-The site requires Node `>=22`. `npm run check` is currently an alias for `astro build`.
+The site requires Node `>=22`. `npm run check` is currently an alias for
+`astro build`. `npm run preview` runs a build first, then starts `wrangler dev`
+against the Worker configuration in `wrangler.jsonc`.
+
+Use `npm run generate-types` after changing Cloudflare bindings in
+`wrangler.jsonc`; it runs `wrangler types` for the `worker-configuration.d.ts`
+file referenced by `tsconfig.json`.
 
 ### Documentation + Site Content Workflow
 
@@ -121,7 +127,9 @@ Use this workflow when adding/updating public pages:
 5. **Verify the site builds**
    - Run `npm run build` or `npm run check` before opening a docs PR.
 6. **Do not deploy without approval**
-   - `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project `haief-site`; production deployment requires explicit human authorization.
+   - `npm run deploy` builds and deploys with `wrangler deploy`; production deployment requires explicit human authorization.
+   - `wrangler.jsonc` currently names the Worker `haief`, serves assets from `./dist` through the `ASSETS` binding, and enables observability.
+   - Route and custom-domain bindings are managed outside this repository; verify them with an authorized human before relying on a live URL.
 
 ### Public Goals and Safety Case Updates
 
@@ -152,6 +160,12 @@ public-goal language, or governance crisis timelines:
   - Ensure page front matter includes a concise `description`.
 - **Inconsistent governance terminology**
   - Cross-check terms with `src/pages/solidarity-framework.md` before merge.
+- **Local Cloudflare secrets or environment files appear in git**
+  - `.dev.vars*` and `.env*` are ignored by default; commit only intentionally reviewed example files such as `.dev.vars.example` or `.env.example`.
+- **Worker metadata is served as a static asset**
+  - Keep `public/.assetsignore`; it excludes `_worker.js` and `_routes.json` from the assets upload if those files are present.
+- **Cloudflare binding types are stale**
+  - Run `npm run generate-types` after changing `wrangler.jsonc`, then review any generated `worker-configuration.d.ts` diff before committing it.
 
 ### Documentation
 

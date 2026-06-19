@@ -8,7 +8,14 @@
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-19-cursor-docs-automation-pr24
+**Status:** open
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verify the merged PR #24 Cloudflare Workers configuration and update engineering documentation for any newly exposed setup, workflow, or operational gaps.
+**Blockers:** None.
+**Next action:** Inspect the PR #24 diff and current source files to identify the smallest useful documentation update.
 
 ---
 

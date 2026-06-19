@@ -73,16 +73,18 @@ haief/
 
 ## Current Implemented Public Website Structure
 
-Source-verified on 2026-06-19 after PR #21. This tree lists the active
-Astro/Cloudflare Pages static site files that replaced the previous Jekyll
-scaffold. Governance coordination files remain documented in the section above.
+Source-verified on 2026-06-19 after PR #24. This tree lists the active
+Astro/Cloudflare Workers site files that replaced the previous Jekyll scaffold
+and later Cloudflare Pages deploy command. Governance coordination files remain
+documented in the section above.
 
 ```
 haief/
-├── package.json                       ← Node >=22, Astro scripts, Cloudflare Pages deploy command
+├── package.json                       ← Node >=22, Astro scripts, Wrangler preview/deploy/type commands
 ├── package-lock.json                  ← npm lockfile for the site toolchain
-├── astro.config.mjs                   ← Astro config, sitemap integration, canonical site URL
-├── tsconfig.json                      ← Astro TypeScript configuration
+├── astro.config.mjs                   ← Astro config, sitemap integration, Cloudflare adapter, canonical site URL
+├── tsconfig.json                      ← Astro TypeScript configuration plus optional Worker types include
+├── wrangler.jsonc                     ← Worker name, Astro entrypoint, assets binding, observability
 │
 ├── src/
 │   ├── layouts/
@@ -98,6 +100,7 @@ haief/
 │       └── *.md                       ← Narrative, framework, action, and submission pages
 │
 └── public/
+    ├── .assetsignore                  ← Excludes Worker metadata filenames from asset uploads
     ├── assets/
     │   ├── css/main.css               ← Site design system and reusable components
     │   └── images/favicon.svg         ← Favicon served from /assets/images/favicon.svg
@@ -108,12 +111,18 @@ Operational notes:
 
 - `npm run dev` starts the local Astro server.
 - `npm run build` and `npm run check` run `astro build` and write `dist/`.
-- `npm run preview` serves the built output locally.
-- `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project
-  `haief-site`; production deployments require explicit human authorization.
-- `astro.config.mjs` sets the canonical site URL to `https://haief.org`, while
-  the documented Cloudflare Pages preview is `https://haief-site.pages.dev/`
-  until the custom domain is bound.
+- `npm run preview` runs `npm run build && wrangler dev`.
+- `npm run deploy` runs `npm run build && wrangler deploy`; production
+  deployments require explicit human authorization.
+- `npm run generate-types` runs `wrangler types` for the optional
+  `worker-configuration.d.ts` include in `tsconfig.json`.
+- `astro.config.mjs` sets the canonical site URL to `https://haief.org` and
+  uses the Cloudflare adapter.
+- `wrangler.jsonc` names the Worker `haief`, points `main` at the Astro
+  Cloudflare entrypoint, serves `./dist` through the `ASSETS` binding, enables
+  `global_fetch_strictly_public`, and turns on observability.
+- Route, workers.dev, and custom-domain state are managed outside repository
+  source; verify them in Cloudflare before relying on a live URL.
 
 ---
 

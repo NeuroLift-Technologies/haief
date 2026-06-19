@@ -33,8 +33,10 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 - `src/components/Header.astro` and `src/components/Footer.astro`: reusable navigation surfaces.
 - `public/assets/css/main.css`: design system and page-specific components, served at `/assets/css/main.css`.
 - `public/assets/images/favicon.svg`: favicon, served at `/assets/images/favicon.svg`.
-- `astro.config.mjs`: Astro config, `@astrojs/sitemap`, and canonical `site: 'https://haief.org'`.
-- `package.json`: Node `>=22`, Astro build/dev scripts, and Cloudflare Pages deploy command.
+- `public/.assetsignore`: prevents Worker metadata filenames from being uploaded as static assets if present.
+- `astro.config.mjs`: Astro config, `@astrojs/sitemap`, `@astrojs/cloudflare`, and canonical `site: 'https://haief.org'`.
+- `wrangler.jsonc`: Cloudflare Worker name, compatibility settings, Astro entrypoint, assets binding, and observability flag.
+- `package.json`: Node `>=22`, Astro build/dev scripts, Worker preview/deploy scripts, and type-generation script.
 
 ### Public interfaces contributors should treat as stable
 
@@ -73,8 +75,16 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 6. **Build and deploy contract**
    - `npm run dev` starts Astro locally.
    - `npm run build` and `npm run check` run `astro build` and emit `dist/`.
-   - `npm run preview` serves the built output locally.
-   - `npm run deploy` runs `astro build && wrangler pages deploy dist --project-name haief-site`; production deployment requires explicit human authorization.
+   - `npm run preview` runs `npm run build && wrangler dev`.
+   - `npm run deploy` runs `npm run build && wrangler deploy`; production deployment requires explicit human authorization.
+   - `npm run generate-types` runs `wrangler types` for the optional `worker-configuration.d.ts` file included by `tsconfig.json`.
+
+7. **Cloudflare Worker configuration contract**
+   - `astro.config.mjs` must keep `adapter: cloudflare()` when the site is deployed through `wrangler deploy`.
+   - `wrangler.jsonc` currently names the Worker `haief`, uses `@astrojs/cloudflare/entrypoints/server` as `main`, serves `./dist` through the `ASSETS` binding, sets `compatibility_date` to `2026-06-19`, enables `global_fetch_strictly_public`, and turns observability on.
+   - `public/.assetsignore` excludes `_worker.js` and `_routes.json` from uploaded static assets if those generated files appear.
+   - `.dev.vars*` and `.env*` are ignored except reviewed example files; never commit real Cloudflare secrets or tokens.
+   - Route, workers.dev, and custom-domain state are Cloudflare dashboard/account concerns and are not source-verifiable from this repository.
 
 ## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow
 
