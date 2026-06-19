@@ -9,3 +9,8 @@ dist/
 .astro/
 .wrangler/
 *.log
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
