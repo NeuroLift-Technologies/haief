@@ -73,7 +73,7 @@ haief/
 
 ## Current Implemented Public Website Structure
 
-Source-verified on 2026-06-19 after PR #26. This tree lists the active
+Source-verified on 2026-06-19 after PR #29. This tree lists the active
 Astro/Cloudflare Worker site files that replaced the previous Jekyll scaffold.
 Governance coordination files remain documented in the section above.
 
@@ -120,6 +120,10 @@ Operational notes:
   serves `./dist` through the `ASSETS` binding, and enables observability.
 - `astro.config.mjs` sets the canonical site URL to `https://elevaitionfoundation.org`.
   Production/custom-domain routing is managed outside this repository.
+- Canonical domain changes span more than `astro.config.mjs`: verify
+  `src/layouts/Base.astro` JSON-LD, any absolute public/share links in
+  `src/pages/`, generated sitemap output, and the static `public/robots.txt`
+  `Sitemap:` line.
 
 ---
 

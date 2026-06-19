@@ -126,6 +126,25 @@ Operational constraints:
 - Before a deploy, verify `public/robots.txt` and any absolute public links still match the intended canonical/public URL split.
 - Run `npm run generate-types` after changing Wrangler bindings or compatibility settings so `worker-configuration.d.ts` can be regenerated if needed.
 
+### Canonical URL and Public Domain Changes
+
+Use this checklist when changing the public domain, canonical URL, or social-share
+links:
+
+1. **Update the generated canonical source**
+   - `astro.config.mjs` `site` is the source for `Astro.site`, generated canonical links, Open Graph URLs, and `@astrojs/sitemap` output.
+2. **Update explicit metadata**
+   - `src/layouts/Base.astro` also emits organization JSON-LD. Keep its `url` aligned with the intended public origin unless a deliberate split is documented.
+3. **Search for absolute public links**
+   - Public pages may contain absolute share URLs, for example Twitter intent links in `src/pages/for-humans.md` and `src/pages/take-action.md`.
+   - Prefer root-relative links for internal navigation; use absolute URLs only when an external service requires them.
+4. **Check robots separately**
+   - `public/robots.txt` is a static asset copied into `dist/` unchanged. Updating `astro.config.mjs` does not update its `Sitemap:` line.
+5. **Validate output before release**
+   - Run `npm run build` or `npm run check`.
+   - Inspect generated sitemap and page metadata in `dist/` when public URL behavior changes.
+   - Do not run `npm run deploy` without explicit production/deployment authorization.
+
 ### Documentation + Site Content Workflow
 
 Use this workflow when adding/updating public pages:

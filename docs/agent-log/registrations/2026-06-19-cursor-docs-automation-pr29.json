@@ -1,0 +1,25 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor Cloud Automation",
+    "platform": "Cursor Cloud",
+    "version": "GPT-5.5",
+    "session_id": "158b2152-7214-45b1-9efe-a458133e75b6-pr29-docs-follow-up",
+    "entry_date": "2026-06-19",
+    "entry_point": "Automation triggered by merged PR #29: [CLAUDE] fix(site): canonical domain -> elevaitionfoundation.org",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-b70a",
+    "capabilities_self_reported": [
+      "Source-verified documentation updates",
+      "GitHub PR context inspection",
+      "Astro canonical URL and metadata documentation",
+      "Repository governance session tracking"
+    ],
+    "known_limitations": [
+      "No production deployment authorization",
+      "No authority to make architecture decisions beyond documenting the implemented source"
+    ],
+    "preferred_handoff_format": "Structured JSON handoff plus concise PR summary"
+  }
+}

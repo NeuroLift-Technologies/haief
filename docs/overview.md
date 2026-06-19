@@ -107,9 +107,16 @@ when adding, renaming, or removing pages:
    - When agent-facing terms change, cross-check `src/pages/solidarity-framework.md`, `AGENTS.md`, and `NLT-DEV-OTOI.md` for governance alignment without amending OTOI content.
 
 8. **URL, sitemap, and robots contract**
-   - `astro.config.mjs` sets `site: 'https://elevaitionfoundation.org'`; `Base.astro` and `@astrojs/sitemap` use that value for canonical URLs and sitemap generation.
+   - `astro.config.mjs` sets `site: 'https://elevaitionfoundation.org'`; `Base.astro` uses `Astro.site` from that config to generate per-route canonical links and Open Graph URLs.
+   - `@astrojs/sitemap` uses the same `site` value for generated sitemap output.
+   - `src/layouts/Base.astro` also emits organization JSON-LD with an explicit public `url`; keep it aligned when the canonical origin changes.
+   - Some public pages include absolute share URLs for external services. Current source-verified examples are the Twitter intent links in `src/pages/for-humans.md` and `src/pages/take-action.md`.
    - Repository source does not declare the production route or custom-domain binding; verify Cloudflare routing outside the repo before release.
    - `public/robots.txt` is copied into the build output as a static asset. Verify its `Sitemap:` host when `astro.config.mjs` `site` or deployment domains change.
+   - Suggested source check for domain changes:
+     ```bash
+     rg 'https://(elevaitionfoundation|haief|neurolift-technologies\.github\.io)' astro.config.mjs src public README.md CONTRIBUTING.md docs file-structure.md
+     ```
 
 9. **Build and deploy contract**
    - `npm run dev` starts Astro locally.

@@ -8,7 +8,14 @@
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-19-cursor-docs-automation-pr29
+**Status:** open
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verifying the merged PR #29 canonical-domain update and adding focused developer documentation for future public URL, metadata, sitemap, robots, and absolute-link maintenance.
+**Blockers:** None.
+**Next action:** Update existing site runbooks with a concise canonical-domain checklist, then validate and record handoff.
 
 ---
 

@@ -70,6 +70,7 @@ All commits in this PR follow: `[AGENT_NAME] type(scope): description`
 - [ ] Existing tests pass (or N/A — document why)
 - [ ] New tests added for new functionality (or N/A — document why)
 - [ ] Site build checked with `npm run build` or `npm run check` when touching `src/`, `public/`, `astro.config.mjs`, `package.json`, or `package-lock.json` (or N/A — document why)
+- [ ] Canonical/public URL surfaces checked when touching domains, share links, metadata, sitemap, or `public/robots.txt` (or N/A — document why)
 
 ---
 

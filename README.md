@@ -156,6 +156,8 @@ The public site is an Astro site built for Cloudflare Workers:
 
 `astro.config.mjs` sets the canonical site URL to `https://elevaitionfoundation.org` for generated metadata and sitemap output. Repository source does not declare the production route or custom-domain binding; verify Cloudflare routing outside the repo before release.
 
+When the public domain changes, update the full URL surface together: Astro `site`, metadata/JSON-LD in `src/layouts/Base.astro`, any absolute public links in `src/pages/`, and the static `public/robots.txt` `Sitemap:` line. `public/robots.txt` is copied into `dist/` as-is and is not generated from `astro.config.mjs`.
+
 Route and workflow details live in [`docs/overview.md`](docs/overview.md). In particular, the Q&A and fact-check forms are client-side public interfaces: they prepare GitHub issue or `mailto:` handoffs and do not submit to a backend service.
 
 ### 🔒 About the /internal Directory
