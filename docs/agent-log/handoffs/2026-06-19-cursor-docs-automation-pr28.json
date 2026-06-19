@@ -1,0 +1,51 @@
+{
+  "handoff_record": {
+    "session_id": "2026-06-19-cursor-docs-automation-pr28",
+    "agent_name": "Cursor Cloud Automation",
+    "date": "2026-06-19",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "cursor/engineering-documentation-updates-810b",
+    "work_completed": [
+      "Source-verified the merged PR #28 Astro/Cloudflare Worker documentation against package.json, wrangler.jsonc, tsconfig.json, astro.config.mjs, public/.assetsignore, and the current src/ tree.",
+      "Updated README.md, CONTRIBUTING.md, docs/overview.md, and file-structure.md to document the Wrangler-generated worker-configuration.d.ts workflow and its tsconfig.json include path.",
+      "Documented when to run npm run generate-types after Worker binding, compatibility_date, or compatibility flag changes.",
+      "Documented the verified Cloudflare adapter build-log caveat: builds may mention IMAGES and SESSION capability bindings, while current source does not use Astro image/session APIs and wrangler.jsonc only declares ASSETS.",
+      "Added session registration and resolved the active thread for this documentation automation."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Updated existing developer docs and runbooks instead of creating a new page to keep the documentation-only follow-up focused.",
+      "Did not generate or commit worker-configuration.d.ts because the task was documentation-only and no Worker config change required refreshed generated types.",
+      "Did not alter production routing, deployment settings, package engines, npm dependency versions, or public/robots.txt because those require separate maintainer decisions."
+    ],
+    "decisions_pending": [
+      "Maintainers should decide whether to address the existing low-severity npm audit findings.",
+      "Maintainers should decide whether to update the pre-existing stale public/robots.txt sitemap host.",
+      "Maintainers should decide whether package.json engines.node should be tightened beyond >=22."
+    ],
+    "escalations": [],
+    "next_agent_notes": "The docs now cover the Worker type-generation path and adapter binding notices verified during npm run build. Use Node v22.22.2 first on PATH in Cursor Cloud; the default Node v22.14.0 remains the known unsupported runtime for this Astro/Vite toolchain. Do not deploy without explicit human authorization.",
+    "files_modified": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "docs/overview.md",
+      "file-structure.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr28.json",
+      "docs/agent-log/handoffs/2026-06-19-cursor-docs-automation-pr28.json"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "python3 -m json.tool docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr28.json",
+      "git diff --check origin/main..HEAD",
+      "Targeted Python source-doc contract checks for wrangler.jsonc, tsconfig.json, package.json, CONTRIBUTING.md, and docs/overview.md",
+      "Targeted source scan confirming no Astro.session, astro:assets, or <Image usage under src/",
+      "PATH=\"$HOME/.nvm/versions/node/v22.22.2/bin:$PATH\" npm ci",
+      "PATH=\"$HOME/.nvm/versions/node/v22.22.2/bin:$PATH\" npm run build"
+    ],
+    "tests_passing": true,
+    "pr_url": "Pending OpenGitPr automation"
+  }
+}

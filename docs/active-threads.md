@@ -8,18 +8,20 @@
 
 ## Active Threads
 
-### Thread: 2026-06-19-cursor-docs-automation-pr28
-**Status:** open
-**Owner:** Cursor Cloud Automation
-**Started:** 2026-06-19
-**Last updated:** 2026-06-19
-**Summary:** Source-verify the merged PR #28 documentation changes and update any remaining weak developer documentation for recently changed Astro/Cloudflare Worker site workflows.
-**Blockers:** None.
-**Next action:** Inspect the merged PR #28 diff and current site/source files for documentation gaps.
+*(No active threads yet)*
 
 ---
 
 ## Resolved Threads
+
+### Thread: 2026-06-19-cursor-docs-automation-pr28
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verified the merged PR #28 Worker workflow documentation and added focused developer docs for Wrangler-generated type files, `tsconfig.json` integration, compatibility-flag changes, and Cloudflare adapter `IMAGES`/`SESSION` binding notices.
+**Blockers:** None.
+**Next action:** Review the documentation PR; separately decide whether to address the existing low-severity npm audit findings and the pre-existing stale `public/robots.txt` sitemap host.
 
 ### Thread: 2026-06-19-cursor-docs-automation-pr26
 **Status:** resolved
