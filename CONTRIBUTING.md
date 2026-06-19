@@ -126,6 +126,7 @@ Operational constraints:
 - Before a deploy, verify `public/robots.txt` and any absolute public links still match the intended canonical/public URL split.
 - `tsconfig.json` includes `./worker-configuration.d.ts` so generated Cloudflare binding types are picked up when present. A clean checkout may not contain that file until `npm run generate-types` runs `wrangler types`.
 - Run `npm run generate-types` after changing Wrangler bindings, `compatibility_date`, or compatibility flags. Review the generated `worker-configuration.d.ts` before committing it; it should describe bindings such as `ASSETS`, not contain secrets.
+- `astro build` may log Cloudflare adapter support for `IMAGES` and `SESSION`. Current source does not use Astro image/session APIs, and `wrangler.jsonc` only declares the `ASSETS` binding. If future pages adopt those APIs, add the matching Worker bindings before deploying and then regenerate types.
 
 ### Documentation + Site Content Workflow
 
@@ -196,6 +197,8 @@ public-goal language, or governance crisis timelines:
   - Check `wrangler.jsonc` `main`, `assets.directory`, and `assets.binding` against `astro.config.mjs` and the generated `dist/` output.
 - **Type or binding errors after changing `wrangler.jsonc`**
   - Run `npm run generate-types` to refresh `worker-configuration.d.ts`, then confirm `tsconfig.json` still includes that file and the `.astro` type directory.
+- **Build logs mention `IMAGES` or `SESSION` bindings**
+  - Treat them as adapter capability notices unless source starts using Astro image or session APIs. If those APIs are added, update `wrangler.jsonc`, run `npm run generate-types`, and verify the generated bindings before deploy.
 - **Build fails with `node:module` missing `registerHooks`**
   - Check `node --version` and use a current Node 22 runtime. In Cursor Cloud, ensure the desired `nvm` Node path appears before `/exec-daemon` on `PATH`.
 - **Inconsistent governance terminology**

@@ -120,6 +120,7 @@ when adding, renaming, or removing pages:
    - `wrangler.jsonc` names the Worker `haief`, uses `@astrojs/cloudflare/entrypoints/server` as `main`, serves `./dist` through the `ASSETS` binding, enables observability, and sets the Worker compatibility date plus `global_fetch_strictly_public`.
    - `public/.assetsignore` keeps `_worker.js` and `_routes.json` out of static asset uploads so Worker routing files are not treated as public assets.
    - `npm run generate-types` runs `wrangler types` and writes `worker-configuration.d.ts` when binding or compatibility settings need refreshed TypeScript definitions.
+   - Current source does not use Astro image or session APIs. If future pages add those APIs, add matching `IMAGES` or `SESSION` bindings to `wrangler.jsonc` before deploy and regenerate Worker types.
    - This repository currently has governance validation CI only; site builds must be run manually for PRs that touch `src/`, `public/`, `astro.config.mjs`, or package files.
 
 ## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow
