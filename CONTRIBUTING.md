@@ -101,9 +101,10 @@ npm run build
 npm run preview
 ```
 
-The site requires Node `>=22`. `npm run check` is currently an alias for
-`astro build`. `npm run preview` runs a build first, then starts `wrangler dev`
-against the Worker configuration in `wrangler.jsonc`.
+The site requires Node `>=22`; the current Worker toolchain has been validated
+with Node v22.22.2. `npm run check` is currently an alias for `astro build`.
+`npm run preview` runs a build first, then starts `wrangler dev` against the
+Worker configuration in `wrangler.jsonc`.
 
 Use `npm run generate-types` after changing Cloudflare bindings in
 `wrangler.jsonc`; it runs `wrangler types` for the `worker-configuration.d.ts`
@@ -166,6 +167,8 @@ public-goal language, or governance crisis timelines:
   - Keep `public/.assetsignore`; it excludes `_worker.js` and `_routes.json` from the assets upload if those files are present.
 - **Cloudflare binding types are stale**
   - Run `npm run generate-types` after changing `wrangler.jsonc`, then review any generated `worker-configuration.d.ts` diff before committing it.
+- **Astro fails before loading config with `node:module.registerHooks`**
+  - Upgrade to a current Node 22.x runtime, rerun `npm ci`, and build again. Node v22.14.0 failed in automation; Node v22.22.2 passed.
 
 ### Documentation
 

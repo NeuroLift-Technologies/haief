@@ -143,7 +143,8 @@ wrangler.jsonc
 The public site is an Astro site configured for Cloudflare Workers via
 `@astrojs/cloudflare` and `wrangler.jsonc`:
 
-- Node `>=22` is required by `package.json`.
+- Node `>=22` is required by `package.json`; this Worker toolchain has been
+  validated with Node v22.22.2.
 - `npm run dev` starts the local Astro dev server.
 - `npm run build` and `npm run check` run `astro build` and emit `dist/`.
 - `npm run preview` builds the site and serves it locally through `wrangler dev`.
@@ -155,6 +156,9 @@ generated metadata and sitemap output. `wrangler.jsonc` names the configured
 Worker `haief`, points Wrangler at the Astro Cloudflare entrypoint, serves
 assets from `./dist` through the `ASSETS` binding, and enables observability.
 Route, custom-domain, and dashboard state are not stored in this repository.
+If an earlier Node 22.x runtime fails to load Astro with a
+`node:module.registerHooks` error, upgrade to a current Node 22.x release and
+rerun `npm ci`.
 
 ### 🔒 About the /internal Directory
 

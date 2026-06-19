@@ -78,6 +78,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
    - `npm run preview` runs `npm run build && wrangler dev`.
    - `npm run deploy` runs `npm run build && wrangler deploy`; production deployment requires explicit human authorization.
    - `npm run generate-types` runs `wrangler types` for the optional `worker-configuration.d.ts` file included by `tsconfig.json`.
+   - Use a current Node 22.x runtime; automation build validation passed with Node v22.22.2, while v22.14.0 failed before config load with `node:module.registerHooks`.
 
 7. **Cloudflare Worker configuration contract**
    - `astro.config.mjs` must keep `adapter: cloudflare()` when the site is deployed through `wrangler deploy`.
