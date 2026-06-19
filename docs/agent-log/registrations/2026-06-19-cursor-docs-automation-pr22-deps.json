@@ -1,0 +1,24 @@
+{
+	"agent_registration": {
+		"agent_name": "GPT-5.5 Cursor Cloud Automation",
+		"platform": "Cursor Cloud Automation",
+		"version": "GPT-5.5",
+		"session_id": "2026-06-19-cursor-docs-automation-pr22-deps",
+		"entry_date": "2026-06-19",
+		"entry_point": "Automation trigger for closed PR #22: Dependabot npm_and_yarn group update touching package.json and package-lock.json.",
+		"acknowledged_otoi": true,
+		"otoi_version": "ORG-DEV-OTOI-1.0.0",
+		"working_repo": "NeuroLift-Technologies/haief",
+		"working_branch": "cursor/engineering-documentation-updates-7895",
+		"capabilities_self_reported": [
+			"Source-verified documentation maintenance",
+			"Astro and npm workflow review",
+			"Cloudflare Pages runbook alignment"
+		],
+		"known_limitations": [
+			"Cannot approve production deployments or bind Cloudflare custom domains",
+			"Will not change governance contracts that require Joshua approval"
+		],
+		"preferred_handoff_format": "JSON handoff record per OTOI Section 5"
+	}
+}

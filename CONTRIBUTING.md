@@ -85,38 +85,62 @@ See [Community Guidelines](community/guidelines.md) for full details.
 
 ## Development Setup
 
-### Website (Jekyll)
+### Website (Astro on Cloudflare Pages)
 
 ```bash
-# Install dependencies
-bundle install
+# Requires Node.js 22 or newer.
+npm ci
 
-# Run local server
-bundle exec jekyll serve
+# Run the local Astro dev server
+npm run dev
 
-# Build for production
-bundle exec jekyll build
+# Build the static site into dist/
+npm run build
+
+# Preview the built site locally
+npm run preview
 ```
+
+`npm run check` currently runs the same Astro build as `npm run build`; use it when
+you want a named validation step in CI-style notes.
+
+`npm run deploy` builds the site and runs
+`wrangler pages deploy dist --project-name haief-site`. Treat that as a
+production action: do not run it without explicit human authorization.
+
+### Dependency Maintenance
+
+The website uses root npm manifests only:
+
+- `package.json` declares the supported toolchain (`node >=22`) and scripts.
+- `package-lock.json` is the canonical npm lockfile. Do not edit it by hand.
+- Routine dependency updates should be verified with `npm ci` followed by
+  `npm run build` or `npm run check`.
+- Cloudflare Pages deployment uses the repo-local `wrangler` dev dependency
+  through the `npm run deploy` script; avoid relying on a globally installed
+  Wrangler version when testing the project.
 
 ### Documentation + Site Content Workflow
 
 Use this workflow when adding/updating public pages:
 
-1. **Edit content in `_pages/` or `index.html`**
-   - Include front matter fields (`layout`, `title`, `description`, `permalink`) for pages in `_pages/`.
+1. **Edit content in `src/pages/`**
+   - Markdown pages use `layout: ../layouts/Base.astro`, `title`, and `description` front matter.
+   - The homepage lives at `src/pages/index.astro`; the not-found page lives at `src/pages/404.astro`.
 2. **Wire discoverability**
-   - Add/update nav entries in `_config.yml` (`nav` section).
-   - Add/update corresponding footer links in `_includes/footer.html` when appropriate.
+   - Add/update header entries in `src/components/Header.astro`.
+   - Add/update footer links in `src/components/Footer.astro` when appropriate.
 3. **Use stable internal links**
-   - Prefer `{{ '/target/' | relative_url }}` over hard-coded `/haief/...` paths.
+   - Prefer root-relative links such as `/target/`.
+   - Do not use Jekyll Liquid (`relative_url`, `site.*`, or `baseurl`) in Astro pages.
 4. **Prefer reusable styling**
-   - Add repeated styles as classes in `assets/css/main.css`.
+   - Add repeated styles as classes in `public/assets/css/main.css`.
 5. **Verify the site builds**
-   - Run `bundle exec jekyll build` before opening a docs PR.
+   - Run `npm run build` before opening a docs PR.
 
 ### Public Goals and Safety Case Updates
 
-Use this additional checklist when editing `_pages/safety-case-template.md`,
+Use this additional checklist when editing `src/pages/safety-case-template.md`,
 public-goal language, or governance crisis timelines:
 
 1. **Keep claims traceable**
@@ -126,8 +150,8 @@ public-goal language, or governance crisis timelines:
    - The public template currently has ten required sections.
    - Update `docs/overview.md` and `docs/governance.md` if the section list, review path, or linked specifications change.
 3. **Cross-link the workflow**
-   - Public goals belong in narrative pages such as `_pages/who-we-are.md`.
-   - Evidence and constraints belong in `_pages/safety-case-template.md`.
+   - Public goals belong in narrative pages such as `src/pages/who-we-are.md`.
+   - Evidence and constraints belong in `src/pages/safety-case-template.md`.
    - Case-study timelines belong in the relevant case-study or problem page.
 4. **Avoid premature compliance language**
    - Do not claim certification, registration, or review unless that process exists publicly.
@@ -136,13 +160,13 @@ public-goal language, or governance crisis timelines:
 ### Troubleshooting Common Pitfalls
 
 - **New page not reachable from navigation**
-  - Check both `_config.yml` and `_includes/footer.html`.
+  - Check both `src/components/Header.astro` and `src/components/Footer.astro`.
 - **Broken internal links in production**
-  - Replace hard-coded root-relative links with `relative_url`.
+  - Use root-relative links such as `/take-action/`; remove stale Jekyll Liquid.
 - **Poor social preview cards**
   - Ensure page front matter includes a concise `description`.
 - **Inconsistent governance terminology**
-  - Cross-check terms with `_pages/solidarity-framework.md` before merge.
+  - Cross-check terms with `src/pages/solidarity-framework.md` before merge.
 
 ### Documentation
 

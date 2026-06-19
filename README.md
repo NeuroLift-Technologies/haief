@@ -16,7 +16,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is an independent, community‑driv
 
 HAIEF exists to ensure that AI serves people, not the other way around — with transparency, dignity, and global accessibility at its core.
 
-**[Visit the Website](https://neurolift-technologies.github.io/haief/)** | **[Join Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)** | **[Take Action](https://neurolift-technologies.github.io/haief/take-action/)**
+**[Visit the Website](https://haief.org/)** | **[Join Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)** | **[Take Action](https://haief.org/take-action/)**
 
 ---
 
@@ -82,11 +82,22 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 ## 🗂️ Repository Structure
 
 ```
-/_pages
-    safety-case-template.md
-    who-we-are.md
-    the-problem.md
-    case-study-anthropic-pentagon-2026.md
+/src
+    /pages
+        index.astro
+        safety-case-template.md
+        who-we-are.md
+        the-problem.md
+        case-study-anthropic-pentagon-2026.md
+    /components
+        Header.astro
+        Footer.astro
+    /layouts
+        Base.astro
+
+/public
+    /assets
+        css/main.css
 
 /solidarity-framework
     /toi
@@ -116,7 +127,25 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 /internal  (gitignored)
     charter/
     agent-contributions/
+
+package.json
+package-lock.json
+astro.config.mjs
 ```
+
+### Developer Quick Start
+
+The public site is an Astro static site deployed to Cloudflare Pages.
+
+```bash
+npm ci
+npm run dev
+npm run build
+```
+
+Use Node.js 22 or newer. `npm run deploy` builds and deploys `dist/` with the
+repo-local Wrangler dependency to the `haief-site` Cloudflare Pages project; run
+it only with explicit human authorization.
 
 ### 🔒 About the /internal Directory
 

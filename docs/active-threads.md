@@ -2,13 +2,20 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-05-28
+**Last updated:** 2026-06-19
 
 ---
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-19-cursor-docs-automation-pr22-deps
+**Status:** open
+**Owner:** GPT-5.5 Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Documenting the source-verified Astro/Cloudflare Pages developer workflow after the Dependabot npm update in PR #22 (`astro` 5.16.9 → 6.4.6 and `wrangler` 4.94.0 → 4.102.0), with focus on stale Jekyll setup and runbook references.
+**Blockers:** None.
+**Next action:** Update existing developer and governance docs, then verify the docs against package scripts and site source paths.
 
 ---
 
