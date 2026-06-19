@@ -145,15 +145,16 @@ tsconfig.json
 
 ### Public Website Stack
 
-The public site is an Astro static site deployed to Cloudflare Pages:
+The public site is an Astro site built for Cloudflare Workers:
 
 - Node `>=22` is required by `package.json`.
 - `npm run dev` starts the local Astro dev server.
 - `npm run build` and `npm run check` run `astro build` and emit `dist/`.
-- `npm run preview` serves the built site locally.
-- `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project `haief-site`; use it only with explicit production/deployment authorization.
+- `npm run preview` builds the site and serves the Worker locally through `wrangler dev`.
+- `npm run deploy` builds and deploys the Worker with `wrangler deploy`; use it only with explicit production/deployment authorization.
+- `wrangler.jsonc` defines the Worker named `haief`, the `@astrojs/cloudflare` entrypoint, the static asset binding for `dist/`, and observability.
 
-`astro.config.mjs` sets the canonical site URL to `https://haief.org` for generated metadata and sitemap output. The currently documented Cloudflare Pages preview is `https://haief-site.pages.dev/` until the custom domain is bound.
+`astro.config.mjs` sets the canonical site URL to `https://haief.org` for generated metadata and sitemap output. Repository source does not declare the production route or custom-domain binding; verify Cloudflare routing outside the repo before release.
 
 Route and workflow details live in [`docs/overview.md`](docs/overview.md). In particular, the Q&A and fact-check forms are client-side public interfaces: they prepare GitHub issue or `mailto:` handoffs and do not submit to a backend service.
 
@@ -172,7 +173,7 @@ This ensures that public standards remain transparent while internal agent orche
 
 ## ☁️ What Is Not in This Repo
 
-The public static website build and Cloudflare Pages deploy tooling are now in this repo. The following runtime systems remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
+The public website source, static build, and Cloudflare Worker deploy tooling are now in this repo. The following runtime systems remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
 
 - Fusion methodology  
 - Identity‑bound agent state  

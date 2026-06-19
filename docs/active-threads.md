@@ -8,7 +8,14 @@
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-19-cursor-docs-automation-pr26
+**Status:** open
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verifying the merged PR #26 Astro workflow documentation against the current Cloudflare Worker deployment source and updating stale developer-facing docs.
+**Blockers:** None.
+**Next action:** Align existing docs with `@astrojs/cloudflare`, `wrangler.jsonc`, `wrangler deploy`, and static asset handling, then validate.
 
 ---
 
