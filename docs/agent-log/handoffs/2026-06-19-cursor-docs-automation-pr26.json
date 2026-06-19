@@ -46,6 +46,6 @@
       "Targeted stale-reference scans for Cloudflare Pages deploy and wrangler pages deploy"
     ],
     "tests_passing": true,
-    "pr_url": ""
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/28"
   }
 }
