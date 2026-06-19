@@ -46,6 +46,6 @@
       "PATH=\"$HOME/.nvm/versions/node/v22.22.2/bin:$PATH\" npm run build"
     ],
     "tests_passing": true,
-    "pr_url": "Pending OpenGitPr automation"
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/30"
   }
 }
