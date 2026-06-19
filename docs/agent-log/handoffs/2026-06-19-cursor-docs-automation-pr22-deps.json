@@ -1,0 +1,49 @@
+{
+	"handoff_record": {
+		"session_id": "2026-06-19-cursor-docs-automation-pr22-deps",
+		"agent_name": "GPT-5.5 Cursor Cloud Automation",
+		"date": "2026-06-19",
+		"otoi_version": "ORG-DEV-OTOI-1.0.0",
+		"repo": "NeuroLift-Technologies/haief",
+		"branch": "cursor/engineering-documentation-updates-7895",
+		"work_completed": [
+			"Source-verified PR #22 dependency context: root npm update changed Astro from 5.16.9 to 6.4.6 and Wrangler from 4.94.0 to 4.102.0.",
+			"Updated README.md and CONTRIBUTING.md to describe the current Astro/Cloudflare Pages workflow, Node >=22, npm scripts, repo-local Wrangler, and deploy guardrail.",
+			"Updated docs/overview.md and docs/governance.md with current site architecture paths, safety-case navigation ownership, root-relative link constraints, and dependency-maintenance runbook steps.",
+			"Removed a stale Jekyll Liquid link from fact-checking/README.md.",
+			"Recorded session registration and resolved active-thread status."
+		],
+		"work_in_progress": [],
+		"blockers": [],
+		"decisions_made": [
+			"Updated existing docs instead of creating a new page because the relevant developer and governance runbooks already existed but referenced removed Jekyll paths.",
+			"Did not run or document any production deployment; npm run deploy remains explicitly human-authorized because it invokes Cloudflare Pages deployment.",
+			"Left npm audit findings unresolved because this automation was documentation-only and the audit output requires a separate dependency/security decision."
+		],
+		"decisions_pending": [
+			"Joshua or maintainers should decide how to address the existing two low-severity npm audit findings."
+		],
+		"escalations": [],
+		"next_agent_notes": "The docs now align with the current Astro source tree and PR #22 dependency update. Full verification passed after the whitespace follow-up commit. npm ci still reports two low-severity vulnerabilities; treat remediation as a separate dependency task.",
+		"files_modified": [
+			"README.md",
+			"CONTRIBUTING.md",
+			"docs/overview.md",
+			"docs/governance.md",
+			"fact-checking/README.md",
+			"docs/active-threads.md",
+			"docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr22-deps.json",
+			"docs/agent-log/handoffs/2026-06-19-cursor-docs-automation-pr22-deps.json"
+		],
+		"tests_run": [
+			"npm ci",
+			"npm run build",
+			"bash .nltotoi/scripts/validate-governance.sh",
+			"python3 -m json.tool docs/agent-log/registrations/2026-06-19-cursor-docs-automation-pr22-deps.json",
+			"git diff --check HEAD~2..HEAD",
+			"rg \"Website \\\\(Jekyll\\\\)|bundle install|bundle exec jekyll|\\\\{\\\\{[^\\\\n]*relative_url|neurolift-technologies\\\\.github\\\\.io/haief\" --glob \"*.md\""
+		],
+		"tests_passing": true,
+		"pr_url": null
+	}
+}
