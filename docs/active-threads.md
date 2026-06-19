@@ -8,7 +8,14 @@
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-19-cursor-docs-automation-pr28
+**Status:** open
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verify the merged PR #28 documentation changes and update any remaining weak developer documentation for recently changed Astro/Cloudflare Worker site workflows.
+**Blockers:** None.
+**Next action:** Inspect the merged PR #28 diff and current site/source files for documentation gaps.
 
 ---
 

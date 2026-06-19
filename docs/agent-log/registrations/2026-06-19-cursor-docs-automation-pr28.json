@@ -1,0 +1,26 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor Cloud Automation",
+    "platform": "Cursor Cloud",
+    "version": "GPT-5.5",
+    "session_id": "2026-06-19-cursor-docs-automation-pr28",
+    "entry_date": "2026-06-19",
+    "entry_point": "Automation trigger for merged PR #28: [Cursor] docs(site): align Astro Worker workflow docs",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-810b",
+    "capabilities_self_reported": [
+      "Source-verified documentation updates",
+      "Repository workflow and runbook review",
+      "GitHub PR diff inspection",
+      "Governance-aware handoff documentation"
+    ],
+    "known_limitations": [
+      "No production deployment authority",
+      "No authority to make architecture, deployment, UX, or strategic decisions",
+      "No authority to amend OTOI governance without Joshua W. Dorsey, Sr. approval"
+    ],
+    "preferred_handoff_format": "Structured JSON handoff record with files modified, checks run, and pending decisions."
+  }
+}

@@ -37,6 +37,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 - `astro.config.mjs`: Astro config, `@astrojs/sitemap`, `@astrojs/cloudflare`, and canonical `site: 'https://haief.org'`.
 - `wrangler.jsonc`: Cloudflare Worker deploy contract for the `haief` Worker and static asset binding.
 - `package.json`: Node `>=22`, Astro build/dev scripts, Wrangler preview/deploy scripts, and Cloudflare dependencies. Use a current Node 22 runtime for builds; Node `22.14.0` fails with a missing `node:module.registerHooks` export before Astro loads config.
+- `tsconfig.json`: Astro strict TypeScript config. It includes `.astro/types.d.ts` and `./worker-configuration.d.ts`; the Wrangler-generated file may be absent in a clean checkout until `npm run generate-types` runs.
 
 ### Public route inventory
 
@@ -116,8 +117,9 @@ when adding, renaming, or removing pages:
    - `npm run build` and `npm run check` run `astro build` and emit `dist/`.
    - `npm run preview` runs `npm run build && wrangler dev`, serving the generated Cloudflare Worker locally.
    - `npm run deploy` runs `npm run build && wrangler deploy`; production deployment requires explicit human authorization.
-   - `wrangler.jsonc` names the Worker `haief`, uses `@astrojs/cloudflare/entrypoints/server` as `main`, serves `./dist` through the `ASSETS` binding, enables observability, and sets the Worker compatibility date/flags.
+   - `wrangler.jsonc` names the Worker `haief`, uses `@astrojs/cloudflare/entrypoints/server` as `main`, serves `./dist` through the `ASSETS` binding, enables observability, and sets the Worker compatibility date plus `global_fetch_strictly_public`.
    - `public/.assetsignore` keeps `_worker.js` and `_routes.json` out of static asset uploads so Worker routing files are not treated as public assets.
+   - `npm run generate-types` runs `wrangler types` and writes `worker-configuration.d.ts` when binding or compatibility settings need refreshed TypeScript definitions.
    - This repository currently has governance validation CI only; site builds must be run manually for PRs that touch `src/`, `public/`, `astro.config.mjs`, or package files.
 
 ## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow

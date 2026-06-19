@@ -120,6 +120,9 @@ Operational notes:
   serves `./dist` through the `ASSETS` binding, and enables observability.
 - `astro.config.mjs` sets the canonical site URL to `https://haief.org`.
   Production/custom-domain routing is managed outside this repository.
+- `tsconfig.json` includes `./worker-configuration.d.ts` for Wrangler-generated
+  binding types. That file may be absent from a clean checkout until
+  `npm run generate-types` runs after Worker binding or compatibility changes.
 
 ---
 

@@ -119,12 +119,13 @@ That command runs `astro build` and then `wrangler deploy`.
 Operational constraints:
 
 - Do not deploy without explicit production/deployment authorization from Joshua W. Dorsey, Sr.
-- `wrangler.jsonc` is the deploy contract. It names the Worker `haief`, points `main` at `@astrojs/cloudflare/entrypoints/server`, binds static assets from `./dist` to `ASSETS`, enables observability, and sets `compatibility_date`.
+- `wrangler.jsonc` is the deploy contract. It names the Worker `haief`, points `main` at `@astrojs/cloudflare/entrypoints/server`, binds static assets from `./dist` to `ASSETS`, enables observability, and sets `compatibility_date` plus the current compatibility flags.
 - Wrangler authentication must already be configured for an account with access to deploy the `haief` Worker.
 - `astro.config.mjs` uses `site: 'https://haief.org'` for canonical metadata and sitemap generation. Repository source does not declare the production route or custom-domain binding.
 - `public/.assetsignore` excludes Worker routing artifacts (`_worker.js` and `_routes.json`) from static asset upload; keep it aligned with Astro/Cloudflare output if the adapter changes.
 - Before a deploy, verify `public/robots.txt` and any absolute public links still match the intended canonical/public URL split.
-- Run `npm run generate-types` after changing Wrangler bindings or compatibility settings so `worker-configuration.d.ts` can be regenerated if needed.
+- `tsconfig.json` includes `./worker-configuration.d.ts` so generated Cloudflare binding types are picked up when present. A clean checkout may not contain that file until `npm run generate-types` runs `wrangler types`.
+- Run `npm run generate-types` after changing Wrangler bindings, `compatibility_date`, or compatibility flags. Review the generated `worker-configuration.d.ts` before committing it; it should describe bindings such as `ASSETS`, not contain secrets.
 
 ### Documentation + Site Content Workflow
 
@@ -193,6 +194,8 @@ public-goal language, or governance crisis timelines:
   - Compare `astro.config.mjs` `site` with `public/robots.txt` before release.
 - **Worker preview fails after a clean build**
   - Check `wrangler.jsonc` `main`, `assets.directory`, and `assets.binding` against `astro.config.mjs` and the generated `dist/` output.
+- **Type or binding errors after changing `wrangler.jsonc`**
+  - Run `npm run generate-types` to refresh `worker-configuration.d.ts`, then confirm `tsconfig.json` still includes that file and the `.astro` type directory.
 - **Build fails with `node:module` missing `registerHooks`**
   - Check `node --version` and use a current Node 22 runtime. In Cursor Cloud, ensure the desired `nvm` Node path appears before `/exec-daemon` on `PATH`.
 - **Inconsistent governance terminology**

@@ -153,6 +153,7 @@ The public site is an Astro site built for Cloudflare Workers:
 - `npm run preview` builds the site and serves the Worker locally through `wrangler dev`.
 - `npm run deploy` builds and deploys the Worker with `wrangler deploy`; use it only with explicit production/deployment authorization.
 - `wrangler.jsonc` defines the Worker named `haief`, the `@astrojs/cloudflare` entrypoint, the static asset binding for `dist/`, and observability.
+- `npm run generate-types` refreshes Wrangler-generated binding types when Worker configuration changes.
 
 `astro.config.mjs` sets the canonical site URL to `https://haief.org` for generated metadata and sitemap output. Repository source does not declare the production route or custom-domain binding; verify Cloudflare routing outside the repo before release.
 
