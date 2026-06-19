@@ -102,7 +102,7 @@ Use this checklist when package updates change Astro, Wrangler, or related build
   **Safeguard:** Verify wording against existing framework documents before merge.
 - **Pitfall:** Style sprawl from repeated inline formatting.  
   **Safeguard:** Promote repeated styles to named CSS classes in `public/assets/css/main.css`.
-- **Pitfall:** Accidentally deploying while testing build tooling.  
+- **Pitfall:** Accidentally deploying while testing build tooling.
   **Safeguard:** Use `npm run build`, `npm run check`, or `npm run preview`; reserve `npm run deploy` for explicitly authorized production actions.
 
 ## Contribution Guidelines
