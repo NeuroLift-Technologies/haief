@@ -49,6 +49,6 @@
       "rg 'Sitemap:|sitemap-index' dist"
     ],
     "tests_passing": true,
-    "pr_url": null
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/26"
   }
 }
