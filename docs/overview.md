@@ -36,7 +36,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 - `public/.assetsignore`: Cloudflare asset upload exclusions for Worker routing artifacts.
 - `astro.config.mjs`: Astro config, `@astrojs/sitemap`, `@astrojs/cloudflare`, and canonical `site: 'https://haief.org'`.
 - `wrangler.jsonc`: Cloudflare Worker deploy contract for the `haief` Worker and static asset binding.
-- `package.json`: Node `>=22`, Astro build/dev scripts, Wrangler preview/deploy scripts, and Cloudflare dependencies.
+- `package.json`: Node `>=22`, Astro build/dev scripts, Wrangler preview/deploy scripts, and Cloudflare dependencies. Use a current Node 22 runtime for builds; Node `22.14.0` fails with a missing `node:module.registerHooks` export before Astro loads config.
 
 ### Public route inventory
 

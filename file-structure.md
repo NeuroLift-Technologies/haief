@@ -109,6 +109,8 @@ haief/
 Operational notes:
 
 - `npm run dev` starts the local Astro server.
+- Use a current Node 22 runtime for the Astro/Vite toolchain; Node `22.14.0`
+  fails before loading `astro.config.mjs`.
 - `npm run build` and `npm run check` run `astro build` and write `dist/`.
 - `npm run preview` builds the site and serves the Cloudflare Worker locally
   with `wrangler dev`.

@@ -104,7 +104,7 @@ npm run build
 npm run preview
 ```
 
-The site requires Node `>=22`. `npm run check` is currently an alias for `astro build`. `npm run preview` runs `npm run build && wrangler dev`, so it exercises the generated Cloudflare Worker locally rather than Astro's standalone preview server.
+The site declares Node `>=22` in `package.json`, but the current Astro/Vite toolchain needs a recent Node 22 runtime with `node:module.registerHooks`. Node `22.22.2` has been verified for builds; Node `22.14.0` fails before loading `astro.config.mjs`. `npm run check` is currently an alias for `astro build`. `npm run preview` runs `npm run build && wrangler dev`, so it exercises the generated Cloudflare Worker locally rather than Astro's standalone preview server.
 
 ### Cloudflare Worker Runbook
 
@@ -193,6 +193,8 @@ public-goal language, or governance crisis timelines:
   - Compare `astro.config.mjs` `site` with `public/robots.txt` before release.
 - **Worker preview fails after a clean build**
   - Check `wrangler.jsonc` `main`, `assets.directory`, and `assets.binding` against `astro.config.mjs` and the generated `dist/` output.
+- **Build fails with `node:module` missing `registerHooks`**
+  - Check `node --version` and use a current Node 22 runtime. In Cursor Cloud, ensure the desired `nvm` Node path appears before `/exec-daemon` on `PATH`.
 - **Inconsistent governance terminology**
   - Cross-check terms with `src/pages/solidarity-framework.md` before merge.
 

@@ -147,7 +147,7 @@ tsconfig.json
 
 The public site is an Astro site built for Cloudflare Workers:
 
-- Node `>=22` is required by `package.json`.
+- Node `>=22` is declared in `package.json`; use a current Node 22 runtime such as `22.22.2` for the Astro/Vite toolchain.
 - `npm run dev` starts the local Astro dev server.
 - `npm run build` and `npm run check` run `astro build` and emit `dist/`.
 - `npm run preview` builds the site and serves the Worker locally through `wrangler dev`.
