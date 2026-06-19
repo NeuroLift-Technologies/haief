@@ -86,9 +86,16 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
     /pages
         index.astro
         404.astro
+        for-agents.md
+        for-humans.md
+        questions-and-answers.md
         safety-case-template.md
-        who-we-are.md
+        solidarity-framework.md
+        submit-fact-check.md
+        submit-question.md
+        take-action.md
         the-problem.md
+        who-we-are.md
         case-study-anthropic-pentagon-2026.md
     /layouts
         Base.astro
@@ -147,6 +154,8 @@ The public site is an Astro static site deployed to Cloudflare Pages:
 - `npm run deploy` builds and deploys `dist/` to the Cloudflare Pages project `haief-site`; use it only with explicit production/deployment authorization.
 
 `astro.config.mjs` sets the canonical site URL to `https://haief.org` for generated metadata and sitemap output. The currently documented Cloudflare Pages preview is `https://haief-site.pages.dev/` until the custom domain is bound.
+
+Route and workflow details live in [`docs/overview.md`](docs/overview.md). In particular, the Q&A and fact-check forms are client-side public interfaces: they prepare GitHub issue or `mailto:` handoffs and do not submit to a backend service.
 
 ### 🔒 About the /internal Directory
 

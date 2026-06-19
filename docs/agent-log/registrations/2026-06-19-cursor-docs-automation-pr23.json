@@ -1,0 +1,25 @@
+{
+  "agent_registration": {
+    "agent_name": "Cursor Cloud Automation",
+    "platform": "Cursor Cloud",
+    "version": "GPT-5.5",
+    "session_id": "158b2152-7214-45b1-9efe-a458133e75b6",
+    "entry_date": "2026-06-19",
+    "entry_point": "pull_request.closed automation for PR #23",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "cursor/engineering-documentation-updates-f09c",
+    "capabilities_self_reported": [
+      "source-verified documentation maintenance",
+      "repository inspection",
+      "static validation",
+      "git commit and PR preparation"
+    ],
+    "known_limitations": [
+      "cannot infer unimplemented behavior",
+      "will not make architectural or deployment decisions without Joshua approval"
+    ],
+    "preferred_handoff_format": "structured JSON handoff plus concise PR summary"
+  }
+}

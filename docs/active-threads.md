@@ -8,7 +8,14 @@
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-19-cursor-docs-automation-pr23
+**Status:** open
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-19
+**Last updated:** 2026-06-19
+**Summary:** Source-verify the closed PR #23 Astro migration documentation changes and update any remaining weak developer documentation for recently changed subsystems.
+**Blockers:** None.
+**Next action:** Inspect PR #23 diff and current source/docs before making focused documentation updates.
 
 ---
 

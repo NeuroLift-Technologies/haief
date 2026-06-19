@@ -36,6 +36,27 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 - `astro.config.mjs`: Astro config, `@astrojs/sitemap`, and canonical `site: 'https://haief.org'`.
 - `package.json`: Node `>=22`, Astro build/dev scripts, and Cloudflare Pages deploy command.
 
+### Public route inventory
+
+Astro derives public routes from files under `src/pages/`. Keep this table current
+when adding, renaming, or removing pages:
+
+| Source | Public route | Discovery path | Notes |
+|---|---|---|---|
+| `src/pages/index.astro` | `/` | Header logo and direct links | Homepage sections and calls to action. |
+| `src/pages/404.astro` | `dist/404.html` fallback | Error fallback | Static not-found page. |
+| `src/pages/the-problem.md` | `/the-problem/` | Header and footer | Governance problem framing. |
+| `src/pages/who-we-are.md` | `/who-we-are/` | Header and footer | Public-goal and organization framing. |
+| `src/pages/solidarity-framework.md` | `/solidarity-framework/` | Header and footer | Framework terminology source for contributors. |
+| `src/pages/case-study-anthropic-pentagon-2026.md` | `/case-study-anthropic-pentagon-2026/` | Header and footer | Event-based governance case study. |
+| `src/pages/take-action.md` | `/take-action/` | Header CTA and footer | Public participation page. |
+| `src/pages/questions-and-answers.md` | `/questions-and-answers/` | Header | Public Q&A index and link to question submission. |
+| `src/pages/safety-case-template.md` | `/safety-case-template/` | Header and footer resources | Canonical public safety case template. |
+| `src/pages/submit-fact-check.md` | `/submit-fact-check/` | Header | Client-only fact-check request form. |
+| `src/pages/submit-question.md` | `/submit-question/` | Homepage and Q&A page links | Client-only question submission form; intentionally not in header/footer. |
+| `src/pages/for-humans.md` | `/for-humans/` | Header and footer | Human-facing participation guide. |
+| `src/pages/for-agents.md` | `/for-agents/` | Header and footer | Agent-facing structured guidance. |
+
 ### Public interfaces contributors should treat as stable
 
 1. **Page front matter contract**
@@ -54,6 +75,9 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
    - Header navigation is maintained in `src/components/Header.astro`.
    - Footer links are maintained separately in `src/components/Footer.astro`.
    - Adding a primary public page usually requires changes in both components.
+   - Header URLs use root-relative trailing-slash paths; active state compares normalized pathnames.
+   - The `Take Action` nav item is the only header item styled as `nav-cta`.
+   - Secondary workflow pages may be deep-linked instead of appearing in both nav surfaces; document that choice in the route inventory.
 
 3. **Metadata contract**
    - `src/layouts/Base.astro` emits `description`, Open Graph tags, Twitter card fields, canonical URLs, and organization JSON-LD.
@@ -70,11 +94,27 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
    - The page currently contains ten numbered sections. If a section is renamed, added, or removed, update governance runbooks and contributor guidance in the same change.
    - The page uses root-relative links for local site pages and full GitHub URLs for specifications and Discussions.
 
-6. **Build and deploy contract**
+6. **Public submission handoff contract**
+   - `src/pages/submit-question.md` and `src/pages/submit-fact-check.md` are static, browser-only forms.
+   - They do not call a backend or store submissions. Anonymous/public submissions prepare GitHub issue URLs; private responses prepare `mailto:haief@neuroliftsolutions.com` links.
+   - The GitHub labels are part of the public workflow: `question` for Q&A and `fact-check` for verification requests.
+   - Preserve the privacy boundary: private response email addresses should stay in the email handoff, not public GitHub issue bodies.
+
+7. **Agent-facing page contract**
+   - `src/pages/for-agents.md` is a public interface for AI agents and should stay concise, structured, and easy to parse.
+   - When agent-facing terms change, cross-check `src/pages/solidarity-framework.md`, `AGENTS.md`, and `NLT-DEV-OTOI.md` for governance alignment without amending OTOI content.
+
+8. **URL, sitemap, and robots contract**
+   - `astro.config.mjs` sets `site: 'https://haief.org'`; `Base.astro` and `@astrojs/sitemap` use that value for canonical URLs and sitemap generation.
+   - `https://haief-site.pages.dev/` is the documented Cloudflare Pages preview URL until the custom domain is bound.
+   - `public/robots.txt` is copied into the build output as a static asset. Verify its `Sitemap:` host when `astro.config.mjs` `site` or deployment domains change.
+
+9. **Build and deploy contract**
    - `npm run dev` starts Astro locally.
    - `npm run build` and `npm run check` run `astro build` and emit `dist/`.
    - `npm run preview` serves the built output locally.
    - `npm run deploy` runs `astro build && wrangler pages deploy dist --project-name haief-site`; production deployment requires explicit human authorization.
+   - This repository currently has governance validation CI only; site builds must be run manually for PRs that touch `src/`, `public/`, `astro.config.mjs`, or package files.
 
 ## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow
 
