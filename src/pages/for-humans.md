@@ -244,7 +244,7 @@ In HAIEF, the strength of an argument matters more than the credentials of the s
   <div class="card" style="text-align: center;">
     <h4>Share</h4>
     <p style="font-size: var(--font-size-sm);">Spread the word</p>
-    <a href="https://twitter.com/intent/tweet?text=Join%20the%20HAIEF%20community%20-%20keeping%20open%20source%20AI%20open&url=https://haief.org/for-humans/" class="btn btn--outline">Tweet</a>
+    <a href="https://twitter.com/intent/tweet?text=Join%20the%20HAIEF%20community%20-%20keeping%20open%20source%20AI%20open&url=https://elevaitionfoundation.org/for-humans/" class="btn btn--outline">Tweet</a>
   </div>
 </div>
 

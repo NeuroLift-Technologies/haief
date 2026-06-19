@@ -118,7 +118,7 @@ Operational notes:
   `wrangler deploy`; production deployments require explicit human authorization.
 - `wrangler.jsonc` points `main` at `@astrojs/cloudflare/entrypoints/server`,
   serves `./dist` through the `ASSETS` binding, and enables observability.
-- `astro.config.mjs` sets the canonical site URL to `https://haief.org`.
+- `astro.config.mjs` sets the canonical site URL to `https://elevaitionfoundation.org`.
   Production/custom-domain routing is managed outside this repository.
 
 ---
