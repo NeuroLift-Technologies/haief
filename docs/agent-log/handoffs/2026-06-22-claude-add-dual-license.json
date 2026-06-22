@@ -1,0 +1,45 @@
+{
+  "handoff_record": {
+    "session_id": "2026-06-22-claude-add-dual-license",
+    "agent_name": "Claude Code (CLAUDE-CODE)",
+    "date": "2026-06-22",
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "chore/add-dual-license",
+    "work_completed": [
+      "Branch cleanup: deleted all 9 stale remote branches (2 already merged into main, 7 tied to closed PRs). Only main remains.",
+      "Added a dual license (the repo previously had no LICENSE; GitHub reported license=NONE). LICENSE = verbatim Apache License 2.0 (fetched from apache.org, 202 lines) for source code; LICENSE-CC-BY-4.0.txt = verbatim CC BY 4.0 legal code (fetched from creativecommons.org, 396 lines) for HAIEF frameworks/specs/docs.",
+      "Added NOTICE (Apache convention) attributing the work to NeuroLift Technologies LLC for HAIEF and pointing to both licenses.",
+      "Rewrote the README '📜 License' section from a vague 'permissive open-source' line to an explicit dual-license explanation (which paths are Apache-2.0 vs CC BY 4.0) and set package.json \"license\": \"Apache-2.0\".",
+      "Verified: license texts intact (no HTML leaked, correct line counts + headers), package.json valid JSON, governance validator 29/29 passed."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Dual-license split per Joshua: code = Apache-2.0, HAIEF content = CC BY 4.0. Code paths (src/, astro.config.mjs, wrangler.jsonc, tsconfig.json, package.json, tests/) under Apache-2.0; content paths (solidarity-framework/, specs/, community/, fact-checking/, docs/) under CC BY 4.0.",
+      "Used verbatim canonical license texts (not reproduced from memory) so SPDX detection and legal text are exact.",
+      "Attributed code copyright to NeuroLift Technologies LLC and content to HAIEF, per the README's 'Founding Contribution by NeuroLift Technologies LLC' and the HAIEF banner."
+    ],
+    "decisions_pending": [
+      "Joshua W. Dorsey, Sr.: confirm the attribution wording / legal entity (NeuroLift Technologies LLC vs HAIEF) on the NOTICE and README © line if a different holder is preferred; then review/merge the PR."
+    ],
+    "escalations": [],
+    "next_agent_notes": "haief is now down to main only and carries an explicit dual license. If the HAIEF foundation is later incorporated as its own legal entity, update the NOTICE/README copyright holder accordingly. Delivered via PR (chore/add-dual-license).",
+    "files_modified": [
+      "LICENSE",
+      "LICENSE-CC-BY-4.0.txt",
+      "NOTICE",
+      "README.md",
+      "package.json",
+      "docs/agent-log/registrations/2026-06-22-claude-add-dual-license.json",
+      "docs/agent-log/handoffs/2026-06-22-claude-add-dual-license.json"
+    ],
+    "tests_run": [
+      "curl line-count + header integrity checks on LICENSE and LICENSE-CC-BY-4.0.txt (verbatim, no HTML)",
+      "python3 -m json.tool package.json (valid)",
+      "bash .nltotoi/scripts/validate-governance.sh (29/29 passed)"
+    ],
+    "tests_passing": true,
+    "pr_url": "pending-open"
+  }
+}

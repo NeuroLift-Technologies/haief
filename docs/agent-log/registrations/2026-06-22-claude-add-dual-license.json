@@ -1,0 +1,24 @@
+{
+  "agent_registration": {
+    "agent_name": "Claude Code (CLAUDE-CODE)",
+    "platform": "Claude Code",
+    "version": "claude-opus-4-8",
+    "session_id": "2026-06-22-claude-add-dual-license",
+    "entry_date": "2026-06-22",
+    "entry_point": "User (Joshua W. Dorsey, Sr.) request: branch cleanup on haief and add the missing LICENSE — code files under Apache-2.0, HAIEF content under CC BY 4.0.",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.0",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "chore/add-dual-license",
+    "capabilities_self_reported": [
+      "Git branch cleanup",
+      "Read and write files",
+      "Fetching canonical license texts",
+      "Create GitHub pull requests"
+    ],
+    "known_limitations": [
+      "License selection is a legal/governance decision; license types (Apache-2.0 for code, CC BY 4.0 for HAIEF content) and the copyright holder (NeuroLift Technologies LLC / HAIEF) were taken from Joshua's instruction and repo context — confirm attribution wording if a different legal entity is preferred."
+    ],
+    "preferred_handoff_format": "JSON handoff record per OTOI Section 5"
+  }
+}
