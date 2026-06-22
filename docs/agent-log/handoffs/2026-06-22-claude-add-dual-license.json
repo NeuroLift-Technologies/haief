@@ -10,7 +10,7 @@
       "Branch cleanup: deleted all 9 stale remote branches (2 already merged into main, 7 tied to closed PRs). Only main remains.",
       "Added a dual license (the repo previously had no LICENSE; GitHub reported license=NONE). LICENSE = verbatim Apache License 2.0 (fetched from apache.org, 202 lines) for source code; LICENSE-CC-BY-4.0.txt = verbatim CC BY 4.0 legal code (fetched from creativecommons.org, 396 lines) for HAIEF frameworks/specs/docs.",
       "Added NOTICE (Apache convention) attributing the work to NeuroLift Technologies LLC for HAIEF and pointing to both licenses.",
-      "Rewrote the README '📜 License' section from a vague 'permissive open-source' line to an explicit dual-license explanation (which paths are Apache-2.0 vs CC BY 4.0) and set package.json \"license\": \"Apache-2.0\".",
+      "Rewrote the README '📜 License' section from a vague 'permissive open-source' line to an explicit dual-license explanation (which paths are Apache-2.0 vs CC BY 4.0) and set package.json \"license\": \"(Apache-2.0 AND CC-BY-4.0)\" (SPDX dual-license expression, per gemini-code-assist review feedback).",
       "Verified: license texts intact (no HTML leaked, correct line counts + headers), package.json valid JSON, governance validator 29/29 passed."
     ],
     "work_in_progress": [],
