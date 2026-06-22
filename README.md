@@ -186,7 +186,14 @@ These systems implement the standards — but the standards themselves live here
 
 ## 📜 License
 
-All frameworks and specifications in this repository are released under a permissive open‑source license to maximize global adoption and community governance.
+This repository is **dual-licensed** to fit its two kinds of material:
+
+- **Source code** — the Astro site and supporting software (`src/`, `astro.config.mjs`, `wrangler.jsonc`, `tsconfig.json`, `package.json`, build/config, and `tests/`) is licensed under the **Apache License 2.0**. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).
+- **HAIEF content** — the frameworks, specifications, and documentation (e.g. `solidarity-framework/`, `specs/`, `community/`, `fact-checking/`, `docs/`, and other prose/Markdown) is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. See [`LICENSE-CC-BY-4.0.txt`](LICENSE-CC-BY-4.0.txt).
+
+In short: **code is Apache-2.0; the HAIEF standards and writing are CC BY 4.0** — free to adopt, adapt, and build on, with attribution. Where a file contains both, the content license (CC BY 4.0) governs the prose and the code license (Apache-2.0) governs any embedded code.
+
+© 2025–2026 NeuroLift Technologies LLC, for the Human & AI ElevAItion Foundation (HAIEF).
 
 ---
 
