@@ -149,7 +149,7 @@ This principle, from the disability rights movement, means that decisions affect
 
 ### Is HAIEF open source?
 
-Yes! All frameworks and specifications are released under permissive open-source licenses to maximize global adoption and community governance. The goal is transparent, auditable, enforceable standards that anyone can implement.
+Yes. This repository is dual-licensed so each kind of work can be reused under an appropriate open license: software source and build/test infrastructure are Apache-2.0, while HAIEF frameworks, specifications, and documentation are CC BY 4.0. The goal is transparent, auditable, enforceable standards that anyone can implement, cite, adapt, and improve with attribution.
 
 ---
 

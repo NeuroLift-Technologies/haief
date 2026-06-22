@@ -36,7 +36,10 @@ The Human & AI ElevAItion Foundation (HAIEF) is a community-governed initiative 
 - `public/.assetsignore`: Cloudflare asset upload exclusions for Worker routing artifacts.
 - `astro.config.mjs`: Astro config, `@astrojs/sitemap`, `@astrojs/cloudflare`, and canonical `site: 'https://elevaitionfoundation.org'`.
 - `wrangler.jsonc`: Cloudflare Worker deploy contract for the `haief` Worker and static asset binding.
-- `package.json`: Node `>=22`, Astro build/dev scripts, Wrangler preview/deploy scripts, and Cloudflare dependencies. Use a current Node 22 runtime for builds; Node `22.14.0` fails with a missing `node:module.registerHooks` export before Astro loads config.
+- `package.json`: Node `>=22`, Astro build/dev scripts, Wrangler preview/deploy scripts, Cloudflare dependencies, and the repository SPDX license expression.
+- `LICENSE`, `LICENSE-CC-BY-4.0.txt`, and `NOTICE`: repository dual-license source files and attribution notice.
+
+Use a current Node 22 runtime for builds; Node `22.14.0` fails with a missing `node:module.registerHooks` export before Astro loads config.
 
 ### Public route inventory
 
@@ -119,6 +122,13 @@ when adding, renaming, or removing pages:
    - `wrangler.jsonc` names the Worker `haief`, uses `@astrojs/cloudflare/entrypoints/server` as `main`, serves `./dist` through the `ASSETS` binding, enables observability, and sets the Worker compatibility date/flags.
    - `public/.assetsignore` keeps `_worker.js` and `_routes.json` out of static asset uploads so Worker routing files are not treated as public assets.
    - This repository currently has governance validation CI only; site builds must be run manually for PRs that touch `src/`, `public/`, `astro.config.mjs`, or package files.
+
+10. **License boundary contract**
+   - Code and build/test infrastructure are Apache-2.0. The current source areas are `src/`, `astro.config.mjs`, `wrangler.jsonc`, `tsconfig.json`, `package.json`, and `tests/`.
+   - HAIEF standards, framework prose, and documentation are CC BY 4.0. The current prose/content areas are `solidarity-framework/`, `specs/`, `community/`, `fact-checking/`, `docs/`, and other Markdown-first content.
+   - `LICENSE` is the Apache-2.0 text, `LICENSE-CC-BY-4.0.txt` is the CC BY 4.0 text, and `NOTICE` records repository attribution.
+   - `package.json` uses `(Apache-2.0 AND CC-BY-4.0)` to make the dual-license boundary machine-readable, but path-level intent is documented in the README and this overview.
+   - When a file mixes prose and examples, keep the prose under CC BY 4.0 and the embedded code/config example under Apache-2.0 unless a more specific notice is added.
 
 ## Changed Subsystem: Case Study, Public Goals, and Safety Case Flow
 

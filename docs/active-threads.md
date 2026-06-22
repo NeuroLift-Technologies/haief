@@ -2,13 +2,20 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-06-19
+**Last updated:** 2026-06-22
 
 ---
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-06-22-cursor-docs-automation-pr33
+**Status:** open
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-22
+**Last updated:** 2026-06-22
+**Summary:** Source-verifying PR #33 dual-license changes and updating contributor/developer documentation for the Apache-2.0 code and CC BY 4.0 HAIEF content split.
+**Blockers:** None.
+**Next action:** Update existing docs, validate, commit, and write handoff.
 
 ---
 
