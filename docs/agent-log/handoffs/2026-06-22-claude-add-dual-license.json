@@ -40,6 +40,6 @@
       "bash .nltotoi/scripts/validate-governance.sh (29/29 passed)"
     ],
     "tests_passing": true,
-    "pr_url": "pending-open"
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/33"
   }
 }
