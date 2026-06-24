@@ -4,7 +4,7 @@
 **Version:** 1.0.0  
 **Scope:** Setting up governance stubs in a new or existing NLT repository  
 **Authority:** Joshua W. Dorsey, Sr.  
-**Governed by:** ORG-DEV-OTOI-1.0.0
+**Governed by:** ORG-DEV-OTOI-1.0.2
 
 ---
 
@@ -61,7 +61,7 @@ You are working in a NeuroLift Technologies repository.
 deployment, UX, and strategic decisions. Escalate. Do not guess.
 
 **Governed by:** Solidarity Framework | HAIEF | https://elevaitionfoundation.org
-**OTOI Version:** ORG-DEV-OTOI-1.0.0
+**OTOI Version:** ORG-DEV-OTOI-1.0.2
 ```
 
 Replace `[REPO NAME]` with the actual repository name.
@@ -159,14 +159,14 @@ to **"Selected repositories"**, you must add `haief` to its access list.
 Commit using the format:
 
 ```
-[AGENT_NAME] chore(governance): add repo governance stubs (ORG-DEV-OTOI-1.0.0)
+[AGENT_NAME] chore(governance): add repo governance stubs (ORG-DEV-OTOI-1.0.2)
 ```
 
 ### Step 7: Verify
 
 Confirm the following exist and contain correct content:
 - [ ] `CLAUDE.md` points to `NLT-DEV-OTOI.md` canonical URL
-- [ ] `CLAUDE.md` references `ORG-DEV-OTOI-1.0.0`
+- [ ] `CLAUDE.md` references `ORG-DEV-OTOI-1.0.2`
 - [ ] `docs/active-threads.md` exists and is readable
 - [ ] `docs/agent-log/` directory structure created
 - [ ] GitHub App has access to `haief` (or public mirror fallback is in place)
@@ -185,4 +185,4 @@ bash .nltotoi/scripts/validate-governance.sh
 
 ---
 
-*SOP-NLT-002 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.0*
+*SOP-NLT-002 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*

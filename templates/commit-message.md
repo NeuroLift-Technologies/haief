@@ -70,4 +70,4 @@ is added later.
 
 ---
 
-*ORG-DEV-OTOI-1.0.0 | templates/commit-message.md*
+*ORG-DEV-OTOI-1.0.2 | templates/commit-message.md*

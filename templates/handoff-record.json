@@ -3,7 +3,7 @@
     "session_id":         "[Unique session identifier]",
     "agent_name":         "[Agent name / platform]",
     "date":               "[ISO 8601 date, e.g. 2026-03-31]",
-    "otoi_version":       "ORG-DEV-OTOI-1.0.0",
+    "otoi_version":       "ORG-DEV-OTOI-1.0.2",
     "repo":               "[Repository worked in, e.g. NeuroLift-Technologies/some-repo]",
     "branch":             "[Branch name]",
     "work_completed": [

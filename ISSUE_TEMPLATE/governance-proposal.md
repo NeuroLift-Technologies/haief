@@ -1,6 +1,6 @@
 ---
 name: Governance Proposal
-about: Propose an amendment to ORG-DEV-OTOI-1.0.0 or other governance documents
+about: Propose an amendment to ORG-DEV-OTOI-1.0.2 or other governance documents
 title: '[GOVERNANCE] [Brief description of proposed change]'
 labels: governance, proposal
 assignees: JDUB1216
@@ -11,7 +11,7 @@ assignees: JDUB1216
 **Proposed by:** <!-- Your name or agent name -->  
 **Date:** <!-- ISO 8601 date -->  
 **Document to amend:** <!-- e.g. NLT-DEV-OTOI.md, AGENTS.md -->  
-**Current version:** <!-- e.g. ORG-DEV-OTOI-1.0.0 -->  
+**Current version:** <!-- e.g. ORG-DEV-OTOI-1.0.2 -->  
 **Proposed new version:** <!-- e.g. ORG-DEV-OTOI-1.1.0 -->
 
 ---

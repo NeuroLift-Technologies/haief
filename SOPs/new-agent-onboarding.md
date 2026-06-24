@@ -4,7 +4,7 @@
 **Version:** 1.0.0  
 **Scope:** All coding agents beginning work in any NeuroLift Technologies repository  
 **Authority:** Joshua W. Dorsey, Sr.  
-**Governed by:** ORG-DEV-OTOI-1.0.0
+**Governed by:** ORG-DEV-OTOI-1.0.2
 
 ---
 
@@ -73,7 +73,7 @@ Minimum required fields:
 - `entry_date`
 - `entry_point`
 - `acknowledged_otoi: true`
-- `otoi_version: "ORG-DEV-OTOI-1.0.0"`
+- `otoi_version: "ORG-DEV-OTOI-1.0.2"`
 
 ### Step 6: Confirm Task Scope
 
@@ -127,4 +127,4 @@ If at any point you are unsure, hit a guardrail, or need a decision:
 
 ---
 
-*SOP-NLT-001 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.0*
+*SOP-NLT-001 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*
