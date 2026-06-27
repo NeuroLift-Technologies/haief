@@ -268,22 +268,22 @@ Developers building on the Solidarity Framework:
 
 ---
 
-## Validation in Action: The Anthropic-Pentagon Crisis
+## Validation in Action: Anthropic as One Evidence Point
 
-On February 27, 2026, every component of the Solidarity Framework was validated by a single real-world crisis. When the President blacklisted Anthropic for refusing to allow unrestricted military AI use, the gap each framework component was designed to fill became undeniable.
+The source-reviewed Anthropic case study is one evidence point for the Solidarity Framework. It does not require treating Anthropic as uniquely good or uniquely bad. It shows that AI-human relationships need governance when provider policy, model access, research practices, or model behavior changes affect users. <a href="/case-study-anthropic-pentagon-2026/">Read the source-reviewed case study &rarr;</a>
 
 <div class="grid grid--2">
   <div class="card">
     <h4 class="card__title">TOI &mdash; Terms of Interaction</h4>
-    <p class="card__text">Anthropic enforced TOI-like boundaries: refusing mass surveillance and autonomous weapons use. The government destroyed them with a single presidential order. <strong>If users had declared machine-readable interaction preferences via TOI, those preferences would exist independent of any company &mdash; and no single government action could override them all.</strong></p>
+    <p class="card__text">TOI gives users portable standing when company policy changes, access changes, or relationship-affecting model behavior changes. <strong>If users had declared machine-readable interaction preferences via TOI, those preferences would exist independent of any company.</strong></p>
   </div>
   <div class="card">
     <h4 class="card__title">OTOI &mdash; Orchestrated Terms of Interaction</h4>
-    <p class="card__text">330+ engineers across competing companies &mdash; Google, OpenAI, and others &mdash; spontaneously coordinated governance positions by signing a solidarity letter. This was organic OTOI: cross-organizational enforcement of shared ethical standards. <strong>OTOI formalizes this coordination so it doesn't depend on individual heroism.</strong></p>
+    <p class="card__text">OTOI formalizes cross-organizational enforcement of shared ethical standards. It exists because governance should not depend on individual heroism, informal solidarity, or a single provider's internal process. <strong>OTOI turns coordination into auditable governance.</strong></p>
   </div>
   <div class="card">
     <h4 class="card__title">RRT AIdvocAIte</h4>
-    <p class="card__text">When Claude gets ripped from classified workflows and government agencies mid-use, who provides crisis continuity for the users who depend on it? Defense contractors, analysts, and civilian workers face an abrupt loss of AI tools they've integrated into critical processes. <strong>RRT AIdvocAIte exists for exactly this kind of intervention.</strong></p>
+    <p class="card__text">When a relationship-like AI service changes behavior or becomes unavailable, users may need continuity support and transition help. <strong>RRT AIdvocAIte exists for exactly this kind of intervention.</strong></p>
   </div>
   <div class="card">
     <h4 class="card__title">Sleepwalker Protocol</h4>

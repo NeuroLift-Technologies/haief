@@ -1,0 +1,52 @@
+{
+  "handoff_record": {
+    "session_id": "2026-06-27-codex-anthropic-research-rights",
+    "agent_name": "codex",
+    "date": "2026-06-27",
+    "otoi_version": "ORG-DEV-OTOI-1.0.2",
+    "repo": "NeuroLift-Technologies/haief",
+    "branch": "claude/otoi-1.0.2-sweep",
+    "work_completed": [
+      "Registered Codex session and resolved active thread per repo governance.",
+      "Rewrote the Anthropic case study as a source-reviewed evidence note with verified claims, citation links, and explicit TODOs for unsupported claims.",
+      "Added evergreen AI-Human Bond Research Rights page at /ai-human-bond-research-rights/ with participant and researcher sections.",
+      "Updated header and footer navigation to surface Research Rights as evergreen governance content.",
+      "Aligned homepage, For Humans, Take Action, The Problem, and Solidarity Framework summaries to avoid unsourced Anthropic claims and point to the citation hub.",
+      "Ran local Astro build and governance validation."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Used the Anthropic page as a source-reviewed citation hub rather than duplicating fragile claims across the site.",
+      "Demoted unsupported February 2026 dispute details, court-status claims, quotations, contractor details, and Fable 5 scope claims to TODO items.",
+      "Used in-page participant and researcher anchors instead of placeholder pages for follow-up CTAs."
+    ],
+    "decisions_pending": [
+      "Joshua or a future agent should decide whether to further source the remaining TODO claims or remove them permanently.",
+      "Joshua should review final founder-led tone and strategic framing before publication."
+    ],
+    "escalations": [],
+    "next_agent_notes": "The local dev server from the prior session was running at http://127.0.0.1:4321/ and should hot-reload these content changes. Key new route is /ai-human-bond-research-rights/. Do not reintroduce Anthropic event claims without direct source links or TODO notes.",
+    "files_modified": [
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-06-27-codex-anthropic-research-rights.json",
+      "docs/agent-log/handoffs/2026-06-27-codex-anthropic-research-rights.json",
+      "src/components/Footer.astro",
+      "src/components/Header.astro",
+      "src/pages/ai-human-bond-research-rights.md",
+      "src/pages/case-study-anthropic-pentagon-2026.md",
+      "src/pages/for-humans.md",
+      "src/pages/index.astro",
+      "src/pages/solidarity-framework.md",
+      "src/pages/take-action.md",
+      "src/pages/the-problem.md"
+    ],
+    "tests_run": [
+      "npm run build",
+      "bash .nltotoi/scripts/validate-governance.sh",
+      "curl -L status checks for selected source URLs"
+    ],
+    "tests_passing": true,
+    "pr_url": ""
+  }
+}

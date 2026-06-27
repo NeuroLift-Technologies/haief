@@ -1,0 +1,25 @@
+{
+  "agent_registration": {
+    "agent_name": "codex",
+    "platform": "Codex CLI",
+    "version": "GPT-5",
+    "session_id": "2026-06-27-codex-anthropic-research-rights",
+    "entry_date": "2026-06-27",
+    "entry_point": "User request to source-clean Anthropic content and add AI-Human Bond Research Rights page",
+    "acknowledged_otoi": true,
+    "otoi_version": "ORG-DEV-OTOI-1.0.2",
+    "working_repo": "NeuroLift-Technologies/haief",
+    "working_branch": "claude/otoi-1.0.2-sweep",
+    "capabilities_self_reported": [
+      "Astro content editing",
+      "governance copy review",
+      "source-backed factual cleanup",
+      "local build verification"
+    ],
+    "known_limitations": [
+      "Cannot treat unsourced public-event claims as established facts",
+      "Will mark missing evidence as TODO instead of inventing citations"
+    ],
+    "preferred_handoff_format": "Structured JSON handoff plus concise narrative summary"
+  }
+}

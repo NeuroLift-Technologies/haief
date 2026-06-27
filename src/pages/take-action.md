@@ -18,7 +18,7 @@ description: "Join the HAIEF movement. Developers, organizations, standards bodi
 
 <div class="callout callout--danger">
   <p class="callout__title">This is no longer theoretical</p>
-  <p>On February 27, 2026, the President of the United States blacklisted an AI company for refusing to allow mass surveillance. The only thing that stood between users and unrestricted military AI deployment was a company's Terms of Service. One presidential order eliminated it. <strong>The governance gap HAIEF was built to fill is now visible to the entire world.</strong> <a href="/case-study-anthropic-pentagon-2026/">Read the full case study &rarr;</a></p>
+  <p>The source-reviewed Anthropic case study shows why AI governance cannot stop at provider policy. When AI-human relationships are mediated by companies, users need standing, consent, continuity protection, and data boundaries. <strong>The governance gap HAIEF was built to fill is now visible to the entire world.</strong> <a href="/case-study-anthropic-pentagon-2026/">Read the source-reviewed case study &rarr;</a></p>
 </div>
 
 ---
@@ -33,7 +33,7 @@ description: "Join the HAIEF movement. Developers, organizations, standards bodi
 
   <div class="callout callout--warning" style="margin-top: 0;">
     <p class="callout__title">Why this matters now</p>
-    <p>The Anthropic crisis proved that governance dependent on any single company's willingness to hold the line is governance that can be eliminated overnight. Contribute to TOI implementation so user sovereignty exists independent of any one vendor.</p>
+    <p>The Anthropic evidence note is one example of a broader problem: user sovereignty cannot depend on any single vendor's internal policy. Contribute to TOI implementation so user standing exists independent of any one provider.</p>
   </div>
 
   <div class="grid grid--2">
@@ -147,7 +147,7 @@ description: "Join the HAIEF movement. Developers, organizations, standards bodi
 
   <div class="callout callout--warning" style="margin-top: 0;">
     <p class="callout__title">Assess your exposure</p>
-    <p>If your organization relies on a single AI provider, you are now exposed to the risk that a government order — anywhere in the world — can force your provider to change its policies or be shut down entirely. The Anthropic crisis is a wake-up call to build governance infrastructure that is vendor-neutral and portable.</p>
+    <p>If your organization relies on a single AI provider, you are exposed to continuity, consent, and transparency risks when provider policies, model access, or safety behaviors change. The Anthropic evidence note is a wake-up call to build governance infrastructure that is vendor-neutral and portable.</p>
   </div>
 
   <div class="grid grid--2">
@@ -238,7 +238,7 @@ description: "Join the HAIEF movement. Developers, organizations, standards bodi
 
   <div class="callout callout--warning" style="margin-top: 0;">
     <p class="callout__title">Your AI tools can be eliminated by political decision</p>
-    <p>The Anthropic blacklisting proves that your access to AI tools — and the protections those tools provide — can be revoked by government order. Demand portable governance that travels with you, not governance locked inside a single company.</p>
+    <p>The Anthropic evidence note shows why access to AI tools and the protections those tools provide should not depend entirely on one company's policy. Demand portable governance that travels with you, not governance locked inside a single company.</p>
   </div>
 
   <div class="grid grid--2">
@@ -324,12 +324,12 @@ description: "Join the HAIEF movement. Developers, organizations, standards bodi
     Share the case for the Third Pillar.
   </h3>
 
-  <p>The Anthropic crisis has made the need for community-owned AI governance visible to the entire world. Help spread the word:</p>
+  <p>The Anthropic evidence note helps make the need for community-owned AI governance visible. Help spread the word:</p>
 
   <ul>
     <li><strong>Share the HAIEF site</strong> &mdash; especially the <a href="/case-study-anthropic-pentagon-2026/">case study</a> that explains what happened and why it matters</li>
     <li><strong>Join the discussion</strong> &mdash; <a href="https://github.com/NeuroLift-Technologies/haief/discussions">GitHub Discussions</a> is open to everyone, no technical expertise needed</li>
-    <li><strong>Talk about it</strong> &mdash; in your communities, workplaces, and social networks. The question "who protects users when companies get blacklisted?" deserves a public answer</li>
+    <li><strong>Talk about it</strong> &mdash; in your communities, workplaces, and social networks. The question "who protects users when provider policy changes?" deserves a public answer</li>
   </ul>
 </div>
 

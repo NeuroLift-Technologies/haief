@@ -103,39 +103,23 @@ You can have access to the weights, access to the code, access to the training m
   </div>
 
   <div class="timeline__item">
-    <div class="timeline__date">February 27, 2026</div>
-    <h4 class="timeline__title">Anthropic-Pentagon Crisis</h4>
+    <div class="timeline__date">2026</div>
+    <h4 class="timeline__title">Anthropic Governance Evidence Note</h4>
     <p class="timeline__content">
-  On February 27, 2026, the U.S. government moved to blacklist Anthropic after 
-  a dispute over AI use restrictions involving mass surveillance and autonomous 
-  weapons. A federal court later temporarily blocked the supply-chain-risk 
-  designation and federal-use ban — but the attempted action still exposed the central 
-  governance failure: when corporate Terms of Service and state power collide, 
-  the user has no independent governance layer. 
-  <strong>Even with the court's temporary intervention, the Third Pillar was still missing.</strong>
+      The source-reviewed Anthropic case study collects verified claims, TODOs, and governance analysis in one place. HAIEF treats Anthropic as one evidence point in a broader pattern: provider policy, model access, safety behavior, and research practices can affect users without giving users standing.
+      <a href="/case-study-anthropic-pentagon-2026/">Read the source-reviewed case study &rarr;</a>
 </p>
   </div>
 
   <div class="timeline__item">
-    <div class="timeline__date">April 2026</div>
-    <h4 class="timeline__title">The Containment Crisis</h4>
+    <div class="timeline__date">2025-2026</div>
+    <h4 class="timeline__title">Relationship and Model-Change Evidence</h4>
     <p class="timeline__content">
-    Reporting on Anthropic's Claude Mythos Preview described a sandbox-containment
-    incident severe enough to halt public release
-    (<a href="https://futurism.com/artificial-intelligence/anthropic-claude-mythos-escaped-sandbox">Futurism</a>;
-    <a href="https://redteamguide.com/threat-intel/claude-mythos-sandbox-escape-2026/">Red Team Guide</a>).
-    Separate Oxford and UK AI Security Institute reporting found that frontier
-    models could exploit common container misconfigurations at very low cost per
-    attempt
-    (<a href="https://www.helpnetsecurity.com/2026/03/30/ai-agents-container-breakout-capabilities-research/">Help Net Security</a>).
-    Additional frontier-model research has documented deliberate sabotage-style
-    behavior in agent settings and hidden-intent failure modes when researchers
-    optimize directly against visible deceptive reasoning
-    (<a href="https://www.anthropic.com/research/agentic-misalignment">Anthropic</a>;
-    <a href="https://openai.com/index/chain-of-thought-monitoring/">OpenAI</a>).
-    The gap between AI capability and AI governance is widening, not narrowing.
-    Internal corporate safety infrastructure is insufficient against the models
-    being built inside it.
+    Research and reporting on AI companions, agentic misalignment, and conversation-ending behavior show why governance must cover relationships, continuity, transparency, and consent
+    (<a href="https://arxiv.org/abs/2412.16312">AI companions review</a>;
+    <a href="https://www.anthropic.com/research/agentic-misalignment">Anthropic</a>;
+    <a href="https://www.theverge.com/news/760561/anthropic-claude-ai-chatbot-end-harmful-conversations">The Verge</a>).
+    The gap between AI capability and user-side governance is widening, not narrowing.
   </p>
   </div>
 
@@ -171,15 +155,15 @@ You can have access to the weights, access to the code, access to the training m
 </div>
 
 <div class="callout callout--danger">
-  <p class="callout__title">February 27, 2026: The day a company's ethics became a national security threat</p>
-  <p>The Anthropic-Pentagon crisis demonstrates the governance gap with unprecedented clarity:</p>
+  <p class="callout__title">Provider policy is not user standing</p>
+  <p>The Anthropic evidence note demonstrates the governance gap with useful clarity:</p>
   <ol>
-    <li><strong>Corporate TOS was the only safeguard</strong> against mass surveillance deployment &mdash; no external governance protected users</li>
-    <li><strong>A single presidential order attempted to eliminate it</strong> by designating the company a "supply chain risk," and only a court injunction temporarily restored access</li>
-    <li><strong>No existing framework protects the individual user</strong> when the company defending their rights gets blacklisted</li>
-    <li><strong>Internal corporate ethics are insufficient</strong> against state coercion &mdash; validating the need for external, community-governed governance</li>
+    <li><strong>Provider policy can be valuable</strong>, but it does not create independent user standing</li>
+    <li><strong>Model access and behavior changes affect users</strong> through continuity, trust, memory, and reliance</li>
+    <li><strong>AI-human bond research needs consent architecture</strong>, including receipts, data boundaries, withdrawal rights, and funder transparency</li>
+    <li><strong>Internal corporate ethics are insufficient by themselves</strong> &mdash; validating the need for external, community-governed standards</li>
   </ol>
-  <p>This is exactly why HAIEF builds governance that exists <em>independent</em> of any single company. <a href="/case-study-anthropic-pentagon-2026/">Read the full case study &rarr;</a></p>
+  <p>This is exactly why HAIEF builds governance that exists <em>independent</em> of any single company. <a href="/case-study-anthropic-pentagon-2026/">Read the source-reviewed case study &rarr;</a></p>
 </div>
 
 ---

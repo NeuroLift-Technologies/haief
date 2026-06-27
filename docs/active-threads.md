@@ -2,7 +2,7 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-06-22
+**Last updated:** 2026-06-27
 
 ---
 
@@ -22,6 +22,15 @@
 **Summary:** Source-verified the merged PR #33 dual-license changes and updated existing contributor, overview, repository-structure, and public Q&A docs for the Apache-2.0 software / CC BY 4.0 HAIEF content split.
 **Blockers:** None.
 **Next action:** Review the documentation PR; separately decide whether to tighten `package.json` `engines.node` beyond `>=22` and whether to address the existing low-severity npm audit findings.
+
+### Thread: 2026-06-27-codex-anthropic-research-rights
+**Status:** resolved
+**Owner:** codex
+**Started:** 2026-06-27
+**Last updated:** 2026-06-27
+**Summary:** Source-cleaned Anthropic-related governance content, added the evergreen AI-Human Bond Research Rights page, wired navigation, verified local build, and wrote the session handoff.
+**Blockers:** None.
+**Next action:** Review the public copy and decide whether to further source or remove the remaining TODO items on the Anthropic evidence page.
 
 ### Thread: 2026-06-19-cursor-docs-automation-pr26
 **Status:** resolved
