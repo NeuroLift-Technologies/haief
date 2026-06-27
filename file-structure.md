@@ -26,6 +26,9 @@ haief/
 ├── README.md                          ← Public HAIEF repository overview
 ├── file-structure.md                  ← This structure and mapping ADR
 ├── nltotoi.json                       ← Internal discovery manifest
+├── LICENSE                            ← Apache-2.0 license text for software source
+├── LICENSE-CC-BY-4.0.txt              ← CC BY 4.0 license text for HAIEF content
+├── NOTICE                             ← Repository attribution and dual-license notice
 │
 ├── agents/
 │   └── nlt-governance-steward.md      ← Governance compliance and OTOI guidance agent
@@ -84,6 +87,9 @@ haief/
 ├── astro.config.mjs                   ← Astro config, sitemap integration, Cloudflare adapter, canonical site URL
 ├── tsconfig.json                      ← Astro TypeScript configuration
 ├── wrangler.jsonc                     ← Cloudflare Worker deploy config and static asset binding
+├── LICENSE                            ← Apache-2.0 license text for software source
+├── LICENSE-CC-BY-4.0.txt              ← CC BY 4.0 license text for HAIEF content
+├── NOTICE                             ← Attribution notice for the dual-license repository
 │
 ├── src/
 │   ├── layouts/

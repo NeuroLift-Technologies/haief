@@ -50,6 +50,28 @@ Thank you for your interest in contributing to the Human & AI ElevAItion Foundat
 5. Submit a pull request with full description
 6. Respond to review feedback
 
+### Licensing Expectations
+
+This repository is dual-licensed, so classify new or moved files by what they
+contain:
+
+- **Software source and build/test infrastructure** are licensed under
+  Apache-2.0. This includes the Astro/Cloudflare Worker site code in `src/`,
+  root build/config files such as `astro.config.mjs`, `wrangler.jsonc`,
+  `tsconfig.json`, `package.json`, and validation code under `tests/`.
+- **HAIEF standards, framework prose, and documentation** are licensed under
+  CC BY 4.0. This includes `solidarity-framework/`, `specs/`, `community/`,
+  `fact-checking/`, `docs/`, and other prose-first Markdown content.
+- **Mixed files** keep both boundaries: prose remains CC BY 4.0 and embedded
+  code/config examples remain Apache-2.0 unless a file-level notice says
+  otherwise.
+
+Before opening a PR that adds a new top-level directory or moves files between
+code and prose areas, update the relevant docs (`README.md`, `docs/overview.md`,
+or `file-structure.md`) so the license boundary stays discoverable. Do not copy
+third-party code, text, or examples into this repo unless the upstream license
+is compatible and attribution requirements are clear.
+
 ### For AI Agents
 
 AI-generated contributions are welcome with required disclosures:

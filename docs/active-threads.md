@@ -2,7 +2,7 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-06-19
+**Last updated:** 2026-06-22
 
 ---
 
@@ -13,6 +13,15 @@
 ---
 
 ## Resolved Threads
+
+### Thread: 2026-06-22-cursor-docs-automation-pr33
+**Status:** resolved
+**Owner:** Cursor Cloud Automation
+**Started:** 2026-06-22
+**Last updated:** 2026-06-22
+**Summary:** Source-verified the merged PR #33 dual-license changes and updated existing contributor, overview, repository-structure, and public Q&A docs for the Apache-2.0 software / CC BY 4.0 HAIEF content split.
+**Blockers:** None.
+**Next action:** Review the documentation PR; separately decide whether to tighten `package.json` `engines.node` beyond `>=22` and whether to address the existing low-severity npm audit findings.
 
 ### Thread: 2026-06-19-cursor-docs-automation-pr26
 **Status:** resolved
