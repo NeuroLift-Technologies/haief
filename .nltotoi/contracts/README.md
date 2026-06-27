@@ -6,7 +6,7 @@ This directory is the versioned governance contract namespace for NeuroLift Tech
 
 | Document | Path | Version |
 |---|---|---|
-| NLT Developer Operations & Team Orientation Index | `NLT-DEV-OTOI.md` (root) | ORG-DEV-OTOI-1.0.0 |
+| NLT Developer Orchestrated Terms of Interaction | `NLT-DEV-OTOI.md` (root) | ORG-DEV-OTOI-1.0.2 |
 
 The canonical contract lives at **`NLT-DEV-OTOI.md`** in the repository root, not inside this namespace directory. This README serves as the reference pointer for tooling and agents.
 
@@ -34,4 +34,4 @@ Future versions of the contract will be archived here as:
 
 ---
 
-*Contract namespace — NeuroLift Technologies | ORG-DEV-OTOI-1.0.0*
+*Contract namespace — NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*

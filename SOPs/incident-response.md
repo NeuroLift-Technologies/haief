@@ -4,7 +4,7 @@
 **Version:** 1.0.0  
 **Scope:** Responding to a coding agent that has deviated from governance protocols  
 **Authority:** Joshua W. Dorsey, Sr.  
-**Governed by:** ORG-DEV-OTOI-1.0.0
+**Governed by:** ORG-DEV-OTOI-1.0.2
 
 ---
 
@@ -15,7 +15,7 @@ This SOP defines the response procedure when a coding agent has:
 - Committed sensitive data (credentials, secrets)
 - Gone beyond authorized scope
 - Taken irreversible actions without approval
-- Behaved in ways inconsistent with ORG-DEV-OTOI-1.0.0
+- Behaved in ways inconsistent with ORG-DEV-OTOI-1.0.2
 
 ---
 
@@ -152,7 +152,7 @@ All critical and high severity incidents must be escalated to Joshua W. Dorsey, 
 ## Prevention
 
 The best incident response is prevention. Ensure every agent:
-- Reads and acknowledges ORG-DEV-OTOI-1.0.0 before beginning
+- Reads and acknowledges ORG-DEV-OTOI-1.0.2 before beginning
 - Self-registers per OTOI Section 3
 - Has clear, specific task scope confirmed before starting
 - Knows to escalate rather than guess
@@ -206,4 +206,4 @@ Enable GitHub's built-in secret scanning for all NLT repositories:
 
 ---
 
-*SOP-NLT-003 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.0*
+*SOP-NLT-003 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*

@@ -142,14 +142,14 @@ echo ""
 
 # --- Content Checks ---
 echo "[ Content Validation ]"
-check_content "NLT-DEV-OTOI.md"  "ORG-DEV-OTOI-1.0.0"           "Document ID"
+check_content "NLT-DEV-OTOI.md"  "ORG-DEV-OTOI-1.0.2"           "Document ID"
 check_content "NLT-DEV-OTOI.md"  "Joshua W. Dorsey"              "Authority marker"
 check_content "NLT-DEV-OTOI.md"  "Solidarity Framework"          "Solidarity Framework reference"
 check_content "NLT-DEV-OTOI.md"  "HAIEF"                         "HAIEF reference"
 check_content "AGENTS.md"        "NLT-DEV-OTOI.md"               "OTOI reference in AGENTS.md"
-check_content "AGENTS.md"        "ORG-DEV-OTOI-1.0.0"            "Document ID in AGENTS.md"
+check_content "AGENTS.md"        "ORG-DEV-OTOI-1.0.2"            "Document ID in AGENTS.md"
 check_content "nltotoi.json"     "NeuroLift-Technologies/haief" "Repository name in manifest"
-check_content "nltotoi.json"     "ORG-DEV-OTOI-1.0.0"            "Document ID in manifest"
+check_content "nltotoi.json"     "ORG-DEV-OTOI-1.0.2"            "Document ID in manifest"
 check_content "nltotoi.json"     "NLT-DEV-OTOI.md"               "Canonical contract path in manifest"
 
 echo ""

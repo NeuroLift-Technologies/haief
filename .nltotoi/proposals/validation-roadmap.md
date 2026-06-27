@@ -11,7 +11,7 @@
 The `validate-governance.sh` script provides:
 
 - ✅ Required file existence checks
-- ✅ Document ID header validation (`ORG-DEV-OTOI-1.0.0`)
+- ✅ Document ID header validation (`ORG-DEV-OTOI-1.0.2`)
 - ✅ Authority marker checks
 - ✅ Exit code reporting for CI integration
 
@@ -60,4 +60,4 @@ All validation scripts must:
 
 ---
 
-*Validation roadmap — NeuroLift Technologies | ORG-DEV-OTOI-1.0.0*
+*Validation roadmap — NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*

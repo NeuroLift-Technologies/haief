@@ -133,7 +133,7 @@ workflow has been implemented in this repository.
 
 | Source (nlt-business-agents) | Destination (haief) | Change |
 |---|---|---|
-| `docs/context/NLT-DEV-OTOI.md` | `NLT-DEV-OTOI.md` | Update `document_id` to `ORG-DEV-OTOI-1.0.0`, remove project-specific stack references |
+| `docs/context/NLT-DEV-OTOI.md` | `NLT-DEV-OTOI.md` | Update `document_id` to `ORG-DEV-OTOI-1.0.2`, remove project-specific stack references |
 | `AGENTS.md` | `AGENTS.md` | Internal version — keep full coordination protocol, add pointer to public `.github` AGENTS.md |
 | `nltotoi.json` | `nltotoi.json` | Update `repository` field to reference org scope, not single repo |
 | `.nltotoi/` (entire namespace) | `.nltotoi/` | Direct copy — validation script already works at org level |
@@ -152,7 +152,7 @@ workflow has been implemented in this repository.
     "entry_date":         "[ISO 8601 date, e.g. 2026-03-31]",
     "entry_point":        "[Which file, task, or conversation brought you in]",
     "acknowledged_otoi":  true,
-    "otoi_version":       "ORG-DEV-OTOI-1.0.0",
+    "otoi_version":       "ORG-DEV-OTOI-1.0.2",
     "working_repo":       "[e.g. NeuroLift-Technologies/some-repo]",
     "working_branch":     "[e.g. feature/my-feature]",
     "capabilities_self_reported": [
@@ -172,7 +172,7 @@ workflow has been implemented in this repository.
 
 **Agent:** [Name]  
 **Session:** [Branch/session ID]  
-**Governed by:** ORG-DEV-OTOI-1.0.0
+**Governed by:** ORG-DEV-OTOI-1.0.2
 
 ### Before Merging
 - [ ] Governance validation script passed (`.nltotoi/scripts/validate-governance.sh`)
