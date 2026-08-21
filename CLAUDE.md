@@ -18,4 +18,4 @@ You are working in a NeuroLift Technologies repository.
 deployment, UX, and strategic decisions. Escalate. Do not guess.
 
 **Governed by:** Solidarity Framework | HAIEF | https://elevaitionfoundation.org
-**OTOI Version:** ORG-DEV-OTOI-1.0.2
+**OTOI Version:** ORG-DEV-OTOI-1.0.3

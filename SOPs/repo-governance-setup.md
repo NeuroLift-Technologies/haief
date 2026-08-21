@@ -4,7 +4,7 @@
 **Version:** 1.0.0  
 **Scope:** Setting up governance stubs in a new or existing NLT repository  
 **Authority:** Joshua W. Dorsey, Sr.  
-**Governed by:** ORG-DEV-OTOI-1.0.2
+**Governed by:** ORG-DEV-OTOI-1.0.3
 
 ---
 
@@ -61,7 +61,7 @@ You are working in a NeuroLift Technologies repository.
 deployment, UX, and strategic decisions. Escalate. Do not guess.
 
 **Governed by:** Solidarity Framework | HAIEF | https://elevaitionfoundation.org
-**OTOI Version:** ORG-DEV-OTOI-1.0.2
+**OTOI Version:** ORG-DEV-OTOI-1.0.3
 ```
 
 Replace `[REPO NAME]` with the actual repository name.
@@ -77,7 +77,7 @@ Create `docs/active-threads.md` with the following starting structure:
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** [ISO 8601 date]
+**Last updated:** [ISO 8601 timestamp with offset, e.g. 2026-03-31T15:30:00-04:00]
 
 ---
 
@@ -159,14 +159,14 @@ to **"Selected repositories"**, you must add `haief` to its access list.
 Commit using the format:
 
 ```
-[AGENT_NAME] chore(governance): add repo governance stubs (ORG-DEV-OTOI-1.0.2)
+[AGENT_NAME] chore(governance): add repo governance stubs (ORG-DEV-OTOI-1.0.3)
 ```
 
 ### Step 7: Verify
 
 Confirm the following exist and contain correct content:
 - [ ] `CLAUDE.md` points to `NLT-DEV-OTOI.md` canonical URL
-- [ ] `CLAUDE.md` references `ORG-DEV-OTOI-1.0.2`
+- [ ] `CLAUDE.md` references `ORG-DEV-OTOI-1.0.3`
 - [ ] `docs/active-threads.md` exists and is readable
 - [ ] `docs/agent-log/` directory structure created
 - [ ] GitHub App has access to `haief` (or public mirror fallback is in place)
@@ -185,4 +185,4 @@ bash .nltotoi/scripts/validate-governance.sh
 
 ---
 
-*SOP-NLT-002 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*
+*SOP-NLT-002 v1.0.0 | NeuroLift Technologies | ORG-DEV-OTOI-1.0.3*

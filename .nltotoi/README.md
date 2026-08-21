@@ -30,7 +30,7 @@ The `.nltotoi/` namespace is the machine-readable and tooling-oriented layer of 
 
 The canonical governance contract is: **`NLT-DEV-OTOI.md`** (repository root)
 
-Document ID: `ORG-DEV-OTOI-1.0.2`
+Document ID: `ORG-DEV-OTOI-1.0.3`
 
 ## Discovery
 
@@ -82,7 +82,7 @@ additional validation that may make strict mode more useful.
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | `MISSING: <path>` | A required governance file from the script is absent or moved. | Restore the file at the listed path or update the validator through the approved governance process. |
-| `CONTENT MISSING` | A required marker such as `ORG-DEV-OTOI-1.0.2`, `Joshua W. Dorsey`, `Solidarity Framework`, or `HAIEF` is absent. | Restore the marker without changing the governance contract meaning. Escalate before changing contract language. |
+| `CONTENT MISSING` | A required marker such as `ORG-DEV-OTOI-1.0.3`, `Joshua W. Dorsey`, `Solidarity Framework`, or `HAIEF` is absent. | Restore the marker without changing the governance contract meaning. Escalate before changing contract language. |
 | `Unknown flag` | The script only accepts `--strict`. | Re-run with no flags or with `--strict`. |
 | CI fails but local run passes | The workflow runs from a clean checkout on Ubuntu. | Confirm the changed files were committed, pushed, and are present at their repository paths. |
 
@@ -94,4 +94,4 @@ tracked in `.nltotoi/proposals/validation-roadmap.md`.
 
 ---
 
-*Internal namespace — NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*
+*Internal namespace — NeuroLift Technologies | ORG-DEV-OTOI-1.0.3*

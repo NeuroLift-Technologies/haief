@@ -1,0 +1,70 @@
+{
+  "handoff_record": {
+    "session_id":         "2026-08-21-hermes-otoi-1.0.3-sync",
+    "agent_name":         "Hermes (Hermes Agent, Nous Research)",
+    "date":               "2026-08-21T16:22:57-04:00",
+    "otoi_version":       "ORG-DEV-OTOI-1.0.3",
+    "repo":               "NeuroLift-Technologies/haief",
+    "branch":             "chore/otoi-1.0.3-sync",
+    "work_completed": [
+      "Diffed haief governance files against the canonical ORG-DEV-OTOI-1.0.3 source in NeuroLift-Technologies/.github-private to identify substantive deltas rather than string-replacing a version number.",
+      "Bumped ORG-DEV-OTOI-1.0.2 to ORG-DEV-OTOI-1.0.3 across 22 files (53 occurrences), plus the bare nltotoi.json version/last_updated metadata fields.",
+      "Backfilled the 1.0.3 ISO 8601 requirement: full timestamps with UTC offset now specified for agent registration entry_date, handoff date, and active-threads Started/Last updated in NLT-DEV-OTOI.md (Sections 3, 5, 6), templates/agent-registration.json, templates/handoff-record.json, SOPs/repo-governance-setup.md, and file-structure.md.",
+      "Backfilled the PR-only workflow provisions originally introduced in ORG-DEV-OTOI-1.0.1 that had never reached this repository: NLT-DEV-OTOI.md Section 4.1 step 6, Section 4.2 PR-delivery paragraph, Section 4.4 guardrail bullet; AGENTS.md session-start step 6, commit-format paragraph, and Guardrails table row.",
+      "Added NLT-DEV-OTOI.md Section 11 Change Log (1.0.0 through 1.0.3) and updated the Section 10 Quick Reference session-start row to include the feature-branch step.",
+      "Verified with .nltotoi/scripts/validate-governance.sh: 29 passed, 0 failed, 0 warned, exit 0 — now asserting ORG-DEV-OTOI-1.0.3.",
+      "Verified all repository JSON parses, then ran npm ci and npm run build: Astro build completed, 14 pages generated, exit 0."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Preserved haief's deliberate repo-local scoping (repository-specific titles, haief paths, repo-local notes) instead of copying .github-private wholesale, per the standing instruction in AGENTS.md to keep references local absent an explicit upstream-sync request.",
+      "Excluded docs/agent-log/ historical registration and handoff records from the version rewrite. Those records state which OTOI version governed a past session and rewriting them would falsify the audit trail.",
+      "Excluded package-lock.json, whose 1.0.2 matches are unrelated npm dependency versions.",
+      "Left ISO 8601 references outside the 1.0.3 scope (escalation/intent-log Date fields already timestamp-precise; specs/provenance.md and specs/handoff-rules.md are separate specifications) unchanged."
+    ],
+    "decisions_pending": [
+      "Joshua to review and merge this Pull Request; agents cannot self-approve.",
+      "Whether haief should also rename .nltotoi/ to .otoi/ to match asfdk-harness — deliberately out of scope for this PR to keep the governance sync reviewable.",
+      "Open dependabot PR #36 (esbuild 0.27.7 to 0.28.1) remains unaddressed.",
+      "Whether the remaining OTOI-1.0.2-era repos still on older versions should receive the same sync."
+    ],
+    "escalations": [],
+    "next_agent_notes": "haief is now aligned with ORG-DEV-OTOI-1.0.3. Note this repository had drifted two versions, not one: the PR-only guardrail from 1.0.1 was absent and has been backfilled here, so do not assume a version-number match implies content parity in other NLT repos — diff against .github-private before trusting a repo's stated version. The .nltotoi/ directory name is retained in this repo while asfdk-harness has moved to .otoi/.",
+    "files_modified": [
+      "NLT-DEV-OTOI.md",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "nltotoi.json",
+      "file-structure.md",
+      "agents/nlt-governance-steward.md",
+      ".nltotoi/README.md",
+      ".nltotoi/index/governance-files.md",
+      ".nltotoi/contracts/README.md",
+      ".nltotoi/proposals/validation-roadmap.md",
+      ".nltotoi/scripts/validate-governance.sh",
+      "SOPs/new-agent-onboarding.md",
+      "SOPs/repo-governance-setup.md",
+      "SOPs/incident-response.md",
+      "templates/agent-registration.json",
+      "templates/handoff-record.json",
+      "templates/escalation.md",
+      "templates/intent-log.md",
+      "templates/commit-message.md",
+      "ISSUE_TEMPLATE/agent-escalation.md",
+      "ISSUE_TEMPLATE/governance-proposal.md",
+      "PULL_REQUEST_TEMPLATE/agent-contribution.md",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-08-21-hermes-otoi-1.0.3-sync.json",
+      "docs/agent-log/handoffs/2026-08-21-hermes-otoi-1.0.3-sync.json"
+    ],
+    "tests_run": [
+      "bash .nltotoi/scripts/validate-governance.sh — 29 passed, 0 failed, 0 warned, exit 0",
+      "JSON parse check across all repository JSON files — all valid",
+      "npm ci — exit 0",
+      "npm run build — Astro build complete, 14 pages, exit 0"
+    ],
+    "tests_passing": true,
+    "pr_url": "[pending — populated after PR creation]"
+  }
+}
