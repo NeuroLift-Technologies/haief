@@ -65,6 +65,6 @@
       "npm run build — Astro build complete, 14 pages, exit 0"
     ],
     "tests_passing": true,
-    "pr_url": "[pending — populated after PR creation]"
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/37"
   }
 }
