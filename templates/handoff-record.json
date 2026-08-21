@@ -2,8 +2,8 @@
   "handoff_record": {
     "session_id":         "[Unique session identifier]",
     "agent_name":         "[Agent name / platform]",
-    "date":               "[ISO 8601 date, e.g. 2026-03-31]",
-    "otoi_version":       "ORG-DEV-OTOI-1.0.2",
+    "date":               "[ISO 8601 timestamp with offset, e.g. 2026-03-31T15:30:00-04:00]",
+    "otoi_version":       "ORG-DEV-OTOI-1.0.3",
     "repo":               "[Repository worked in, e.g. NeuroLift-Technologies/some-repo]",
     "branch":             "[Branch name]",
     "work_completed": [

@@ -1,6 +1,6 @@
 # NLT-DEV-OTOI — haief Developer Orchestrated Terms of Interaction
 
-**Document ID:** ORG-DEV-OTOI-1.0.2  
+**Document ID:** ORG-DEV-OTOI-1.0.3  
 **Scope:** Repository-specific (NeuroLift-Technologies/haief)  
 **Repository:** `NeuroLift-Technologies/haief`  
 **Maintained by:** Joshua W. Dorsey, Sr. — Final authority on all architectural, deployment, and strategic decisions  
@@ -68,10 +68,10 @@ Every agent beginning a session in any NLT repo should self-register using the f
     "platform":           "[e.g. Codex CLI, Claude Code, Cursor, Gemini CLI, GitHub Copilot]",
     "version":            "[Model or tool version, if known]",
     "session_id":         "[Unique session identifier, if applicable]",
-    "entry_date":         "[ISO 8601 date, e.g. 2026-03-31]",
+    "entry_date":         "[ISO 8601 timestamp with offset, e.g. 2026-03-31T15:30:00-04:00]",
     "entry_point":        "[Which file, task, or conversation brought you in]",
     "acknowledged_otoi":  true,
-    "otoi_version":       "ORG-DEV-OTOI-1.0.2",
+    "otoi_version":       "ORG-DEV-OTOI-1.0.3",
     "working_repo":       "[e.g. NeuroLift-Technologies/some-repo]",
     "working_branch":     "[e.g. feature/my-feature]",
     "capabilities_self_reported": [
@@ -93,11 +93,12 @@ The standalone template is also available at `templates/agent-registration.json`
 
 ### 4.1 Session Start Protocol
 
-1. Read this document (ORG-DEV-OTOI-1.0.2)
+1. Read this document (ORG-DEV-OTOI-1.0.3)
 2. Read the repo-level CLAUDE.md (if present)
 3. Read `docs/active-threads.md` in the working repo (if present)
 4. Self-register (Section 3)
 5. Confirm task scope with the human before beginning significant work
+6. Work from a feature branch and prepare changes for Pull Request review — never push directly to `main` or any protected branch
 
 ### 4.2 Commit Format
 
@@ -110,6 +111,8 @@ All commits by agents must follow:
 Types: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`, `ci`
 
 Example: `[CLAUDE] feat(auth): add OAuth2 callback handler`
+
+All agent-authored changes must be delivered through a Pull Request from a feature branch. Agents must never push directly to `main` or any other protected branch.
 
 > **Fork Repository Exception:** The agent commit format requirement does not apply to
 > pull requests from forked repositories. Fork PR workflows are governed at the org level
@@ -152,6 +155,7 @@ When escalating, use this format (also available as `templates/escalation.md`):
 - **No production deployments** without explicit human sign-off
 - **No credential creation or storage** in code or version control
 - **No external service integrations** without Joshua's approval
+- **Pull Request only workflow** — agents must use feature branches and Pull Requests for changes; never push directly to `main` or any protected branch
 - **No changes to this document (NLT-DEV-OTOI.md)** without formal amendment process
 
 ---
@@ -165,7 +169,7 @@ At the end of every significant session, write a handoff record using the format
   "handoff_record": {
     "session_id":         "[Session identifier]",
     "agent_name":         "[Agent name]",
-    "date":               "[ISO 8601 date]",
+    "date":               "[ISO 8601 timestamp with offset, e.g. 2026-03-31T15:30:00-04:00]",
     "repo":               "[Repository worked in]",
     "branch":             "[Branch name]",
     "work_completed":     [],
@@ -200,12 +204,22 @@ Format for each thread entry:
 ### Thread: [Thread ID]
 **Status:** [open | blocked | resolved]
 **Owner:** [Agent or human responsible]
-**Started:** [ISO 8601 date]
-**Last updated:** [ISO 8601 date]
+**Started:** [ISO 8601 timestamp with offset, e.g. 2026-03-31T15:30:00-04:00]
+**Last updated:** [ISO 8601 timestamp with offset, e.g. 2026-03-31T15:30:00-04:00]
 **Summary:** [One-paragraph description]
 **Blockers:** [Any blocking conditions]
 **Next action:** [Specific next step required]
 ```
+
+### 6.1 Historical Records and Timestamp Grandfathering
+
+The full ISO 8601 timestamp requirement introduced in ORG-DEV-OTOI-1.0.3 applies to records **created on or after 2026-07-30**.
+
+Entries predating 1.0.3 are **grandfathered** and retain their original date-only `Started` and `Last updated` values. Agents must **not** retroactively convert them: the precise time of a past session is not recoverable from the record, and substituting a fabricated time would corrupt the audit trail the record exists to preserve.
+
+The same principle governs `docs/agent-log/`. Historical registration and handoff records state which OTOI version governed a past session and are immutable — they are never rewritten by a later version bump.
+
+A pre-1.0.3 entry may be migrated to full-timestamp format **only** when a verified timestamp is available from an independent source (a commit timestamp, PR event, or CI run). Absent that evidence, leave the entry as-is.
 
 ---
 
@@ -270,7 +284,7 @@ Agents may not self-amend this document.
 
 | Action | Protocol |
 |---|---|
-| Session start | Read OTOI → read repo CLAUDE.md → read active-threads → register |
+| Session start | Read OTOI → read repo CLAUDE.md → read active-threads → register → feature branch |
 | Commit format | `[AGENT_NAME] type(scope): description` |
 | Escalation trigger | Scope unclear, arch decision needed, blocker, ethical concern |
 | Escalation target | Joshua W. Dorsey, Sr. |
@@ -279,4 +293,15 @@ Agents may not self-amend this document.
 
 ---
 
-*ORG-DEV-OTOI-1.0.2 | NeuroLift Technologies | Governed by Solidarity Framework & HAIEF*
+## Section 11 — Change Log
+
+| Version | Date | Authorized By | Summary |
+|---|---|---|---|
+| ORG-DEV-OTOI-1.0.3 | 2026-07-30 | Joshua W. Dorsey, Sr. | Required full ISO 8601 timestamps with UTC offset (e.g. `2026-03-31T15:30:00-04:00`) in all agent documentation — agent registration `entry_date`, handoff `date`, and active-threads `Started`/`Last updated`. Replaced date-only format across §§3/5/6. **Applies to records created on or after 2026-07-30**; pre-1.0.3 entries are grandfathered and retain their original date-only values (see §6.1). Synced into this repo-local contract by Hermes (Hermes Agent) acting on behalf of Joshua W. Dorsey, Sr., which also backfilled the PR-only workflow provisions from 1.0.1 (§4.1 step 6, §4.2 paragraph, §4.4 guardrail) that had not previously reached this repository. |
+| ORG-DEV-OTOI-1.0.2 | 2026-06-01 | Joshua W. Dorsey, Sr. | Corrected full-name expansion of TOI and OTOI across all governance documents. TOI = "Terms of Interaction"; OTOI = "Orchestrated Terms of Interaction". Previous incorrect expansion ("Developer Operations & Team Orientation Index") removed. Implemented by Claude Code acting on behalf of Joshua W. Dorsey, Sr. |
+| ORG-DEV-OTOI-1.0.1 | 2026-05-28 | Joshua W. Dorsey, Sr. | Added PR-only workflow guardrail (§4.4), updated Session Start Protocol to require feature branch (§4.1 step 6), clarified commit format to explicitly require PR delivery (§4.2). |
+| ORG-DEV-OTOI-1.0.0 | 2026-03-31 | Joshua W. Dorsey, Sr. | Initial release of org-wide governance contract. |
+
+---
+
+*ORG-DEV-OTOI-1.0.3 | NeuroLift Technologies | Governed by Solidarity Framework & HAIEF*

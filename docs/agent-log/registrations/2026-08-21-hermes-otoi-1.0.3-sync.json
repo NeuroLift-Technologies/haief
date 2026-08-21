@@ -1,0 +1,26 @@
+{
+  "agent_registration": {
+    "agent_name":         "Hermes",
+    "platform":           "Hermes Agent (Nous Research)",
+    "version":            "meituan/longcat-2.0",
+    "session_id":         "2026-08-21-hermes-otoi-1.0.3-sync",
+    "entry_date":         "2026-08-21T16:22:57-04:00",
+    "entry_point":        "Direct request from Joshua W. Dorsey, Sr. to sync the haief repo-local governance contract to ORG-DEV-OTOI-1.0.3",
+    "acknowledged_otoi":  true,
+    "otoi_version":       "ORG-DEV-OTOI-1.0.3",
+    "working_repo":       "NeuroLift-Technologies/haief",
+    "working_branch":     "chore/otoi-1.0.3-sync",
+    "capabilities_self_reported": [
+      "Repository and cross-repository governance drift analysis",
+      "Source-verified documentation synchronization",
+      "Shell, Node, and Astro build verification",
+      "Git and GitHub PR workflow execution"
+    ],
+    "known_limitations": [
+      "Cannot approve its own Pull Request — merge authority rests with Joshua W. Dorsey, Sr.",
+      "Cannot amend the OTOI contract itself; this session applies an already-authorized org-level version (1.0.3) to a repo-local copy",
+      "Local build verification only; does not validate Cloudflare production deployment"
+    ],
+    "preferred_handoff_format": "structured JSON handoff record plus an updated docs/active-threads.md entry"
+  }
+}

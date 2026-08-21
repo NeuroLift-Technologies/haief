@@ -2,17 +2,26 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-06-27
+**Last updated:** 2026-08-21T16:22:57-04:00
 
 ---
 
 ## Active Threads
 
-*(No active threads yet)*
+### Thread: 2026-08-21-hermes-otoi-1.0.3-sync
+**Status:** open
+**Owner:** Hermes (Hermes Agent, Nous Research)
+**Started:** 2026-08-21T16:22:57-04:00
+**Last updated:** 2026-08-21T16:22:57-04:00
+**Summary:** Synced this repository's governance contract from ORG-DEV-OTOI-1.0.2 to ORG-DEV-OTOI-1.0.3 against the canonical source in `.github-private`. Bumped the document ID across 22 files, applied the 1.0.3 full-ISO-8601-timestamp requirement to agent registration, handoff, and active-thread formats, and backfilled the PR-only workflow provisions from 1.0.1 (§4.1 step 6, §4.2, §4.4 guardrail, AGENTS.md guardrail table) that had never reached this repository. Added NLT-DEV-OTOI.md §11 Change Log. Verified: governance validator 29/29 pass, Astro build 14 pages, exit 0. Repo-local scoping preserved rather than copying org canon wholesale.
+**Blockers:** None. Awaiting Joshua's review — agents cannot self-approve.
+**Next action:** Joshua to review and merge the PR. Then decide whether to rename `.nltotoi/` → `.otoi/` to match asfdk-harness, whether to address dependabot PR #36 (esbuild 0.27.7 → 0.28.1), and whether the remaining repos still on pre-1.0.3 OTOI need the same sync.
 
 ---
 
 ## Resolved Threads
+
+> **Timestamp note:** Threads below predate ORG-DEV-OTOI-1.0.3 and are grandfathered under §6.1 — they retain date-only `Started`/`Last updated` values. Do not retroactively convert them to full timestamps; the original times are not recoverable and inventing them would corrupt the audit trail.
 
 ### Thread: 2026-06-22-cursor-docs-automation-pr33
 **Status:** resolved

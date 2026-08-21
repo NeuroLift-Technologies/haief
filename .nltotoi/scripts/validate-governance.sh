@@ -40,7 +40,11 @@ check_content() {
   local file="$1"
   local pattern="$2"
   local label="$3"
-  if [[ -f "${REPO_ROOT}/${file}" ]] && grep -q "${pattern}" "${REPO_ROOT}/${file}"; then
+  # -F: match the pattern as a fixed string, not a regex. Governance identifiers
+  # such as ORG-DEV-OTOI-1.0.3 contain dots; under regex matching those dots are
+  # wildcards, so a malformed value like ORG-DEV-OTOI-1x0y3 would satisfy the
+  # check. -- terminates option parsing so patterns starting with a dash are safe.
+  if [[ -f "${REPO_ROOT}/${file}" ]] && grep -Fq -- "${pattern}" "${REPO_ROOT}/${file}"; then
     echo "  ✅ CONTENT OK: ${label} in ${file}"
     ((PASS++)) || true
   else
@@ -142,14 +146,14 @@ echo ""
 
 # --- Content Checks ---
 echo "[ Content Validation ]"
-check_content "NLT-DEV-OTOI.md"  "ORG-DEV-OTOI-1.0.2"           "Document ID"
+check_content "NLT-DEV-OTOI.md"  "ORG-DEV-OTOI-1.0.3"           "Document ID"
 check_content "NLT-DEV-OTOI.md"  "Joshua W. Dorsey"              "Authority marker"
 check_content "NLT-DEV-OTOI.md"  "Solidarity Framework"          "Solidarity Framework reference"
 check_content "NLT-DEV-OTOI.md"  "HAIEF"                         "HAIEF reference"
 check_content "AGENTS.md"        "NLT-DEV-OTOI.md"               "OTOI reference in AGENTS.md"
-check_content "AGENTS.md"        "ORG-DEV-OTOI-1.0.2"            "Document ID in AGENTS.md"
+check_content "AGENTS.md"        "ORG-DEV-OTOI-1.0.3"            "Document ID in AGENTS.md"
 check_content "nltotoi.json"     "NeuroLift-Technologies/haief" "Repository name in manifest"
-check_content "nltotoi.json"     "ORG-DEV-OTOI-1.0.2"            "Document ID in manifest"
+check_content "nltotoi.json"     "ORG-DEV-OTOI-1.0.3"            "Document ID in manifest"
 check_content "nltotoi.json"     "NLT-DEV-OTOI.md"               "Canonical contract path in manifest"
 
 echo ""

@@ -40,6 +40,7 @@ The principles are public. The operational machinery for this work lives in this
 3. Read docs/active-threads.md (working repo)
 4. Self-register per OTOI Section 3
 5. Confirm task scope before beginning
+6. Work from a feature branch and open a Pull Request — never push directly to `main` or protected branches
 ```
 
 ### Commit Format
@@ -51,6 +52,8 @@ All agent commits must follow:
 ```
 
 Types: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`, `ci`
+
+All agent-authored changes must go through a Pull Request opened from a feature branch. Do not push directly to `main` or other protected branches.
 
 ### Escalation Triggers
 
@@ -76,6 +79,7 @@ These are **non-negotiable**. No exceptions without explicit Joshua approval:
 | No production deployments | Human must explicitly approve all production actions |
 | No credential storage | Never store secrets, tokens, or credentials in code or VCS |
 | No external integrations | Third-party service connections require Joshua's approval |
+| PR-only workflow | Create changes on feature branches and deliver them through Pull Requests; never push directly to `main` or other protected branches |
 | No OTOI self-amendment | This governance doc cannot be changed by agents |
 
 ---
@@ -142,4 +146,4 @@ Before ending any significant session:
 
 ---
 
-*Internal governance document — NeuroLift Technologies | ORG-DEV-OTOI-1.0.2*
+*Internal governance document — NeuroLift Technologies | ORG-DEV-OTOI-1.0.3*
