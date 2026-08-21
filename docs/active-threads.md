@@ -2,24 +2,26 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-08-21T18:42:02-04:00
+**Last updated:** 2026-08-21T19:09:43-04:00
 
 ---
 
 ## Active Threads
 
-### Thread: 2026-08-21-hermes-astro7-migration
-**Status:** open
-**Owner:** Hermes (Hermes Agent, Nous Research)
-**Started:** 2026-08-21T18:42:02-04:00
-**Last updated:** 2026-08-21T18:42:02-04:00
-**Summary:** Diagnosed and fixed the failing Cloudflare build on `main`. PR #36, labelled an indirect esbuild patch bump, also carried a major upgrade (astro 6.4.6 → 7.1.3, adapter ^13.7.0 → ^14.1.4) that broke the build: a legacy `overrides: { "vite": "^7" }` block from `dab1eb3` force-pinned vite to 7.3.5 while Astro 7 requires vite ^8.0.13, so the prerender chunk was emitted as `worker-entry-*` instead of `prerender-entry-*`. Reproduced locally on node 22 (identical stack frame to CF's node 24). Two PRs: **#38** reverts to Astro 6 to restore a buildable `main`; **feat/migrate-astro-7** performs the upgrade properly (astro ^7.2.4 + adapter ^14.2.3, stale override removed) and supersedes it. The migration also fixes a regression the passing build hid — Astro 7's `compressHTML: 'jsx'` default fused footer text to adjacent links on all 14 pages (28 occurrences). Verified content-neutral against an Astro 6 baseline: 0/14 pages differ in visible text or structure. `npm audit` goes from 10 vulnerabilities (8 high) to **0**.
-**Blockers:** None. Awaiting Joshua's review — agents cannot self-approve.
-**Next action:** Joshua to choose the landing order (merge #38 first for an immediately green `main`, or merge the migration directly and close #38 as superseded), and to confirm the live Cloudflare Workers deploy plus Images/KV bindings, which cannot be verified locally. Separately: decide whether `wrangler.jsonc` `assets.directory` should be corrected from `./dist` to `./dist/client` (pre-existing, currently inert), and whether dependabot should be constrained so major framework upgrades cannot arrive under an indirect security label.
+*(No active threads)*
 
 ---
 
 ## Resolved Threads
+
+### Thread: 2026-08-21-hermes-astro7-migration
+**Status:** resolved
+**Owner:** Hermes (Hermes Agent, Nous Research)
+**Started:** 2026-08-21T18:42:02-04:00
+**Last updated:** 2026-08-21T19:09:43-04:00
+**Summary:** Diagnosed and fixed the failing Cloudflare build on `main`. PR #36, labelled an indirect esbuild patch bump, also carried a major upgrade (astro 6.4.6 → 7.1.3, adapter ^13.7.0 → ^14.1.4) that broke the build: a legacy `overrides: { "vite": "^7" }` block from `dab1eb3` force-pinned vite to 7.3.5 while Astro 7 requires vite ^8.0.13, so the prerender chunk was emitted as `worker-entry-*` instead of `prerender-entry-*`. Reproduced locally on node 22 (identical stack frame to CF's node 24). Two PRs were prepared: #38 reverted to Astro 6 as a safety net, and #39 performed the upgrade properly (astro ^7.2.4 + adapter ^14.2.3, stale override removed, pinned ^7.2.4 because adapter 14.2.1 raised its astro peer range to ^7.2.0). Joshua merged **#39** and closed #38 as superseded. The migration also fixed a regression the passing build concealed: Astro 7's `compressHTML: 'jsx'` default fused footer text to adjacent links on all 14 pages (28 occurrences), caught only by diffing rendered output against an Astro 6 baseline. Verified content-neutral — 0/14 pages differ in visible text or structure.
+**Blockers:** None.
+**Next action:** Verified on merged `main` (5a87978): Deploy Astro to GitHub Pages succeeded, Governance Validation and CodeQL passed, `npm ci` + `npm run build` exit 0 with 14 pages, `npm audit` reports 0 vulnerabilities (from 10, including 8 high), and the footer spacing fix is present in output. Remaining optional follow-ups for Joshua: confirm the live Cloudflare Workers deploy and the Images/KV session bindings (not verifiable locally); decide whether `wrangler.jsonc` `assets.directory` should move from `./dist` to `./dist/client` (pre-existing and currently inert, since the adapter generates its own `dist/client/wrangler.json`); and consider constraining dependabot so major framework upgrades cannot arrive under an indirect-dependency security label, which is how this incident reached `main` unreviewed.
 
 ### Thread: 2026-08-21-hermes-otoi-1.0.3-sync
 **Status:** resolved
