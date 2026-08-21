@@ -21,6 +21,8 @@
 
 ## Resolved Threads
 
+> **Timestamp note:** Threads below predate ORG-DEV-OTOI-1.0.3 and are grandfathered under §6.1 — they retain date-only `Started`/`Last updated` values. Do not retroactively convert them to full timestamps; the original times are not recoverable and inventing them would corrupt the audit trail.
+
 ### Thread: 2026-06-22-cursor-docs-automation-pr33
 **Status:** resolved
 **Owner:** Cursor Cloud Automation

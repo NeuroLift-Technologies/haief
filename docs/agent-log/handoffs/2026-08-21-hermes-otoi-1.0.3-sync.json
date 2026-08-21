@@ -13,7 +13,8 @@
       "Backfilled the PR-only workflow provisions originally introduced in ORG-DEV-OTOI-1.0.1 that had never reached this repository: NLT-DEV-OTOI.md Section 4.1 step 6, Section 4.2 PR-delivery paragraph, Section 4.4 guardrail bullet; AGENTS.md session-start step 6, commit-format paragraph, and Guardrails table row.",
       "Added NLT-DEV-OTOI.md Section 11 Change Log (1.0.0 through 1.0.3) and updated the Section 10 Quick Reference session-start row to include the feature-branch step.",
       "Verified with .nltotoi/scripts/validate-governance.sh: 29 passed, 0 failed, 0 warned, exit 0 — now asserting ORG-DEV-OTOI-1.0.3.",
-      "Verified all repository JSON parses, then ran npm ci and npm run build: Astro build completed, 14 pages generated, exit 0."
+      "Verified all repository JSON parses, then ran npm ci and npm run build: Astro build completed, 14 pages generated, exit 0.",
+      "Addressed CodeRabbit review on PR #37 (2 actionable findings, both verified valid before fixing): (1) hardened check_content in .nltotoi/scripts/validate-governance.sh to use `grep -Fq --` instead of `grep -q`. Confirmed empirically that the unpatched validator accepted the malformed identifier ORG-DEV-OTOI-1x0y3, because the dots in the version string were being treated as regex wildcards — a real defect in a governance gate. Negative-tested the fix: injecting the malformed ID now fails the run (28 passed, 1 failed, exit 1), and the repository restores to 29/29. (2) Added NLT-DEV-OTOI.md Section 6.1 Historical Records and Timestamp Grandfathering, stating the 1.0.3 timestamp requirement applies to records created on or after 2026-07-30, that pre-1.0.3 entries are grandfathered, that agents must not fabricate historical times, and that migration is permitted only against an independently verifiable timestamp. Cross-referenced from the Section 11 changelog row and flagged inline above the resolved-threads list in docs/active-threads.md."
     ],
     "work_in_progress": [],
     "blockers": [],
@@ -60,6 +61,8 @@
     ],
     "tests_run": [
       "bash .nltotoi/scripts/validate-governance.sh — 29 passed, 0 failed, 0 warned, exit 0",
+      "Negative test of the hardened validator — injected malformed ORG-DEV-OTOI-1x0y3 into nltotoi.json: 28 passed, 1 failed, exit 1 (the unpatched grep -q accepted it); repository restored byte-identical and re-verified at 29/29",
+      "bash -n .nltotoi/scripts/validate-governance.sh — syntax OK",
       "JSON parse check across all repository JSON files — all valid",
       "npm ci — exit 0",
       "npm run build — Astro build complete, 14 pages, exit 0"

@@ -211,6 +211,16 @@ Format for each thread entry:
 **Next action:** [Specific next step required]
 ```
 
+### 6.1 Historical Records and Timestamp Grandfathering
+
+The full ISO 8601 timestamp requirement introduced in ORG-DEV-OTOI-1.0.3 applies to records **created on or after 2026-07-30**.
+
+Entries predating 1.0.3 are **grandfathered** and retain their original date-only `Started` and `Last updated` values. Agents must **not** retroactively convert them: the precise time of a past session is not recoverable from the record, and substituting a fabricated time would corrupt the audit trail the record exists to preserve.
+
+The same principle governs `docs/agent-log/`. Historical registration and handoff records state which OTOI version governed a past session and are immutable — they are never rewritten by a later version bump.
+
+A pre-1.0.3 entry may be migrated to full-timestamp format **only** when a verified timestamp is available from an independent source (a commit timestamp, PR event, or CI run). Absent that evidence, leave the entry as-is.
+
 ---
 
 ## Section 7 — Intent Logging
@@ -287,7 +297,7 @@ Agents may not self-amend this document.
 
 | Version | Date | Authorized By | Summary |
 |---|---|---|---|
-| ORG-DEV-OTOI-1.0.3 | 2026-07-30 | Joshua W. Dorsey, Sr. | Required full ISO 8601 timestamps with UTC offset (e.g. `2026-03-31T15:30:00-04:00`) in all agent documentation — agent registration `entry_date`, handoff `date`, and active-threads `Started`/`Last updated`. Replaced date-only format across §§3/5/6. Synced into this repo-local contract by Hermes (Hermes Agent) acting on behalf of Joshua W. Dorsey, Sr., which also backfilled the PR-only workflow provisions from 1.0.1 (§4.1 step 6, §4.2 paragraph, §4.4 guardrail) that had not previously reached this repository. |
+| ORG-DEV-OTOI-1.0.3 | 2026-07-30 | Joshua W. Dorsey, Sr. | Required full ISO 8601 timestamps with UTC offset (e.g. `2026-03-31T15:30:00-04:00`) in all agent documentation — agent registration `entry_date`, handoff `date`, and active-threads `Started`/`Last updated`. Replaced date-only format across §§3/5/6. **Applies to records created on or after 2026-07-30**; pre-1.0.3 entries are grandfathered and retain their original date-only values (see §6.1). Synced into this repo-local contract by Hermes (Hermes Agent) acting on behalf of Joshua W. Dorsey, Sr., which also backfilled the PR-only workflow provisions from 1.0.1 (§4.1 step 6, §4.2 paragraph, §4.4 guardrail) that had not previously reached this repository. |
 | ORG-DEV-OTOI-1.0.2 | 2026-06-01 | Joshua W. Dorsey, Sr. | Corrected full-name expansion of TOI and OTOI across all governance documents. TOI = "Terms of Interaction"; OTOI = "Orchestrated Terms of Interaction". Previous incorrect expansion ("Developer Operations & Team Orientation Index") removed. Implemented by Claude Code acting on behalf of Joshua W. Dorsey, Sr. |
 | ORG-DEV-OTOI-1.0.1 | 2026-05-28 | Joshua W. Dorsey, Sr. | Added PR-only workflow guardrail (§4.4), updated Session Start Protocol to require feature branch (§4.1 step 6), clarified commit format to explicitly require PR delivery (§4.2). |
 | ORG-DEV-OTOI-1.0.0 | 2026-03-31 | Joshua W. Dorsey, Sr. | Initial release of org-wide governance contract. |

@@ -40,7 +40,11 @@ check_content() {
   local file="$1"
   local pattern="$2"
   local label="$3"
-  if [[ -f "${REPO_ROOT}/${file}" ]] && grep -q "${pattern}" "${REPO_ROOT}/${file}"; then
+  # -F: match the pattern as a fixed string, not a regex. Governance identifiers
+  # such as ORG-DEV-OTOI-1.0.3 contain dots; under regex matching those dots are
+  # wildcards, so a malformed value like ORG-DEV-OTOI-1x0y3 would satisfy the
+  # check. -- terminates option parsing so patterns starting with a dash are safe.
+  if [[ -f "${REPO_ROOT}/${file}" ]] && grep -Fq -- "${pattern}" "${REPO_ROOT}/${file}"; then
     echo "  ✅ CONTENT OK: ${label} in ${file}"
     ((PASS++)) || true
   else
