@@ -1,0 +1,61 @@
+{
+  "handoff_record": {
+    "session_id":         "2026-08-21-hermes-astro7-migration",
+    "agent_name":         "Hermes (Hermes Agent, Nous Research)",
+    "date":               "2026-08-21T18:42:02-04:00",
+    "otoi_version":       "ORG-DEV-OTOI-1.0.3",
+    "repo":               "NeuroLift-Technologies/haief",
+    "branch":             "fix/revert-astro7-restore-build, feat/migrate-astro-7",
+    "work_completed": [
+      "Diagnosed the failing Cloudflare build on main. Established from run timestamps that PR #37 (the OTOI 1.0.3 governance sync) merged at 20:42 and deployed successfully, and that the failure at 21:29:33 belonged to PR #36, which merged four seconds earlier.",
+      "Identified that PR #36, labelled 'bump esbuild from 0.27.7 to 0.28.1' with dependency-type indirect, also carried a major framework upgrade: astro 6.4.6 to 7.1.3 and @astrojs/cloudflare ^13.7.0 to ^14.1.4.",
+      "Root-caused the break to a legacy overrides block, `overrides: { \"vite\": \"^7\" }`, added in dab1eb3 with the original Workers configuration. Astro 7 requires vite ^8.0.13; the override force-pinned vite to 7.3.5, so the prerender environment emitted worker-entry-<hash>.js while astro looked for a chunk prefixed prerender-entry, and getPrerenderEntryFileName threw. Confirmed against upstream: adapter 14.0.0's only breaking change is 'Upgrade to Vite v8'.",
+      "Reproduced the failure locally on node 22.23.2 with an identical error and stack frame to the Cloudflare build on node 24.18.0, ruling out a runtime-version cause.",
+      "PR #38 (fix/revert-astro7-restore-build): restored astro 6.4.6 and @astrojs/cloudflare ^13.7.0 and regenerated the lockfile to return main to a buildable state.",
+      "PR (feat/migrate-astro-7): performed the Astro 6 to 7 migration properly — astro ^7.2.4, @astrojs/cloudflare ^14.2.3, vite 8.2.2 transitively, and removal of the stale vite override.",
+      "Pinned astro ^7.2.4 rather than the 7.1.3 from PR #36 after reading the adapter changelog: 14.2.1 corrected its astro peer range from ^7.0.0 to ^7.2.0 because it imports symbols from astro/app added in 7.2.0, so adapter 14.2.x paired with astro 7.1.3 fails at build time with MISSING_EXPORT.",
+      "Audited the repository against every Astro 7 breaking change from the official upgrade guide. Not applicable to this project: @astrojs/db, astro:transitions internals, getContainerRenderer, the src/fetch.ts reserved filename, experimental flags, remark/rehype plugins, Astro.locals.runtime, and cloudflareModules.",
+      "Caught and fixed a real regression that the build did not surface: Astro 7 changes the compressHTML default from true to 'jsx', which stripped whitespace by JSX rules and fused footer text to adjacent links across all 14 pages (28 occurrences), rendering 'contribution fromNeuroLift Technologies LLC' and 'licensed under aCreative Commons Attribution 4.0 International License' in visible page text. Fixed with explicit {\" \"} separators in src/components/Footer.astro per the upgrade guide.",
+      "Verified the migration is content-neutral by capturing an Astro 6.4.6 baseline build and diffing rendered output: 0 of 14 pages differ in visible text, and 0 of 14 differ structurally in a/h1/h2/h3/p/li/img/section/nav counts, <title>, or canonical URL."
+    ],
+    "work_in_progress": [],
+    "blockers": [],
+    "decisions_made": [
+      "Reverted first rather than fixing forward directly, on Joshua's instruction, so that main returns to a deployable state while the major upgrade receives its own review. Framework and deployment changes require human sign-off under OTOI Section 4.4.",
+      "Corrected an earlier incorrect diagnosis of my own: I had reported that Astro 7 relocates build output to dist/client and would therefore break wrangler.jsonc. Astro 6 also emits to dist/client. The wrangler.jsonc 'directory: ./dist' mismatch is pre-existing and inert, since deploys run through .github/workflows/deploy-pages.yml which correctly uses dist/client, and the adapter now generates dist/client/wrangler.json with assets.directory '.' that overrides the repo value at build time.",
+      "Left wrangler.jsonc unchanged in the migration PR. Correcting it is a deployment-configuration change that is not required for the upgrade and would exceed the scope of a reviewable migration.",
+      "Reported honestly in PR #38 that the revert reintroduces 3 high-severity astro XSS advisories and escalated that trade-off to Joshua rather than presenting the revert as cost-free.",
+      "Corrected my own initial claim that the revert would preserve an esbuild security fix. Root node_modules/esbuild is 0.27.7 both before PR #36 (73e366c) and after it (9a9ac48); it is pinned transitively by astro 6 / vite 7. PR #36 only bumped nested copies, so its stated advisory was never actually closed and is only resolved by the Astro 7 upgrade."
+    ],
+    "decisions_pending": [
+      "Joshua to choose the landing order: merge PR #38 to restore a green main immediately and then merge the Astro 7 migration, or merge the migration directly and close PR #38 as unnecessary. The migration supersedes the revert and reaches npm audit 0 vulnerabilities.",
+      "Joshua to confirm the live Cloudflare Workers deploy and the Cloudflare Images and KV session bindings behave correctly after the upgrade; this cannot be verified locally.",
+      "Whether the pre-existing wrangler.jsonc assets.directory './dist' value should be corrected to './dist/client' in a separate change.",
+      "Whether dependabot configuration should be constrained so that major framework upgrades cannot arrive under an indirect-dependency security label without review."
+    ],
+    "escalations": [
+      "Raised in the PR #38 body for Joshua's decision: reverting to astro 6.4.6 reintroduces GHSA-f48w-9m4c-m7f5, GHSA-7pw4-f3q4-r2p2 and GHSA-4g3v-8h47-v7g6, three high-severity XSS advisories affecting astro <=7.0.9. The site is fully static with no on-demand rendering or hydrated islands, so the affected code paths do not appear to be exercised, but the advisories are real and the trade was made explicit rather than assumed."
+    ],
+    "next_agent_notes": "Two PRs address one incident. PR #38 reverts to Astro 6 to restore a buildable main; the feat/migrate-astro-7 PR performs the upgrade properly and supersedes it. The decisive lesson: the Astro 7 build passed while silently corrupting visible footer text on every page, so a passing build is not sufficient evidence for a framework major upgrade. Diff rendered output against a baseline. The Astro 6 baseline used here was captured to /tmp/baseline-astro6 and will not survive a reboot; regenerate it by building from PR #38's branch if the comparison is needed again. Note also that a matching version number does not imply content parity, and that dependabot labelled a major framework upgrade as an indirect esbuild patch.",
+    "files_modified": [
+      "package.json",
+      "package-lock.json",
+      "src/components/Footer.astro",
+      "docs/active-threads.md",
+      "docs/agent-log/registrations/2026-08-21-hermes-astro7-migration.json",
+      "docs/agent-log/handoffs/2026-08-21-hermes-astro7-migration.json"
+    ],
+    "tests_run": [
+      "npm ci then npm run build on feat/migrate-astro-7 — exit 0, 14 pages, no compiler errors",
+      "Visible-text diff of all 14 rendered pages against an Astro 6.4.6 baseline — 0 pages differ",
+      "Structural parity check across all 14 pages (a/h1/h2/h3/p/li/img/section/nav counts, <title>, canonical URL) — 0 pages differ",
+      "Word-fused-to-inline-tag regression scan — 28 occurrences before the Footer fix, 0 after",
+      "Emitted-artifact check — 14 .html files, assets/, _headers, robots.txt, sitemap-0.xml, sitemap-index.xml present under dist/client",
+      "npm audit on feat/migrate-astro-7 — found 0 vulnerabilities (from 10, including 8 high)",
+      "npm install then npm run build on fix/revert-astro7-restore-build — exit 0, 14 pages",
+      "bash .nltotoi/scripts/validate-governance.sh on both branches — 29 passed, 0 failed, exit 0"
+    ],
+    "tests_passing": true,
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/38"
+  }
+}
