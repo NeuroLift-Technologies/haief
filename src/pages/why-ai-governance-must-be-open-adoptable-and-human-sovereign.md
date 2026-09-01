@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Base.astro
 title: "Why AI Governance Must Be Open, Adoptable, and Human-Sovereign"
-description: "AI governance is being shaped right now by corporate-led standards bodies and academic alliances. The missing piece is who AI actually serves. HAIEF fills that gap — and it's already running."
+description: "AI governance has technical standards and safety frameworks. The missing layer is human sovereignty — who the system ultimately serves. HAIEF is building that layer, and it's already running."
 date: 2026-09-01
 ---
 
@@ -9,7 +9,7 @@ date: 2026-09-01
   <div class="container">
     <h1 class="page-header__title">Why AI Governance Must Be Open, Adoptable, and Human-Sovereign</h1>
     <p class="page-header__subtitle">
-      The standards for AI are being written right now. Here's why they need a human-rights pillar — and why HAIEF exists.
+      The standards and governance structures for AI are being established right now. Here's why they need a human-sovereignty layer — and why HAIEF exists.
     </p>
   </div>
 </div>
@@ -19,24 +19,30 @@ date: 2026-09-01
 
 <div class="callout callout--danger">
   <p class="callout__title">The window is closing</p>
-  <p>Three things are happening simultaneously: the EU AI Act's 2026 compliance deadline is approaching, the OSI is finalizing its Open Source AI Definition, and corporate-led standards bodies like the AI Alliance for Open Innovation (AAIF) are setting technical standards. None of these processes have adequate representation from the people who are actually affected by AI systems. <strong>This is the governance gap HAIEF was built to fill.</strong></p>
+  <p>Three things are happening simultaneously: the EU AI Act's transparency obligations began applying on **August 2, 2026**, with additional requirements continuing to come into force through 2027 and 2028. The OSI's Open Source AI Definition 1.0 is already released. The Agentic AI Foundation (AAIF), under the Linux Foundation, now includes 247 member organizations setting technical standards for agentic AI. These structures are being established right now, and none of them include an explicit layer for human sovereignty in AI interaction. **This is the governance gap HAIEF was built to fill.**</p>
 </div>
 
 ---
 
 ## The Three Pillars of AI Governance
 
-AI governance is being built from three directions right now. Only two of them are getting attention.
+AI governance is being built across **three layers** right now. Only one of them is getting the human-rights question.
 
-| Pillar | Who | Focus | What's Missing |
-|--------|-----|-------|----------------|
-| **Technical standards** | AAIF / Linux Foundation | Interoperability, model formats, tool chains | Who controls the system |
-| **Open research** | AI Alliance | Innovation, safety research, open models | Power dynamics between users and vendors |
-| **Human sovereignty** | **HAIEF** | User rights, consent, continuity, governance infrastructure | — |
+| Layer | Who's Building | Focus |
+|-------|---------------|-------|
+| **Technical interoperability** | Agentic AI Foundation (AAIF) / Linux Foundation — 247 member organizations | Protocols, models, tools, agent communication |
+| **System accountability** | EU AI Act, OSI Open Source AI Definition, safety research | Safety, evaluation, risk management, transparency |
+| **Human sovereignty** | **HAIEF** | Consent, identity, continuity, user-defined governance |
 
-The first two pillars answer *how* AI works and *what* it can do. They don't answer *who it serves*. That's the missing third pillar — and it's the one that determines whether AI reinforces human agency or replaces it.
+The first layer answers *how* AI systems operate. The second answers *what* we verify about them. Neither answers *who the system ultimately serves*.
 
-HAIEF is that pillar. It's the voice of users, communities, and democratic values in a space currently dominated by corporations with commercial incentives.
+That's the missing third layer — and it's the one that determines whether AI reinforces human agency or replaces it.
+
+Technical interoperability is being built rapidly. AI systems need to work together, and the infrastructure for that is advancing. The Agentic AI Foundation now brings together 247 organizations under a neutral Linux Foundation umbrella to standardize agentic AI. That's real progress.
+
+But interoperability alone doesn't answer the sovereignty question. **Technical standards can be open and interoperable while still leaving human sovereignty insufficiently specified.**
+
+HAIEF isn't competing with AAIF. It's solving a different layer. AAIF builds the pipes. HAIEF defines who controls what flows through them.
 
 ---
 
@@ -76,7 +82,7 @@ HAIEF's governance architecture is built in two layers:
 
 #### Protective Layer (Operational Protocols)
 
-- **Sleepwalker Protocol**: Emotional continuity governance. Prevents abrupt, destabilizing AI behavior changes — especially important for users who rely on AI for ongoing support, neurodivergent users, and anyone in a high-stakes environment where sudden shifts in AI behavior could cause real harm.
+- **Sleepwalker Protocol**: Emotional continuity governance. Governs continuity across AI session and behavioral transitions, reducing the risk of abrupt or destabilizing changes — especially important for users who rely on AI for ongoing support, neurodivergent users, and anyone in a high-stakes environment.
 
 - **RRT AIdvocAIte Framework**: A structured, multi-persona approach to real-time support for neurodivergent users and crisis situations. Not a replacement for human care — a governance layer that ensures AI support systems behave safely and consistently.
 
@@ -154,9 +160,11 @@ Open source built software freedom. Open governance builds interaction freedom.
 
 ### For Standards Bodies
 
-- Reference HAIEF in OSI's Open Source AI Definition discussions
-- Ensure user sovereignty is represented in EU AI Act implementation
-- Don't let technical interoperability standards become the entire governance story
+- Evaluate human sovereignty as a distinct governance layer alongside technical interoperability and system accountability.
+- Reference TOI/OTOI where user-defined interaction governance is relevant.
+- Ensure technical interoperability standards preserve human agency across platforms.
+- Engage lived-experience communities as participants in governance design.
+- Adopt HAIEF's "Nothing About Us Without Us" as a governance principle that extends beyond neurodivergent users to any community affected by AI governance decisions.
 
 ### For Organizations
 
@@ -177,9 +185,9 @@ Open source built software freedom. Open governance builds interaction freedom.
 This isn't theoretical.
 
 - **40+ state attorneys general** are investigating AI harms
-- The **EU AI Act** has a 2026 compliance deadline
-- **OSI is finalizing** its Open Source AI Definition — right now
-- **AAIF standards** are being set without user representation
+- The **EU AI Act**'s transparency obligations took effect on August 2, 2026, with additional requirements phasing in through 2027 and 2028
+- The **OSI Open Source AI Definition 1.0** is already released — but it defines what "open" means for models, not what "sovereign" means for users
+- The **Agentic AI Foundation** now has 247 member organizations standardizing agentic AI — but the standards don't include a human-sovereignty layer
 - Vulnerable users face **abandonment when AI sessions end**
 - Crisis intervention gaps leave people **at risk**
 
@@ -193,7 +201,7 @@ The governance infrastructure for AI is being built whether we participate or no
 
 ---
 
-*HAIEF is proposed by NeuroLift Technologies LLC as a global public-benefit foundation. The frameworks are open source under CC BY 4.0. The code is Apache-2.0. HAIEF is designed to be owned by the world, not by any single company, vendor, or model provider.*
+*HAIEF is proposed by NeuroLift Technologies LLC as a foundation for public-benefit governance. The frameworks are open source under CC BY 4.0. The code is Apache-2.0. HAIEF is designed to be governed by the community it serves — not by any single company, vendor, or model provider.*
 
   </div>
 </div>
