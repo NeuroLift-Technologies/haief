@@ -8,7 +8,13 @@ ai_assistant_directive:
   required_file: "NLT-DEV-OTOI.md"
 ```
 
-[![Financial Contributors on Open Collective](https://opencollective.com/haief/all/badge.svg?label=Financial+Contributors)](https://opencollective.com/haief)
+**Open governance standards for human-safe, emotionally-continuous AI.** Adoptable by any model, platform, or organization.
+
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Website](https://img.shields.io/badge/Website-elevaitionfoundation.org-2ea44f)](https://elevaitionfoundation.org)
+[![Open Collective](https://img.shields.io/opencollective/all/haief?label=Open%20Collective)](https://opencollective.com/haief)
+[![GitHub Discussions](https://img.shields.io/github/discussions/NeuroLift-Technologies/haief)](https://github.com/NeuroLift-Technologies/haief/discussions)
 
 **Keeping Open Source AI Open**
 
@@ -20,11 +26,35 @@ HAIEF exists to ensure that AI serves people, not the other way around — with 
 
 ---
 
+## Start Here
+
+New to HAIEF? Read in this order:
+
+1. [The Problem](src/pages/the-problem.md) — why AI governance needs to change
+2. [Solidarity Framework](src/pages/solidarity-framework.md) — our ethical foundation
+3. [TOI & OTOI](solidarity-framework/otoi/) — the actual governance protocols
+4. [Safety Case Template](src/pages/safety-case-template.md) — prove your system is compliant
+
+Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md) and join [Discussions](https://github.com/NeuroLift-Technologies/haief/discussions).
+
+---
+
+## Who This Is For
+
+- **AI platform engineers** — adopt TOI/OTOI as your governance layer
+- **Safety researchers** — use the specs as a baseline for evaluation
+- **Open-source maintainers** — add a SAFETY-CASE.md to your repo
+- **Policy makers** — reference architecture for AI regulation
+- **Neurodivergent users & advocates** — the Sleepwalker Protocol exists for you
+- **Anyone building multi-agent systems** — OTOI governs agent-to-agent coordination
+
+---
+
 ## 🌍 Mission
 
 To establish open, enforceable, human‑centric standards for AI behavior, multi‑agent collaboration, emotional continuity, and user sovereignty — standards that any model, platform, or organization can adopt.
 
-**HAIEF is not a product.**  
+**HAIEF is not a product.**
 It is public infrastructure for the future of human–AI interaction.
 
 ---
@@ -35,27 +65,27 @@ This repo hosts the public governance layer of the HAIEF ecosystem:
 
 ### Core Frameworks
 
-- **TOI — Terms of Interaction**  
+- **TOI — Terms of Interaction**
   Baseline rules for how AI systems engage with humans.
 
-- **OTOI — Orchestrated Terms of Interaction**  
+- **OTOI — Orchestrated Terms of Interaction**
   Multi‑agent governance ensuring provenance, identity integrity, and safe handoffs.
 
-- **Sleepwalker Protocol**  
+- **Sleepwalker Protocol**
   Emotional continuity governance designed to prevent abrupt, destabilizing AI behavior.
 
-- **RRT AIdvocAIte Framework**  
+- **RRT AIdvocAIte Framework**
   A structured, multi‑persona approach to real‑time support for neurodivergent users and high‑stakes environments.
 
 ### Open Standards & Specifications
 
-- Provenance schemas  
-- Identity integrity rules  
-- Multi‑agent handoff formats  
-- Safety validation harnesses  
-- Agent safety case template  
-- Public test suites  
-- Documentation and reference implementations  
+- Provenance schemas
+- Identity integrity rules
+- Multi‑agent handoff formats
+- Safety validation harnesses
+- Agent safety case template
+- Public test suites
+- Documentation and reference implementations
 
 All content in this repository is open source, community‑maintained, and intended for global adoption.
 
@@ -65,11 +95,11 @@ All content in this repository is open source, community‑maintained, and inten
 
 NeuroLift Technologies is proposing that the free open‑source community:
 
-- **Organize**  
-- **Build**  
-- **Extend**  
-- **Deploy**  
-- **Govern**  
+- **Organize**
+- **Build**
+- **Extend**
+- **Deploy**
+- **Govern**
 
 …the HAIEF standards and frameworks.
 
@@ -162,10 +192,10 @@ Route and workflow details live in [`docs/overview.md`](docs/overview.md). In pa
 
 The charter and agent contribution logs for AI agents assisting with the build will live in `/internal/`, which is intentionally gitignored to preserve:
 
-- provenance integrity  
-- agent identity boundaries  
-- safe experimentation  
-- non‑public coordination  
+- provenance integrity
+- agent identity boundaries
+- safe experimentation
+- non‑public coordination
 
 This ensures that public standards remain transparent while internal agent orchestration remains controlled.
 
@@ -175,10 +205,10 @@ This ensures that public standards remain transparent while internal agent orche
 
 The public website source, static build, and Cloudflare Worker deploy tooling are now in this repo. The following runtime systems remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
 
-- Fusion methodology  
-- Identity‑bound agent state  
-- Emotional continuity memory  
-- Enterprise‑grade deployment infrastructure  
+- Fusion methodology
+- Identity‑bound agent state
+- Emotional continuity memory
+- Enterprise‑grade deployment infrastructure
 
 These systems implement the standards — but the standards themselves live here, openly.
 
@@ -199,18 +229,18 @@ In short: **code is Apache-2.0; the HAIEF standards and writing are CC BY 4.0** 
 
 ## ✨ Founding Contribution
 
-**by NeuroLift Technologies LLC**  
-**Architect:** Joshua Dorsey  
+**by NeuroLift Technologies LLC**
+**Architect:** Joshua Dorsey
 **Role:** Founder, Lead Architect, and Originator of the HAIEF Governance Layer
 
 NeuroLift Technologies contributes:
 
-- The initial TOI–OTOI governance architecture  
-- The Sleepwalker Protocol for emotional continuity  
-- The RRT AIdvocAIte multi‑persona support framework  
-- The provenance, identity, and handoff standards  
-- The narrative scaffolding and movement‑building foundation  
-- The vision of AI as public infrastructure, not private power  
+- The initial TOI–OTOI governance architecture
+- The Sleepwalker Protocol for emotional continuity
+- The RRT AIdvocAIte multi‑persona support framework
+- The provenance, identity, and handoff standards
+- The narrative scaffolding and movement‑building foundation
+- The vision of AI as public infrastructure, not private power
 
 This contribution is made freely to the global community as the seed of a shared, open, human‑centric AI governance ecosystem.
 
@@ -218,10 +248,10 @@ This contribution is made freely to the global community as the seed of a shared
 
 ## 🖋️ Signature & Contribution Statement
 
-**Joshua Dorsey**  
-Founder & Lead Architect, NeuroLift Technologies  
+**Joshua Dorsey**
+Founder & Lead Architect, NeuroLift Technologies
 Contributor to the Human & AI ElevAItion Foundation
 
-> *"Our governance is public.*  
-> *Our intelligence is private.*  
+> *"Our governance is public.*
+> *Our intelligence is private.*
 > *The user remains sovereign."*
