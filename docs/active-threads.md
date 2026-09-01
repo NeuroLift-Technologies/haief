@@ -2,17 +2,26 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-08-21T19:09:43-04:00
+**Last updated:** 2026-08-31T21:15:00-04:00
 
 ---
 
 ## Active Threads
 
-*(No active threads)*
+### Thread: 2026-08-31-hermes-readme-launch-structure
+**Status:** in_progress
+**Owner:** Hermes (Hermes Agent, Nous Research)
+**Started:** 2026-08-31T21:00:00-04:00
+**Last updated:** 2026-08-31T21:15:00-04:00
+**Summary:** Restructured README.md for public launch — added badges, one-line value proposition, "Start Here" section, and "Who This Is For" section. AI directive preserved at top per repo convention. PR #41 open.
+**Blockers:** None.
+**Next action:** After merge, add repository topics and begin flagship article.
 
 ---
 
 ## Resolved Threads
+
+*(No active threads)*
 
 ### Thread: 2026-08-21-hermes-astro7-migration
 **Status:** resolved
