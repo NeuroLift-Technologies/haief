@@ -71,6 +71,8 @@ specifications as a core safety requirement
 
 HAIEF provides **The Solidarity Framework** - open, community-driven standards for AI governance that prioritize human safety and user sovereignty.
 
+The frameworks are documented in our manifesto: [Why AI Governance Must Be Open, Adoptable, and Human-Sovereign](/why-ai-governance-must-be-open-adoptable-and-human-sovereign/) — the core thesis for why a human-rights pillar is essential to AI governance.
+
 <div class="framework-diagram">
   <div class="framework-layer framework-layer--constitutional">
     <div class="framework-layer__title">Constitutional Layer - The Rules of Relationship</div>
@@ -226,7 +228,14 @@ HAIEF operates under principles that reflect our values:
 
 ## What We're Building
 
-### Technical Infrastructure
+### Live Today
+
+- **ASFDK Harness** — runtime governance control plane deployed on Cloudflare Workers, exposing TOI/OTOI checks as MCP tools
+- **66+ NeuroLift repositories** governed by OTOI v1.0.3 — every agent session passes through the governance layer before tool execution
+- **PR Review Hermes Bot** — enforces governance compliance on every Pull Request across the organization
+- **HAIEF website** — public documentation and framework specs deployed at elevaitionfoundation.org
+
+### Framework Specifications
 
 - **Framework specifications** for TOI, OTOI, RRT AIdvocAIte, and Sleepwalker Protocol
 - **Reference implementations** that demonstrate compliance
