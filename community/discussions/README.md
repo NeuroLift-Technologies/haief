@@ -4,12 +4,12 @@ Welcome to the HAIEF community discussions.
 
 ## Announcements
 
-- **[Article] Why AI Governance Must Be Open, Adoptable, and Human-Sovereign** — The standards for AI are being written right now. Here's why they need a human-rights pillar, and why HAIEF already exists. [Read the article →](#)
+- **[Article] Why AI Governance Must Be Open, Adoptable, and Human-Sovereign** — The standards and governance structures for AI are being established right now. Here's why they need a human-rights pillar, and why HAIEF already exists. [Read the article →](/why-ai-governance-must-be-open-adoptable-and-human-sovereign/)
 
 ## Start a Discussion
 
 - **[Question]** — Have a question about HAIEF, TOI, OTOI, or the Solidarity Framework?
-- **[Discussion]** — Want to explore an idea, share a use case, or debate a approach?
+- **[Discussion]** — Want to explore an idea, share a use case, or debate an approach?
 - **[Proposal]** — Have an idea for how HAIEF should evolve? Start here.
 
 ## Categories

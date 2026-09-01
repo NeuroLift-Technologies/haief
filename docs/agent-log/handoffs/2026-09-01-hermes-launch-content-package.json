@@ -31,7 +31,6 @@
       "ISSUE_TEMPLATE/article-launch.md",
       "ISSUE_TEMPLATE/discussion_template.md",
       "docs/active-threads.md",
-      "docs/agent-log/handoffs/2026-08-31-hermes-readme-launch-structure.json",
       "docs/agent-log/handoffs/2026-09-01-hermes-launch-content-package.json"
     ],
     "tests_run": [

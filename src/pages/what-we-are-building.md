@@ -1,14 +1,14 @@
 ---
 layout: ../layouts/Base.astro
 title: "What We're Building — HAIEF in Practice"
-description: "HAIEF isn't a proposal. It's a working governance layer running across 66+ repositories right now. Here's what's live, what's coming, and how to engage."
+description: "HAIEF isn't a proposal. It's a working governance layer running across 66+ repositories (as of August 2026). Here's what's live, what's coming, and how to engage."
 ---
 
 <div class="page-header">
   <div class="container">
     <h1 class="page-header__title">What We're Building</h1>
     <p class="page-header__subtitle">
-      HAIEF isn't a proposal. It's a working governance layer running across 66+ repositories right now. Here's what's live, what's coming, and how to engage.
+      HAIEF isn't a proposal. It's a working governance layer running across 66+ repositories (as of August 2026) right now. Here's what's live, what's coming, and how to engage.
     </p>
   </div>
 </div>
@@ -134,7 +134,7 @@ HAIEF avoids all three:
 
 ### Give feedback
 
-This is a living framework. The page you're reading right now is the result of three independent AI reviews (Hermes, Claude, ChatGPT, and Grok) catching factual errors, soft claims, and structural issues in earlier drafts. If you spot something that should be corrected, say so — publicly, in the discussions, or through the fact-check submission.
+This is a living framework. The page you're reading right now is the result of four independent AI reviews (Hermes, Claude, ChatGPT, and Grok) catching factual errors, soft claims, and structural issues in earlier drafts. If you spot something that should be corrected, say so — publicly, in the discussions, or through the fact-check submission.
 
 ---
 
