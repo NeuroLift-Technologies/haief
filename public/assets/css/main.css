@@ -1254,3 +1254,74 @@ pre code {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
 }
+
+/* ============================================
+   Dark Mode
+   ============================================ */
+
+[data-theme="dark"] {
+  --color-primary: #4ea8d4;
+  --color-primary-dark: #3a8ab5;
+  --color-primary-light: #6bb8e0;
+  --color-accent: #ff8c42;
+  --color-accent-dark: #e87a30;
+  --color-accent-light: #ffa560;
+  --color-text: #e8e8f0;
+  --color-text-muted: #a0a0c0;
+  --color-text-light: #8080a0;
+  --color-bg: #0f1021;
+  --color-bg-alt: #1a1b35;
+  --color-bg-dark: #0a0b18;
+  --color-border: #2a2b4a;
+  --color-border-light: #1f1f3a;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-alt);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Show/hide icons based on theme */
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+.theme-toggle .icon-sun {
+  display: none;
+}
+.theme-toggle .icon-moon {
+  display: block;
+}
