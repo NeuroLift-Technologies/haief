@@ -48,11 +48,33 @@ But interoperability alone doesn't answer the sovereignty question. **Technical 
 
 HAIEF isn't competing with AAIF. It's solving a different layer. AAIF builds the pipes. HAIEF defines who controls what flows through them.
 
-AAIEF solves one layer of the problem. HAIEF solves another.
+## The Governance Relationship
 
----
+HAIEF doesn't replace AAIF, the EU AI Act, or OSI. It sits above them.
 
-## The Problem: Governance as Corporate Policy
+```text
+                HUMAN SOVEREIGNTY
+                       │
+                     HAIEF
+                       │
+            ┌──────────┴──────────┐
+            │                     │
+           TOI                   OTOI
+            │                     │
+     User governance       Agent governance
+            │                     │
+            └──────────┬──────────┘
+                       │
+                ASFDK / Runtime
+                       │
+             ┌─────────┼─────────┐
+             │         │         │
+           MCP       Agents    Models
+```
+
+AAIF defines how agents communicate. EU AI Act defines what's lawful. OSI defines what's open. HAIEF defines what the user controls.
+
+Technical standards can be adopted without governance. Governance without technical standards is unenforceable. HAIEF provides the layer that makes both work together.
 
 Right now, if you want to know what rules govern your AI interactions, you read a vendor's Terms of Service. Those terms:
 
