@@ -338,16 +338,29 @@ pre code {
 }
 
 .hero--dark {
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-alt) 100%);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .hero--dark {
   background: linear-gradient(135deg, var(--color-bg-dark) 0%, #2a2a4e 100%);
-  color: white;
 }
 
 .hero--dark h1,
 .hero--dark h2 {
-  color: white;
+  color: var(--color-text);
 }
 
 .hero--dark p {
+  color: var(--color-text-muted);
+}
+
+[data-theme="dark"] .hero--dark h1,
+[data-theme="dark"] .hero--dark h2 {
+  color: white;
+}
+
+[data-theme="dark"] .hero--dark p {
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -455,6 +468,16 @@ pre code {
 
 .btn--outline-light:hover {
   background-color: white;
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .btn--outline-light {
+  border-color: var(--color-text-light);
+  color: var(--color-text-light);
+}
+
+[data-theme="dark"] .btn--outline-light:hover {
+  background-color: var(--color-bg-alt);
   color: var(--color-text);
 }
 
@@ -1039,9 +1062,13 @@ pre code {
 
 /* Crisis Banner */
 .crisis-banner {
-  background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%);
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-alt) 100%);
   border-bottom: 3px solid var(--color-accent);
   padding: var(--space-6) 0;
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .crisis-banner {
   color: white;
 }
 
@@ -1324,4 +1351,22 @@ pre code {
 }
 .theme-toggle .icon-moon {
   display: block;
+}
+
+/* Dark mode callout backgrounds */
+[data-theme="dark"] .callout--warning {
+  background-color: #3d3520;
+  border-left-color: var(--color-warning);
+}
+[data-theme="dark"] .callout--danger {
+  background-color: #3d2020;
+  border-left-color: var(--color-danger);
+}
+[data-theme="dark"] .callout--info {
+  background-color: #1a3040;
+  border-left-color: var(--color-info);
+}
+[data-theme="dark"] .callout--success {
+  background-color: #1a3528;
+  border-left-color: var(--color-success);
 }
