@@ -22,7 +22,7 @@ The Human & AI ElevAItion Foundation (HAIEF) is an independent, community‑driv
 
 HAIEF exists to ensure that AI serves people, not the other way around — with transparency, dignity, and global accessibility at its core.
 
-**[Visit the Website](https://haief-site.pages.dev/)** | **[Join Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)** | **[Take Action](https://haief-site.pages.dev/take-action/)**
+**[Visit the Website](https://elevaitionfoundation.org)** | **[Join Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)** | **[Take Action](https://elevaitionfoundation.org/take-action/)**
 
 ---
 
@@ -111,7 +111,7 @@ NeuroLift contributes the initial architecture, protocols, and governance scaffo
 
 ## 🗂️ Repository Structure
 
-```
+```text
 /src
     /pages
         index.astro
@@ -203,7 +203,7 @@ This ensures that public standards remain transparent while internal agent orche
 
 ## ☁️ What Is Not in This Repo
 
-The public website source, static build, and Cloudflare Worker deploy tooling are now in this repo. The following runtime systems remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
+The public website source is checked in and built from this repository. The build is generated from source and deployed by the Cloudflare Worker. The following runtime systems remain private and cloud‑hosted (Azure, GCP, Cloudflare, etc.):
 
 - Fusion methodology
 - Identity‑bound agent state

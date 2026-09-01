@@ -21,8 +21,6 @@
 
 ## Resolved Threads
 
-*(No active threads)*
-
 ### Thread: 2026-08-21-hermes-astro7-migration
 **Status:** resolved
 **Owner:** Hermes (Hermes Agent, Nous Research)
