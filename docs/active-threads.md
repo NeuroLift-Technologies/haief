@@ -2,20 +2,33 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-08-31T21:15:00-04:00
+**Last updated:** 2026-09-01T03:51:00-04:00
 
 ---
 
 ## Active Threads
 
-### Thread: 2026-08-31-hermes-readme-launch-structure
+### Thread: 2026-09-01-hermes-dark-mode-callout-fixes
 **Status:** in_progress
 **Owner:** Hermes (Hermes Agent, Nous Research)
-**Started:** 2026-08-31T21:00:00-04:00
-**Last updated:** 2026-08-31T21:15:00-04:00
-**Summary:** Restructured README.md for public launch — added badges, one-line value proposition, "Start Here" section, and "Who This Is For" section. AI directive preserved at top per repo convention. PR #41 open.
+**Started:** 2026-09-01T03:44:00-04:00
+**Last updated:** 2026-09-01T03:51:00-04:00
+**Summary:** Follow-up to PR #44 (dark mode toggle). Added dark mode background overrides for all callout variants (`.callout--warning`, `--danger`, `--info`, `--success`) so they render correctly in dark mode. Converted crisis banner's hardcoded gradient to use CSS variables. Fixed `.hero--dark` and `.btn--outline-light` to be adaptive. PR #45 open on `fix/dark-mode-callout-backgrounds`.
 **Blockers:** None.
-**Next action:** After merge, add repository topics and begin flagship article.
+**Next action:** After merge, update `.hermes.md` with confirmed callout dark mode pattern.
+
+---
+
+## Resolved Threads
+
+### Thread: 2026-08-31-hermes-readme-launch-structure
+**Status:** resolved
+**Owner:** Hermes (Hermes Agent, Nous Research)
+**Started:** 2026-08-31T21:00:00-04:00
+**Last updated:** 2026-09-01T01:37:39-04:00
+**Summary:** Restructured README.md for public launch — added badges, one-line value proposition, "Start Here" section, and "Who This Is For" section. AI directive preserved at top per repo convention. PR #41 merged (2026-09-01T01:37:39Z).
+**Blockers:** None.
+**Next action:** Completed.
 
 ---
 

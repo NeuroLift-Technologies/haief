@@ -1,0 +1,59 @@
+{
+  "handoff_metadata": {
+    "document_id": "HAIEF-HND-2026-002",
+    "session_id": "20260901_034400_6a3f2db8",
+    "agent_name": "Hermes",
+    "agent_platform": "Hermes Agent (Nous Research)",
+    "model": "poolside/laguna-s-2.1:free",
+    "provider": "nous",
+    "started_at": "2026-09-01T03:44:00-04:00",
+    "ended_at": "2026-09-01T03:51:00-04:00",
+    "governance_framework": "ASFDK/OTOI 1.0.3",
+    "working_repo": "haeef"
+  },
+  "session_summary": {
+    "task": "Follow-up to PR #44: Add dark mode background overrides for callout blocks so they render correctly in dark mode.",
+    "context": "PR #44 added the dark mode toggle and Base.astro pre-paint theme detection, but the callout background colors were not updated for dark mode. User identified that the Founding Contribution section (which uses .callout--info class) and other callout blocks need dark backgrounds in dark mode.",
+    "key_changes": [
+      "Added [data-theme='dark'] backgrounds for .callout--warning (#3d3520), .callout--danger (#3d2020), .callout--info (#1a3040), .callout--success (#1a3528)",
+      "Converted crisis banner gradient from hardcoded #1a1a2e to var(--color-bg-dark) CSS variable",
+      "Made .hero--dark adaptive in light mode (var(--color-bg-alt)) and kept dark gradient in dark mode",
+      "Added dark mode overrides for .btn--outline-light (border, background, hover state)"
+    ],
+    "files_modified": [
+      "public/assets/css/main.css"
+    ],
+    "pr_url": "https://github.com/NeuroLift-Technologies/haief/pull/45",
+    "branch": "fix/dark-mode-callout-backgrounds",
+    "build_status": "pass (16 pages)",
+    "commit": {
+      "hash": "f4592ab",
+      "message": "[HERMES] fix(theme): add dark mode callout backgrounds and fix crisis banner variable"
+    }
+  },
+  "decisions_made": [
+    {
+      "decision": "Use CSS variable-based dark mode backgrounds for callouts",
+      "rationale": "Matches the existing dark mode pattern introduced in PR #44 (uses [data-theme='dark'] attribute selector)",
+      "approved_by": "Joshua Dorsey (user)"
+    }
+  ],
+  "decisions_pending": [
+    {
+      "decision": "Audit other components for hardcoded light-mode colors",
+      "rationale": "User indicated 'there's a lot that need to be changed to a dark background' — the current PR addresses callout blocks but a broader audit may be needed for full dark mode coverage"
+    }
+  ],
+  "escalations": [],
+  "blockers": [],
+  "next_steps": [
+    "Wait for PR #45 review and merge",
+    "If additional dark mode gaps identified, create follow-up PR"
+  ],
+  "review_sources": [],
+  "governance": {
+    "otoi_compliance": true,
+    "commit_format": "[HERMES] type(scope): description",
+    "pr_template": "PULL_REQUEST_TEMPLATE/agent-contribution.md"
+  }
+}
