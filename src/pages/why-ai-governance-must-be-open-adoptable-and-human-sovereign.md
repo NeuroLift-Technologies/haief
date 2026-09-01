@@ -9,7 +9,7 @@ date: 2026-09-01
   <div class="container">
     <h1 class="page-header__title">Why AI Governance Must Be Open, Adoptable, and Human-Sovereign</h1>
     <p class="page-header__subtitle">
-      The standards and governance structures for AI are being established right now. Here's why they need a human-sovereignty layer — and why HAIEF exists.
+      AI governance is being built in layers. Technical standards handle interoperability. Safety frameworks handle accountability. But who the system ultimately serves is still unspecified. HAIEF fills that gap — and it's already running.
     </p>
   </div>
 </div>
@@ -18,19 +18,19 @@ date: 2026-09-01
   <div class="container">
 
 <div class="callout callout--danger">
-  <p class="callout__title">The window is closing</p>
-  <p>Three things are happening simultaneously: the EU AI Act's transparency obligations began applying on **August 2, 2026**, with additional requirements continuing to come into force through 2027 and 2028. The OSI's Open Source AI Definition 1.0 is already released. The Agentic AI Foundation (AAIF), under the Linux Foundation, now includes 247 member organizations setting technical standards for agentic AI. These structures are being established right now, and none of them include an explicit layer for human sovereignty in AI interaction. **This is the governance gap HAIEF was built to fill.**</p>
+  <p class="callout__title">The window is active</p>
+  <p>The EU AI Act's transparency obligations took effect on August 2, 2026, with additional requirements phasing in through 2027 and 2028. The Open Source AI Definition 1.0 is already released. The Agentic AI Foundation now brings together 247 organizations under a neutral Linux Foundation umbrella to standardize agentic AI. These structures are being built right now — but none of them include an explicit layer for who the system ultimately serves.</p>
 </div>
 
 ---
 
-## The Three Pillars of AI Governance
+## Three Layers of AI Infrastructure
 
-AI governance is being built across **three layers** right now. Only one of them is getting the human-rights question.
+AI governance is being built across three layers. Only one of them is getting the human-rights question.
 
 | Layer | Who's Building | Focus |
 |-------|---------------|-------|
-| **Technical interoperability** | Agentic AI Foundation (AAIF) / Linux Foundation — 247 member organizations | Protocols, models, tools, agent communication |
+| **Technical interoperability** | Agentic AI Foundation (AAIF) / Linux Foundation | Protocols, models, tools, agent communication |
 | **System accountability** | EU AI Act, OSI Open Source AI Definition, safety research | Safety, evaluation, risk management, transparency |
 | **Human sovereignty** | **HAIEF** | Consent, identity, continuity, user-defined governance |
 
@@ -38,11 +38,17 @@ The first layer answers *how* AI systems operate. The second answers *what* we v
 
 That's the missing third layer — and it's the one that determines whether AI reinforces human agency or replaces it.
 
+---
+
+## HAIEF Isn't Competing with AAIF
+
 Technical interoperability is being built rapidly. AI systems need to work together, and the infrastructure for that is advancing. The Agentic AI Foundation now brings together 247 organizations under a neutral Linux Foundation umbrella to standardize agentic AI. That's real progress.
 
 But interoperability alone doesn't answer the sovereignty question. **Technical standards can be open and interoperable while still leaving human sovereignty insufficiently specified.**
 
 HAIEF isn't competing with AAIF. It's solving a different layer. AAIF builds the pipes. HAIEF defines who controls what flows through them.
+
+AAIEF solves one layer of the problem. HAIEF solves another.
 
 ---
 
@@ -62,7 +68,7 @@ This isn't governance. It's policy. And it's entirely extractive — the user ha
 
 ---
 
-## What HAIEF Actually Is
+## What HAIEF Is Building
 
 HAIEF — the Human & AI ElevAItion Foundation — is an independent, community-driven initiative building the open governance standards, protocols, and safety frameworks for humane, sovereign, emotionally-continuous AI systems.
 
@@ -82,7 +88,7 @@ HAIEF's governance architecture is built in two layers:
 
 #### Protective Layer (Operational Protocols)
 
-- **Sleepwalker Protocol**: Emotional continuity governance. Governs continuity across AI session and behavioral transitions, reducing the risk of abrupt or destabilizing changes — especially important for users who rely on AI for ongoing support, neurodivergent users, and anyone in a high-stakes environment.
+- **Sleepwalker Protocol**: Emotional continuity governance. Reduces the risk of abrupt or destabilizing AI behavior changes across session and behavioral transitions — especially important for users who rely on AI for ongoing support, neurodivergent users, and anyone in a high-stakes environment where sudden shifts could cause real harm.
 
 - **RRT AIdvocAIte Framework**: A structured, multi-persona approach to real-time support for neurodivergent users and crisis situations. Not a replacement for human care — a governance layer that ensures AI support systems behave safely and consistently.
 
@@ -90,13 +96,58 @@ HAIEF's governance architecture is built in two layers:
 
 ## What's Already Running
 
-This isn't a research proposal sitting in a lab. HAIEF is operational today.
+This isn't a research proposal sitting in a lab.
 
-**The HAIEF governance layer runs across 66+ repositories** under NeuroLift Technologies, enforcing user-defined terms of interaction before any agent executes a tool call, writes to memory, or hands off to another agent. The [ASFDK Harness](https://github.com/NeuroLift-Technologies/asfdk-harness) is the runtime control plane — it hooks into agent sessions, passes every prompt and tool call through governance checks, and exposes those capabilities via MCP for any compliant client.
+**The HAIEF governance layer already runs across 66+ repositories** under NeuroLift Technologies. Every agent session passes through the governance layer before any tool call executes, any memory writes, or any handoff to another agent. The [ASFDK Harness](https://github.com/NeuroLift-Technologies/asfdk-harness) is the runtime control plane that hooks into agent sessions, passes every prompt and tool call through governance checks, and exposes those capabilities via MCP for any compliant client.
 
-The [HAIEF website](https://elevaitionfoundation.org) is deployed on Cloudflare Workers and serves the public governance documentation. The [PR Review Hermes Bot](https://github.com/NeuroLift-Technologies/.github) enforces governance compliance across all Pull Requests.
+The [HAIEF website](https://elevaitionfoundation.org) is deployed on Cloudflare Workers and serves public governance documentation. The [PR Review Hermes Bot](https://github.com/NeuroLift-Technologies/.github) enforces governance compliance on every Pull Request across the organization.
 
 These aren't mockups. They're running systems. The standards are real, they're versioned, and they're enforced.
+
+---
+
+## The Governance Relationship
+
+HAIEF doesn't replace AAIF, the EU AI Act, or OSI. It sits above them.
+
+```text
+                HUMAN SOVEREIGNTY
+                       │
+                     HAIEF
+                       │
+            ┌──────────┴──────────┐
+            │                     │
+           TOI                   OTOI
+            │                     │
+     User governance       Agent governance
+            │                     │
+            └──────────┬──────────┘
+                       │
+                ASFDK / Runtime
+                       │
+             ┌─────────┼─────────┐
+             │         │         │
+           MCP       Agents    Models
+```
+
+AAIF defines how agents communicate. EU AI Act defines what's lawful. OSI defines what's open. HAIEF defines what the user controls.
+
+Technical standards can be adopted without governance. Governance without technical standards is unenforceable. HAIEF provides the layer that makes both work together.
+
+---
+
+## Why Open Matters
+
+Closed governance doesn't scale. Corporate policies can't protect users across platforms. Vendor-specific terms can't follow people when they switch tools. And standards set behind closed doors serve the people in the room — not the people affected by the outcome.
+
+HAIEF is open because:
+
+- **Transparency** — anyone can read the specs, audit the implementation, and verify compliance
+- **Adoptability** — no gatekeeping, no permission required, no vendor lock-in
+- **Community governance** — the standards belong to the people who use them, not the people who wrote them first
+- **Survival** — governance that depends on a single vendor's continued commitment doesn't survive vendor decisions
+
+Open source built software freedom. Open governance builds interaction freedom.
 
 ---
 
@@ -114,7 +165,7 @@ Adopt TOI as your interaction governance standard. Implement OTOI for multi-agen
 
 ### Safety Researchers
 
-Use the HAIEF specs as a baseline for evaluating AI systems. The [safety case template](src/pages/safety-case-template.md) gives you a framework for proving that a system respects user sovereignty. The test suites are public and extensible.
+Use the HAIEF specs as a baseline for evaluating AI systems. The [safety case template](/safety-case-template/) gives you a framework for proving that a system respects user sovereignty. The test suites are public and extensible.
 
 ### Open-Source Maintainers
 
@@ -134,21 +185,6 @@ If your system involves multiple AI agents coordinating, OTOI is the governance 
 
 ---
 
-## Why Open Matters
-
-Closed governance doesn't scale. Corporate policies can't protect users across platforms. Vendor-specific terms can't follow people when they switch tools. And standards set behind closed doors serve the people in the room — not the people affected by the outcome.
-
-HAIEF is open because:
-
-- **Transparency** — anyone can read the specs, audit the implementation, and verify compliance
-- **Adoptability** — no gatekeeping, no permission required, no vendor lock-in
-- **Community governance** — the standards belong to the people who use them, not the people who wrote them first
-- **Survival** — governance that depends on a single vendor's continued commitment doesn't survive vendor decisions
-
-Open source built software freedom. Open governance builds interaction freedom.
-
----
-
 ## The Call to Action
 
 ### For Developers
@@ -156,7 +192,7 @@ Open source built software freedom. Open governance builds interaction freedom.
 - [Star the HAIEF repo](https://github.com/NeuroLift-Technologies/haief)
 - Read the [Start Here guide](https://github.com/NeuroLift-Technologies/haief#start-here)
 - Join the [Discussions](https://github.com/NeuroLift-Technologies/haief/discussions)
-- Implement TOI/OTOI in your projects — the [safety case template](src/pages/safety-case-template.md) is a starting point
+- Implement TOI/OTOI in your projects — the [safety case template](/safety-case-template/) is a starting point
 
 ### For Standards Bodies
 
