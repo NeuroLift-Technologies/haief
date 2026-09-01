@@ -128,36 +128,6 @@ These aren't mockups. They're running systems. The standards are real, they're v
 
 ---
 
-## The Governance Relationship
-
-HAIEF doesn't replace AAIF, the EU AI Act, or OSI. It sits above them.
-
-```text
-                HUMAN SOVEREIGNTY
-                       │
-                     HAIEF
-                       │
-            ┌──────────┴──────────┐
-            │                     │
-           TOI                   OTOI
-            │                     │
-     User governance       Agent governance
-            │                     │
-            └──────────┬──────────┘
-                       │
-                ASFDK / Runtime
-                       │
-             ┌─────────┼─────────┐
-             │         │         │
-           MCP       Agents    Models
-```
-
-AAIF defines how agents communicate. EU AI Act defines what's lawful. OSI defines what's open. HAIEF defines what the user controls.
-
-Technical standards can be adopted without governance. Governance without technical standards is unenforceable. HAIEF provides the layer that makes both work together.
-
----
-
 ## Why Open Matters
 
 Closed governance doesn't scale. Corporate policies can't protect users across platforms. Vendor-specific terms can't follow people when they switch tools. And standards set behind closed doors serve the people in the room — not the people affected by the outcome.

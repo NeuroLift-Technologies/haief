@@ -2,20 +2,20 @@
 
 > This file tracks active work threads. Agents must read this at session start and update it during and at the end of each session.
 
-**Last updated:** 2026-09-01T03:51:00-04:00
+**Last updated:** 2026-09-01T07:44:00-04:00
 
 ---
 
 ## Active Threads
 
-### Thread: 2026-09-01-hermes-dark-mode-callout-fixes
+### Thread: 2026-09-01-hermes-duplicate-governance-section
 **Status:** in_progress
 **Owner:** Hermes (Hermes Agent, Nous Research)
-**Started:** 2026-09-01T03:44:00-04:00
-**Last updated:** 2026-09-01T03:51:00-04:00
-**Summary:** Follow-up to PR #44 (dark mode toggle). Added dark mode background overrides for all callout variants (`.callout--warning`, `--danger`, `--info`, `--success`) so they render correctly in dark mode. Converted crisis banner's hardcoded gradient to use CSS variables. Fixed `.hero--dark` and `.btn--outline-light` to be adaptive. PR #45 open on `fix/dark-mode-callout-backgrounds`.
+**Started:** 2026-09-01T07:44:00-04:00
+**Last updated:** 2026-09-01T07:44:00-04:00
+**Summary:** Removed duplicate "The Governance Relationship" section from the manifesto article. The section appeared at both line 51 and line 131 with identical content. PR #47 open on `fix/duplicate-governance-section`.
 **Blockers:** None.
-**Next action:** Fix `hero--dark` text colors for light mode (review feedback) and correct crisis banner gradient.
+**Next action:** After merge, verify live site shows only one instance.
 
 ---
 
