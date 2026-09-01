@@ -120,7 +120,7 @@ HAIEF's governance architecture is built in two layers:
 
 This isn't a research proposal sitting in a lab.
 
-**The HAIEF governance layer already runs across 66+ repositories** under NeuroLift Technologies. Every agent session passes through the governance layer before any tool call executes, any memory writes, or any handoff to another agent. The [ASFDK Harness](https://github.com/NeuroLift-Technologies/asfdk-harness) is the runtime control plane that hooks into agent sessions, passes every prompt and tool call through governance checks, and exposes those capabilities via MCP for any compliant client.
+**The HAIEF governance layer already runs across 66+ repositories** (as of September 2026) under NeuroLift Technologies. Every agent session passes through the governance layer before any tool call executes, any memory writes, or any handoff to another agent. The [ASFDK Harness](https://github.com/NeuroLift-Technologies/asfdk-harness) is the runtime control plane that hooks into agent sessions, passes every prompt and tool call through governance checks, and exposes those capabilities via MCP for any compliant client.
 
 The [HAIEF website](https://elevaitionfoundation.org) is deployed on Cloudflare Workers and serves public governance documentation. The [PR Review Hermes Bot](https://github.com/NeuroLift-Technologies/.github) enforces governance compliance on every Pull Request across the organization.
 
