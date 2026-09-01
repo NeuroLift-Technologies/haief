@@ -1,50 +1,21 @@
-# HAIEF Discussions
+# Discussions
 
-This directory is for ongoing discussions about HAIEF standards, frameworks, and governance.
+Welcome to the HAIEF community discussions.
 
-## Discussion Format
+## Announcements
 
-Create a new markdown file for each discussion topic using the format:
+- **[Article] Why AI Governance Must Be Open, Adoptable, and Human-Sovereign** — The standards for AI are being written right now. Here's why they need a human-rights pillar, and why HAIEF already exists. [Read the article →](#)
 
-### Filename Format
-`YYYY-MM-DD-discussion-topic.md`
+## Start a Discussion
 
-### Content Structure
+- **[Question]** — Have a question about HAIEF, TOI, OTOI, or the Solidarity Framework?
+- **[Discussion]** — Want to explore an idea, share a use case, or debate a approach?
+- **[Proposal]** — Have an idea for how HAIEF should evolve? Start here.
 
-```markdown
-# Discussion: [Topic]
+## Categories
 
-**Initiated by:** [Name]
-**Date:** YYYY-MM-DD
-**Status:** [Open | Resolved | Archived]
+Use the issue templates in `ISSUE_TEMPLATE/` when opening a discussion — they help structure the conversation and make it easier for others to engage.
 
-## Topic
-What is this discussion about?
+## Code of Conduct
 
-## Key Questions
-- Question 1
-- Question 2
-- ...
-
-## Participants
-- Participant 1
-- Participant 2
-- ...
-
-## Summary of Positions
-(To be updated as discussion progresses)
-
-## Outcomes/Decisions
-(To be filled in when discussion concludes)
-```
-
-## Participating in Discussions
-
-1. Read existing discussions to avoid duplication
-2. Add your perspective thoughtfully and respectfully
-3. Update the discussion file with your contributions
-4. Help move discussions toward actionable outcomes
-
----
-
-*This space is maintained by the HAIEF community.*
+Please read and follow the [Code of Conduct](https://github.com/NeuroLift-Technologies/.github/blob/4d6d20fe7de852b9ba2b922d553cb0be910484ee/CODE_OF_CONDUCT.md) in all discussions.
