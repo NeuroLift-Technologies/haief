@@ -348,10 +348,19 @@ pre code {
 
 .hero--dark h1,
 .hero--dark h2 {
-  color: white;
+  color: var(--color-text);
 }
 
 .hero--dark p {
+  color: var(--color-text-muted);
+}
+
+[data-theme="dark"] .hero--dark h1,
+[data-theme="dark"] .hero--dark h2 {
+  color: white;
+}
+
+[data-theme="dark"] .hero--dark p {
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1053,9 +1062,13 @@ pre code {
 
 /* Crisis Banner */
 .crisis-banner {
-  background: linear-gradient(135deg, var(--color-bg-dark) 0%, #2a2a4e 100%);
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-alt) 100%);
   border-bottom: 3px solid var(--color-accent);
   padding: var(--space-6) 0;
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .crisis-banner {
   color: white;
 }
 
